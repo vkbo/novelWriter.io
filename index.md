@@ -13,3 +13,6 @@ header:
 excerpt: >-
   A markdown-like editor for organising and writing novels.
 ---
+This page is incomplete.
+Please check back in the near future.
+In the meantime, the [GitHub source page](https://github.com/vkbo/novelWriter) has all the latest information.

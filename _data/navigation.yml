@@ -1,9 +1,13 @@
 main:
-  - title: "Posts"
+  - title: "News"
     url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Docs"
+    url: https://novelwriter.readthedocs.io
+  - title: "Source"
+    url: https://github.com/vkbo/novelWriter
+  # - title: "Categories"
+  #   url: /categories/
+  # - title: "Tags"
+  #   url: /tags/
   - title: "About"
     url: /about/
