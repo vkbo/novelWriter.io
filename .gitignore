@@ -1,3 +1,5 @@
-_site/
-.jekyll-cache/
-*.lock
+# Build Files
+build/
+
+# Dev Stuff
+.pytest_cache/
