@@ -3,13 +3,10 @@
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Source+Sans+Pro&display=swap"); */
-/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Source+Sans+Pro&display=swap'); */
 
 html {
     --pst-font-size-base: 12pt;
     --pst-font-family-base-system: "Source Sans Pro", sans-serif;
-    /* --pst-font-family-heading: "Josefin Sans", sans-serif; */
 }
 
 html[data-theme="light"] {
@@ -18,4 +15,12 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
     --pst-color-primary: white;
+}
+
+.bd-sidebar-primary {
+    flex: 0 0 17rem;
+}
+
+span.guilabel {
+    font-weight: 400;
 }

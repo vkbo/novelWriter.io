@@ -26,7 +26,7 @@ exclude_patterns = []
 
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
-html_css_files = ["css/custom.css"]
+html_css_files = ["custom.css"]
 html_theme_options = {
     "navbar_align": "left",
     "navbar_start": ["navbar-logo"],
@@ -34,26 +34,26 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links"],
     "navbar_persistent": ["search-button", "theme-switcher"],
     "logo": {
-        "image_light": "images/novelwriter-light.png",
-        "image_dark": "images/novelwriter-dark.png",
-        # "image_light": "images/novelwriter-icon.svg",
-        # "image_dark": "images/novelwriter-icon.svg",
+        "image_light": "novelwriter-light.png",
+        "image_dark": "novelwriter-dark.png",
+        # "image_light": "novelwriter-icon.svg",
+        # "image_dark": "novelwriter-icon.svg",
     },
     "favicons": [
         {
             "rel": "icon",
             "sizes": "16x16",
-            "href": "images/novelwriter-icon-16.png",
+            "href": "novelwriter-icon-16.png",
         },
         {
             "rel": "icon",
             "sizes": "32x32",
-            "href": "images/novelwriter-icon-32.png",
+            "href": "novelwriter-icon-32.png",
         },
         {
             "rel": "apple-touch-icon",
             "sizes": "180x180",
-            "href": "images/novelwriter-icon-180.png",
+            "href": "novelwriter-icon-180.png",
         },
     ],
     "pygment_light_style": "tango",

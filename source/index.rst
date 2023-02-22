@@ -23,7 +23,7 @@ novelWriter
    .. grid-item::
       :padding: 0 0 3 0
 
-      .. image:: _static/images/screenshot-multi.png
+      .. image:: images/screenshot_multi.png
          :width: 100%
 
 .. code-block:: python
@@ -39,5 +39,4 @@ novelWriter
    :hidden:
 
    Home <self>
-   Manual <https://novelwriter.readthedocs.io/>
-
+   Manual <docs/index>
