@@ -39,4 +39,4 @@ novelWriter
    :hidden:
 
    Home <self>
-   Manual <docs/index>
+   Documentation <docs/index>
