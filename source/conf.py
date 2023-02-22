@@ -3,10 +3,20 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import json
+
+from pathlib import Path
 from datetime import datetime
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+
+setFile = Path("settings.json")
+release = "Unknown"
+if setFile.exists():
+    settings = json.loads(setFile.read_text())
+    if isinstance(settings, dict):
+        release = settings.get("docVersion", "Unknown")
 
 project = "novelWriter"
 copyright = f"2018–{datetime.now().year} Veronica Berglyd Olsen"
@@ -19,6 +29,8 @@ extensions = ["sphinx_design"]
 
 templates_path = ["_templates"]
 exclude_patterns = []
+today_fmt = "%A, %d %B %Y at %H:%M"
+language = "en"
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -36,6 +48,7 @@ html_theme_options = {
     "navbar_center": ["navbar-nav"],
     "navbar_end": ["navbar-icon-links"],
     "navbar_persistent": ["search-button", "theme-switcher"],
+    "search_bar_text": "Search text ...",
     "logo": {
         "image_light": "novelwriter-light.png",
         "image_dark": "novelwriter-dark.png",

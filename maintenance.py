@@ -4,11 +4,28 @@ novelWriter.io Maintenance Script
 """
 
 import sys
+import json
 import shutil
 import argparse
 import urllib.request
 
 from pathlib import Path
+
+
+def updateSetting(name, value):
+    """Update a setting in the settings.json file.
+    """
+    setFile = Path("source/settings.json")
+    if setFile.exists():
+        settings = json.loads(setFile.read_text())
+    else:
+        settings = {}
+
+    if isinstance(settings, dict):
+        settings[name] = value
+        setFile.write_text(json.dumps(settings, indent=2))
+
+    return
 
 
 def pullDocs(args):
@@ -47,6 +64,16 @@ def pullDocs(args):
         shutil.rmtree(extPath)
     shutil.unpack_archive(zipFile, outDir)
     print("Done")
+
+    release = "unknown"
+    with open(extPath / "novelwriter" / "__init__.py") as inFile:
+        for aLine in inFile:
+            if aLine.startswith("__version__"):
+                release = aLine.split('"')[1].strip()
+                break
+
+    updateSetting("docVersion", release)
+    print(f"Release: {release}")
 
     if docsDst.exists():
         print("Deleting old docs ... ", end="")

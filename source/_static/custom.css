@@ -24,3 +24,7 @@ html[data-theme="dark"] {
 span.guilabel {
     font-weight: 400;
 }
+
+.footer-item {
+    text-align: center;
+}
