@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="256"
+   height="342"
+   fill="#0078d6"
+   version="1.1"
+   id="svg285"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs289" />
+  <path
+     d="M 4,82.388128 105.41581,68.515982 V 166.18721 H 4 M 117.63116,66.534247 252,47 V 165.3379 H 117.63116 M 4,176.49224 h 101.41581 v 97.95434 L 4,260.29132 m 113.63116,-82.4968 H 252 V 295 L 117.63116,276.03196"
+     id="path283"
+     style="stroke-width:2.83591" />
+</svg>

@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -21,6 +22,7 @@ if setFile.exists():
 project = "novelWriter"
 copyright = f"2018–{datetime.now().year} Veronica Berglyd Olsen"
 author = "Veronica Berglyd Olsen"
+
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -49,9 +51,11 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links"],
     "navbar_persistent": ["search-button", "theme-switcher"],
     "search_bar_text": "Search text ...",
+    "footer_start": ["copyright", "sphinx-version"],
+    "footer_end": ["theme-version"],
     "logo": {
-        "image_light": "novelwriter-light.png",
-        "image_dark": "novelwriter-dark.png",
+        "image_light": "_static/novelwriter-light.png",
+        "image_dark": "_static/novelwriter-dark.png",
     },
     "favicons": [{
         "rel": "icon",
@@ -67,7 +71,7 @@ html_theme_options = {
         "href": "novelwriter-icon-180.png",
     }],
     "pygment_light_style": "tango",
-    "pygment_dark_style": "monokai",
+    "pygment_dark_style": "dracula",
     "icon_links_label": "Quick Links",
     "icon_links": [{
         "name": "Mastodon",
