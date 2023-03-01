@@ -22,6 +22,7 @@ if setFile.exists():
 project = "novelWriter"
 copyright = f"2018–{datetime.now().year} Veronica Berglyd Olsen"
 author = "Veronica Berglyd Olsen"
+version = release
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,7 +32,7 @@ extensions = ["sphinx_design"]
 
 templates_path = ["_templates"]
 exclude_patterns = []
-today_fmt = "%A, %d %B %Y at %H:%M"
+today_fmt = "%A, %-d %B %Y at %H:%M"
 language = "en"
 
 
@@ -43,7 +44,8 @@ html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_context = {
-    "default_mode": "light"
+    "default_mode": "light",
+    "build_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
 }
 html_theme_options = {
     "navbar_align": "content",
@@ -55,7 +57,7 @@ html_theme_options = {
     "show_toc_level": 2,
     "show_prev_next": True,
     "footer_start": ["copyright", "sphinx-version"],
-    "footer_end": ["theme-version"],
+    "footer_end": ["theme-version", "build-time"],
     "logo": {
         "image_light": "_static/novelwriter-light.png",
         "image_dark": "_static/novelwriter-dark.png",
