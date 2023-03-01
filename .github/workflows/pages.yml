@@ -1,4 +1,4 @@
-name: Public Page
+name: Publish
 
 on:
   push:
