@@ -45,7 +45,7 @@ html_context = {
     "default_mode": "light"
 }
 html_theme_options = {
-    "navbar_align": "left",
+    "navbar_align": "content",
     "navbar_start": ["navbar-logo"],
     "navbar_center": ["navbar-nav"],
     "navbar_end": ["navbar-icon-links"],

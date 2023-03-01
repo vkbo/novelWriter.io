@@ -9,6 +9,8 @@ novelWriter
    :caption: Contents
    :hidden:
 
+   about
+   download
    Documentation <docs/index>
 
 .. grid:: 2
