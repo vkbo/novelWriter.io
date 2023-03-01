@@ -38,6 +38,7 @@ language = "en"
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_title = ""
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
@@ -51,6 +52,8 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links"],
     "navbar_persistent": ["search-button", "theme-switcher"],
     "search_bar_text": "Search text ...",
+    "show_toc_level": 2,
+    "show_prev_next": True,
     "footer_start": ["copyright", "sphinx-version"],
     "footer_end": ["theme-version"],
     "logo": {
