@@ -4,6 +4,13 @@
 novelWriter
 ***********
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents
+   :hidden:
+
+   Documentation <docs/index>
+
 .. grid:: 2
    :margin: 4 4 0 0
    :gutter: 0
@@ -29,49 +36,6 @@ novelWriter
          :width: 100%
 
 
-Latest Release 2.0.5
-====================
+.. include:: generated/download_block.rst
 
-Released on February 12, 2023
-
-.. grid:: 3
-   :margin: 4 4 0 0
-   :gutter: 4
-   :padding: 0
-
-   .. grid-item-card::
-      :class-header: nw-sd-os-card-header
-
-      **Linux**
-      ^^^^^^^^^
-      .. include:: generated/download_linux.rst
-
-   .. grid-item-card::
-      :class-header: nw-sd-os-card-header
-
-      **Windows**
-      ^^^^^^^^^^^
-      .. include:: generated/download_windows.rst
-
-   .. grid-item-card::
-      :class-header: nw-sd-os-card-header
-
-      **MacOS**
-      ^^^^^^^^^
-      .. include:: generated/download_macos.rst
-
-
-.. code-block:: python
-
-   import blablabla
-
-   for a in range(14):
-       print(a**2)
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents
-   :hidden:
-
-   Home <self>
-   Documentation <docs/index>
+.. include:: generated/checksum_block.rst

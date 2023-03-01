@@ -10,6 +10,7 @@ import argparse
 import urllib.request
 
 from pathlib import Path
+from datetime import datetime
 
 
 def updateSetting(name, value):
@@ -29,7 +30,7 @@ def updateSetting(name, value):
 
 
 def pullDocs(args):
-    """Download docs from and extract them into the website source.
+    """Download docs and extract them into the website source.
     """
     print("")
     print("Pulling Documentation Source")
@@ -96,6 +97,141 @@ def pullDocs(args):
     return
 
 
+def pullRelease(args):
+    """Download release info from the GitHub API.
+    """
+    print("")
+    print("Pulling Release Info")
+    print("====================")
+    print("")
+
+    print(f"Tag: {args.tag}")
+
+    apiUrl = f"https://api.github.com/repos/vkbo/novelwriter/releases/tags/{args.tag}"
+    urlReq = urllib.request.Request(apiUrl)
+    urlReq.add_header("User-Agent", "Mozilla/5.0 (compatible; novelWriter (Python))")
+    urlReq.add_header("Accept", "application/vnd.github.v3+json")
+
+    urlData = urllib.request.urlopen(urlReq, timeout=10)
+    data = json.loads(urlData.read().decode())
+    print(json.dumps(data, indent=2))
+
+    releaseUrl = data.get("html_url", "Unkown")
+    releaseVersion = data.get("name", "Version ???")
+    releaseDate = data.get("published_at", "")
+    # releaseNote = data.get("body", "")
+    tarBall = data.get("tarball_url", "")
+    zipBall = data.get("zipball_url", "")
+    print(f"Release URL:     {releaseUrl}")
+    print(f"Release Version: {releaseVersion}")
+    print(f"Release Date:    {releaseDate}")
+    print(f"Release TarBall: {tarBall}")
+    print(f"Release ZipBall: {zipBall}")
+    print("")
+
+    releaseDateFmt = datetime.fromisoformat(releaseDate).strftime("%B %-d, %Y")
+
+    pkgFiles = {}
+    shaFiles = {}
+    shaSums = {}
+
+    def processAsset(asset):
+        return {
+            "name": asset.get("name"),
+            "download": asset.get("browser_download_url"),
+            "size": asset.get("size", -1),
+        }
+
+    for asset in data.get("assets", []):
+        assetName = asset.get("name")
+        if not assetName:
+            continue
+
+        if assetName.endswith(".deb"):
+            print(f"Found Asset: {assetName}")
+            pkgFiles["Debian"] = processAsset(asset)
+        elif assetName.endswith(".AppImage"):
+            print(f"Found Asset: {assetName}")
+            pkgFiles["AppImage"] = processAsset(asset)
+        elif assetName.endswith("setup.exe"):
+            print(f"Found Asset: {assetName}")
+            pkgFiles["WinExe"] = processAsset(asset)
+        elif assetName.endswith(".dmg"):
+            print(f"Found Asset: {assetName}")
+            pkgFiles["MacDMG"] = processAsset(asset)
+        elif assetName.endswith(".whl"):
+            print(f"Found Asset: {assetName}")
+            pkgFiles["Wheel"] = processAsset(asset)
+        elif assetName.endswith(".sha256"):
+            shaFiles[assetName] = asset.get("browser_download_url", "error")
+
+    # Download ShaSum Files
+    print("")
+    print("Checking Sha Files")
+    tempDir = Path("_temp/shafiles")
+    tempDir.mkdir(exist_ok=True)
+    for shaFile, shaUrl in shaFiles.items():
+        shaPath = tempDir / shaFile
+        if shaPath.is_file():
+            print(f"Found: {shaFile}")
+        else:
+            urllib.request.urlretrieve(shaUrl, shaPath)
+            print(f"Downloaded: {shaFile}")
+
+        shaData = shaPath.read_text()
+        shaSums[shaData[66:].rstrip()] = shaData[:64]
+
+    print("")
+
+    # Update Files
+    print("Updating Files")
+
+    buildFromTemplate("download_block.rst", {
+        "release_version": releaseVersion,
+        "release_date": releaseDateFmt,
+        "release_url": releaseUrl,
+        "appimage_download": pkgFiles["AppImage"]["download"],
+        "debian_download":  pkgFiles["Debian"]["download"],
+        "winexe_download": pkgFiles["WinExe"]["download"],
+        "macdmg_download": pkgFiles["MacDMG"]["download"],
+    })
+
+    nmAppImage = pkgFiles["AppImage"]["name"]
+    nmDebian = pkgFiles["Debian"]["name"]
+    nmWinExe = pkgFiles["WinExe"]["name"]
+    nmMacDMG = pkgFiles["MacDMG"]["name"]
+
+    buildFromTemplate("checksum_block.rst", {
+        "appimage_name": nmAppImage,
+        "appimage_shasum": shaSums[nmAppImage],
+        "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
+        "debian_name": nmDebian,
+        "debian_shasum": shaSums[nmDebian],
+        "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
+        "winexe_name": nmWinExe,
+        "winexe_shasum": shaSums[nmWinExe],
+        "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
+        "macdmg_name": nmMacDMG,
+        "macdmg_shasum": shaSums[nmMacDMG],
+        "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
+    })
+
+    print("")
+
+    return
+
+
+def buildFromTemplate(name, data):
+    """Write data to a template.
+    """
+    templateDir = Path("templates")
+    generateDir = Path("source/generated")
+    templateText = (templateDir / name).read_text().format(**data)
+    (generateDir / name).write_text(templateText, encoding="utf-8")
+    print(f"Updated: {generateDir / name}")
+    return
+
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
@@ -105,6 +241,10 @@ if __name__ == "__main__":
     pDocs.add_argument("--branch", type=str, help="Pull docs from a specific branch")
     pDocs.add_argument("--tag", type=str, help="Pull docs from a specific tag")
     pDocs.set_defaults(func=pullDocs)
+
+    pRelease = subParsers.add_parser("release")
+    pRelease.add_argument("--tag", type=str, help="Pull release info from a specific tag")
+    pRelease.set_defaults(func=pullRelease)
 
     args = parser.parse_args()
     args.func(args)
