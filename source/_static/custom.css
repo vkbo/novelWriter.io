@@ -39,10 +39,30 @@ span.guilabel {
     background-color: var(--pst-color-surface) !important;
 }
 
+.sd-octicon {
+    vertical-align: baseline;
+    height: 1em;
+    margin-top: 0.15em;
+    margin-bottom: -0.15em;
+}
+
 /*
  * Custom Classes for Sphinx-Design
  */
 
 .nw-sd-os-card-header {
     background-color: var(--pst-color-surface) !important;
+}
+
+.custom-inline-image {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 1rem;
+}
+
+.custom-inline-image-tall {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.8rem;
+    margin-right: 0.2rem;
 }

@@ -35,7 +35,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Build Documentation
+      - name: Build Pages
         run: |
           make html
 

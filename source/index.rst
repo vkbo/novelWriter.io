@@ -40,4 +40,40 @@ novelWriter
 
 .. include:: generated/download_block.rst
 
+
+Other Install Options
+---------------------
+
+.. _PPA: https://launchpad.net/~vkbo/+archive/ubuntu/novelwriter
+.. _Python Package Index: https://pypi.org/project/novelWriter/
+
+.. |ubuntu-logo| image:: images/ubuntu.svg
+   :class: dark-light custom-inline-image-tall
+
+.. |pypi-logo| image:: images/pypi.svg
+   :class: dark-light custom-inline-image-tall
+
+
+.. grid::
+   :margin: 0
+   :gutter: 4
+   :padding: 0
+
+   .. grid-item::
+
+      .. code-block:: bash
+         :caption: |ubuntu-logo| Add the Ubuntu PPA_ to your system:
+
+         sudo add-apt-repository ppa:vkbo/novelwriter
+         sudo apt update && sudo apt install novelwriter
+
+   .. grid-item::
+
+      .. code-block:: bash
+         :caption: |pypi-logo| Install from the `Python Package Index`_:
+
+         pip install --user novelwriter
+
+For more download options, including pre-releases, see the :ref:`main_download` page.
+
 .. include:: generated/checksum_block.rst

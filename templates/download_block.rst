@@ -3,7 +3,7 @@ Latest Release
 
 .. _Release Notes: {release_url}
 
-{release_version} -- Released on {release_date} -- `Release Notes`_
+**{release_version}** -- Released on {release_date} -- :octicon:`mark-github` `Release Notes`_
 
 .. grid:: 3
    :margin: 4 4 0 0

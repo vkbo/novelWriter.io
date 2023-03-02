@@ -3,7 +3,7 @@ Latest Release
 
 .. _Release Notes: https://github.com/vkbo/novelWriter/releases/tag/v2.0.6
 
-Version 2.0.6 -- Released on February 26, 2023 -- `Release Notes`_
+**Version 2.0.6** -- Released on February 26, 2023 -- :octicon:`mark-github` `Release Notes`_
 
 .. grid:: 3
    :margin: 4 4 0 0
