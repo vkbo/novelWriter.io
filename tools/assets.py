@@ -41,8 +41,7 @@ ASSET_TEXT = {
     ),
     AssetType.APP_IMAGE_OLD: (
         "AppImage (Legacy)",
-        "You should try the ``manylinux_2_28`` version first. This may not work for older distos, "
-        "in which case you may want to download the ``manylinux_2_24`` version instead."
+        "For older Linux distros you may need to download this AppImage instead."
     ),
     AssetType.DEBIAN: (
         "Debian Package",

@@ -42,7 +42,7 @@
          | **Checksum:** :octicon:`hash` ``98380ccd8dee025f4839bddcbf1b0140c57b92c911be9081980d4bfdde10e03c`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelWriter-2.0.6-py3.10-manylinux_2_28_x86_64.AppImage.sha256>`__
 
       **AppImage (Legacy)**
-         You should try the ``manylinux_2_28`` version first. This may not work for older distos, in which case you may want to download the ``manylinux_2_24`` version instead.
+         For older Linux distros you may need to download this AppImage instead.
 
          | **Download:** :octicon:`download` `novelWriter-2.0.6-py3.10-manylinux_2_24_x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelWriter-2.0.6-py3.10-manylinux_2_24_x86_64.AppImage>`__ [ 100 MB ]
          | **Checksum:** :octicon:`hash` ``d7d99b7b4b598e51044a81edb6c4c17de90823ecfc9cb210df069bb8e88a3f6b`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelWriter-2.0.6-py3.10-manylinux_2_24_x86_64.AppImage.sha256>`__
