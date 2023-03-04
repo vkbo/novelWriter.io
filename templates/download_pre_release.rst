@@ -12,7 +12,7 @@
    :animate: fade-in-slide-down
    :icon: info
 
-   .. include:: generated/release_notes.rst
+   .. include:: generated/pre_release_notes.rst
 
 .. tab-set::
 
