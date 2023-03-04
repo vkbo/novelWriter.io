@@ -8,15 +8,13 @@ Features
 .. _Typicons: https://www.s-ings.com/typicons/
 
 
-Easy Project Overview
-=====================
-
 .. grid:: 2
    :margin: 4 4 0 0
-   :gutter: 5
+   :gutter: 0
    :padding: 0
 
    .. grid-item::
+      :padding: 1 0 0 3
 
       novelWriter allows you to break down your novel in whatever way you need, and into as many
       documents as you want to. They can be dragged and dropped into a custom order, and organised
@@ -26,6 +24,7 @@ Easy Project Overview
       the text of your documents and notes. You can even insert comments.
 
    .. grid-item::
+      :padding: 0 0 3 0
 
       .. image:: images/feat_editor_light.png
          :class: dark-light
@@ -42,16 +41,18 @@ Alternative Novel Overview
 
 .. grid:: 2
    :margin: 4 4 0 0
-   :gutter: 5
+   :gutter: 0
    :padding: 0
 
    .. grid-item::
+      :padding: 0 0 0 3
 
       .. image:: images/feat_novelview_light.png
          :class: dark-light
          :width: 100%
 
    .. grid-item::
+      :padding: 1 0 3 0
 
       When you have structured the main sections of your novel in terms of chapters and scenes,
       you can switch to the :guilabel:`Novel Outline` view instead.
@@ -71,10 +72,11 @@ Project Outline
 
 .. grid:: 2
    :margin: 4 4 0 0
-   :gutter: 5
+   :gutter: 0
    :padding: 0
 
    .. grid-item::
+      :padding: 1 0 0 3
 
       The :guilabel:`Outline View`` gives you a complete overview of the structure of your novel in
       terms of your chapters and scenes.
@@ -83,6 +85,7 @@ Project Outline
       of columns are visible, but you can add more from the configuration button in the toolbar.
 
    .. grid-item::
+      :padding: 0 0 3 0
 
       .. image:: images/feat_outline_light.png
          :class: dark-light
@@ -98,17 +101,18 @@ Build & Export
 
 .. grid:: 2
    :margin: 4 4 0 0
-   :gutter: 5
+   :gutter: 0
    :padding: 0
 
    .. grid-item::
+      :padding: 1 0 0 3
 
       .. image:: images/feat_build_light.png
          :class: dark-light
          :width: 100%
 
    .. grid-item::
-
+      :padding: 1 0 3 0
 
       The :guilabel:`Build Novel Project`` tool lets you assemble all your files into a single
       document. You can filter what to include to make a manuscript, make a draft of your novel
@@ -127,10 +131,11 @@ Dark Theme & Syntax
 
 .. grid:: 2
    :margin: 4 4 0 0
-   :gutter: 5
+   :gutter: 0
    :padding: 0
 
    .. grid-item::
+      :padding: 1 0 0 3
 
       novelWriter defaults to the Qt framework's default colour theme for your system. But it also
       comes with an optional standard dark theme. All themes have matching icon themes based on the
@@ -143,6 +148,7 @@ Dark Theme & Syntax
       more of them.
 
    .. grid-item::
+      :padding: 0 0 3 0
 
       .. image:: images/feat_editor_dark.png
          :class: dark-light
@@ -158,10 +164,11 @@ Other Features
 
 .. grid:: 2
    :margin: 4 4 0 0
-   :gutter: 5
+   :gutter: 0
    :padding: 0
 
    .. grid-item::
+      :padding: 1 0 0 3
 
       **Document Viewer**
 
@@ -174,6 +181,7 @@ Other Features
       and the view panel so you can focus on your text.
 
    .. grid-item::
+      :padding: 1 0 3 0
 
       **Follow Links & References**
 

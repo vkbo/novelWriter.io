@@ -47,6 +47,16 @@ span.guilabel {
 }
 
 /*
+ * Hacks
+ */
+
+/* This one ensures that there is no scrollbar on Chrome if it's not needed */
+.sidebar-primary-items__end {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+/*
  * Custom Classes
  */
 
