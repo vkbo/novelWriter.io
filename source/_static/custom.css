@@ -67,6 +67,15 @@ span.guilabel {
     width: 6em;
 }
 
+.nw-sidebar-logo {
+    display: block;
+    text-align: center;
+}
+
+.nw-sidebar-logo img {
+    width: 50%;
+}
+
 .nw-sd-os-card-header {
     background-color: var(--pst-color-surface) !important;
 }

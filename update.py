@@ -107,6 +107,16 @@ def pullDocs(args):
             print(f"Copying: {item}")
             shutil.copytree(item, docsDst / item.name)
 
+    # Change the Main Heading
+    docsIndex = docsDst / "index.rst"
+    indexText = docsIndex.read_text(encoding="utf-8")
+    newText = [
+        "#############",
+        "Documentation",
+        "#############",
+    ] + indexText.splitlines()[3:]
+    docsIndex.write_text("\n".join(newText), encoding="utf-8")
+
     print("")
     print("Docs updated")
     print("")

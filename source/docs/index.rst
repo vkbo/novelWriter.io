@@ -1,6 +1,6 @@
-#############################
-Documentation for novelWriter
-#############################
+#############
+Documentation
+#############
 
 .. image:: images/novelwriter_logo.png
    :align: right

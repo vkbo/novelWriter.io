@@ -55,7 +55,7 @@ Other Packages
    | **Checksum:** :octicon:`hash` ``{wheel_shasum}`` :octicon:`download` `ShaSum File <{wheel_shasumfile}>`__
 
 **Source Code**
-   The source code package are archived files of the entire source code. See also the `novelWriter Repository`_.
+   The source code packages are archived files of the entire source code. See also the `novelWriter Repository`_.
 
    | **Download:** :octicon:`download` `{srczip_name} <{srczip_download}>`__
    | **Download:** :octicon:`download` `{srctar_name} <{srctar_download}>`__

@@ -3,6 +3,7 @@
 .. div:: main-page-icon
 
    .. image:: _static/novelwriter-icon.svg
+      :class: dark-light
 
 ***********
 novelWriter
@@ -13,8 +14,9 @@ novelWriter
    :caption: Contents
    :hidden:
 
-   about
+   features
    download
+   about/index
    Documentation <docs/index>
 
 .. grid:: 2
@@ -41,6 +43,9 @@ novelWriter
          :class: dark-light
          :width: 100%
 
+.. div:: sd-text-center sd-font-weight-bold
+
+   novelWriter is Free and `Open Source <https://www.gnu.org/licenses/gpl-3.0.en.html>`_, and runs on Linux, Windows and MacOS
 
 .. include:: generated/download_block.rst
 

@@ -48,7 +48,8 @@ html_context = {
     "build_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
 }
 html_sidebars = {
-    "**": ["sidebar-nav-bs"],
+    "**": ["sidebar-logo", "sidebar-nav-bs"],
+    "index": [],
 }
 html_theme_options = {
     "navbar_align": "content",
@@ -78,6 +79,11 @@ html_theme_options = {
         "sizes": "180x180",
         "href": "novelwriter-icon-180.png",
     }],
+    "header_links_before_dropdown": 6,
+    "external_links": [
+        {"name": "Issues", "url": "https://github.com/vkbo/novelWriter/issues"},
+        {"name": "Discussions", "url": "https://github.com/vkbo/novelWriter/discussions"}
+    ],
     "pygment_light_style": "tango",
     "pygment_dark_style": "dracula",
     "icon_links_label": "Quick Links",
