@@ -33,6 +33,36 @@ class AssetOS(Enum):
 # END Enum AssetOS
 
 
+ASSET_TEXT = {
+    AssetType.APP_IMAGE: (
+        "AppImage",
+        "The AppImage should run on any recent Linux distro. See the "
+        "`AppImage website`_ for more info."
+    ),
+    AssetType.APP_IMAGE_OLD: (
+        "AppImage (Legacy)",
+        "You should try the ``manylinux_2_28`` version first. This may not work for older distos, "
+        "in which case you may want to download the ``manylinux_2_24`` version instead."
+    ),
+    AssetType.DEBIAN: (
+        "Debian Package",
+        "The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_."
+    ),
+    AssetType.WINDOWS_EXE: (
+        "Setup Installer",
+        "This is a standard setup installer for Windows. It is made for Windows 10 or newer."
+    ),
+    AssetType.MAC_DMG: (
+        "DMG Image",
+        "This is a DMG image for MacOS, and should work on MacOS 10 or higher."
+    ),
+    AssetType.PYTHON_WHEEL: (
+        "Python Wheel",
+        "The Wheel package can be installed with ``pip install <file_path>``."
+    ),
+}
+
+
 def fmtSize(size):
     """Formats a size with kB, MB, GB, etc.
     """
@@ -178,6 +208,59 @@ class DownloadAssets:
         if isinstance(asset, Asset):
             return asset
         return Asset({})
+
+    def generateDownloadTabs(self, zipName, zipUrl, tarName, tarUrl):
+        """Generate the full list of download links.
+        """
+        def appendType(aType, target):
+            asset = self._assets[aType]
+            if not isinstance(asset, Asset):
+                return
+            target.append(f"      **{ASSET_TEXT[aType][0]}**")
+            target.append(f"         {ASSET_TEXT[aType][1]}")
+            target.append("")
+            target.append(
+                f"         | **Download:** :octicon:`download` `{asset.assetName} "
+                f"<{asset.assetUrl}>`__ [ {asset.assetSizeString} ]"
+            )
+            target.append(
+                f"         | **Checksum:** :octicon:`hash` ``{asset.assetShaSum}`` "
+                f":octicon:`download` `ShaSum File <{asset.assetShaSumUrl}>`__"
+            )
+            target.append("")
+            return
+
+        buffer = []
+        buffer.append(".. tab-set::")
+        buffer.append("")
+        buffer.append("   .. tab-item:: Linux")
+        buffer.append("")
+        appendType(AssetType.APP_IMAGE, buffer)
+        appendType(AssetType.APP_IMAGE_OLD, buffer)
+        appendType(AssetType.DEBIAN, buffer)
+        buffer.append("")
+        buffer.append("   .. tab-item:: Windows")
+        buffer.append("")
+        appendType(AssetType.WINDOWS_EXE, buffer)
+        buffer.append("")
+        buffer.append("   .. tab-item:: MacOS")
+        buffer.append("")
+        appendType(AssetType.MAC_DMG, buffer)
+        buffer.append("")
+        buffer.append("   .. tab-item:: Other Packages")
+        buffer.append("")
+        appendType(AssetType.PYTHON_WHEEL, buffer)
+        buffer.append("      **Source Code**")
+        buffer.append(
+            "         The source code packages are archived files of the entire source code. "
+            "See also the `novelWriter Repository`_."
+        )
+        buffer.append("")
+        buffer.append(f"         | **Download:** :octicon:`download` `{zipName} <{zipUrl}>`__")
+        buffer.append(f"         | **Download:** :octicon:`download` `{tarName} <{tarUrl}>`__")
+        buffer.append("")
+
+        return "\n".join(buffer)
 
     def _processAsset(self, data):
         """Process an asset.

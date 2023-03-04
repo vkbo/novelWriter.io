@@ -40,14 +40,20 @@ def processReleaseNotes(text):
         return f"`#{x.group(1)} <https://github.com/vkbo/novelWriter/issues/{x.group(1)}>`_"
 
     buffer = []
+    buffer.append(".. dropdown:: Release Notes")
+    buffer.append("   :animate: fade-in-slide-down")
+    buffer.append("   :icon: info")
+    buffer.append("")
     for line in text.splitlines():
         if line.startswith("###"):
             title = line.lstrip("#").lstrip()
-            buffer.append(f".. rubric:: {title}")
+            buffer.append(f"   .. rubric:: {title}")
         else:
             line = line.replace("`", "``")
             line = re.sub(r"#([0-9]+)\b", ghLinks, line)
-            buffer.append(line)
+            buffer.append(f"   {line}".rstrip())
+
+    buffer.append("")
 
     return "\n".join(buffer)
 
@@ -189,11 +195,9 @@ def pullRelease(args):
     print("Updating Files")
 
     aAppImg = assets.getAsset(AssetType.APP_IMAGE)
-    aAppOld = assets.getAsset(AssetType.APP_IMAGE_OLD)
     aDebian = assets.getAsset(AssetType.DEBIAN)
     aWinExe = assets.getAsset(AssetType.WINDOWS_EXE)
     aMacDmg = assets.getAsset(AssetType.MAC_DMG)
-    aPWheel = assets.getAsset(AssetType.PYTHON_WHEEL)
 
     if isPreRelease:
         # Updating Pre-Release Info
@@ -201,45 +205,12 @@ def pullRelease(args):
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
-            "appimage_name": aAppImg.assetName,
-            "appimage_size": aAppImg.assetSizeString,
-            "appimage_shasum": aAppImg.assetShaSum,
-            "appimage_download": aAppImg.assetUrl,
-            "appimage_shasumfile": aAppImg.assetShaSumUrl,
-            "appimagelegacy_name": aAppOld.assetName,
-            "appimagelegacy_size": aAppOld.assetSizeString,
-            "appimagelegacy_shasum": aAppOld.assetShaSum,
-            "appimagelegacy_download": aAppOld.assetUrl,
-            "appimagelegacy_shasumfile": aAppOld.assetShaSumUrl,
-            "debian_name": aDebian.assetName,
-            "debian_size": aDebian.assetSizeString,
-            "debian_shasum": aDebian.assetShaSum,
-            "debian_download": aDebian.assetUrl,
-            "debian_shasumfile": aDebian.assetShaSumUrl,
-            "winexe_name": aWinExe.assetName,
-            "winexe_size": aWinExe.assetSizeString,
-            "winexe_shasum": aWinExe.assetShaSum,
-            "winexe_download": aWinExe.assetUrl,
-            "winexe_shasumfile": aWinExe.assetShaSumUrl,
-            "macdmg_name": aMacDmg.assetName,
-            "macdmg_size": aMacDmg.assetSizeString,
-            "macdmg_shasum": aMacDmg.assetShaSum,
-            "macdmg_download": aMacDmg.assetUrl,
-            "macdmg_shasumfile": aMacDmg.assetShaSumUrl,
-            "wheel_name": aPWheel.assetName,
-            "wheel_size": aPWheel.assetSizeString,
-            "wheel_shasum": aPWheel.assetShaSum,
-            "wheel_download": aPWheel.assetUrl,
-            "wheel_shasumfile": aPWheel.assetShaSumUrl,
-            "srczip_name": f"novelWriter-{shortVersion}.zip",
-            "srczip_download": zipBall,
-            "srctar_name": f"novelWriter-{shortVersion}.tar.gz",
-            "srctar_download": tarBall,
+            "release_notes": processReleaseNotes(releaseNotes),
+            "download_tabs": assets.generateDownloadTabs(
+                f"novelWriter-{shortVersion}.zip", zipBall,
+                f"novelWriter-{shortVersion}.tar.gz", tarBall
+            ),
         })
-
-        Path("source/generated/pre_release_notes.rst").write_text(
-            processReleaseNotes(releaseNotes), encoding="utf-8"
-        )
 
     else:
         # Updating Latest Release Info
@@ -272,45 +243,12 @@ def pullRelease(args):
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
-            "appimage_name": aAppImg.assetName,
-            "appimage_size": aAppImg.assetSizeString,
-            "appimage_shasum": aAppImg.assetShaSum,
-            "appimage_download": aAppImg.assetUrl,
-            "appimage_shasumfile": aAppImg.assetShaSumUrl,
-            "appimagelegacy_name": aAppOld.assetName,
-            "appimagelegacy_size": aAppOld.assetSizeString,
-            "appimagelegacy_shasum": aAppOld.assetShaSum,
-            "appimagelegacy_download": aAppOld.assetUrl,
-            "appimagelegacy_shasumfile": aAppOld.assetShaSumUrl,
-            "debian_name": aDebian.assetName,
-            "debian_size": aDebian.assetSizeString,
-            "debian_shasum": aDebian.assetShaSum,
-            "debian_download": aDebian.assetUrl,
-            "debian_shasumfile": aDebian.assetShaSumUrl,
-            "winexe_name": aWinExe.assetName,
-            "winexe_size": aWinExe.assetSizeString,
-            "winexe_shasum": aWinExe.assetShaSum,
-            "winexe_download": aWinExe.assetUrl,
-            "winexe_shasumfile": aWinExe.assetShaSumUrl,
-            "macdmg_name": aMacDmg.assetName,
-            "macdmg_size": aMacDmg.assetSizeString,
-            "macdmg_shasum": aMacDmg.assetShaSum,
-            "macdmg_download": aMacDmg.assetUrl,
-            "macdmg_shasumfile": aMacDmg.assetShaSumUrl,
-            "wheel_name": aPWheel.assetName,
-            "wheel_size": aPWheel.assetSizeString,
-            "wheel_shasum": aPWheel.assetShaSum,
-            "wheel_download": aPWheel.assetUrl,
-            "wheel_shasumfile": aPWheel.assetShaSumUrl,
-            "srczip_name": f"novelWriter-{shortVersion}.zip",
-            "srczip_download": zipBall,
-            "srctar_name": f"novelWriter-{shortVersion}.tar.gz",
-            "srctar_download": tarBall,
+            "release_notes": processReleaseNotes(releaseNotes),
+            "download_tabs": assets.generateDownloadTabs(
+                f"novelWriter-{shortVersion}.zip", zipBall,
+                f"novelWriter-{shortVersion}.tar.gz", tarBall
+            ),
         })
-
-        Path("source/generated/release_notes.rst").write_text(
-            processReleaseNotes(releaseNotes), encoding="utf-8"
-        )
 
     print("")
 
