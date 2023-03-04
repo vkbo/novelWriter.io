@@ -47,8 +47,25 @@ span.guilabel {
 }
 
 /*
- * Custom Classes for Sphinx-Design
+ * Custom Classes
  */
+
+.sidebar-icon {
+    width: 10em;
+    float: right;
+}
+
+.main-page-icon {
+    position: absolute;
+    float: left;
+    margin-left: -8em;
+    margin-top: 0.3em;
+    z-index: 0;
+}
+
+.main-page-icon img {
+    width: 6em;
+}
 
 .nw-sd-os-card-header {
     background-color: var(--pst-color-surface) !important;

@@ -47,6 +47,9 @@ html_context = {
     "default_mode": "light",
     "build_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
 }
+html_sidebars = {
+    "**": ["sidebar-nav-bs"],
+}
 html_theme_options = {
     "navbar_align": "content",
     "navbar_start": ["navbar-logo"],

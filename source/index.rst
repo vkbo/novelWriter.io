@@ -1,5 +1,9 @@
 :html_theme.sidebar_secondary.remove:
 
+.. div:: main-page-icon
+
+   .. image:: _static/novelwriter-icon.svg
+
 ***********
 novelWriter
 ***********

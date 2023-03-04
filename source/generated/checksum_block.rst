@@ -10,7 +10,7 @@ Sha256 Checksums
 * | **MacOS DMG Image:** novelWriter-2.0.6-macos.dmg
   | Sha256: ``8e5f12110b5f3b93a6445d34a5b5e45bab0167b3474690f9aa1b8fd5bcfde9c8`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelWriter-2.0.6-macos.dmg.sha256>`__
 
-.. rubric:: How To Verify the Checksum
+.. rubric:: Verify the Checksum
 
 .. tab-set::
 

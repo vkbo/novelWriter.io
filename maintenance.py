@@ -29,6 +29,23 @@ def updateSetting(name, value):
     return
 
 
+def fmtSize(size):
+    """Formats a size with kB, MB, GB, etc.
+    """
+    value = float(size)
+    for pF in ["k", "M", "G", "T", "P", "E"]:
+        value /= 1000.0
+        if value < 1000.0:
+            if value < 10.0:
+                return f"{value:5.2f} {pF}B"
+            elif value < 100.0:
+                return f"{value:5.1f} {pF}B"
+            else:
+                return f"{value:3.0f} {pF}B"
+
+    return str(value)
+
+
 def pullDocs(args):
     """Download docs and extract them into the website source.
     """
@@ -105,6 +122,13 @@ def pullRelease(args):
     print("====================")
     print("")
 
+    if args.remove_pre:
+        print("Removing Pre-Release")
+        Path("source/generated/download_pre_release.rst").write_text(
+            "*There are currently no pre-releases available ...*", encoding="utf-8"
+        )
+        return
+
     print(f"Tag: {args.tag}")
 
     apiUrl = f"https://api.github.com/repos/vkbo/novelwriter/releases/tags/{args.tag}"
@@ -119,11 +143,14 @@ def pullRelease(args):
     releaseUrl = data.get("html_url", "Unkown")
     releaseVersion = data.get("name", "Version ???")
     releaseDate = data.get("published_at", "")
+    shortVersion = data.get("tag_name", "???").lstrip("v")
     # releaseNote = data.get("body", "")
+    isPreRelease = data.get("prerelease", False)
     tarBall = data.get("tarball_url", "")
     zipBall = data.get("zipball_url", "")
     print(f"Release URL:     {releaseUrl}")
     print(f"Release Version: {releaseVersion}")
+    print(f"Release Short:   {shortVersion}")
     print(f"Release Date:    {releaseDate}")
     print(f"Release TarBall: {tarBall}")
     print(f"Release ZipBall: {zipBall}")
@@ -186,49 +213,125 @@ def pullRelease(args):
     # Update Files
     print("Updating Files")
 
-    buildFromTemplate("download_block.rst", {
-        "release_version": releaseVersion,
-        "release_date": releaseDateFmt,
-        "release_url": releaseUrl,
-        "appimage_download": pkgFiles["AppImage"]["download"],
-        "debian_download":  pkgFiles["Debian"]["download"],
-        "winexe_download": pkgFiles["WinExe"]["download"],
-        "macdmg_download": pkgFiles["MacDMG"]["download"],
-    })
-
     nmAppImage = pkgFiles["AppImage"]["name"]
     nmDebian = pkgFiles["Debian"]["name"]
     nmWinExe = pkgFiles["WinExe"]["name"]
     nmMacDMG = pkgFiles["MacDMG"]["name"]
+    nmWheel = pkgFiles["Wheel"]["name"]
 
-    buildFromTemplate("checksum_block.rst", {
-        "appimage_name": nmAppImage,
-        "appimage_shasum": shaSums[nmAppImage],
-        "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
-        "debian_name": nmDebian,
-        "debian_shasum": shaSums[nmDebian],
-        "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
-        "winexe_name": nmWinExe,
-        "winexe_shasum": shaSums[nmWinExe],
-        "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
-        "macdmg_name": nmMacDMG,
-        "macdmg_shasum": shaSums[nmMacDMG],
-        "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
-    })
+    if isPreRelease:
+        # Updating Pre-Release Info
+        buildFromTemplate("download_release.rst", {
+            "release_version": releaseVersion,
+            "release_date": releaseDateFmt,
+            "release_url": releaseUrl,
+            "appimage_name": nmAppImage,
+            "appimage_size": fmtSize(pkgFiles["AppImage"]["size"]),
+            "appimage_shasum": shaSums[nmAppImage],
+            "appimage_download": pkgFiles["AppImage"]["download"],
+            "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
+            "debian_name": nmDebian,
+            "debian_size": fmtSize(pkgFiles["Debian"]["size"]),
+            "debian_shasum": shaSums[nmDebian],
+            "debian_download":  pkgFiles["Debian"]["download"],
+            "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
+            "winexe_name": nmWinExe,
+            "winexe_size": fmtSize(pkgFiles["WinExe"]["size"]),
+            "winexe_shasum": shaSums[nmWinExe],
+            "winexe_download":  pkgFiles["WinExe"]["download"],
+            "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
+            "macdmg_name": nmMacDMG,
+            "macdmg_size": fmtSize(pkgFiles["MacDMG"]["size"]),
+            "macdmg_shasum": shaSums[nmMacDMG],
+            "macdmg_download":  pkgFiles["MacDMG"]["download"],
+            "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
+            "wheel_name": nmWheel,
+            "wheel_size": fmtSize(pkgFiles["Wheel"]["size"]),
+            "wheel_shasum": shaSums[nmWheel],
+            "wheel_download":  pkgFiles["Wheel"]["download"],
+            "wheel_shasumfile": shaFiles[f"{nmWheel}.sha256"],
+            "srczip_name": f"novelWriter-{shortVersion}.zip",
+            "srczip_download": zipBall,
+            "srctar_name": f"novelWriter-{shortVersion}.tar.gz",
+            "srctar_download": tarBall,
+        }, "download_pre_release.rst")
+
+    else:
+        # Updating Latest Release Info
+        buildFromTemplate("download_block.rst", {
+            "release_version": releaseVersion,
+            "release_date": releaseDateFmt,
+            "release_url": releaseUrl,
+            "appimage_download": pkgFiles["AppImage"]["download"],
+            "debian_download":  pkgFiles["Debian"]["download"],
+            "winexe_download": pkgFiles["WinExe"]["download"],
+            "macdmg_download": pkgFiles["MacDMG"]["download"],
+        })
+
+        buildFromTemplate("checksum_block.rst", {
+            "appimage_name": nmAppImage,
+            "appimage_shasum": shaSums[nmAppImage],
+            "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
+            "debian_name": nmDebian,
+            "debian_shasum": shaSums[nmDebian],
+            "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
+            "winexe_name": nmWinExe,
+            "winexe_shasum": shaSums[nmWinExe],
+            "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
+            "macdmg_name": nmMacDMG,
+            "macdmg_shasum": shaSums[nmMacDMG],
+            "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
+        })
+
+        buildFromTemplate("download_release.rst", {
+            "release_version": releaseVersion,
+            "release_date": releaseDateFmt,
+            "release_url": releaseUrl,
+            "appimage_name": nmAppImage,
+            "appimage_size": fmtSize(pkgFiles["AppImage"]["size"]),
+            "appimage_shasum": shaSums[nmAppImage],
+            "appimage_download": pkgFiles["AppImage"]["download"],
+            "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
+            "debian_name": nmDebian,
+            "debian_size": fmtSize(pkgFiles["Debian"]["size"]),
+            "debian_shasum": shaSums[nmDebian],
+            "debian_download":  pkgFiles["Debian"]["download"],
+            "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
+            "winexe_name": nmWinExe,
+            "winexe_size": fmtSize(pkgFiles["WinExe"]["size"]),
+            "winexe_shasum": shaSums[nmWinExe],
+            "winexe_download":  pkgFiles["WinExe"]["download"],
+            "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
+            "macdmg_name": nmMacDMG,
+            "macdmg_size": fmtSize(pkgFiles["MacDMG"]["size"]),
+            "macdmg_shasum": shaSums[nmMacDMG],
+            "macdmg_download":  pkgFiles["MacDMG"]["download"],
+            "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
+            "wheel_name": nmWheel,
+            "wheel_size": fmtSize(pkgFiles["Wheel"]["size"]),
+            "wheel_shasum": shaSums[nmWheel],
+            "wheel_download":  pkgFiles["Wheel"]["download"],
+            "wheel_shasumfile": shaFiles[f"{nmWheel}.sha256"],
+            "srczip_name": f"novelWriter-{shortVersion}.zip",
+            "srczip_download": zipBall,
+            "srctar_name": f"novelWriter-{shortVersion}.tar.gz",
+            "srctar_download": tarBall,
+        })
 
     print("")
 
     return
 
 
-def buildFromTemplate(name, data):
+def buildFromTemplate(name, data, output=None):
     """Write data to a template.
     """
+    output = output or name
     templateDir = Path("templates")
     generateDir = Path("source/generated")
     templateText = (templateDir / name).read_text().format(**data)
-    (generateDir / name).write_text(templateText, encoding="utf-8")
-    print(f"Updated: {generateDir / name}")
+    (generateDir / output).write_text(templateText, encoding="utf-8")
+    print(f"Updated: {generateDir / output}")
     return
 
 
@@ -237,13 +340,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     subParsers = parser.add_subparsers()
 
-    pDocs = subParsers.add_parser("docs")
+    pDocs = subParsers.add_parser("docs", help="Update documentation")
     pDocs.add_argument("--branch", type=str, help="Pull docs from a specific branch")
     pDocs.add_argument("--tag", type=str, help="Pull docs from a specific tag")
     pDocs.set_defaults(func=pullDocs)
 
-    pRelease = subParsers.add_parser("release")
+    pRelease = subParsers.add_parser("release", help="Update release")
     pRelease.add_argument("--tag", type=str, help="Pull release info from a specific tag")
+    pRelease.add_argument("--remove-pre", action="store_true", help="Remove pre release")
     pRelease.set_defaults(func=pullRelease)
 
     args = parser.parse_args()
