@@ -3,6 +3,7 @@
 novelWriter.io Maintenance Script
 """
 
+import re
 import sys
 import json
 import shutil
@@ -11,6 +12,9 @@ import urllib.request
 
 from pathlib import Path
 from datetime import datetime
+
+from tools import DownloadAssets
+from tools.assets import AssetType
 
 
 def updateSetting(name, value):
@@ -29,22 +33,28 @@ def updateSetting(name, value):
     return
 
 
-def fmtSize(size):
-    """Formats a size with kB, MB, GB, etc.
+def processReleaseNotes(text):
+    """Format the release notes text.
     """
-    value = float(size)
-    for pF in ["k", "M", "G", "T", "P", "E"]:
-        value /= 1000.0
-        if value < 1000.0:
-            if value < 10.0:
-                return f"{value:5.2f} {pF}B"
-            elif value < 100.0:
-                return f"{value:5.1f} {pF}B"
-            else:
-                return f"{value:3.0f} {pF}B"
+    def ghLinks(x):
+        return f"`#{x.group(1)} <https://github.com/vkbo/novelWriter/issues/{x.group(1)}>`_"
 
-    return str(value)
+    buffer = []
+    for line in text.splitlines():
+        if line.startswith("###"):
+            title = line.lstrip("#").lstrip()
+            buffer.append(f".. rubric:: {title}")
+        else:
+            line = line.replace("`", "``")
+            line = re.sub(r"#([0-9]+)\b", ghLinks, line)
+            buffer.append(line)
 
+    return "\n".join(buffer)
+
+
+##
+#  Documentation
+##
 
 def pullDocs(args):
     """Download docs and extract them into the website source.
@@ -124,6 +134,10 @@ def pullDocs(args):
     return
 
 
+##
+#  Releases
+##
+
 def pullRelease(args):
     """Download release info from the GitHub API.
     """
@@ -154,7 +168,7 @@ def pullRelease(args):
     releaseVersion = data.get("name", "Version ???")
     releaseDate = data.get("published_at", "")
     shortVersion = data.get("tag_name", "???").lstrip("v")
-    # releaseNote = data.get("body", "")
+    releaseNotes = data.get("body", "")
     isPreRelease = data.get("prerelease", False)
     tarBall = data.get("tarball_url", "")
     zipBall = data.get("zipball_url", "")
@@ -167,196 +181,154 @@ def pullRelease(args):
     print("")
 
     releaseDateFmt = datetime.fromisoformat(releaseDate).strftime("%B %-d, %Y")
-
-    pkgFiles = {}
-    shaFiles = {}
-    shaSums = {}
-
-    def processAsset(asset):
-        return {
-            "name": asset.get("name"),
-            "download": asset.get("browser_download_url"),
-            "size": asset.get("size", -1),
-        }
-
-    for asset in data.get("assets", []):
-        assetName = asset.get("name")
-        if not assetName:
-            continue
-
-        if assetName.endswith(".deb"):
-            print(f"Found Asset: {assetName}")
-            pkgFiles["Debian"] = processAsset(asset)
-        elif assetName.endswith(".AppImage") and "2_28" in assetName:
-            print(f"Found Asset: {assetName}")
-            pkgFiles["AppImage"] = processAsset(asset)
-        elif assetName.endswith(".AppImage") and "2_24" in assetName:
-            print(f"Found Asset: {assetName}")
-            pkgFiles["AppImageLegacy"] = processAsset(asset)
-        elif assetName.endswith("setup.exe"):
-            print(f"Found Asset: {assetName}")
-            pkgFiles["WinExe"] = processAsset(asset)
-        elif assetName.endswith(".dmg"):
-            print(f"Found Asset: {assetName}")
-            pkgFiles["MacDMG"] = processAsset(asset)
-        elif assetName.endswith(".whl"):
-            print(f"Found Asset: {assetName}")
-            pkgFiles["Wheel"] = processAsset(asset)
-        elif assetName.endswith(".sha256"):
-            shaFiles[assetName] = asset.get("browser_download_url", "error")
-
-    # Download ShaSum Files
-    print("")
-    print("Checking Sha Files")
-    tempDir = Path("_temp/shafiles")
-    tempDir.mkdir(exist_ok=True)
-    for shaFile, shaUrl in shaFiles.items():
-        shaPath = tempDir / shaFile
-        if shaPath.is_file():
-            print(f"Found: {shaFile}")
-        else:
-            urllib.request.urlretrieve(shaUrl, shaPath)
-            print(f"Downloaded: {shaFile}")
-
-        shaData = shaPath.read_text()
-        shaSums[shaData[66:].rstrip()] = shaData[:64]
+    assets = DownloadAssets(data)
 
     print("")
 
     # Update Files
     print("Updating Files")
 
-    nmAppImage = pkgFiles["AppImage"]["name"]
-    nmAppImageLegacy = pkgFiles["AppImageLegacy"]["name"]
-    nmDebian = pkgFiles["Debian"]["name"]
-    nmWinExe = pkgFiles["WinExe"]["name"]
-    nmMacDMG = pkgFiles["MacDMG"]["name"]
-    nmWheel = pkgFiles["Wheel"]["name"]
+    aAppImg = assets.getAsset(AssetType.APP_IMAGE)
+    aAppOld = assets.getAsset(AssetType.APP_IMAGE_OLD)
+    aDebian = assets.getAsset(AssetType.DEBIAN)
+    aWinExe = assets.getAsset(AssetType.WINDOWS_EXE)
+    aMacDmg = assets.getAsset(AssetType.MAC_DMG)
+    aPWheel = assets.getAsset(AssetType.PYTHON_WHEEL)
 
     if isPreRelease:
         # Updating Pre-Release Info
-        buildFromTemplate("download_release.rst", {
+        buildFromTemplate("download_release.rst", "download_pre_release.rst", {
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
-            "appimage_name": nmAppImage,
-            "appimage_size": fmtSize(pkgFiles["AppImage"]["size"]),
-            "appimage_shasum": shaSums[nmAppImage],
-            "appimage_download": pkgFiles["AppImage"]["download"],
-            "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
-            "appimagelegacy_name": nmAppImageLegacy,
-            "appimagelegacy_size": fmtSize(pkgFiles["AppImageLegacy"]["size"]),
-            "appimagelegacy_shasum": shaSums[nmAppImageLegacy],
-            "appimagelegacy_download": pkgFiles["AppImageLegacy"]["download"],
-            "appimagelegacy_shasumfile": shaFiles[f"{nmAppImageLegacy}.sha256"],
-            "debian_name": nmDebian,
-            "debian_size": fmtSize(pkgFiles["Debian"]["size"]),
-            "debian_shasum": shaSums[nmDebian],
-            "debian_download":  pkgFiles["Debian"]["download"],
-            "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
-            "winexe_name": nmWinExe,
-            "winexe_size": fmtSize(pkgFiles["WinExe"]["size"]),
-            "winexe_shasum": shaSums[nmWinExe],
-            "winexe_download":  pkgFiles["WinExe"]["download"],
-            "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
-            "macdmg_name": nmMacDMG,
-            "macdmg_size": fmtSize(pkgFiles["MacDMG"]["size"]),
-            "macdmg_shasum": shaSums[nmMacDMG],
-            "macdmg_download":  pkgFiles["MacDMG"]["download"],
-            "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
-            "wheel_name": nmWheel,
-            "wheel_size": fmtSize(pkgFiles["Wheel"]["size"]),
-            "wheel_shasum": shaSums[nmWheel],
-            "wheel_download":  pkgFiles["Wheel"]["download"],
-            "wheel_shasumfile": shaFiles[f"{nmWheel}.sha256"],
+            "appimage_name": aAppImg.assetName,
+            "appimage_size": aAppImg.assetSizeString,
+            "appimage_shasum": aAppImg.assetShaSum,
+            "appimage_download": aAppImg.assetUrl,
+            "appimage_shasumfile": aAppImg.assetShaSumUrl,
+            "appimagelegacy_name": aAppOld.assetName,
+            "appimagelegacy_size": aAppOld.assetSizeString,
+            "appimagelegacy_shasum": aAppOld.assetShaSum,
+            "appimagelegacy_download": aAppOld.assetUrl,
+            "appimagelegacy_shasumfile": aAppOld.assetShaSumUrl,
+            "debian_name": aDebian.assetName,
+            "debian_size": aDebian.assetSizeString,
+            "debian_shasum": aDebian.assetShaSum,
+            "debian_download": aDebian.assetUrl,
+            "debian_shasumfile": aDebian.assetShaSumUrl,
+            "winexe_name": aWinExe.assetName,
+            "winexe_size": aWinExe.assetSizeString,
+            "winexe_shasum": aWinExe.assetShaSum,
+            "winexe_download": aWinExe.assetUrl,
+            "winexe_shasumfile": aWinExe.assetShaSumUrl,
+            "macdmg_name": aMacDmg.assetName,
+            "macdmg_size": aMacDmg.assetSizeString,
+            "macdmg_shasum": aMacDmg.assetShaSum,
+            "macdmg_download": aMacDmg.assetUrl,
+            "macdmg_shasumfile": aMacDmg.assetShaSumUrl,
+            "wheel_name": aPWheel.assetName,
+            "wheel_size": aPWheel.assetSizeString,
+            "wheel_shasum": aPWheel.assetShaSum,
+            "wheel_download": aPWheel.assetUrl,
+            "wheel_shasumfile": aPWheel.assetShaSumUrl,
             "srczip_name": f"novelWriter-{shortVersion}.zip",
             "srczip_download": zipBall,
             "srctar_name": f"novelWriter-{shortVersion}.tar.gz",
             "srctar_download": tarBall,
-        }, "download_pre_release.rst")
+        })
+
+        Path("source/generated/pre_release_notes.rst").write_text(
+            processReleaseNotes(releaseNotes), encoding="utf-8"
+        )
 
     else:
         # Updating Latest Release Info
-        buildFromTemplate("download_block.rst", {
+        buildFromTemplate("download_block.rst", "download_block.rst", {
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
-            "appimage_download": pkgFiles["AppImage"]["download"],
-            "debian_download":  pkgFiles["Debian"]["download"],
-            "winexe_download": pkgFiles["WinExe"]["download"],
-            "macdmg_download": pkgFiles["MacDMG"]["download"],
+            "appimage_download": aAppImg.assetUrl,
+            "debian_download": aDebian.assetUrl,
+            "winexe_download": aWinExe.assetUrl,
+            "macdmg_download": aMacDmg.assetUrl,
         })
 
-        buildFromTemplate("checksum_block.rst", {
-            "appimage_name": nmAppImage,
-            "appimage_shasum": shaSums[nmAppImage],
-            "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
-            "debian_name": nmDebian,
-            "debian_shasum": shaSums[nmDebian],
-            "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
-            "winexe_name": nmWinExe,
-            "winexe_shasum": shaSums[nmWinExe],
-            "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
-            "macdmg_name": nmMacDMG,
-            "macdmg_shasum": shaSums[nmMacDMG],
-            "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
+        buildFromTemplate("checksum_block.rst", "checksum_block.rst", {
+            "appimage_name": aAppImg.assetName,
+            "appimage_shasum": aAppImg.assetShaSum,
+            "appimage_shasumfile": aAppImg.assetShaSumUrl,
+            "debian_name": aDebian.assetName,
+            "debian_shasum": aDebian.assetShaSum,
+            "debian_shasumfile": aDebian.assetShaSumUrl,
+            "winexe_name": aWinExe.assetName,
+            "winexe_shasum": aWinExe.assetShaSum,
+            "winexe_shasumfile": aWinExe.assetShaSumUrl,
+            "macdmg_name": aMacDmg.assetName,
+            "macdmg_shasum": aMacDmg.assetShaSum,
+            "macdmg_shasumfile": aMacDmg.assetShaSumUrl,
         })
 
-        buildFromTemplate("download_release.rst", {
+        buildFromTemplate("download_release.rst", "download_release.rst", {
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
-            "appimage_name": nmAppImage,
-            "appimage_size": fmtSize(pkgFiles["AppImage"]["size"]),
-            "appimage_shasum": shaSums[nmAppImage],
-            "appimage_download": pkgFiles["AppImage"]["download"],
-            "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
-            "appimagelegacy_name": nmAppImageLegacy,
-            "appimagelegacy_size": fmtSize(pkgFiles["AppImageLegacy"]["size"]),
-            "appimagelegacy_shasum": shaSums[nmAppImageLegacy],
-            "appimagelegacy_download": pkgFiles["AppImageLegacy"]["download"],
-            "appimagelegacy_shasumfile": shaFiles[f"{nmAppImageLegacy}.sha256"],
-            "debian_name": nmDebian,
-            "debian_size": fmtSize(pkgFiles["Debian"]["size"]),
-            "debian_shasum": shaSums[nmDebian],
-            "debian_download":  pkgFiles["Debian"]["download"],
-            "debian_shasumfile": shaFiles[f"{nmDebian}.sha256"],
-            "winexe_name": nmWinExe,
-            "winexe_size": fmtSize(pkgFiles["WinExe"]["size"]),
-            "winexe_shasum": shaSums[nmWinExe],
-            "winexe_download":  pkgFiles["WinExe"]["download"],
-            "winexe_shasumfile": shaFiles[f"{nmWinExe}.sha256"],
-            "macdmg_name": nmMacDMG,
-            "macdmg_size": fmtSize(pkgFiles["MacDMG"]["size"]),
-            "macdmg_shasum": shaSums[nmMacDMG],
-            "macdmg_download":  pkgFiles["MacDMG"]["download"],
-            "macdmg_shasumfile": shaFiles[f"{nmMacDMG}.sha256"],
-            "wheel_name": nmWheel,
-            "wheel_size": fmtSize(pkgFiles["Wheel"]["size"]),
-            "wheel_shasum": shaSums[nmWheel],
-            "wheel_download":  pkgFiles["Wheel"]["download"],
-            "wheel_shasumfile": shaFiles[f"{nmWheel}.sha256"],
+            "appimage_name": aAppImg.assetName,
+            "appimage_size": aAppImg.assetSizeString,
+            "appimage_shasum": aAppImg.assetShaSum,
+            "appimage_download": aAppImg.assetUrl,
+            "appimage_shasumfile": aAppImg.assetShaSumUrl,
+            "appimagelegacy_name": aAppOld.assetName,
+            "appimagelegacy_size": aAppOld.assetSizeString,
+            "appimagelegacy_shasum": aAppOld.assetShaSum,
+            "appimagelegacy_download": aAppOld.assetUrl,
+            "appimagelegacy_shasumfile": aAppOld.assetShaSumUrl,
+            "debian_name": aDebian.assetName,
+            "debian_size": aDebian.assetSizeString,
+            "debian_shasum": aDebian.assetShaSum,
+            "debian_download": aDebian.assetUrl,
+            "debian_shasumfile": aDebian.assetShaSumUrl,
+            "winexe_name": aWinExe.assetName,
+            "winexe_size": aWinExe.assetSizeString,
+            "winexe_shasum": aWinExe.assetShaSum,
+            "winexe_download": aWinExe.assetUrl,
+            "winexe_shasumfile": aWinExe.assetShaSumUrl,
+            "macdmg_name": aMacDmg.assetName,
+            "macdmg_size": aMacDmg.assetSizeString,
+            "macdmg_shasum": aMacDmg.assetShaSum,
+            "macdmg_download": aMacDmg.assetUrl,
+            "macdmg_shasumfile": aMacDmg.assetShaSumUrl,
+            "wheel_name": aPWheel.assetName,
+            "wheel_size": aPWheel.assetSizeString,
+            "wheel_shasum": aPWheel.assetShaSum,
+            "wheel_download": aPWheel.assetUrl,
+            "wheel_shasumfile": aPWheel.assetShaSumUrl,
             "srczip_name": f"novelWriter-{shortVersion}.zip",
             "srczip_download": zipBall,
             "srctar_name": f"novelWriter-{shortVersion}.tar.gz",
             "srctar_download": tarBall,
         })
+
+        Path("source/generated/release_notes.rst").write_text(
+            processReleaseNotes(releaseNotes), encoding="utf-8"
+        )
 
     print("")
 
     return
 
 
-def buildFromTemplate(name, data, output=None):
+def buildFromTemplate(name, output, data):
     """Write data to a template.
     """
     output = output or name
     templateDir = Path("templates")
     generateDir = Path("source/generated")
     templateText = (templateDir / name).read_text().format(**data)
+    if not output:
+        return templateText
     (generateDir / output).write_text(templateText, encoding="utf-8")
     print(f"Updated: {generateDir / output}")
-    return
+    return None
 
 
 if __name__ == "__main__":
