@@ -187,9 +187,12 @@ def pullRelease(args):
         if assetName.endswith(".deb"):
             print(f"Found Asset: {assetName}")
             pkgFiles["Debian"] = processAsset(asset)
-        elif assetName.endswith(".AppImage"):
+        elif assetName.endswith(".AppImage") and "2_28" in assetName:
             print(f"Found Asset: {assetName}")
             pkgFiles["AppImage"] = processAsset(asset)
+        elif assetName.endswith(".AppImage") and "2_24" in assetName:
+            print(f"Found Asset: {assetName}")
+            pkgFiles["AppImageLegacy"] = processAsset(asset)
         elif assetName.endswith("setup.exe"):
             print(f"Found Asset: {assetName}")
             pkgFiles["WinExe"] = processAsset(asset)
@@ -224,6 +227,7 @@ def pullRelease(args):
     print("Updating Files")
 
     nmAppImage = pkgFiles["AppImage"]["name"]
+    nmAppImageLegacy = pkgFiles["AppImageLegacy"]["name"]
     nmDebian = pkgFiles["Debian"]["name"]
     nmWinExe = pkgFiles["WinExe"]["name"]
     nmMacDMG = pkgFiles["MacDMG"]["name"]
@@ -240,6 +244,11 @@ def pullRelease(args):
             "appimage_shasum": shaSums[nmAppImage],
             "appimage_download": pkgFiles["AppImage"]["download"],
             "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
+            "appimagelegacy_name": nmAppImageLegacy,
+            "appimagelegacy_size": fmtSize(pkgFiles["AppImageLegacy"]["size"]),
+            "appimagelegacy_shasum": shaSums[nmAppImageLegacy],
+            "appimagelegacy_download": pkgFiles["AppImageLegacy"]["download"],
+            "appimagelegacy_shasumfile": shaFiles[f"{nmAppImageLegacy}.sha256"],
             "debian_name": nmDebian,
             "debian_size": fmtSize(pkgFiles["Debian"]["size"]),
             "debian_shasum": shaSums[nmDebian],
@@ -302,6 +311,11 @@ def pullRelease(args):
             "appimage_shasum": shaSums[nmAppImage],
             "appimage_download": pkgFiles["AppImage"]["download"],
             "appimage_shasumfile": shaFiles[f"{nmAppImage}.sha256"],
+            "appimagelegacy_name": nmAppImageLegacy,
+            "appimagelegacy_size": fmtSize(pkgFiles["AppImageLegacy"]["size"]),
+            "appimagelegacy_shasum": shaSums[nmAppImageLegacy],
+            "appimagelegacy_download": pkgFiles["AppImageLegacy"]["download"],
+            "appimagelegacy_shasumfile": shaFiles[f"{nmAppImageLegacy}.sha256"],
             "debian_name": nmDebian,
             "debian_size": fmtSize(pkgFiles["Debian"]["size"]),
             "debian_shasum": shaSums[nmDebian],

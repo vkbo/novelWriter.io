@@ -13,10 +13,16 @@ Linux
 -----
 
 **AppImage**
-   The AppImage should run on any Linux distro. See the `AppImage website`_ for more info.
+   The AppImage should run on any recent Linux distro. See the `AppImage website`_ for more info.
+
+   You should try the ``manylinux_2_28`` version first. This may not work for older distos, in
+   which case you may want to download the ``manylinux_2_24`` version instead.
 
    | **Download:** :octicon:`download` `{appimage_name} <{appimage_download}>`__ [ {appimage_size} ]
    | **Checksum:** :octicon:`hash` ``{appimage_shasum}`` :octicon:`download` `ShaSum File <{appimage_shasumfile}>`__
+   |
+   | **Download:** :octicon:`download` `{appimagelegacy_name} <{appimagelegacy_download}>`__ [ {appimagelegacy_size} ]
+   | **Checksum:** :octicon:`hash` ``{appimagelegacy_shasum}`` :octicon:`download` `ShaSum File <{appimagelegacy_shasumfile}>`__
 
 **Debian Package**
    The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_.
