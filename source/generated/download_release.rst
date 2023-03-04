@@ -55,7 +55,7 @@ Other Packages
    | **Checksum:** :octicon:`hash` ``383e8c54ab4395b5c712156dae5aa23a828725689b964f9dd69bf8b9a58befbc`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelWriter-2.0.6-py3-none-any.whl.sha256>`__
 
 **Source Code**
-   The source code package are archived files of the entire source code. See also the `novelWriter Repository`_.
+   The source code packages are archived files of the entire source code. See also the `novelWriter Repository`_.
 
    | **Download:** :octicon:`download` `novelWriter-2.0.6.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v2.0.6>`__
    | **Download:** :octicon:`download` `novelWriter-2.0.6.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v2.0.6>`__
