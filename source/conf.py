@@ -79,10 +79,11 @@ html_theme_options = {
         "sizes": "180x180",
         "href": "novelwriter-icon-180.png",
     }],
-    "header_links_before_dropdown": 6,
+    "header_links_before_dropdown": 7,
     "external_links": [
         {"name": "Issues", "url": "https://github.com/vkbo/novelWriter/issues"},
-        {"name": "Discussions", "url": "https://github.com/vkbo/novelWriter/discussions"}
+        {"name": "Discussions", "url": "https://github.com/vkbo/novelWriter/discussions"},
+        {"name": "Donate", "url": "https://ko-fi.com/jadzia626"},
     ],
     "pygment_light_style": "tango",
     "pygment_dark_style": "dracula",

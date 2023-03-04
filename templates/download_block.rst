@@ -5,7 +5,7 @@ Latest Release
 
 **{release_version}** -- Released on {release_date} -- :octicon:`mark-github` `Release Notes`_
 
-.. grid:: 3
+.. grid:: 1 1 3 3
    :margin: 4 4 0 0
    :gutter: 4
    :padding: 0
