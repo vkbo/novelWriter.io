@@ -10,6 +10,16 @@ About
    self
    contribute
    donate
+   docs
+
+.. toctree::
+   :caption: Useful Links
+   :hidden:
+
+   Source Code <https://github.com/vkbo/novelWriter>
+   Features & Issues <https://github.com/vkbo/novelWriter/issues>
+   Discussions <https://github.com/vkbo/novelWriter/discussions>
+   Translations <https://crowdin.com/project/novelwriter>
 
 The idea to make novelWriter came about because most good software i could find for fiction writing
 seemed to focus its development on Windows and MacOS. Even those that had once supported Linux, had
