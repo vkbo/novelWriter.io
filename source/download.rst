@@ -1,8 +1,8 @@
 .. _main_download:
 
-********
-Download
-********
+*********
+Downloads
+*********
 
 This page includes all available packages for the latest release.
 
