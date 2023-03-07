@@ -8,9 +8,9 @@ About
    :hidden:
 
    self
+   docs
    contribute
    donate
-   docs
 
 .. toctree::
    :caption: Useful Links

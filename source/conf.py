@@ -44,7 +44,7 @@ html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_context = {
-    "default_mode": "light",
+    "default_mode": "auto",
     "build_time": datetime.now().strftime("%Y-%m-%d %H:%M"),
 }
 html_sidebars = {

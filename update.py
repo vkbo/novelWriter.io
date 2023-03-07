@@ -127,6 +127,8 @@ def pullDocs(args):
     docsIndex = docsDst / "index.rst"
     indexText = docsIndex.read_text(encoding="utf-8")
     newText = [
+        ".. _main_documentation:",
+        "",
         "#############",
         "Documentation",
         "#############",

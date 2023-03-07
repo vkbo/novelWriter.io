@@ -4,10 +4,10 @@
 Documentation
 *************
 
-This website includes the documentation for the latest full release of novelWriter as a
-convenience. However, the main documentation page is hosted on ReadTheDocs. The version hosted
-there has documentation available for multiple releases of novelWriter, including for the current
-development efforts.
+This website includes the :ref:`documentation <main_documentation>` for the latest full release of
+novelWriter as a convenience. However, the main documentation page is hosted on ReadTheDocs. The
+version hosted there has documentation available for multiple releases of novelWriter, including
+for the current development efforts.
 
 The "Stable" version of the documentation always points to the latest release, and should be the
 same documentation as available on this website.
