@@ -28,7 +28,7 @@ version = release
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinx_design"]
+extensions = ["sphinx_design", "sphinx_favicon"]
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -66,19 +66,6 @@ html_theme_options = {
         "image_light": "_static/novelwriter-light.png",
         "image_dark": "_static/novelwriter-dark.png",
     },
-    "favicons": [{
-        "rel": "icon",
-        "sizes": "16x16",
-        "href": "novelwriter-icon-16.png",
-    }, {
-        "rel": "icon",
-        "sizes": "32x32",
-        "href": "novelwriter-icon-32.png",
-    }, {
-        "rel": "apple-touch-icon",
-        "sizes": "180x180",
-        "href": "novelwriter-icon-180.png",
-    }],
     "header_links_before_dropdown": 7,
     "external_links": [
         {"name": "Issues", "url": "https://github.com/vkbo/novelWriter/issues"},
@@ -101,4 +88,12 @@ html_theme_options = {
         "url": "https://pypi.org/project/novelWriter",
         "icon": "fa-solid fa-box",
     }],
+}
+
+# -- Extension settings ------------------------------------------------------
+
+favicons = {
+    "rel": "icon",
+    "href": "novelwriter-icon.svg",
+    "type": "image/svg+xml"
 }
