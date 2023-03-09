@@ -40,14 +40,18 @@ def processReleaseNotes(text):
         return f"`#{x.group(1)} <https://github.com/vkbo/novelWriter/issues/{x.group(1)}>`_"
 
     buffer = []
-    buffer.append(".. dropdown:: Release Notes")
-    buffer.append("   :animate: fade-in-slide-down")
-    buffer.append("   :icon: info")
-    buffer.append("")
     for line in text.splitlines():
         if line.startswith("###"):
             title = line.lstrip("#").lstrip()
-            buffer.append(f"   .. rubric:: {title}")
+            icon = None
+            if "release" in title.lower():
+                icon = "info"
+            elif "changelog" in title.lower():
+                icon = "tasklist"
+            buffer.append(f".. dropdown:: {title.title()}")
+            buffer.append("   :animate: fade-in-slide-down")
+            if icon:
+                buffer.append(f"   :icon: {icon}")
         else:
             line = line.replace("`", "``")
             line = re.sub(r"#([0-9]+)\b", ghLinks, line)
@@ -170,7 +174,11 @@ def pullRelease(args):
 
     urlData = urllib.request.urlopen(urlReq, timeout=10)
     data = json.loads(urlData.read().decode())
-    print(json.dumps(data, indent=2))
+
+    outDir = Path("_temp")
+    outDir.mkdir(exist_ok=True)
+    with open(outDir / "api_data.json", mode="w") as apiDump:
+        json.dump(data, apiDump, indent=2)
 
     releaseUrl = data.get("html_url", "Unkown")
     releaseVersion = data.get("name", "Version ???")

@@ -70,11 +70,11 @@ def fmtSize(size):
         value /= 1000.0
         if value < 1000.0:
             if value < 10.0:
-                return f"{value:5.2f} {pF}B"
+                return f"{value:.2f} {pF}B"
             elif value < 100.0:
-                return f"{value:5.1f} {pF}B"
+                return f"{value:.1f} {pF}B"
             else:
-                return f"{value:3.0f} {pF}B"
+                return f"{value:.0f} {pF}B"
 
     return str(value)
 
@@ -215,48 +215,50 @@ class DownloadAssets:
             asset = self._assets[aType]
             if not isinstance(asset, Asset):
                 return
-            target.append(f"      **{ASSET_TEXT[aType][0]}**")
-            target.append(f"         {ASSET_TEXT[aType][1]}")
+            target.append(f"**{ASSET_TEXT[aType][0]}**")
+            target.append(f"   {ASSET_TEXT[aType][1]}")
             target.append("")
             target.append(
-                f"         | **Download:** :octicon:`download` `{asset.assetName} "
+                f"   | **Download:** :octicon:`download` `{asset.assetName} "
                 f"<{asset.assetUrl}>`__ [ {asset.assetSizeString} ]"
             )
             target.append(
-                f"         | **Checksum:** :octicon:`hash` ``{asset.assetShaSum}`` "
+                f"   | **Checksum:** :octicon:`hash` ``{asset.assetShaSum}`` "
                 f":octicon:`download` `ShaSum File <{asset.assetShaSumUrl}>`__"
             )
             target.append("")
             return
 
         buffer = []
-        buffer.append(".. tab-set::")
-        buffer.append("")
-        buffer.append("   .. tab-item:: Linux")
+        buffer.append("Linux")
+        buffer.append("-----")
         buffer.append("")
         appendType(AssetType.APP_IMAGE, buffer)
         appendType(AssetType.APP_IMAGE_OLD, buffer)
         appendType(AssetType.DEBIAN, buffer)
         buffer.append("")
-        buffer.append("   .. tab-item:: Windows")
+        buffer.append("Windows")
+        buffer.append("-------")
         buffer.append("")
         appendType(AssetType.WINDOWS_EXE, buffer)
         buffer.append("")
-        buffer.append("   .. tab-item:: MacOS")
+        buffer.append("MacOS")
+        buffer.append("-----")
         buffer.append("")
         appendType(AssetType.MAC_DMG, buffer)
         buffer.append("")
-        buffer.append("   .. tab-item:: Other Packages")
+        buffer.append("Other Packages")
+        buffer.append("--------------")
         buffer.append("")
         appendType(AssetType.PYTHON_WHEEL, buffer)
-        buffer.append("      **Source Code**")
+        buffer.append("**Source Code**")
         buffer.append(
-            "         The source code packages are archived files of the entire source code. "
+            "The source code packages are archived files of the entire source code. "
             "See also the `novelWriter Repository`_."
         )
         buffer.append("")
-        buffer.append(f"         | **Download:** :octicon:`download` `{zipName} <{zipUrl}>`__")
-        buffer.append(f"         | **Download:** :octicon:`download` `{tarName} <{tarUrl}>`__")
+        buffer.append(f"| **Download:** :octicon:`download` `{zipName} <{zipUrl}>`__")
+        buffer.append(f"| **Download:** :octicon:`download` `{tarName} <{tarUrl}>`__")
         buffer.append("")
 
         return "\n".join(buffer)
