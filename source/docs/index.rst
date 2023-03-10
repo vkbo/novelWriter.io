@@ -17,6 +17,7 @@ editor that allows for easy organisation of text and notes, using human readable
 storage for robustness.
 
 .. figure:: images/screenshot_multi.png
+   :class: dark-light
    :align: center
    :width: 500
 
@@ -31,7 +32,7 @@ as well. novelWriter can also be run directly from the Python source, or install
 the pip tool. See :ref:`a_started` for more details.
 
 .. note::
-   Version 1.3 introduced a few changes that will require you to make some minor modifications to
+   Release 1.5 introduced a few changes that will require you to make some minor modifications to
    some of the headings in your project. It should be fairly quick and straightforward. Please see
    the :ref:`a_prjfmt_1_3` section for more details.
 
