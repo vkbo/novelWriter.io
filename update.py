@@ -6,15 +6,13 @@ novelWriter.io Maintenance Script
 import re
 import sys
 import json
-import shutil
 import argparse
 import urllib.request
 
 from pathlib import Path
 from datetime import datetime
 
-from tools import DownloadAssets
-from tools.assets import AssetType
+from tools import DownloadAssets, Documentation, AssetType
 
 
 def updateSetting(name, value):
@@ -74,70 +72,21 @@ def pullDocs(args):
     print("============================")
     print("")
 
-    dlUrl = ""
-    dlZip = ""
     if args.branch:
-        dlUrl = f"https://github.com/vkbo/novelWriter/archive/refs/heads/{args.branch}.zip"
-        dlZip = f"novelWriter-{args.branch}.zip"
+        target = args.branch
+        isBranch = True
     elif args.tag:
-        dlUrl = f"https://github.com/vkbo/novelWriter/archive/refs/tags/{args.tag}.zip"
-        dlZip = f"novelWriter-{args.tag.lstrip('v')}.zip"
+        target = args.tag
+        isBranch = False
     else:
         print("ERROR: Not tag or branch specified")
         sys.exit(1)
 
-    outDir = Path("_temp")
-    outDir.mkdir(exist_ok=True)
+    docs = Documentation(target, isBranch=isBranch)
+    docs.pullDocs()
+    docs.writeDocsCopy()
 
-    print(f"Downloading: {dlUrl}")
-    zipFile = outDir / dlZip
-    urllib.request.urlretrieve(dlUrl, zipFile)
-
-    extPath = outDir / zipFile.stem
-    docsSrc = extPath / "docs" / "source"
-    docsDst = Path("source/docs")
-
-    print("Extracting ... ", end="")
-    if extPath.exists():
-        shutil.rmtree(extPath)
-    shutil.unpack_archive(zipFile, outDir)
-    print("Done")
-
-    release = "unknown"
-    with open(extPath / "novelwriter" / "__init__.py") as inFile:
-        for aLine in inFile:
-            if aLine.startswith("__version__"):
-                release = aLine.split('"')[1].strip()
-                break
-
-    updateSetting("docVersion", release)
-    print(f"Release: {release}")
-
-    if docsDst.exists():
-        print("Deleting old docs ... ", end="")
-        shutil.rmtree(docsDst)
-        print("Done")
-
-    docsDst.mkdir()
-    for item in docsSrc.iterdir():
-        if item.is_file() and item.suffix in (".rst", ".pdf"):
-            print(f"Copying: {item}")
-            shutil.copyfile(item, docsDst / item.name)
-        elif item.is_dir() and item.name == "images":
-            print(f"Copying: {item}")
-            shutil.copytree(item, docsDst / item.name)
-
-    # Change the Main Heading
-    docsIndex = docsDst / "index.rst"
-    indexText = docsIndex.read_text(encoding="utf-8")
-    newText = [
-        ".. _main_documentation:",
-        "",
-        "#############",
-        "Documentation",
-        "#############",
-    ] + indexText.splitlines()[3:]
-    docsIndex.write_text("\n".join(newText), encoding="utf-8")
+    updateSetting("docVersion", docs.release)
 
     print("")
     print("Docs updated")

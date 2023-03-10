@@ -1,16 +1,14 @@
 .. _main_documentation:
 
-#############
+*************
 Documentation
-#############
+*************
 
-.. image:: images/novelwriter_logo.png
-   :align: right
-   :width: 48
+| **Release Version:** 2.0.6
+| **Release Date:** Sunday, 26 February 2023
+| **Updated:** Friday, 10 March 2023
 
-| **For Release:** |release|
-| **Last Updated:** |today|
-|
+**PDF:** :download:`novelWriter-2.0.6.pdf`
 
 novelWriter is an open source plain text editor designed for writing novels assembled from many
 smaller text documents. It uses a minimal formatting syntax inspired by Markdown, and adds a meta
@@ -33,7 +31,7 @@ as well. novelWriter can also be run directly from the Python source, or install
 the pip tool. See :ref:`a_started` for more details.
 
 .. note::
-   Version 1.5 introduced a few changes that will require you to make some minor modifications to
+   Version 1.3 introduced a few changes that will require you to make some minor modifications to
    some of the headings in your project. It should be fairly quick and straightforward. Please see
    the :ref:`a_prjfmt_1_3` section for more details.
 
