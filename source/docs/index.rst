@@ -6,7 +6,7 @@ Documentation
 
 | **Release Version:** 2.0.6
 | **Release Date:** Sunday, 26 February 2023
-| **Updated:** Monday, 20 March 2023
+| **Updated:** Tuesday, 4 April 2023
 
 **PDF:** :download:`novelWriter-2.0.6.pdf`
 
@@ -39,7 +39,7 @@ the pip tool. See :ref:`a_started` for more details.
 **Useful Links**
 
 * Website: https://novelwriter.io
-* Documentation: https://novelwriter.readthedocs.io
+* Documentation: https://docs.novelwriter.io
 * Internationalisation: https://crowdin.com/project/novelwriter
 * Source Code: https://github.com/vkbo/novelWriter
 * Source Releases: https://github.com/vkbo/novelWriter/releases

@@ -161,7 +161,7 @@ class Documentation:
 
         indexLines = indexText.splitlines()
         for n, line in enumerate(indexLines):
-            if line.startswith("novelWriter"):
+            if line.startswith("novelWriter is an"):
                 indexBuffer += indexLines[n:]
                 break
         else:
