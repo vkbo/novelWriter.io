@@ -1,9 +1,9 @@
 Latest Release
 ==============
 
-.. _Release Notes: https://github.com/vkbo/novelWriter/releases/tag/v2.0.6
+.. _Release Notes: https://github.com/vkbo/novelWriter/releases/tag/v2.0.7
 
-**Version 2.0.6** -- Released on February 26, 2023 -- :octicon:`mark-github` `Release Notes`_
+**Version 2.0.7** -- Released on April 16, 2023 -- :octicon:`mark-github` `Release Notes`_
 
 .. grid:: 1 1 3 3
    :margin: 4 4 0 0
@@ -24,8 +24,8 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelWriter-2.0.6-py3.10-manylinux_2_28_x86_64.AppImage>`__
-            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelwriter_2.0.6_all.deb>`__
+            | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.0.7/novelWriter-2.0.7-py3.10-manylinux_2_28_x86_64.AppImage>`__
+            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.0.7/novelwriter_2.0.7_all.deb>`__
 
          .. grid-item::
             :columns: 5
@@ -48,7 +48,7 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelwriter-2.0.6-py3.10.10-win10-amd64-setup.exe>`__
+            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.0.7/novelwriter-2.0.7-py3.10.11-win10-amd64-setup.exe>`__
 
          .. grid-item::
             :columns: 5
@@ -71,7 +71,7 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `DMG Image <https://github.com/vkbo/novelWriter/releases/download/v2.0.6/novelWriter-2.0.6-macos.dmg>`__
+            | :octicon:`download` `DMG Image <https://github.com/vkbo/novelWriter/releases/download/v2.0.7/novelWriter-2.0.7-macos.dmg>`__
 
          .. grid-item::
             :columns: 5
