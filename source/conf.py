@@ -42,6 +42,7 @@ language = "en"
 html_title = ""
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
+html_extra_path = ["_extra"]
 html_css_files = ["custom.css"]
 html_context = {
     "default_mode": "auto",
