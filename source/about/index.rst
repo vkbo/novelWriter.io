@@ -8,6 +8,7 @@ About
    :hidden:
 
    self
+   privacy_policy
    docs
    contribute
    donate

@@ -71,7 +71,7 @@ Other Install Options
    .. grid-item::
 
       .. code-block:: bash
-         :caption: |ubuntu-logo| Add the Ubuntu PPA_ to your system:
+         :caption: |ubuntu-logo| Add the Ubuntu PPA_ to your system
 
          sudo add-apt-repository ppa:vkbo/novelwriter
          sudo apt update && sudo apt install novelwriter
@@ -79,7 +79,7 @@ Other Install Options
    .. grid-item::
 
       .. code-block:: bash
-         :caption: |pypi-logo| Install from the `Python Package Index`_:
+         :caption: |pypi-logo| Install from the `Python Package Index`_
 
          pip install --user novelwriter
 
