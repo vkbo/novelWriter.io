@@ -8,10 +8,10 @@ About
    :hidden:
 
    self
-   privacy_policy
-   docs
-   contribute
-   donate
+   about/privacy_policy
+   about/docs
+   about/contribute
+   about/donate
 
 .. toctree::
    :caption: Useful Links
