@@ -49,6 +49,7 @@ Latest Release
 
             | **Download**
             | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.0.7/novelwriter-2.0.7-py3.10.11-win10-amd64-setup.exe>`__
+            | :octicon:`light-bulb` :ref:`Install Help <main_install_windows>`
 
          .. grid-item::
             :columns: 5

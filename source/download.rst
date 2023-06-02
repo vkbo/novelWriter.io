@@ -4,6 +4,12 @@
 Downloads
 *********
 
+.. toctree::
+   :caption: Help with Installation
+   :hidden:
+
+   download/help_win
+
 This page includes all available packages for the latest release.
 
 When pre-release packages for the next version of novelWriter are available, these release packages
