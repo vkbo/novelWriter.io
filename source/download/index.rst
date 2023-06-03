@@ -8,7 +8,7 @@ Downloads
    :caption: Help with Installation
    :hidden:
 
-   download/help_win
+   help_win
 
 This page includes all available packages for the latest release.
 
@@ -22,10 +22,10 @@ documentation.
 Latest Release
 ==============
 
-.. include:: generated/download_release.rst
+.. include:: ../generated/download_release.rst
 
 
 Latest Pre-Release
 ==================
 
-.. include:: generated/download_pre_release.rst
+.. include:: ../generated/download_pre_release.rst

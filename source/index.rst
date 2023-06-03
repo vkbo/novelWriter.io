@@ -17,8 +17,8 @@ novelWriter
    :hidden:
 
    features
-   about
-   download
+   about/index
+   download/index
    Documentation <docs/index>
 
 .. grid:: 1 1 2 2

@@ -31,7 +31,7 @@ version = release
 extensions = ["sphinx_design", "sphinx_favicon"]
 
 templates_path = ["_templates"]
-exclude_patterns = []
+exclude_patterns = ["generated/*.rst"]
 today_fmt = "%A, %-d %B %Y at %H:%M"
 language = "en"
 
