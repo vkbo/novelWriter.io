@@ -56,6 +56,7 @@ Other Install Options
 ---------------------
 
 .. _PPA: https://launchpad.net/~vkbo/+archive/ubuntu/novelwriter
+.. _Pre-Release PPA: https://launchpad.net/~vkbo/+archive/ubuntu/novelwriter-pre
 .. _Python Package Index: https://pypi.org/project/novelWriter/
 
 .. |ubuntu-logo| image:: images/ubuntu.svg
@@ -85,6 +86,7 @@ Other Install Options
 
          pip install --user novelwriter
 
-For more download options, including pre-releases, see the :ref:`main_download` page.
+* For more download options, including pre-releases, see the :ref:`main_download` page.
+* Ubuntu pre-releases are available on the `Pre-Release PPA`_, by adding ``ppa:vkbo/novelwriter-pre`` instead.
 
 .. include:: generated/checksum_block.rst
