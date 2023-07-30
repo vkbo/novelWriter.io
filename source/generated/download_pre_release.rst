@@ -50,7 +50,7 @@
    * SVG icons have been optimised in terms of storage size and object complexity. PR `#1456 <https://github.com/vkbo/novelWriter/issues/1456>`_.
    * The file names for the project meta data files have been simplified and references to legacy formats removed. The wordlist has been converted to a JSON file, and the session log to a JSON Lines file. All old files are renamed or converted on the fly when opening the project. PR `#1464 <https://github.com/vkbo/novelWriter/issues/1464>`_.
    * The core project item and tree classes have been modified to improve how items, and in particular, orphaned items are handled. These are mostly internal changes that simplifies how items are accessed in the source code. Issue `#1481 <https://github.com/vkbo/novelWriter/issues/1481>`_. PR `#1482 <https://github.com/vkbo/novelWriter/issues/1482>`_.
-   * Many of the above PRs adds type annotations to classes and functions in the source code. These will be added gradually to the entire source code going forward.
+   * Many of the above PRs add type annotations to classes and functions in the source code. These will be added gradually to the entire source code going forward.
 
 Linux
 -----
@@ -102,4 +102,3 @@ The source code packages are archived files of the entire source code. See also 
 
 | **Download:** :octicon:`download` `novelWriter-2.1b1.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v2.1b1>`__
 | **Download:** :octicon:`download` `novelWriter-2.1b1.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v2.1b1>`__
-
