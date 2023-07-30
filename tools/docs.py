@@ -37,8 +37,7 @@ class Documentation:
         return self._nwRelease
 
     def pullDocs(self):
-        """Pull the archived version of the docs from GitHub.
-        """
+        """Pull the archived version of the docs from GitHub."""
         if self._branch:
             dlUrl = f"https://github.com/vkbo/novelWriter/archive/refs/heads/{self._branch}.zip"
             dlZip = f"novelWriter-{self._branch}.zip"
@@ -72,7 +71,8 @@ class Documentation:
         return
 
     def writeDocsCopy(self):
-        """Write a copy of the documentation to the correct output folder.
+        """Write a copy of the documentation to the correct output
+        folder.
         """
         docsSrc = self._extPath / "docs" / "source"
         docsDst = self._dstPath
@@ -101,8 +101,7 @@ class Documentation:
     ##
 
     def _buildPdfManual(self):
-        """This function will build the documentation as manual.pdf.
-        """
+        """This function will build the documentation as manual.pdf."""
         buildDir = str(self._extPath / "docs")
         buildFile = self._extPath / "docs" / "build" / "latex" / "manual.pdf"
         buildFile.unlink(missing_ok=True)
@@ -126,8 +125,7 @@ class Documentation:
         return
 
     def _rewriteIndex(self, indexFile: Path):
-        """Rewrite the index file with updated information.
-        """
+        """Rewrite the index file with updated information."""
         relVersion = f"{self._nwMajor}.{self._nwMinor}"
         relDateStr = datetime.fromisoformat(self._nwDate).strftime("%A, %-d %B %Y")
         nowDateStr = datetime.now().strftime("%A, %-d %B %Y")
@@ -172,8 +170,7 @@ class Documentation:
         return
 
     def _extractReleaseInfo(self):
-        """Extract information about the release version and date.
-        """
+        """Extract information about the release version and date."""
         print("Extracting Version Info ... ", end="")
         foundV = False
         foundD = False

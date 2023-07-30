@@ -63,8 +63,7 @@ ASSET_TEXT = {
 
 
 def fmtSize(size):
-    """Formats a size with kB, MB, GB, etc.
-    """
+    """Formats a size with kB, MB, GB, etc."""
     value = float(size)
     for pF in ["k", "M", "G", "T", "P", "E"]:
         value /= 1000.0
@@ -163,8 +162,7 @@ class Asset:
         return
 
     def _pullShaSum(self):
-        """Retrieve the shasum file for the asset.
-        """
+        """Retrieve the shasum file for the asset."""
         tempDir = ROOT_DIR / "_temp" / "shafiles"
         tempDir.mkdir(exist_ok=True)
         shaFile = tempDir / f"{self._name}.sha256"
@@ -201,16 +199,14 @@ class DownloadAssets:
         return
 
     def getAsset(self, assetType):
-        """Return an asset from the records.
-        """
+        """Return an asset from the records."""
         asset = self._assets.get(assetType, None)
         if isinstance(asset, Asset):
             return asset
         return Asset({})
 
     def generateDownloadTabs(self, zipName, zipUrl, tarName, tarUrl):
-        """Generate the full list of download links.
-        """
+        """Generate the full list of download links."""
         def appendType(aType, target):
             asset = self._assets[aType]
             if not isinstance(asset, Asset):
@@ -264,8 +260,7 @@ class DownloadAssets:
         return "\n".join(buffer)
 
     def _processAsset(self, data):
-        """Process an asset.
-        """
+        """Process an asset."""
         asset = Asset(data)
         aType = asset.assetType
         if aType in self._assets:

@@ -16,8 +16,7 @@ from tools import DownloadAssets, Documentation, AssetType
 
 
 def updateSetting(name, value):
-    """Update a setting in the settings.json file.
-    """
+    """Update a setting in the settings.json file."""
     setFile = Path("source/settings.json")
     if setFile.exists():
         settings = json.loads(setFile.read_text())
@@ -32,8 +31,7 @@ def updateSetting(name, value):
 
 
 def processReleaseNotes(text):
-    """Format the release notes text.
-    """
+    """Format the release notes text."""
     def ghLinks(x):
         return f"`#{x.group(1)} <https://github.com/vkbo/novelWriter/issues/{x.group(1)}>`_"
 
@@ -65,8 +63,7 @@ def processReleaseNotes(text):
 ##
 
 def pullDocs(args):
-    """Download docs and extract them into the website source.
-    """
+    """Download docs and extract them into the website source."""
     print("")
     print("Pulling Documentation Source")
     print("============================")
@@ -100,8 +97,7 @@ def pullDocs(args):
 ##
 
 def pullRelease(args):
-    """Download release info from the GitHub API.
-    """
+    """Download release info from the GitHub API."""
     print("")
     print("Pulling Release Info")
     print("====================")
@@ -215,8 +211,7 @@ def pullRelease(args):
 
 
 def buildFromTemplate(name, output, data):
-    """Write data to a template.
-    """
+    """Write data to a template."""
     output = output or name
     templateDir = Path("templates")
     generateDir = Path("source/generated")
