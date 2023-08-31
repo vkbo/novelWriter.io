@@ -4,7 +4,6 @@
 Running from Source
 *******************
 
-.. _main website: https://novelwriter.io
 .. _GitHub: https://github.com/vkbo/novelWriter/releases
 .. _PyPi: https://pypi.org/project/novelWriter/
 .. _Sphinx Docs: https://www.sphinx-doc.org/
@@ -18,20 +17,12 @@ to build the various components like the translation files and documentation.
    ``python3`` may be needed instead. Likewise, ``pip`` may need to be replaced with ``pip3``.
 
 Most of the custom commands for building packages of novelWriter, or building assets, are contained
-in the ``setup.py`` script in the root of the source code. You can list the available commands by
-running:
+in the ``pkgutils.py`` script in the root of the source code. You can list the available commands
+by running:
 
 .. code-block:: bash
 
-   python setup.py help
-
-.. warning::
-
-   Calling ``setup.py install`` has been deprecated for a while, and this approach is no longer
-   actively supported in novelWriter either.
-
-   In a future version, the packaging and asset build tools part of the current ``setup.py`` file
-   will be moved to another script and the ``setup.py`` file removed entirely.
+   python pkgutils.py help
 
 
 .. _a_source_depend:
@@ -46,13 +37,10 @@ format of the main project file. Everything else is handled with standard Python
 The following Python packages are needed to run novelWriter:
 
 * ``PyQt5`` – needed for connecting with the Qt5 libraries.
-* ``lxml`` – needed for full XML support.
 * ``PyEnchant`` – needed for spell checking (optional).
 
 PyQt/Qt should be at least 5.10, but ideally 5.13 or higher for all features to work. For instance,
-searching using regular expressions with full Unicode support requires 5.13. There is no known
-minimum version requirement for package ``lxml``, but the code was originally written with 4.2,
-which is therefore set as the minimum. It may work on lower versions. You have to test it.
+searching using regular expressions with full Unicode support requires 5.13.
 
 If you want spell checking, you must install the ``PyEnchant`` package. The spell check library
 must be at least 3.0 to work with Windows. On Linux, 2.0 also works fine.
@@ -98,7 +86,7 @@ With the tool installed, run the following command from the root of the novelWri
 
 This should generate two files in the ``dist/`` folder at your current location. One with file
 extension ``.tar.gz`` and one with extension ``.whl``. The latter is the package you want to
-install, here with example version number 2.0.7, but your may be different:
+install, here with example version number 2.0.7, but yours may be different:
 
 .. code-block:: bash
 
@@ -119,7 +107,7 @@ You can build the ``.qm`` files with:
 
 .. code-block:: bash
 
-   python setup.py qtlrelease
+   python pkgutils.py qtlrelease
 
 This requires that the Qt Linguist tool is installed on your system. On Ubuntu and Debian, the
 needed package is called ``qttools5-dev-tools``.
@@ -140,7 +128,7 @@ the ``assets`` folder of the source. This file can be built from setup script by
 
 .. code-block:: bash
 
-   python setup.py sample
+   python pkgutils.py sample
 
 
 .. _a_source_docs:
@@ -168,7 +156,7 @@ You can also build a PDF manual from the documentation using the setup script:
 
 .. code-block:: bash
 
-   python setup.py manual
+   python pkgutils.py manual
 
 This will build the documentation as a PDF using LaTeX. The file will then be copied into the
 assets folder and made available in the :guilabel:`Help` menu in novelWriter. The Sphinx build
