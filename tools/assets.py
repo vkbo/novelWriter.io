@@ -132,11 +132,11 @@ class Asset:
         if not name:
             return
 
-        if name.endswith(".AppImage") and "2_28" in name:
-            self._type = AssetType.APP_IMAGE
+        if name.endswith(".AppImage") and "oldlinux" in name:
+            self._type = AssetType.APP_IMAGE_OLD
             self._os = AssetOS.LINUX
         elif name.endswith(".AppImage"):
-            self._type = AssetType.APP_IMAGE_OLD
+            self._type = AssetType.APP_IMAGE
             self._os = AssetOS.LINUX
         elif name.endswith(".deb"):
             self._type = AssetType.DEBIAN
