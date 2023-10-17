@@ -73,6 +73,7 @@ Latest Release
 
             | **Download**
             | :octicon:`download` `DMG Image <{macdmg_download}>`__
+            | :octicon:`light-bulb` :ref:`Install Help <a_started_macos>`
 
          .. grid-item::
             :columns: 5

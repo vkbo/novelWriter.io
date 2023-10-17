@@ -37,7 +37,7 @@ def processReleaseNotes(text):
 
     buffer = []
     for line in text.splitlines():
-        if line.startswith("###"):
+        if line.startswith("### "):
             title = line.lstrip("#").lstrip()
             icon = None
             if "release" in title.lower():
@@ -48,6 +48,12 @@ def processReleaseNotes(text):
             buffer.append("   :animate: fade-in-slide-down")
             if icon:
                 buffer.append(f"   :icon: {icon}")
+        elif line.startswith("#"):
+            title = line.lstrip("#").lstrip()
+            buffer.append(f"   **{title}**")
+        elif line.startswith("_") and line.endswith("_"):
+            text = line.strip("_")
+            buffer.append(f"   *{text}*")
         else:
             line = line.replace("`", "``")
             line = re.sub(r"#([0-9]+)\b", ghLinks, line)
@@ -106,7 +112,7 @@ def pullRelease(args):
     if args.remove_pre:
         print("Removing Pre-Release")
         Path("source/generated/download_pre_release.rst").write_text(
-            "*There are currently no pre-releases available ...*", encoding="utf-8"
+            "*There is currently no pre-release available ...*", encoding="utf-8"
         )
         return
 
@@ -125,7 +131,7 @@ def pullRelease(args):
     with open(outDir / "api_data.json", mode="w") as apiDump:
         json.dump(data, apiDump, indent=2)
 
-    releaseUrl = data.get("html_url", "Unkown")
+    releaseUrl = data.get("html_url", "Unknown")
     releaseVersion = data.get("name", "Version ???")
     releaseDate = data.get("published_at", "")
     shortVersion = data.get("tag_name", "???").lstrip("v")

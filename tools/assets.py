@@ -125,8 +125,7 @@ class Asset:
         return fmtSize(self._size)
 
     def _processAsset(self):
-        """Process the raw asset data.
-        """
+        """Process the raw asset data."""
         data = self._raw
         name = data.get("name", "")
         if not name:
