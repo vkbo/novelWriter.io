@@ -114,7 +114,7 @@ Build & Export
    .. grid-item::
       :padding: 1 0 3 0
 
-      The :guilabel:`Build Novel Project`` tool lets you assemble all your files into a single
+      The :guilabel:`Build Manuscript` tool lets you assemble all your files into a single
       document. You can filter what to include to make a manuscript, make a draft of your novel
       outline, or compile a document of all your notes.
 
@@ -123,7 +123,7 @@ Build & Export
 
 **More Info from the Documentation**
 
-| :octicon:`book` :ref:`a_export`
+| :octicon:`book` :ref:`a_manuscript`
 
 
 Dark Theme & Syntax
