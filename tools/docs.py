@@ -151,7 +151,7 @@ class Documentation:
             "",
             f"| **Release Version:** {relVersionStr}",
             f"| **Release Date:** {relDateStr}",
-            f"| **Updated:** {nowDateStr}",
+            f"| **Docs Updated:** {nowDateStr}",
             "",
             f"**PDF:** :download:`novelWriter-{self._nwRelease}.pdf`",
             "",

@@ -6,7 +6,7 @@ Documentation
 
 | **Release Version:** 2.1
 | **Release Date:** Tuesday, 17 October 2023
-| **Updated:** Tuesday, 17 October 2023
+| **Docs Updated:** Tuesday, 17 October 2023
 
 **PDF:** :download:`novelWriter-2.1.pdf`
 

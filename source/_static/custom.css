@@ -65,10 +65,7 @@ span.guilabel {
     font-weight: 400;
 }
 
-.bd-footer {
-    background-color: var(--pst-color-on-surface) !important;
-}
-
+.bd-footer,
 .bd-header {
     background-color: var(--pst-color-surface) !important;
 }
