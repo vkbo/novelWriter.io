@@ -86,7 +86,7 @@ In addition to its own code, novelWriter depends on a few libraries. They are lo
 
 * ``PyQt5`` is the framework that novelWriter is built upon. It is a Python wrapper library for
   the `Qt Framework`_.
-* ``lxml`` is an XML library currently used by novelWriter (it will be removed in release 2.1).
+* ``lxml`` is an XML library currently used by novelWriter (it was removed in release 2.1).
 * ``enchant`` is a spell checker library that provides spell checking capabilities for novelWriter.
 
 That's all.

@@ -10,6 +10,12 @@ Downloads
 
    help_win
 
+.. toctree::
+   :caption: Documentation PDFs
+   :hidden:
+
+   pdf_docs
+
 This page includes all available packages for the latest release.
 
 When pre-release packages for the next version of novelWriter are available, these release packages
