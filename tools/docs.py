@@ -22,6 +22,7 @@ class Documentation:
         self._tempDir = ROOT_DIR / "_temp"
         self._extPath = self._tempDir / "novelWriter"
         self._dstPath = ROOT_DIR / "source" / "docs"
+        self._pdfPath = ROOT_DIR / "source" / "download"
 
         self._nwRelease = "Unknown"
         self._nwDate = "1970-01-01"
@@ -93,6 +94,7 @@ class Documentation:
 
         self._buildPdfManual()
         self._rewriteIndex(docsDst / "index.rst")
+        self._createPdfPage()
 
         return
 
@@ -116,12 +118,39 @@ class Documentation:
             raise Exception(f"Build returned error code {exCode}")
 
         if buildFile.exists():
-            finalFile = self._dstPath / f"novelWriter-{self._nwRelease}.pdf"
-            buildFile.rename(finalFile)
+            newDoc = self._pdfPath / f"novelWriter-{self._nwMajor}.{self._nwMinor}.pdf"
+            newDoc.unlink(missing_ok=True)
+            buildFile.rename(newDoc)
             print("Done")
         else:
             print("FAILED")
 
+        return
+
+    def _createPdfPage(self):
+        """Create the index of PDF manuals."""
+        pdfs = []
+        for item in self._pdfPath.iterdir():
+            if item.is_file() and item.suffix == ".pdf":
+                bits = item.stem[12:].split(".")
+                key = f"{int(bits[0]):02d}.{int(bits[1]):03d}"
+                pdfs.append((key, item.name))
+
+        with open(self._pdfPath / "pdf_docs.rst", mode="w", encoding="utf-8") as of:
+            of.write(
+                ".. _main_download_pdfs:\n"
+                "\n"
+                "******************\n"
+                "Documentation PDFs\n"
+                "******************\n"
+                "\n"
+                "The current documentation for the latest version is available on the "
+                ":ref:`main_documentation` page. This page contains PDFs for the current and "
+                "earlier versions.\n"
+                "\n"
+            )
+            for _, pdf in sorted(pdfs, key=lambda x: x[0], reverse=True):
+                of.write(f"| :download:`{pdf}`\n")
         return
 
     def _rewriteIndex(self, indexFile: Path):
@@ -153,7 +182,11 @@ class Documentation:
             f"| **Release Date:** {relDateStr}",
             f"| **Docs Updated:** {nowDateStr}",
             "",
-            f"**PDF:** :download:`novelWriter-{self._nwRelease}.pdf`",
+            (
+                f"**PDF:** :download:`novelWriter-{self._nwMajor}.{self._nwMinor}.pdf "
+                f"<../download/novelWriter-{self._nwMajor}.{self._nwMinor}.pdf>` "
+                "[ :ref:`Older Versions <main_download_pdfs>` ]"
+            ),
             "",
         ]
 
