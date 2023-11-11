@@ -99,22 +99,19 @@ span.guilabel {
 .main-page-icon {
     position: absolute;
     float: left;
-    margin-left: -8em;
+    margin-left: -11em;
     margin-top: 0.3em;
     z-index: 0;
 }
 
-.main-page-icon img {
-    width: 6em;
-}
-
 .nw-sidebar-logo {
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
-.nw-sidebar-logo img {
-    width: 50%;
+.nw-sidebar-logo img,
+.main-page-icon img {
+    width: 9em;
 }
 
 .nw-sd-os-card-header {
