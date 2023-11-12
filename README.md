@@ -1,6 +1,6 @@
 # The novelWriter Website Source
 
-<img align="left" style="width: 128px; margin: 0 8px 4px -8px;" src="/novelwriter.png">
+<img align="left" style="width: 148px; margin: 0 8px 12px -12px;" src="novelwriter.png">
 
 This is the source repository for the [novelWriter.io](https://novelwriter.io) website.
 
