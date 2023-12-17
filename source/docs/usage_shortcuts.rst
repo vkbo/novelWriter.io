@@ -25,18 +25,18 @@ Main Window Shortcuts
    ":kbd:`F8`",           "Toggle :guilabel:`Focus Mode`"
    ":kbd:`F9`",           "Re-build the project index"
    ":kbd:`F11`",          "Toggle full screen mode"
-   ":kbd:`Alt+1`",        "Switch focus to the project tree (Windows :kbd:`Ctrl+Alt+1`)"
-   ":kbd:`Alt+2`",        "Switch focus to document editor (Windows :kbd:`Ctrl+Alt+2`)"
-   ":kbd:`Alt+3`",        "Switch focus to document viewer (Windows :kbd:`Ctrl+Alt+3`)"
-   ":kbd:`Alt+4`",        "Switch focus to outline view (Windows :kbd:`Ctrl+Alt+4`)"
    ":kbd:`Ctrl+,`",       "Open the :guilabel:`Preferences` dialog"
+   ":kbd:`Ctrl+E`",       "Switch focus to the document editor"
+   ":kbd:`Ctrl+T`",       "Switch focus to the project/novel tree"
    ":kbd:`Ctrl+Q`",       "Exit novelWriter"
    ":kbd:`Ctrl+Shift+,`", "Open the :guilabel:`Project Settings` dialog"
    ":kbd:`Ctrl+Shift+O`", "Open a project"
    ":kbd:`Ctrl+Shift+S`", "Save the current project"
+   ":kbd:`Ctrl+Shift+T`", "Switch focus to the outline view"
    ":kbd:`Ctrl+Shift+W`", "Close the current project"
    ":kbd:`Shift+F1`",     "Open the local user manual (PDF) if it is available"
    ":kbd:`Shift+F6`",     "Open the :guilabel:`Project Details` dialog"
+
 
 .. _a_kb_tree:
 
@@ -59,8 +59,8 @@ Project Tree Shortcuts
    ":kbd:`Ctrl+R`",         "Open the selected document in the viewer"
    ":kbd:`Ctrl+Up`",        "Move selected item one step up in the tree"
    ":kbd:`Ctrl+Down`",      "Move selected item one step down in the tree"
-   ":kbd:`Ctrl+Shift+Z`",   "Undo the last move of a project item, if possible"
    ":kbd:`Ctrl+Shift+Del`", "Move the selected item to Trash"
+   ":kbd:`Ctrl+Shift+Z`",   "Undo the last move of a project item, if possible"
 
 
 .. _a_kb_editor:
@@ -77,10 +77,10 @@ Text Search Shortcuts
 
    ":kbd:`F3`",           "Find the next occurrence of the search word"
    ":kbd:`Ctrl+F`",       "Open the search bar and search for the selected word, if any is selected"
-   ":kbd:`Ctrl+G`",       "Find next occurrence of search word in current document"
+   ":kbd:`Ctrl+G`",       "Find the next occurrence of the search word"
    ":kbd:`Ctrl+H`",       "Open the search tool and populate with the selected word (Mac :kbd:`Cmd+=`)"
    ":kbd:`Ctrl+Shift+1`", "Replace selected occurrence of the search word, and move to the next"
-   ":kbd:`Ctrl+Shift+G`", "Find previous occurrence of the search word"
+   ":kbd:`Ctrl+Shift+G`", "Find the previous occurrence of the search word"
    ":kbd:`Shift+F3`",     "Find the previous occurrence of the search word"
 
 
@@ -90,6 +90,8 @@ Text Formatting Shortcuts
 .. csv-table::
    :header: "Shortcut", "Description"
 
+   ":kbd:`Ctrl+'`",       "Wrap selected text, or word under cursor, in single quotes"
+   ":kbd:`Ctrl+""`",      "Wrap selected text, or word under cursor, in double quotes"
    ":kbd:`Ctrl+/`",       "Toggle block format as comment"
    ":kbd:`Ctrl+0`",       "Remove block formatting for block under cursor"
    ":kbd:`Ctrl+1`",       "Change block format to header level 1"
@@ -102,10 +104,8 @@ Text Formatting Shortcuts
    ":kbd:`Ctrl+8`",       "Add a left margin to the block"
    ":kbd:`Ctrl+9`",       "Add a right margin to the block"
    ":kbd:`Ctrl+B`",       "Format selected text, or word under cursor, with strong emphasis (bold)"
-   ":kbd:`Ctrl+D`",       "Strikethrough selected text, or word under cursor"
+   ":kbd:`Ctrl+D`",       "Strike through selected text, or word under cursor"
    ":kbd:`Ctrl+I`",       "Format selected text, or word under cursor, with emphasis (italic)"
-   ":kbd:`Ctrl+'`",       "Wrap selected text, or word under cursor, in single quotes"
-   ":kbd:`Ctrl+""`",      "Wrap selected text, or word under cursor, in double quotes"
    ":kbd:`Ctrl+Shift+/`", "Remove block formatting for block under cursor"
 
 
@@ -127,12 +127,13 @@ Other Editor Shortcuts
    ":kbd:`Ctrl+X`",         "Cut selected text to clipboard"
    ":kbd:`Ctrl+Y`",         "Redo latest undo"
    ":kbd:`Ctrl+Z`",         "Undo latest changes"
-   ":kbd:`Ctrl+Del`",       "Delete the word after the cursor"
    ":kbd:`Ctrl+Backspace`", "Delete the word before the cursor"
-   ":kbd:`Ctrl+Return`",    "Open the tag or reference under the cursor in the viewer"
+   ":kbd:`Ctrl+Del`",       "Delete the word after the cursor"
    ":kbd:`Ctrl+F7`",        "Toggle spell checking"
+   ":kbd:`Ctrl+Return`",    "Open the tag or reference under the cursor in the viewer"
    ":kbd:`Ctrl+Shift+A`",   "Select all text in the current paragraph"
    ":kbd:`Ctrl+Shift+I`",   "Import text to the current document from a text file"
+
 
 .. _a_kb_ins:
 
@@ -146,39 +147,40 @@ a key or key combination for the inserted content.
 .. csv-table::
    :header: "Shortcut", "Description"
 
-   ":kbd:`Ctrl+K`, :kbd:`−`",           "Insert a short dash (en dash)"
+   ":kbd:`Ctrl+K`, :kbd:`Space`",       "Insert a non-breaking space"
    ":kbd:`Ctrl+K`, :kbd:`_`",           "Insert a long dash (em dash)"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+_`",      "Insert a horizontal bar (quotation dash)"
+   ":kbd:`Ctrl+K`, :kbd:`.`",           "Insert an ellipsis"
+   ":kbd:`Ctrl+K`, :kbd:`'`",           "Insert a modifier apostrophe"
+   ":kbd:`Ctrl+K`, :kbd:`*`",           "Insert a list bullet"
+   ":kbd:`Ctrl+K`, :kbd:`%`",           "Insert a per mille symbol"
    ":kbd:`Ctrl+K`, :kbd:`~`",           "Insert a figure dash (same width as a number)"
+   ":kbd:`Ctrl+K`, :kbd:`−`",           "Insert a short dash (en dash)"
    ":kbd:`Ctrl+K`, :kbd:`1`",           "Insert a left single quote"
    ":kbd:`Ctrl+K`, :kbd:`2`",           "Insert a right single quote"
    ":kbd:`Ctrl+K`, :kbd:`3`",           "Insert a left double quote"
    ":kbd:`Ctrl+K`, :kbd:`4`",           "Insert a right double quote"
-   ":kbd:`Ctrl+K`, :kbd:`'`",           "Insert a modifier apostrophe"
-   ":kbd:`Ctrl+K`, :kbd:`.`",           "Insert an ellipsis"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+'`",      "Insert a prime"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+""`",     "Insert a double prime"
-   ":kbd:`Ctrl+K`, :kbd:`Space`",       "Insert a non-breaking space"
-   ":kbd:`Ctrl+K`, :kbd:`Shift+Space`", "Insert a thin space"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+Space`",  "Insert a thin non-breaking space"
-   ":kbd:`Ctrl+K`, :kbd:`*`",           "Insert a list bullet"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+−`",      "Insert a hyphen bullet (alternative bullet)"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+*`",      "Insert a flower mark (alternative bullet)"
-   ":kbd:`Ctrl+K`, :kbd:`%`",           "Insert a per mille symbol"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+O`",      "Insert a degree symbol"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+X`",      "Insert a times sign"
-   ":kbd:`Ctrl+K`, :kbd:`Ctrl+D`",      "Insert a division sign"
-   ":kbd:`Ctrl+K`, :kbd:`G`",           "Insert a ``@tag`` keyword"
-   ":kbd:`Ctrl+K`, :kbd:`V`",           "Insert a ``@pov`` keyword"
-   ":kbd:`Ctrl+K`, :kbd:`F`",           "Insert a ``@focus`` keyword"
    ":kbd:`Ctrl+K`, :kbd:`C`",           "Insert a ``@char`` keyword"
+   ":kbd:`Ctrl+K`, :kbd:`E`",           "Insert an ``@entity`` keyword"
+   ":kbd:`Ctrl+K`, :kbd:`F`",           "Insert a ``@focus`` keyword"
+   ":kbd:`Ctrl+K`, :kbd:`G`",           "Insert a ``@tag`` keyword"
+   ":kbd:`Ctrl+K`, :kbd:`H`",           "Insert a short description comment"
+   ":kbd:`Ctrl+K`, :kbd:`L`",           "Insert a ``@location`` keyword"
+   ":kbd:`Ctrl+K`, :kbd:`O`",           "Insert an ``@object`` keyword"
    ":kbd:`Ctrl+K`, :kbd:`P`",           "Insert a ``@plot`` keyword"
    ":kbd:`Ctrl+K`, :kbd:`S`",           "Insert a synopsis comment"
    ":kbd:`Ctrl+K`, :kbd:`T`",           "Insert a ``@time`` keyword"
-   ":kbd:`Ctrl+K`, :kbd:`L`",           "Insert a ``@location`` keyword"
-   ":kbd:`Ctrl+K`, :kbd:`O`",           "Insert an ``@object`` keyword"
-   ":kbd:`Ctrl+K`, :kbd:`E`",           "Insert an ``@entity`` keyword"
+   ":kbd:`Ctrl+K`, :kbd:`V`",           "Insert a ``@pov`` keyword"
    ":kbd:`Ctrl+K`, :kbd:`X`",           "Insert a ``@custom`` keyword"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+Space`",  "Insert a thin non-breaking space"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+_`",      "Insert a horizontal bar (quotation dash)"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+'`",      "Insert a prime"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+""`",     "Insert a double prime"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+*`",      "Insert a flower mark (alternative bullet)"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+−`",      "Insert a hyphen bullet (alternative bullet)"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+D`",      "Insert a division sign"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+O`",      "Insert a degree symbol"
+   ":kbd:`Ctrl+K`, :kbd:`Ctrl+X`",      "Insert a times sign"
+   ":kbd:`Ctrl+K`, :kbd:`Shift+Space`", "Insert a thin space"
 
 
 .. _a_kb_viewer:
