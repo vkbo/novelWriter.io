@@ -4,9 +4,9 @@
 Documentation
 *************
 
-| **Release Version:** 2.2
-| **Release Date:** Sunday, 17 December 2023
-| **Docs Updated:** Sunday, 17 December 2023
+| **Release Version:** 2.2.1
+| **Release Date:** Saturday, 27 January 2024
+| **Docs Updated:** Saturday, 27 January 2024
 
 **PDF:** :download:`novelWriter-2.2.pdf <../about/novelWriter-2.2.pdf>` [ :ref:`Older Versions <main_about_docs>` ]
 
