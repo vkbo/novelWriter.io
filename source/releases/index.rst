@@ -29,7 +29,7 @@ This is an overview of novelWriter releases.
    :header-rows: 1
    :class: releases-table
 
-   * - Release
+   * - Release Info
      - Release Date
      - Latest Patch
      - Patch Date
