@@ -68,7 +68,7 @@ html_theme_options = {
         "image_light": "_static/novelwriter-light.png",
         "image_dark": "_static/novelwriter-dark.png",
     },
-    "header_links_before_dropdown": 7,
+    "header_links_before_dropdown": 8,
     "external_links": [
         {"name": "Issues", "url": "https://github.com/vkbo/novelWriter/issues"},
         {"name": "Discussions", "url": "https://github.com/vkbo/novelWriter/discussions"},

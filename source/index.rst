@@ -19,6 +19,7 @@ novelWriter
    features
    about/index
    download/index
+   releases/index
    Documentation <docs/index>
 
 .. grid:: 1 1 2 2

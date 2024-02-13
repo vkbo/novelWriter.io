@@ -130,3 +130,7 @@ span.guilabel {
     height: 1.8rem;
     margin-right: 0.2rem;
 }
+
+.releases-table tbody tr:nth-child(1) {
+    background-color: var(--pst-color-surface) !important;
+}
