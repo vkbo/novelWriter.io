@@ -6,27 +6,8 @@
 
 | **Release Version:** Version 2.2.1
 | **Release Date:** January 27, 2024
-| **Release Page:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.2.1>`__
-
-.. dropdown:: Release Notes
-   :animate: fade-in-slide-down
-   :icon: info
-
-   This is a patch release that fixes an issue where the Project View would sometimes switch to the Novel View when a new item was created. This patch also includes updated translations for German and Chinese.
-
-.. dropdown:: Detailed Changelog
-   :animate: fade-in-slide-down
-   :icon: tasklist
-
-   **Bugfixes**
-
-   * Fix a bug in the toggle for the tree view on the left would trigger each time a new project item was created. Issue `#1649 <https://github.com/vkbo/novelWriter/issues/1649>`_. PR `#1648 <https://github.com/vkbo/novelWriter/issues/1648>`_.
-   * Fix an issue where multiple Manuscript and Writing Stats dialogs could be opened. PR `#1671 <https://github.com/vkbo/novelWriter/issues/1671>`_.
-
-   **Internationalisation**
-
-   * Updated German translation, by @HeyMyian. PR `#1666 <https://github.com/vkbo/novelWriter/issues/1666>`_.
-   * Updated Chinese translation, by @ruixuan658 and @longqzh. PR `#1666 <https://github.com/vkbo/novelWriter/issues/1666>`_.
+| **Release Notes:** :ref:`main_release_2_2`
+| **GitHub Release:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.2.1>`__
 
 Linux
 -----

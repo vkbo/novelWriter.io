@@ -135,7 +135,7 @@ def pullRelease(args):
     releaseVersion = data.get("name", "Version ???")
     releaseDate = data.get("published_at", "")
     shortVersion = data.get("tag_name", "???").lstrip("v")
-    releaseNotes = data.get("body", "")
+    releaseRef = "main_release_" + "_".join(shortVersion.split(".")[:2])
     isPreRelease = data.get("prerelease", False)
     tarBall = data.get("tarball_url", "")
     zipBall = data.get("zipball_url", "")
@@ -166,7 +166,7 @@ def pullRelease(args):
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
-            "release_notes": processReleaseNotes(releaseNotes),
+            "release_ref": releaseRef,
             "download_tabs": assets.generateDownloadTabs(
                 f"novelWriter-{shortVersion}.zip", zipBall,
                 f"novelWriter-{shortVersion}.tar.gz", tarBall
@@ -178,7 +178,7 @@ def pullRelease(args):
         buildFromTemplate("download_block.rst", "download_block.rst", {
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
-            "release_url": releaseUrl,
+            "release_ref": releaseRef,
             "appimage_download": aAppImg.assetUrl,
             "debian_download": aDebian.assetUrl,
             "winexe_download": aWinExe.assetUrl,
@@ -204,7 +204,7 @@ def pullRelease(args):
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
-            "release_notes": processReleaseNotes(releaseNotes),
+            "release_ref": releaseRef,
             "download_tabs": assets.generateDownloadTabs(
                 f"novelWriter-{shortVersion}.zip", zipBall,
                 f"novelWriter-{shortVersion}.tar.gz", tarBall

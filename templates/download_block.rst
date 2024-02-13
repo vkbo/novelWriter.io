@@ -1,9 +1,7 @@
 Latest Release
 ==============
 
-.. _Release Notes: {release_url}
-
-**{release_version}** -- Released on {release_date} -- :octicon:`mark-github` `Release Notes`_
+**{release_version}** -- Released on {release_date} -- Read the :ref:`Release Notes <{release_ref}>`
 
 .. grid:: 1 1 3 3
    :margin: 4 4 0 0

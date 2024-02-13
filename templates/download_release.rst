@@ -6,7 +6,7 @@
 
 | **Release Version:** {release_version}
 | **Release Date:** {release_date}
-| **Release Page:** :octicon:`mark-github` `GitHub <{release_url}>`__
+| **Release Notes:** :ref:`{release_ref}`
+| **GitHub Release:** :octicon:`mark-github` `GitHub <{release_url}>`__
 
-{release_notes}
 {download_tabs}
