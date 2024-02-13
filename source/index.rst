@@ -88,6 +88,7 @@ Other Install Options
          pip install --user novelwriter
 
 * For more download options, including pre-releases, see the :ref:`main_download` page.
+* You can also use the Ubuntu PPA on other Debian-based distros. See :ref:`a_started` for more details.
 * Ubuntu pre-releases are available on the `Pre-Release PPA`_, by adding ``ppa:vkbo/novelwriter-pre`` instead.
 
 .. include:: generated/checksum_block.rst

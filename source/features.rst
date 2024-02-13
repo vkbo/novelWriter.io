@@ -45,14 +45,7 @@ Alternative Novel Overview
    :padding: 0
 
    .. grid-item::
-      :padding: 0 0 0 3
-
-      .. image:: images/feat_novelview_light.png
-         :class: dark-light
-         :width: 100%
-
-   .. grid-item::
-      :padding: 1 0 3 0
+      :padding: 1 0 0 3
 
       When you have structured the main sections of your novel in terms of chapters and scenes,
       you can switch to the :guilabel:`Novel Outline` view instead.
@@ -60,6 +53,13 @@ Alternative Novel Overview
       The Novel Outline view lets you see the full structure of your novel in terms of headings
       rather than document files. You can still open each chapter or scene for editing like from
       the regular :guilabel:`Project Tree`.
+
+   .. grid-item::
+      :padding: 0 0 3 0
+
+      .. image:: images/feat_novelview_light.png
+         :class: dark-light
+         :width: 100%
 
 **More Info from the Documentation**
 
@@ -107,19 +107,19 @@ Build & Export
    .. grid-item::
       :padding: 1 0 0 3
 
-      .. image:: images/feat_build_light.png
-         :class: dark-light
-         :width: 100%
-
-   .. grid-item::
-      :padding: 1 0 3 0
-
       The :guilabel:`Build Manuscript` tool lets you assemble all your files into a single
       document. You can filter what to include to make a manuscript, make a draft of your novel
       outline, or compile a document of all your notes.
 
       The result can be printed or saved to HTML, Open Document, Markdown, Plain Text, or PDF. The
       `Open Document`_ format is supported by most open source and commercial word processors.
+
+   .. grid-item::
+      :padding: 1 0 3 0
+
+      .. image:: images/feat_build_light.png
+         :class: dark-light
+         :width: 100%
 
 **More Info from the Documentation**
 
