@@ -15,7 +15,17 @@ from datetime import datetime
 from tools import DownloadAssets, Documentation, AssetType
 
 
-def updateSetting(name, value):
+def hexToInt(value: str, default: int = 0) -> int:
+    """Convert a hex string to an integer."""
+    if isinstance(value, str):
+        try:
+            return int(value, 16)
+        except Exception:
+            return default
+    return default
+
+
+def updateSetting(name: str, value: str) -> None:
     """Update a setting in the settings.json file."""
     setFile = Path("source/settings.json")
     if setFile.exists():
@@ -27,6 +37,31 @@ def updateSetting(name, value):
         settings[name] = value
         setFile.write_text(json.dumps(settings, indent=2))
 
+    return
+
+
+def writeReleaseInfo(version: str, force: bool, info: dict[str, str]) -> None:
+    """Write the release info file."""
+    relFile = Path("source/_extra/release-latest.json")
+    current = json.loads(relFile.read_text(encoding="utf-8")) if relFile.exists() else {}
+    release = current.get("release", {})
+    numeric = tuple(int(x) for x in f"{version}.0.0.0".split(".")[:3])
+    previous = (release.get("major", 0), release.get("minor", 0), release.get("patch", 0))
+    if previous > numeric and not force:
+        print(("Current release info is for %s, not updating. "
+               "Use --force to override.") % release.get("version", "0"))
+        return
+    relFile.write_text(
+        json.dumps({
+            "release": {
+                "version": version,
+                "major": numeric[0],
+                "minor": numeric[1],
+                "patch": numeric[2],
+                "info": info,
+            }
+        }, indent=2), encoding="utf-8"
+    )
     return
 
 
@@ -174,6 +209,21 @@ def pullRelease(args):
         })
 
     else:
+        # Write the release-info.json file
+        writeReleaseInfo(shortVersion, args.force, {
+            "name": releaseVersion,
+            "date": releaseDate,
+            "url": releaseUrl,
+            "assets": {
+                "appimage": aAppImg.assetUrl,
+                "debian": aDebian.assetUrl,
+                "winexe": aWinExe.assetUrl,
+                "macdmg": aMacDmg.assetUrl,
+                "zipball": zipBall,
+                "tarball": tarBall,
+            }
+        })
+
         # Updating Latest Release Info
         buildFromTemplate("download_block.rst", "download_block.rst", {
             "release_version": releaseVersion,
@@ -242,6 +292,7 @@ if __name__ == "__main__":
     pRelease = subParsers.add_parser("release", help="Update release")
     pRelease.add_argument("--tag", type=str, help="Pull release info from a specific tag")
     pRelease.add_argument("--remove-pre", action="store_true", help="Remove pre release")
+    pRelease.add_argument("--force", action="store_true", help="Force update of release info")
     pRelease.set_defaults(func=pullRelease)
 
     args = parser.parse_args()
