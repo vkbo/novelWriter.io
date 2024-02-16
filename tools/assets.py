@@ -53,7 +53,7 @@ ASSET_TEXT = {
     ),
     AssetType.MAC_DMG: (
         "DMG Image",
-        "This is a DMG image for MacOS, and should work on MacOS 10 or higher."
+        "This is a DMG image for MacOS, and should work on at least MacOS 12 or higher."
     ),
     AssetType.PYTHON_WHEEL: (
         "Python Wheel",

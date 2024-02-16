@@ -15,14 +15,16 @@ from datetime import datetime
 from tools import DownloadAssets, Documentation, AssetType
 
 
-def hexToInt(value: str, default: int = 0) -> int:
-    """Convert a hex string to an integer."""
-    if isinstance(value, str):
-        try:
-            return int(value, 16)
-        except Exception:
-            return default
-    return default
+def stripVersion(version: str) -> str:
+    """Strip the pre-release part from a version number."""
+    if "a" in version:
+        return version.partition("a")[0]
+    elif "b" in version:
+        return version.partition("b")[0]
+    elif "rc" in version:
+        return version.partition("rc")[0]
+    else:
+        return version
 
 
 def updateSetting(name: str, value: str) -> None:
@@ -170,7 +172,7 @@ def pullRelease(args):
     releaseVersion = data.get("name", "Version ???")
     releaseDate = data.get("published_at", "")
     shortVersion = data.get("tag_name", "???").lstrip("v")
-    releaseRef = "main_release_" + "_".join(shortVersion.split(".")[:2])
+    releaseRef = "main_release_" + "_".join(stripVersion(shortVersion).split(".")[:2])
     isPreRelease = data.get("prerelease", False)
     tarBall = data.get("tarball_url", "")
     zipBall = data.get("zipball_url", "")

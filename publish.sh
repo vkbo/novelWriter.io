@@ -1,4 +1,4 @@
 #!/bin/bash
 
-make clean html
+make html
 rsync -avPh --delete build/html/ novelwriter.io:www/

@@ -45,7 +45,7 @@ MacOS
 -----
 
 **DMG Image**
-   This is a DMG image for MacOS, and should work on MacOS 10 or higher.
+   This is a DMG image for MacOS, and should work on at least MacOS 12 or higher.
 
    | **Download:** :octicon:`download` `novelWriter-2.2.1.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.2.1/novelWriter-2.2.1.dmg>`__ [ 92.2 MB ]
    | **Checksum:** :octicon:`hash` ``b67101db1d0f358664370a40d1f7cfe25d02f160849d0de87261af3e7c0a6b96`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.2.1/novelWriter-2.2.1.dmg.sha256>`__
@@ -65,4 +65,3 @@ The source code packages are archived files of the entire source code. See also 
 
 | **Download:** :octicon:`download` `novelWriter-2.2.1.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v2.2.1>`__
 | **Download:** :octicon:`download` `novelWriter-2.2.1.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v2.2.1>`__
-
