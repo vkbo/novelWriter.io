@@ -1,10 +1,10 @@
 .. _main_release_2_3:
 
-**********************
-Pre-Release 2.3 Beta 1
-**********************
+********************
+Pre-Release 2.3 RC 1
+********************
 
-| **Release Date:** February 16, 2024
+| **Release Date:** February 24, 2024
 
 Release Notes
 =============
@@ -127,16 +127,23 @@ Among other, smaller improvements are:
   for instance Excel or Open Office Calc. The export is initiated from a new "Export CSV" button in the toolbar above the outline.
 
 
-Next Pre-Release
-----------------
+Further Details
+---------------
 
-The next upcoming pre-release of novelWriter 2.3 will be 2.3 RC 1.
+The next upcoming release of novelWriter is 2.3.
 
-You can follow the development progress on the `2.3 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/72>`__.
+You can follow the development progress on the `2.3 Milestone <https://github.com/vkbo/novelWriter/milestone/73>`__.
 
-Feedback for the 2.3 Beta 1 release can be posted on the `GitHub Discussions <https://github.com/vkbo/novelWriter/discussions/1699>`__ thread.
+Feedback for the 2.3 RC 1 release can be posted on the `GitHub Discussions <https://github.com/vkbo/novelWriter/discussions/1713>`__ thread.
 
 Download Links
 ==============
 
 .. include:: ../generated/download_pre_release.rst
+
+Other Packages
+==============
+
+Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 2.3 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.3b1>`__
