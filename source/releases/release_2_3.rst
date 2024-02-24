@@ -11,7 +11,7 @@ Release Notes
 
 .. attention::
 
-   This is a beta release of the next release version, and is intended for testing only. Please be careful when using this version
+   This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
    on live writing projects, and make sure you take frequent backups.
 
 
