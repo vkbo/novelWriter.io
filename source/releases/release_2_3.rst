@@ -141,7 +141,7 @@ Feedback for the 2.3 RC 1 release can be posted on the `GitHub Discussions <http
 Download Links
 ==============
 
-.. include:: ../generated/download_pre_release.rst
+.. include:: ../generated/download_release.rst
 
 Older Releases
 ==============
