@@ -1,24 +1,25 @@
 .. _main_release_2_3:
 
-********************
-Pre-Release 2.3 RC 1
-********************
+***********
+Release 2.3
+***********
 
-| **Release Date:** February 24, 2024
+| **Release Date:** March 10, 2024
 
 Release Notes
 =============
 
-.. attention::
+Release 2.3 comes with a lot of design updates to dialogs and tools outside the main GUI. A lot of these changes have been made both
+to modernise the look of the UI and hopefully to make it easier to use. The UI is after all built on technology that has been around
+for decades and looks a bit out of date in its unmodified state.
 
-   This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
-   on live writing projects, and make sure you take frequent backups.
+There are also a number new features requested by you, the users. Please keep them coming!
 
 
 Welcome Dialog
 --------------
 
-.. image:: images/2_3_welcome_1.png
+.. image:: images/2_3_welcome_1.jpg
    :width: 40%
    :align: right
 
@@ -29,21 +30,21 @@ artwork in the background, which has been created specially for novelWriter by `
 The list of projects has gotten a cleaner design, but otherwise contains the same information as before. You can remove projects
 from the list by right-clicking on them and selecting "Remove Project".
 
-At the top of the dialog is also information about the current version of novelWriter, and a link to the releases page here on the
-website. You can also query for information about the latest release by clicking the "Check Now" text. This replaces the old
+At the top of the dialog is also information about the current version of novelWriter, and a link to the releases overview page here
+on the website. You can also query for information about the latest release by clicking the "Check Now" text. This replaces the old
 **Check for Updates** dialog that used to be in the **Help** menu.
 
-.. image:: images/2_3_welcome_2.png
+.. image:: images/2_3_welcome_2.jpg
    :width: 40%
    :align: right
 
-The functionality that used to be on the **New Project Wizard** is now available when you click the "New Project" button. The
-settings are mostly as before, but note that you can now also choose to create a project by copying an existing project. That
-project can be a special project you've created to be a template project if you wish. It can also be a novelWriter project in a Zip
-file, including one of your backups.
+The functionality that used to be on the **New Project Wizard** is now available when you click the "New" button on the Welcome
+dialog. The settings are mostly as before, but note that you can now also choose to create a project by copying an existing project.
+That project can be a special project you've created to be a template project if you wish. It can also be a novelWriter project in a
+Zip file, including one of your backups.
 
 The **About novelWriter** dialog has been updated to a similar design as the **Welcome** dialog, with the same header and version
-check capability. All the text tabs have been removed, aside from the credits. The release notes will no longer be available in the
+check capability. All the text tabs have been removed, except from the credits. The release notes will no longer be available in the
 About dialog. They are instead now only kept here on this website. This allows for better formatting of the notes, a capability the
 in-app text box lacked.
 
@@ -56,13 +57,13 @@ Consistent Design
    :align: right
 
 All of the dialogs in novelWriter that contain multiple pages of information or settings have been updated to a new layout and
-design first introduced for the new **Manuscript** tool in 2.1.
+design first introduced for the new **Manuscript** tool in version 2.1.
 
 Most importantly, perhaps, the **Preferences** dialog has been redesigned. All settings are now in a scrollable list, with quick
 navigation along the left edge and a search box at the top. The new layout is also a lot more flexible in terms of text flow,
-allowing for a better response to languages where text tend to run longer, like German.
+allowing for a better response to languages where text tend to run longer, like for instance German.
 
-In addition to **Preferences**, also the **Project Settings**, **Project Details**, and **Manuscript Build Settings** dialogs have
+In addition to **Preferences**, also the **Project Settings**, **Novel Details**, and **Manuscript Build Settings** dialogs have
 been updated to use a similar design.
 
 
@@ -73,16 +74,16 @@ New Features
    :width: 50%
    :align: right
 
-New design is not the only new stuff added in 2.3. A number of user-requested features have been added as well.
+New design is not the only changes in 2.3. A number of user-requested features have been added as well.
 
 * A new root folder type called "Templates" is now available. Any document added to this folder will be available in the "Add Item"
   menu. You can create a new document like you normally do, but selecting a template from the "From Template" submenu will populate
   the new document with the content of the selected template.
 
 * You can now insert the name of a scene or chapter's "Point of View" or "Focus" character directly into the title in the
-  **Manuscript** tool. They work just the same way as the other header formatting features from the 2.1 version, like automatic
+  **Manuscript** tool. They work just the same way as the other heading formatting features from the 2.1 version, like automatic
   chapter numbers. By default, the name inserted is the text of the ``@tag`` you specify in the character's note. However, if you
-  want the name to appear in a different way in the manuscript, you can set a "display name" after a ``|`` symbol:
+  want the name to appear in a different way in the manuscript, you can set a "display name" after a ``|`` symbol, like so:
 
   .. code-block:: md
 
@@ -103,18 +104,19 @@ New design is not the only new stuff added in 2.3. A number of user-requested fe
 
      %~ This is a paragraph I want out of my text, but haven't yet decided to delete.
 
-  Just like regular comments, these also don't count towards your word count.
+  Just like regular comments, these also don't count towards your word count. The new format is also available as a keyboard
+  shortcut ``Ctrl+Shift+D``.
 
 
 Other Improvements
 ------------------
 
-Among other, smaller improvements are:
+Among other improvements are:
 
 * You can now create regular documents and folders directly by right-clicking in the project tree. Root folders and template
   documents must be created from the "Add Item" menu button still.
-* You can change the label of a document in the project tree by right-clicking it and selecting "Rename to Heading", if there is a
-  heading in the document already.
+* You can change the label of a document in the project tree by right-clicking it and selecting "Rename to Heading". The option is
+  only available if there is a heading in the document already.
 * When multiple paragraphs are selected in the editor, activating one of the formatting commands in the **Format** menu starting
   with "Toggle", will apply the formatting change to all selected text instead of just the first paragraph.
 * You can now filter out tags from project notes set to "Inactive" in the little triple-dot menu in the **References** panel under
@@ -124,7 +126,7 @@ Among other, smaller improvements are:
 * The words in the **Project Word List** can now be exported to a plain text file, and also imported from such a file. Only unique
   words are imported.
 * The content of the table in the **Project Outline** can be exported to a CSV file, which can then be imported as a spread sheet in
-  for instance Excel or Open Office Calc. The export is initiated from a new "Export CSV" button in the toolbar above the outline.
+  for instance Excel or Libre Office Calc. The export is initiated from a new "Export CSV" button in the toolbar above the outline.
 
 
 Further Details
@@ -141,9 +143,10 @@ Download Links
 
 .. include:: ../generated/download_pre_release.rst
 
-Other Packages
+Older Releases
 ==============
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.3 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.3rc1>`__
 | :octicon:`mark-github` `Download Release 2.3 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.3b1>`__

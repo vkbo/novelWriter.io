@@ -65,7 +65,7 @@ Download Links
 .. include:: ../generated/download_release.rst
 
 
-Other Packages
+Older Releases
 ==============
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
