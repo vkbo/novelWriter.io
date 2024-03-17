@@ -5,6 +5,7 @@ Release 2.3
 ***********
 
 | **Release Date:** March 10, 2024
+| **Patches:** :ref:`2.3.1 <main_release_2_3_1>`
 
 Release Notes
 =============
@@ -138,15 +139,32 @@ You can follow the development progress on the `2.3 Milestone <https://github.co
 
 Feedback for the 2.3 RC 1 release can be posted on the `GitHub Discussions <https://github.com/vkbo/novelWriter/discussions/1713>`__ thread.
 
+
+Patch Releases
+==============
+
+.. _main_release_2_3_1:
+
+Patch 2.3.1
+-----------
+
+**Release Date:** March 17, 2024
+
+This is a patch release that fixes several issues with translations into other languages than the default English, and adds
+completed translations for French.
+
+
 Download Links
 ==============
 
 .. include:: ../generated/download_release.rst
+
 
 Older Releases
 ==============
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.3 <https://github.com/vkbo/novelWriter/releases/tag/v2.3>`__
 | :octicon:`mark-github` `Download Release 2.3 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.3rc1>`__
 | :octicon:`mark-github` `Download Release 2.3 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.3b1>`__

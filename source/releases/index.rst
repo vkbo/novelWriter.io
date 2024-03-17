@@ -37,8 +37,8 @@ This is an overview of novelWriter releases.
      - Status
    * - :ref:`main_release_2_3`
      - 2024-03-10
-     - N/A
-     - N/A
+     - 2.3.1
+     - 2024-03-17
      - Latest Release: :ref:`Download <main_download>`
    * - :ref:`main_release_2_2`
      - 2023-12-17
