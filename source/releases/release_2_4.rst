@@ -4,7 +4,7 @@
 Pre-Release 2.4 Beta 1
 **********************
 
-| **Release Date:** Not Released
+| **Release Date:** March 26, 2024
 
 Release Notes
 =============
@@ -16,7 +16,7 @@ Release Notes
 
 The next upcoming release of novelWriter is 2.4.
 
-You can follow the development progress on the `2.4 Beta 1 Milestone <https://github.com/vkbo/novelWriter/milestone/70>`__.
+You can follow the development progress on the `2.4 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/76>`__.
 
 Download Links
 ==============
