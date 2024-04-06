@@ -1,10 +1,10 @@
 .. _main_release_2_4:
 
-**********************
-Pre-Release 2.4 Beta 1
-**********************
+********************
+Pre-Release 2.4 RC 1
+********************
 
-| **Release Date:** March 26, 2024
+| **Release Date:** April 6, 2024
 
 Release Notes
 =============
@@ -16,9 +16,17 @@ Release Notes
 
 The next upcoming release of novelWriter is 2.4.
 
-You can follow the development progress on the `2.4 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/76>`__.
+You can follow the development progress on the `2.4 Milestone <https://github.com/vkbo/novelWriter/milestone/77>`__.
 
 Download Links
 ==============
 
 .. include:: ../generated/download_pre_release.rst
+
+
+Older Releases
+==============
+
+Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 2.4 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4b1>`__
