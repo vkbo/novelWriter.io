@@ -38,7 +38,7 @@ top left of the document headers. This should make it easier to navigate long do
 Highlight Text
 --------------
 
-A new shortcode has been added for highlighting text. It only applies to HTML and Open Document manuscripts, and it is also added to
+A new shortcode is available for highlighting text. It only applies to HTML and Open Document manuscripts, and it is also added to
 Extended Markdown manuscripts using the non-standard ``==`` codes.
 
 To highlight a piece of text in novelWriter, you can wrap the text in ``[m]text[/m]`` codes, click the new highlight button on the
@@ -65,11 +65,11 @@ your manuscript document. See the section below.
 
 .. code-block:: md
 
-   ### My Soft Scene Heading
+   ### A Soft Scene Heading
 
    Text
 
-   ###! My Hard Scene Heading
+   ###! A Hard Scene Heading
 
    Text
 
@@ -82,12 +82,12 @@ Manuscript Tool Changes
    :align: right
 
 The Manuscript Build Tool now shows a set of word and character counts of the text displayed in the preview window. The counts are
-shown at the bottom of the window, and by default only shows the word and character counts. By clicking the little arrow icon, the
+shown at the bottom of the window, and by default only show the word and character counts. By clicking the little arrow icon the
 panel is expanded to show a number of other counts as well.
 
 In addition to the word and character counts, an outline of the previewed manuscript is now available in a tab next to the build
 settings on the left. The outline shows partition and chapter headings at the top level with scenes under chapters if scene titles
-are generated. For notes, level 1 and 2 headings are show. All other heading levels are ignored.
+are generated. For notes, level 1 and 2 headings are shown. All other heading levels are ignored.
 
 There are also new settings for each build. Here is a summary:
 
