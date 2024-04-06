@@ -77,6 +77,13 @@ span.guilabel {
     margin-bottom: -0.15em;
 }
 
+img.align-left,
+img.align-right,
+img.align-center {
+    margin-top: 0.4em;
+    margin-bottom: 1em;
+}
+
 /*
  * Hacks
  */
