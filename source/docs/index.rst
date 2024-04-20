@@ -4,11 +4,11 @@
 Documentation
 *************
 
-| **Release Version:** 2.3.1
-| **Release Date:** Sunday, 17 March 2024
-| **Docs Updated:** Sunday, 17 March 2024
+| **Release Version:** 2.4
+| **Release Date:** Saturday, 20 April 2024
+| **Docs Updated:** Saturday, 20 April 2024
 
-**PDF:** :download:`novelWriter-2.3.pdf <../about/novelWriter-2.3.pdf>` [ :ref:`Older Versions <main_about_docs>` ]
+**PDF:** :download:`novelWriter-2.4.pdf <../about/novelWriter-2.4.pdf>` [ :ref:`Older Versions <main_about_docs>` ]
 
 novelWriter is an open source plain text editor designed for writing novels assembled from
 individual text documents. It uses a minimal formatting syntax inspired by Markdown, and adds a
@@ -22,14 +22,12 @@ storage for robustness.
    :width: 500
 
 The project storage is suitable for version control software, and also well suited for file
-synchronisation tools. All text is saved as plain text files with a meta data header. The core
-project structure is stored in a single project XML file. Other meta data is saved as JSON files.
-See the :ref:`a_breakdown_storage` section for more details.
+synchronisation tools. All text is saved as plain text files, and your project data as standard
+data formats in XML and JSON. See :ref:`a_storage` for more details.
 
-Any operating system that can run Python 3 and has the Qt 5 libraries should be able to run
-novelWriter. It runs fine on Linux, Windows and MacOS, and users have tested it on other platforms
-as well. novelWriter can be run directly from the Python source, or installed from packages or with
-pip. See :ref:`a_started` for more details.
+Any operating system that has Python 3 and the Qt 5 libraries should be able to run novelWriter.
+It runs fine on Linux, Windows and MacOS, and users have tested it on other platforms as well.
+See :ref:`a_started` for more details.
 
 **Useful Links**
 
@@ -58,7 +56,6 @@ pip. See :ref:`a_started` for more details.
    int_overview
    int_started
    int_howto
-   int_customise
    int_glossary
 
 .. toctree::
@@ -88,6 +85,7 @@ pip. See :ref:`a_started` for more details.
    :caption: Additional Details
    :hidden:
 
+   more_customise
    more_projectformat
    more_counting
 
