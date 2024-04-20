@@ -8,25 +8,28 @@ Releases
    :caption: Latest Release
    :hidden:
 
-   release_2_3
+   release_2_4
 
 .. toctree::
    :caption: Next Release
    :hidden:
 
-   release_2_4
+   release_2_5
 
 .. toctree::
    :caption: Previous Releases
    :hidden:
 
+   release_2_3
    release_2_2
    release_2_1
    release_2_0
 
 This is an overview of novelWriter releases.
 
-.. list-table:: Releases
+Latest release is :ref:`main_release_latest`.
+
+.. list-table:: More Releases
    :header-rows: 1
    :class: releases-table
 
@@ -35,11 +38,16 @@ This is an overview of novelWriter releases.
      - Latest Patch
      - Patch Date
      - Status
+   * - :ref:`main_release_2_4`
+     - 2024-04-20
+     - N/A
+     - N/A
+     - Latest Release: :ref:`Download <main_download>`
    * - :ref:`main_release_2_3`
      - 2024-03-10
      - 2.3.1
      - 2024-03-17
-     - Latest Release: :ref:`Download <main_download>`
+     - Past Release: `Download <https://github.com/vkbo/novelWriter/releases/tag/v2.3.1>`__
    * - :ref:`main_release_2_2`
      - 2023-12-17
      - 2.2.1

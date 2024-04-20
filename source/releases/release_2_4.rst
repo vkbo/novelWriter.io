@@ -1,20 +1,14 @@
+.. _main_release_latest:
 .. _main_release_2_4:
 
-********************
-Pre-Release 2.4 RC 1
-********************
+***********
+Release 2.4
+***********
 
-| **Release Date:** April 6, 2024
+| **Release Date:** April 20, 2024
 
 Release Notes
 =============
-
-.. attention::
-
-   This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
-   on live writing projects, and make sure you take frequent backups.
-
-   You can follow the development progress on the `2.4 Milestone <https://github.com/vkbo/novelWriter/milestone/77>`__.
 
 Release 2.4 mostly focuses on adding requested features to the Manuscript tool, but there are also other changes to the main user
 interface that may prove useful.
@@ -104,7 +98,7 @@ There are also new settings for each build. Here is a summary:
 Download Links
 ==============
 
-.. include:: ../generated/download_pre_release.rst
+.. include:: ../generated/download_release.rst
 
 
 Older Releases
@@ -112,4 +106,5 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.4 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4rc1>`__
 | :octicon:`mark-github` `Download Release 2.4 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4b1>`__

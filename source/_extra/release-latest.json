@@ -1,20 +1,20 @@
 {
   "release": {
-    "version": "2.3.1",
+    "version": "2.4",
     "major": 2,
-    "minor": 3,
-    "patch": 1,
+    "minor": 4,
+    "patch": 0,
     "info": {
-      "name": "Version 2.3.1",
-      "date": "2024-03-17T10:30:08Z",
-      "url": "https://github.com/vkbo/novelWriter/releases/tag/v2.3.1",
+      "name": "Version 2.4",
+      "date": "2024-04-20T13:57:49Z",
+      "url": "https://github.com/vkbo/novelWriter/releases/tag/v2.4",
       "assets": {
-        "appimage": "https://github.com/vkbo/novelWriter/releases/download/v2.3.1/novelWriter-2.3.1.AppImage",
-        "debian": "https://github.com/vkbo/novelWriter/releases/download/v2.3.1/novelwriter_2.3.1_all.deb",
-        "winexe": "https://github.com/vkbo/novelWriter/releases/download/v2.3.1/novelwriter-2.3.1-amd64-setup.exe",
-        "macdmg": "https://github.com/vkbo/novelWriter/releases/download/v2.3.1/novelWriter-2.3.1.dmg",
-        "zipball": "https://api.github.com/repos/vkbo/novelWriter/zipball/v2.3.1",
-        "tarball": "https://api.github.com/repos/vkbo/novelWriter/tarball/v2.3.1"
+        "appimage": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4.AppImage",
+        "debian": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelwriter_2.4_all.deb",
+        "winexe": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelwriter-2.4-amd64-setup.exe",
+        "macdmg": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-amd64.dmg",
+        "zipball": "https://api.github.com/repos/vkbo/novelWriter/zipball/v2.4",
+        "tarball": "https://api.github.com/repos/vkbo/novelWriter/tarball/v2.4"
       }
     }
   }
