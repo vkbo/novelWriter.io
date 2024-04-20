@@ -94,6 +94,11 @@ img.align-center {
     margin-top: 0 !important;
 }
 
+/* This removes the additional padding added when kbds are wrapped in kbds */
+kbd.compound {
+    padding: 0;
+}
+
 /*
  * Custom Classes
  */
