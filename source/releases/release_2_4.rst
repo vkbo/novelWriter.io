@@ -50,7 +50,7 @@ toolbar, or select it from the **Format** menu.
 Soft and Hard Scene Breaks
 --------------------------
 
-If you need to distinguish between "soft" and "hard" scene breaks in your project, you can now indicate "hard" scenes by adding a
+If you need to distinguish between "soft" and "hard" scene breaks in your project, you can now indicate "hard" scenes by adding an
 ``!`` to the heading format. The old scene headings are considered "soft" by default. This syntax has no effect on how the scenes
 are treated by the application in general. The only difference between them is that you can format them differently when you create
 your manuscript document. See the section below.
