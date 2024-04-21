@@ -7,8 +7,10 @@ Sha256 Checksums
   | Sha256: ``{debian_shasum}`` :octicon:`download` `ShaSum File <{debian_shasumfile}>`__
 * | **Windows Installer:** {winexe_name}
   | Sha256: ``{winexe_shasum}`` :octicon:`download` `ShaSum File <{winexe_shasumfile}>`__
-* | **MacOS DMG Image:** {macdmg_name}
-  | Sha256: ``{macdmg_shasum}`` :octicon:`download` `ShaSum File <{macdmg_shasumfile}>`__
+* | **MacOS DMG Image (Intel):** {macx86_name}
+  | Sha256: ``{macx86_shasum}`` :octicon:`download` `ShaSum File <{macx86_shasumfile}>`__
+* | **MacOS DMG Image (M1):** {macarm_name}
+  | Sha256: ``{macarm_shasum}`` :octicon:`download` `ShaSum File <{macarm_shasumfile}>`__
 
 .. rubric:: Verify the Checksum
 
@@ -40,4 +42,4 @@ Sha256 Checksums
 
       .. code-block:: bash
 
-         shasum -c {macdmg_name}.sha256
+         shasum -c {macx86_name}.sha256

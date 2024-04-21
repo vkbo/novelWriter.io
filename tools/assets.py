@@ -17,8 +17,9 @@ class AssetType(Enum):
     APP_IMAGE_OLD = 2
     DEBIAN        = 3
     WINDOWS_EXE   = 4
-    MAC_DMG       = 5
-    PYTHON_WHEEL  = 6
+    MAC_DMG_INTEL = 5
+    MAC_DMG_ARM   = 6
+    PYTHON_WHEEL  = 7
 
 # END Enum AssetType
 
@@ -51,9 +52,13 @@ ASSET_TEXT = {
         "Setup Installer",
         "This is a standard setup installer for Windows. It is made for Windows 10 or newer."
     ),
-    AssetType.MAC_DMG: (
-        "DMG Image",
-        "This is a DMG image for MacOS, and should work on at least MacOS 12 or higher."
+    AssetType.MAC_DMG_INTEL: (
+        "DMG Image for Intel",
+        "This is a DMG image for MacOS with x86_64 architecture. It is built on MacOS 12."
+    ),
+    AssetType.MAC_DMG_ARM: (
+        "DMG Image for Apple Silicon (M1)",
+        "This is a DMG image for MacOS with aarch64 architecture. It is built on MacOS 14."
     ),
     AssetType.PYTHON_WHEEL: (
         "Python Wheel",
@@ -143,8 +148,11 @@ class Asset:
         elif name.endswith("setup.exe"):
             self._type = AssetType.WINDOWS_EXE
             self._os = AssetOS.WINDOWS
-        elif name.endswith(".dmg"):
-            self._type = AssetType.MAC_DMG
+        elif name.endswith(".dmg") and "x86_64" in name:
+            self._type = AssetType.MAC_DMG_INTEL
+            self._os = AssetOS.MACOS
+        elif name.endswith(".dmg") and "aarch64" in name:
+            self._type = AssetType.MAC_DMG_ARM
             self._os = AssetOS.MACOS
         elif name.endswith(".whl"):
             self._type = AssetType.PYTHON_WHEEL
@@ -184,12 +192,13 @@ class DownloadAssets:
 
     def __init__(self, data):
         self._raw = data
-        self._assets = {
+        self._assets: dict[AssetType, Asset | None] = {
             AssetType.APP_IMAGE:     None,
             AssetType.APP_IMAGE_OLD: None,
             AssetType.DEBIAN:        None,
             AssetType.WINDOWS_EXE:   None,
-            AssetType.MAC_DMG:       None,
+            AssetType.MAC_DMG_INTEL: None,
+            AssetType.MAC_DMG_ARM:   None,
             AssetType.PYTHON_WHEEL:  None,
         }
         for asset in data.get("assets", []):
@@ -240,7 +249,9 @@ class DownloadAssets:
         buffer.append("MacOS")
         buffer.append("-----")
         buffer.append("")
-        appendType(AssetType.MAC_DMG, buffer)
+        appendType(AssetType.MAC_DMG_INTEL, buffer)
+        buffer.append("")
+        appendType(AssetType.MAC_DMG_ARM, buffer)
         buffer.append("")
         buffer.append("Other Packages")
         buffer.append("--------------")

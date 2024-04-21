@@ -70,7 +70,8 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `DMG Image <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-amd64.dmg>`__
+            | :octicon:`download` `DMG Image (Intel) <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-x86_64.dmg>`__
+            | :octicon:`download` `DMG Image (M1) <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-aarch64.dmg>`__
             | :octicon:`light-bulb` :ref:`Install Help <a_started_macos>`
 
          .. grid-item::

@@ -42,7 +42,7 @@ def updateSetting(name: str, value: str) -> None:
     return
 
 
-def writeReleaseInfo(version: str, force: bool, info: dict[str, str]) -> None:
+def writeReleaseInfo(version: str, force: bool, info: dict[str, str | dict[str, str]]) -> None:
     """Write the release info file."""
     relFile = Path("source/_extra/release-latest.json")
     current = json.loads(relFile.read_text(encoding="utf-8")) if relFile.exists() else {}
@@ -195,7 +195,8 @@ def pullRelease(args):
     aAppImg = assets.getAsset(AssetType.APP_IMAGE)
     aDebian = assets.getAsset(AssetType.DEBIAN)
     aWinExe = assets.getAsset(AssetType.WINDOWS_EXE)
-    aMacDmg = assets.getAsset(AssetType.MAC_DMG)
+    aMacAMD = assets.getAsset(AssetType.MAC_DMG_INTEL)
+    aMacARM = assets.getAsset(AssetType.MAC_DMG_ARM)
 
     if isPreRelease:
         # Updating Pre-Release Info
@@ -220,7 +221,8 @@ def pullRelease(args):
                 "appimage": aAppImg.assetUrl,
                 "debian": aDebian.assetUrl,
                 "winexe": aWinExe.assetUrl,
-                "macdmg": aMacDmg.assetUrl,
+                "macx86": aMacAMD.assetUrl,
+                "macarm": aMacARM.assetUrl,
                 "zipball": zipBall,
                 "tarball": tarBall,
             }
@@ -234,7 +236,8 @@ def pullRelease(args):
             "appimage_download": aAppImg.assetUrl,
             "debian_download": aDebian.assetUrl,
             "winexe_download": aWinExe.assetUrl,
-            "macdmg_download": aMacDmg.assetUrl,
+            "macx86_download": aMacAMD.assetUrl,
+            "macarm_download": aMacARM.assetUrl,
         })
 
         buildFromTemplate("checksum_block.rst", "checksum_block.rst", {
@@ -247,9 +250,12 @@ def pullRelease(args):
             "winexe_name": aWinExe.assetName,
             "winexe_shasum": aWinExe.assetShaSum,
             "winexe_shasumfile": aWinExe.assetShaSumUrl,
-            "macdmg_name": aMacDmg.assetName,
-            "macdmg_shasum": aMacDmg.assetShaSum,
-            "macdmg_shasumfile": aMacDmg.assetShaSumUrl,
+            "macx86_name": aMacAMD.assetName,
+            "macx86_shasum": aMacAMD.assetShaSum,
+            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+            "macarm_name": aMacARM.assetName,
+            "macarm_shasum": aMacARM.assetShaSum,
+            "macarm_shasumfile": aMacARM.assetShaSumUrl,
         })
 
         buildFromTemplate("download_release.rst", "download_release.rst", {

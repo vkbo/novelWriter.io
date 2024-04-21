@@ -12,7 +12,8 @@
         "appimage": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4.AppImage",
         "debian": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelwriter_2.4_all.deb",
         "winexe": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelwriter-2.4-amd64-setup.exe",
-        "macdmg": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-amd64.dmg",
+        "macx86": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-x86_64.dmg",
+        "macarm": "https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-aarch64.dmg",
         "zipball": "https://api.github.com/repos/vkbo/novelWriter/zipball/v2.4",
         "tarball": "https://api.github.com/repos/vkbo/novelWriter/tarball/v2.4"
       }

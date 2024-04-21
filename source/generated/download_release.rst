@@ -44,11 +44,18 @@ Windows
 MacOS
 -----
 
-**DMG Image**
-   This is a DMG image for MacOS, and should work on at least MacOS 12 or higher.
+**DMG Image for Intel**
+   This is a DMG image for MacOS with x86_64 architecture. It is built on MacOS 12.
 
-   | **Download:** :octicon:`download` `novelWriter-2.4-amd64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-amd64.dmg>`__ [ 93.7 MB ]
-   | **Checksum:** :octicon:`hash` ``112a43f8614be36b2a59c1ab4d77dee6621603b72c5376dc18bb6ccba8104f94`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-amd64.dmg.sha256>`__
+   | **Download:** :octicon:`download` `novelWriter-2.4-x86_64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-x86_64.dmg>`__ [ 93.7 MB ]
+   | **Checksum:** :octicon:`hash` ``112a43f8614be36b2a59c1ab4d77dee6621603b72c5376dc18bb6ccba8104f94`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-x86_64.dmg.sha256>`__
+
+
+**DMG Image for Apple Silicon (M1)**
+   This is a DMG image for MacOS with aarch64 architecture. It is built on MacOS 14.
+
+   | **Download:** :octicon:`download` `novelWriter-2.4-aarch64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-aarch64.dmg>`__ [ 71.5 MB ]
+   | **Checksum:** :octicon:`hash` ``0099661ede689bc51efca48c9fe5787d68d752ccb7326b306de58486ebbce5e4`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.4/novelWriter-2.4-aarch64.dmg.sha256>`__
 
 
 Other Packages
