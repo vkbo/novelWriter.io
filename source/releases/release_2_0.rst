@@ -198,11 +198,11 @@ Download Links
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
-| :octicon:`mark-github` `Download Release 2.0 <https://github.com/vkbo/novelWriter/releases/tag/v2.0>`__
-| :octicon:`mark-github` `Download Release 2.0.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.1>`__
-| :octicon:`mark-github` `Download Release 2.0.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.2>`__
-| :octicon:`mark-github` `Download Release 2.0.3 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.3>`__
-| :octicon:`mark-github` `Download Release 2.0.4 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.4>`__
-| :octicon:`mark-github` `Download Release 2.0.5 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.5>`__
-| :octicon:`mark-github` `Download Release 2.0.6 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.6>`__
 | :octicon:`mark-github` `Download Release 2.0.7 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.7>`__
+| :octicon:`mark-github` `Download Release 2.0.6 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.6>`__
+| :octicon:`mark-github` `Download Release 2.0.5 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.5>`__
+| :octicon:`mark-github` `Download Release 2.0.4 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.4>`__
+| :octicon:`mark-github` `Download Release 2.0.3 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.3>`__
+| :octicon:`mark-github` `Download Release 2.0.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.2>`__
+| :octicon:`mark-github` `Download Release 2.0.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.0.1>`__
+| :octicon:`mark-github` `Download Release 2.0 <https://github.com/vkbo/novelWriter/releases/tag/v2.0>`__

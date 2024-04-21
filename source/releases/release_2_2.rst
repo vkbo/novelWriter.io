@@ -62,12 +62,7 @@ created. This patch also includes updated translations for German and Chinese.
 Download Links
 ==============
 
-.. include:: ../generated/download_release.rst
-
-
-Older Releases
-==============
-
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.2.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.2.1>`__
 | :octicon:`mark-github` `Download Release 2.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.2>`__
