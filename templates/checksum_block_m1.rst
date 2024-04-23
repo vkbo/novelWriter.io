@@ -9,6 +9,8 @@ Sha256 Checksums
   | Sha256: ``{winexe_shasum}`` :octicon:`download` `ShaSum File <{winexe_shasumfile}>`__
 * | **MacOS DMG Image (Intel):** {macx86_name}
   | Sha256: ``{macx86_shasum}`` :octicon:`download` `ShaSum File <{macx86_shasumfile}>`__
+* | **MacOS DMG Image (M1):** {macarm_name}
+  | Sha256: ``{macarm_shasum}`` :octicon:`download` `ShaSum File <{macarm_shasumfile}>`__
 
 .. rubric:: Verify the Checksum
 

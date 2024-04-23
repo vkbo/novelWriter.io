@@ -196,7 +196,7 @@ def pullRelease(args):
     aDebian = assets.getAsset(AssetType.DEBIAN)
     aWinExe = assets.getAsset(AssetType.WINDOWS_EXE)
     aMacAMD = assets.getAsset(AssetType.MAC_DMG_INTEL)
-    aMacARM = assets.getAsset(AssetType.MAC_DMG_ARM)
+    # aMacARM = assets.getAsset(AssetType.MAC_DMG_ARM)
 
     if isPreRelease:
         # Updating Pre-Release Info
@@ -222,7 +222,7 @@ def pullRelease(args):
                 "debian": aDebian.assetUrl,
                 "winexe": aWinExe.assetUrl,
                 "macx86": aMacAMD.assetUrl,
-                "macarm": aMacARM.assetUrl,
+                # "macarm": aMacARM.assetUrl,
                 "zipball": zipBall,
                 "tarball": tarBall,
             }
@@ -237,7 +237,7 @@ def pullRelease(args):
             "debian_download": aDebian.assetUrl,
             "winexe_download": aWinExe.assetUrl,
             "macx86_download": aMacAMD.assetUrl,
-            "macarm_download": aMacARM.assetUrl,
+            # "macarm_download": aMacARM.assetUrl,
         })
 
         buildFromTemplate("checksum_block.rst", "checksum_block.rst", {
@@ -253,9 +253,9 @@ def pullRelease(args):
             "macx86_name": aMacAMD.assetName,
             "macx86_shasum": aMacAMD.assetShaSum,
             "macx86_shasumfile": aMacAMD.assetShaSumUrl,
-            "macarm_name": aMacARM.assetName,
-            "macarm_shasum": aMacARM.assetShaSum,
-            "macarm_shasumfile": aMacARM.assetShaSumUrl,
+            # "macarm_name": aMacARM.assetName,
+            # "macarm_shasum": aMacARM.assetShaSum,
+            # "macarm_shasumfile": aMacARM.assetShaSumUrl,
         })
 
         buildFromTemplate("download_release.rst", "download_release.rst", {
