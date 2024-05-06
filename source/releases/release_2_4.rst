@@ -6,6 +6,7 @@ Release 2.4
 ***********
 
 | **Release Date:** April 20, 2024
+| **Patches:** :ref:`2.4.1 <main_release_2_4_1>`
 
 Release Notes
 =============
@@ -95,6 +96,20 @@ There are also new settings for each build. Here is a summary:
 * You can exclude hard line breaks from Markdown manuscript files.
 
 
+Patch Releases
+==============
+
+.. _main_release_2_4_1:
+
+Patch 2.4.1
+-----------
+
+**Release Date:** May 6, 2024
+
+This is a patch release that fixes a number of minor issues with the Manuscript Build tool. The only critical fix is related to a
+potential crash when deleting a build entry when its settings dialog is still open.
+
+
 Download Links
 ==============
 
@@ -106,5 +121,6 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.4 <https://github.com/vkbo/novelWriter/releases/tag/v2.4>`__
 | :octicon:`mark-github` `Download Release 2.4 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4rc1>`__
 | :octicon:`mark-github` `Download Release 2.4 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4b1>`__

@@ -3,16 +3,16 @@
 novelWriter.io Maintenance Script
 """
 
+import argparse
+import json
 import re
 import sys
-import json
-import argparse
 import urllib.request
 
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
-from tools import DownloadAssets, Documentation, AssetType
+from tools import AssetType, Documentation, DownloadAssets
 
 
 def stripVersion(version: str) -> str:

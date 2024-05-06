@@ -6,8 +6,8 @@ import shutil
 import subprocess
 import urllib.request
 
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent.parent
 

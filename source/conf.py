@@ -5,9 +5,8 @@
 
 import json
 
-from pathlib import Path
 from datetime import datetime
-
+from pathlib import Path
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
