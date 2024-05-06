@@ -107,7 +107,9 @@ Patch 2.4.1
 **Release Date:** May 6, 2024
 
 This is a patch release that fixes a number of minor issues with the Manuscript Build tool. The only critical fix is related to a
-potential crash when deleting a build entry when its settings dialog is still open.
+potential crash when deleting a build entry when its settings dialog is still open. A few minor improvements also include
+remembering the scroll position when updating the Manuscript Build preview. It also includes a change in the document editor and
+viewer where the font used for the document header and footer now matches the user interface font instead of the text font.
 
 
 Download Links
