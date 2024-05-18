@@ -6,7 +6,7 @@ Release 2.4
 ***********
 
 | **Release Date:** April 20, 2024
-| **Patches:** :ref:`2.4.1 <main_release_2_4_1>`
+| **Patches:** :ref:`2.4.1 <main_release_2_4_1>`, :ref:`2.4.2 <main_release_2_4_2>`
 
 Release Notes
 =============
@@ -112,6 +112,23 @@ remembering the scroll position when updating the Manuscript Build preview. It a
 viewer where the font used for the document header and footer now matches the user interface font instead of the text font.
 
 
+.. _main_release_2_4_2:
+
+Patch 2.4.2
+-----------
+
+**Release Date:** May 18, 2024
+
+This is a patch release that fixes two minor font issues and updates the Dutch and Chinese translations.
+
+The first font issue was with the preview of the **Manuscript Build** tool where the yellow header banner would use the document
+font set in preferences, while the previewed document itself would use whatever font was selected for the build itself. The banner
+now uses the GUI font instead.
+
+The second font issue occurred when the document font size was created in preferences. The headings in the editor would not be
+rescaled according to the new size until the application was restarted. The headings now scale proportionally without a restart.
+
+
 Download Links
 ==============
 
@@ -123,6 +140,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.4.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4.1>`__
 | :octicon:`mark-github` `Download Release 2.4 <https://github.com/vkbo/novelWriter/releases/tag/v2.4>`__
 | :octicon:`mark-github` `Download Release 2.4 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4rc1>`__
 | :octicon:`mark-github` `Download Release 2.4 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4b1>`__
