@@ -6,7 +6,7 @@ Release 2.4
 ***********
 
 | **Release Date:** April 20, 2024
-| **Patches:** :ref:`2.4.1 <main_release_2_4_1>`, :ref:`2.4.2 <main_release_2_4_2>`
+| **Patches:** :ref:`2.4.1 <main_release_2_4_1>`, :ref:`2.4.2 <main_release_2_4_2>`, :ref:`2.4.3 <main_release_2_4_3>`
 
 Release Notes
 =============
@@ -129,6 +129,21 @@ The second font issue occurred when the document font size was created in prefer
 rescaled according to the new size until the application was restarted. The headings now scale proportionally without a restart.
 
 
+.. _main_release_2_4_3:
+
+Patch 2.4.3
+-----------
+
+**Release Date:** May 20, 2024
+
+This is a patch release that fixes issues with the document font in the editor, viewer and manuscript preview on some Linux distros.
+The font would not be set correctly after a restart of the app. It is known to affect Linux Mint 21.3, and may also affect other
+distros. This patch also fixes a potential crash when using the spell check dictionary install tool. The crash occurs when the
+default folder for the library that runs the spell checking in novelWriter does not exist prior to using the tool to add new spell
+check dictionaries. The bug primarily Windows users where the system's spell check dictionaries cannot be used, and this is the only
+way to install new dictionaries.
+
+
 Download Links
 ==============
 
@@ -140,6 +155,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.4.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.4.2>`__
 | :octicon:`mark-github` `Download Release 2.4.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4.1>`__
 | :octicon:`mark-github` `Download Release 2.4 <https://github.com/vkbo/novelWriter/releases/tag/v2.4>`__
 | :octicon:`mark-github` `Download Release 2.4 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4rc1>`__
