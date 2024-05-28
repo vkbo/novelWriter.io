@@ -21,7 +21,8 @@ Features
       into folders. Documents can even have sub-documents.
 
       Cross-references to your project notes are defined by convenient meta keyword/value tags in
-      the text of your documents and notes. You can even insert comments.
+      your documents and notes. You can also insert comments that can be included in the
+      manuscript.
 
    .. grid-item::
       :padding: 0 0 3 0
@@ -78,7 +79,7 @@ Project Outline
    .. grid-item::
       :padding: 1 0 0 3
 
-      The :guilabel:`Outline View`` gives you a complete overview of the structure of your novel in
+      The :guilabel:`Outline View` gives you a complete overview of the structure of your novel in
       terms of your chapters and scenes.
 
       It also shows you all the associated meta data and cross-references in columns. A default set
@@ -111,8 +112,9 @@ Build & Export
       document. You can filter what to include to make a manuscript, make a draft of your novel
       outline, or compile a document of all your notes.
 
-      The result can be printed or saved to HTML, Open Document, Markdown, Plain Text, or PDF. The
-      `Open Document`_ format is supported by most open source and commercial word processors.
+      The result can be printed or saved to HTML, Open Document and Markdown. The `Open Document`_
+      format is supported by most open source and commercial word processors. You can also print
+      the manuscript, including Print to PDF.
 
    .. grid-item::
       :padding: 1 0 3 0
