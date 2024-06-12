@@ -6,7 +6,8 @@ Release 2.4
 ***********
 
 | **Release Date:** April 20, 2024
-| **Patches:** :ref:`2.4.1 <main_release_2_4_1>`, :ref:`2.4.2 <main_release_2_4_2>`, :ref:`2.4.3 <main_release_2_4_3>`
+| **Patches:** :ref:`2.4.1 <main_release_2_4_1>`, :ref:`2.4.2 <main_release_2_4_2>`, :ref:`2.4.3 <main_release_2_4_3>`,
+  :ref:`2.4.4 <main_release_2_4_4>`
 
 Release Notes
 =============
@@ -144,6 +145,21 @@ check dictionaries. The bug primarily Windows users where the system's spell che
 way to install new dictionaries.
 
 
+.. _main_release_2_4_4:
+
+Patch 2.4.4
+-----------
+
+**Release Date:** June 12, 2024
+
+This is a patch release that fixes two minor issues, and also updates the Portuguese translation.
+
+The first issue is concerning settings document label from document heading before the document is saved. The document is now
+automatically saved before the heading text is extracted. The second issue is a potential crash when closing the Manuscript Build
+dialog. There is a few milliseconds every 10 seconds when the yellow label in the preview is updated where novelWriter may crash
+if the Manuscript tool is closed. There is a very low chance to hit this moment, but it is possible.
+
+
 Download Links
 ==============
 
@@ -155,6 +171,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.4.3 <https://github.com/vkbo/novelWriter/releases/tag/v2.4.3>`__
 | :octicon:`mark-github` `Download Release 2.4.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.4.2>`__
 | :octicon:`mark-github` `Download Release 2.4.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.4.1>`__
 | :octicon:`mark-github` `Download Release 2.4 <https://github.com/vkbo/novelWriter/releases/tag/v2.4>`__

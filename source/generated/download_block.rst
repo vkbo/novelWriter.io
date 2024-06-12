@@ -1,7 +1,7 @@
 Latest Release
 ==============
 
-**Version 2.4.3** -- Released on May 20, 2024 -- Read the :ref:`Release Notes <main_release_2_4>`
+**Version 2.4.4** -- Released on June 12, 2024 -- Read the :ref:`Release Notes <main_release_2_4>`
 
 .. grid:: 1 1 3 3
    :margin: 4 4 0 0
@@ -22,8 +22,8 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.4.3/novelWriter-2.4.3.AppImage>`__
-            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.4.3/novelwriter_2.4.3_all.deb>`__
+            | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelWriter-2.4.4.AppImage>`__
+            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelwriter_2.4.4_all.deb>`__
 
          .. grid-item::
             :columns: 5
@@ -46,7 +46,7 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.4.3/novelwriter-2.4.3-amd64-setup.exe>`__
+            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelwriter-2.4.4-amd64-setup.exe>`__
             | :octicon:`light-bulb` :ref:`Install Help <main_install_windows>`
 
          .. grid-item::
@@ -70,7 +70,7 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `DMG Image (Intel) <https://github.com/vkbo/novelWriter/releases/download/v2.4.3/novelWriter-2.4.3-x86_64.dmg>`__
+            | :octicon:`download` `DMG Image (Intel) <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelWriter-2.4.4-x86_64.dmg>`__
             | :octicon:`light-bulb` :ref:`Install Help <a_started_macos>`
 
          .. grid-item::
