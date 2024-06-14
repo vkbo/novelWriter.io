@@ -37,8 +37,8 @@ Windows
 **Setup Installer**
    This is a standard setup installer for Windows. It is made for Windows 10 or newer.
 
-   | **Download:** :octicon:`download` `novelwriter-2.4.4-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelwriter-2.4.4-amd64-setup.exe>`__ [ 36.4 MB ]
-   | **Checksum:** :octicon:`hash` ``cc446888ebfaea9d42f667ee32c54b58862d10173cd2814e1e4291a6786d1d09`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelwriter-2.4.4-amd64-setup.exe.sha256>`__
+   | **Download:** :octicon:`download` `novelwriter-2.4.4-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelwriter-2.4.4-amd64-setup.exe>`__ [ 48.5 MB ]
+   | **Checksum:** :octicon:`hash` ``2180380227c880753f3b2cd5f36f5a7c1c2c1614f045478d7a0f93df5b6d47e7`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.4.4/novelwriter-2.4.4-amd64-setup.exe.sha256>`__
 
 
 MacOS
