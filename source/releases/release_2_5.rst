@@ -1,10 +1,10 @@
 .. _main_release_2_5:
 
-**********************
-Pre-Release 2.5 Beta 1
-**********************
+********************
+Pre-Release 2.5 RC 1
+********************
 
-| **Release Date:** Not yet released
+| **Release Date:** June 22, 2024
 
 Release Notes
 =============
@@ -14,7 +14,7 @@ Release Notes
    This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
    on live writing projects, and make sure you take frequent backups.
 
-   You can follow the development progress on the `2.5 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/82>`__.
+   You can follow the development progress on the `2.5 Milestone <https://github.com/vkbo/novelWriter/milestone/84>`__.
 
 
 Status Icon Shapes
@@ -41,7 +41,7 @@ Two new themes have been added:
 * A vivid light theme named `Snazzy Light <https://github.com/loilo/vscode-snazzy-light>`__ is also available. This is a pure editor
   theme which should go with the **Default Light** GUI theme.
 
-In addition to the new themes, many fo the current themes have been updated and improved. Primarily, the changes focused on making
+In addition to the new themes, many of the current themes have been updated and improved. Primarily, the changes focused on making
 them more consistent, so that all Tomorrow themes use the same colours for the same parts as other existing themes.
 
 New theme colours were also added. In particular, special comments, like synopsis comments and the new footnote comments, are no
@@ -95,6 +95,7 @@ The dialogue highlighting feature has been improved, and a number of new setting
 * You can also define your own alternate open and close dialog symbol set. Some authors invent new notation to indicate a special
   kind of dialogue, and that is now also supported. This dialogue uses a different colour from the syntax theme than regular
   dialogue.
+* Text in quotes in notes are not considered dialogue. They are no longer highlighter.
 
 
 Font Settings
@@ -117,10 +118,13 @@ Other Changes
 
 * All comment types, including synopsis comments and the new footnotes, can now have formatting in the text. That is, you can use
   the regular Markdown and shortcode codes there just as in regular text.
+* First line indent is now available as a general manuscript setting, and applies to both Open Document and HTML output. It is also
+  visible in the preview document. The custom line height setting is also visible in the preview.
 * The way documents are generated for the document viewer and the manuscript preview has been rewritten. The new approach allows for
   much more flexibility in how the text is formatted. The first change you may notice is that the heading font size now matches that
   of the document editor, something that wasn't possible with the old approach. Other formatting will also be improved in future
   releases.
+* The new project form on the Welcome dialog is now less restrictive about what characters you can put in the project folder name.
 
 
 Technical Changes
@@ -135,3 +139,11 @@ Download Links
 ==============
 
 .. include:: ../generated/download_pre_release.rst
+
+
+Older Releases
+==============
+
+Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 2.5 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.5b1>`__
