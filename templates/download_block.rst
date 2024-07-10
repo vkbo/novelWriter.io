@@ -71,6 +71,7 @@ Latest Release
 
             | **Download**
             | :octicon:`download` `DMG Image (Intel) <{macx86_download}>`__
+            | :octicon:`download` `DMG Image (M1) <{macarm_download}>`__
             | :octicon:`light-bulb` :ref:`Install Help <a_started_macos>`
 
          .. grid-item::

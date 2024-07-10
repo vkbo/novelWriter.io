@@ -8,18 +8,19 @@ Releases
    :caption: Latest Release
    :hidden:
 
-   release_2_4
+   release_2_5
 
 .. toctree::
    :caption: Next Release
    :hidden:
 
-   release_2_5
+   release_2_6
 
 .. toctree::
    :caption: Previous Releases
    :hidden:
 
+   release_2_4
    release_2_3
    release_2_2
    release_2_1
@@ -38,11 +39,16 @@ Latest release is :ref:`main_release_latest`.
      - Latest Patch
      - Patch Date
      - Status
+   * - :ref:`main_release_2_5`
+     - 2024-07-10
+     - N/A
+     - N/A
+     - Latest Release: :ref:`Download <main_download>`
    * - :ref:`main_release_2_4`
      - 2024-04-20
      - 2.4.4
      - 2024-06-12
-     - Latest Release: :ref:`Download <main_download>`
+     - Past Release: `Download <https://github.com/vkbo/novelWriter/releases/tag/v2.4.4>`__
    * - :ref:`main_release_2_3`
      - 2024-03-10
      - 2.3.1
