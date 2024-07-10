@@ -4,11 +4,11 @@
 Documentation
 *************
 
-| **Release Version:** 2.4.1
-| **Release Date:** Monday, 6 May 2024
-| **Docs Updated:** Monday, 6 May 2024
+| **Release Version:** 2.5
+| **Release Date:** Wednesday, 10 July 2024
+| **Docs Updated:** Wednesday, 10 July 2024
 
-**PDF:** :download:`novelWriter-2.4.pdf <../about/novelWriter-2.4.pdf>` [ :ref:`Older Versions <main_about_docs>` ]
+**PDF:** :download:`novelWriter-2.5.pdf <../about/novelWriter-2.5.pdf>` [ :ref:`Older Versions <main_about_docs>` ]
 
 novelWriter is an open source plain text editor designed for writing novels assembled from
 individual text documents. It uses a minimal formatting syntax inspired by Markdown, and adds a

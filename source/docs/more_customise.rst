@@ -131,9 +131,12 @@ A GUI theme ``.conf`` file consists of the following settings:
    linkvisited     = 100, 100, 100
 
    [GUI]
-   statusnone      = 100, 100, 100
-   statussaved     = 100, 100, 100
-   statusunsaved   = 100, 100, 100
+   helptext        =   0,   0,   0
+   fadedtext       = 128, 128, 128
+   errortext       = 255,   0,   0
+   statusnone      = 120, 120, 120
+   statussaved     =   2, 133,  37
+   statusunsaved   = 200,  15,  39
 
 In the Main section you must at least define the ``name`` and ``icontheme`` settings. The
 ``icontheme`` settings should correspond to one of the internal icon themes, either
@@ -143,7 +146,11 @@ setting must match the icon theme's folder name.
 The Palette values correspond to the Qt enum values for ``QPalette::ColorRole``, see the
 `Qt documentation <https://doc.qt.io/qt-5.15/qpalette.html#ColorRole-enum>`_ for more details. The
 colour values are RGB numbers on the format ``r, g, b`` where each is an integer from ``0`` to
-``255``. Omitted values are not loaded and will use default values.
+``255``. Omitted values are not loaded and will use default values. If the ``helptext`` colour is
+not defined, it is computed as a colour between the ``window`` and ``windowtext`` colour.
+
+.. versionadded:: 2.5
+   The ``fadedtext`` and ``errortext`` theme colour entries were added.
 
 
 Custom Syntax Theme
@@ -168,12 +175,13 @@ A syntax theme ``.conf`` file consists of the following settings:
    headertext     =   0,   0,   0
    headertag      =   0,   0,   0
    emphasis       =   0,   0,   0
-   straightquotes =   0,   0,   0
-   doublequotes   =   0,   0,   0
-   singlequotes   =   0,   0,   0
+   dialog         =   0,   0,   0
+   altdialog      =   0,   0,   0
+   note           =   0,   0,   0
    hidden         =   0,   0,   0
    shortcode      =   0,   0,   0
    keyword        =   0,   0,   0
+   tag            =   0,   0,   0
    value          =   0,   0,   0
    optional       =   0,   0,   0
    spellcheckline =   0,   0,   0
@@ -197,3 +205,7 @@ Omitted syntax colours default to black, except ``background`` which defaults to
 
 .. versionadded:: 2.4
    The ``texthighlight`` syntax colour entry was added.
+
+.. versionadded:: 2.5
+   The ``dialog``, ``altdialog``, ``note`` and ``tag`` syntax colour entries were added.
+   ``straightquotes``, ``doublequotes`` and ``singlequotes`` were removed.
