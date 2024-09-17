@@ -5,7 +5,7 @@ Release 2.5
 ***********
 
 | **Release Date:** July 10, 2024
-| **Patches:** :ref:`2.5.1 <main_release_2_5_1>`
+| **Patches:** :ref:`2.5.1 <main_release_2_5_1>`, :ref:`2.5.2 <main_release_2_5_2>`
 
 Release Notes
 =============
@@ -143,6 +143,18 @@ issues with custom input boxes in Preferences, and a usability issue when select
 References panel as well as fixed an issue with the Importance labels not being updated in the tabs for tags.
 
 
+.. _main_release_2_5_2:
+
+Patch 2.5.2
+-----------
+
+**Release Date:** September 17, 2024
+
+This is a patch release that fixes a series of issues mostly affecting dialogue highlighting in the document viewer. The way the
+text is formatted in the viewer changed a lot in 2.5, and there were a few issues with the new implementation. The tab stop distance
+setting was also ignored by the updated document viewer, but has now been fixed as well.
+
+
 Download Links
 ==============
 
@@ -154,6 +166,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.5.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.5.1>`__
 | :octicon:`mark-github` `Download Release 2.5 <https://github.com/vkbo/novelWriter/releases/tag/v2.5>`__
 | :octicon:`mark-github` `Download Release 2.5 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.5rc1>`__
 | :octicon:`mark-github` `Download Release 2.5 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.5b1>`__
