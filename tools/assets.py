@@ -34,35 +34,36 @@ class AssetOS(Enum):
 # END Enum AssetOS
 
 
-ASSET_TEXT = {
+ASSET_TEXT: dict[AssetType, tuple[str, ...]] = {
     AssetType.APP_IMAGE: (
         "AppImage",
-        "The AppImage should run on any recent Linux distro. See the "
+        "The AppImage should run on any recent Linux distro. See the ",
         "`AppImage website`_ for more info."
     ),
     AssetType.APP_IMAGE_OLD: (
         "AppImage (Legacy)",
-        "For older Linux distros you may need to download this AppImage instead."
+        "For older Linux distros you may need to download this AppImage instead.",
     ),
     AssetType.DEBIAN: (
         "Debian Package",
-        "The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_."
+        "The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_.",
     ),
     AssetType.WINDOWS_EXE: (
         "Setup Installer",
-        "This is a standard setup installer for Windows. It is made for Windows 10 or newer."
+        "This is a standard setup installer for Windows. It is made for Windows 10 or newer.",
+        "Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.",
     ),
     AssetType.MAC_DMG_INTEL: (
         "DMG Image for Intel",
-        "This is a DMG image for MacOS with x86_64 architecture. It is built on MacOS 12."
+        "This is a DMG image for MacOS with x86_64 architecture. It is built on MacOS 12.",
     ),
     AssetType.MAC_DMG_ARM: (
         "DMG Image for Apple Silicon (M1)",
-        "This is a DMG image for MacOS with aarch64 architecture. It is built on MacOS 14."
+        "This is a DMG image for MacOS with aarch64 architecture. It is built on MacOS 14.",
     ),
     AssetType.PYTHON_WHEEL: (
         "Python Wheel",
-        "The Wheel package can be installed with ``pip install <file_path>``."
+        "The Wheel package can be installed with ``pip install <file_path>``.",
     ),
 }
 
@@ -231,6 +232,9 @@ class DownloadAssets:
                 f":octicon:`download` `ShaSum File <{asset.assetShaSumUrl}>`__"
             )
             target.append("")
+            if len(ASSET_TEXT[aType]) > 2:
+                target.append(f"   {ASSET_TEXT[aType][2]}")
+                target.append("")
             return
 
         buffer = []

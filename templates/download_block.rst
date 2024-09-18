@@ -46,7 +46,7 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `Setup Installer <{winexe_download}>`__
+            | :octicon:`download` `Setup Installer <{winexe_download}>`__\*
             | :octicon:`light-bulb` :ref:`Install Help <main_install_windows>`
 
          .. grid-item::

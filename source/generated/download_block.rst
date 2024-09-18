@@ -46,7 +46,7 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.5.2/novelwriter-2.5.2-amd64-setup.exe>`__
+            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.5.2/novelwriter-2.5.2-amd64-setup.exe>`__\*
             | :octicon:`light-bulb` :ref:`Install Help <main_install_windows>`
 
          .. grid-item::

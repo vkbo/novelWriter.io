@@ -3,6 +3,8 @@
 .. _Debian: https://www.debian.org/
 .. _Linux Mint: https://linuxmint.com/
 .. _novelWriter Repository: https://github.com/vkbo/novelWriter/
+.. _SignPath.io: https://about.signpath.io/
+.. _SignPath Foundation: https://signpath.org/
 
 | **Release Version:** Version 2.5.2
 | **Release Date:** September 17, 2024
@@ -13,10 +15,12 @@ Linux
 -----
 
 **AppImage**
-   The AppImage should run on any recent Linux distro. See the `AppImage website`_ for more info.
+   The AppImage should run on any recent Linux distro. See the 
 
    | **Download:** :octicon:`download` `novelWriter-2.5.2.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.5.2/novelWriter-2.5.2.AppImage>`__ [ 93.9 MB ]
    | **Checksum:** :octicon:`hash` ``0448282b3404f1e31bc7e79cf9aa1329758b8352ff8d1729e41b1ae20d8d1703`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.2/novelWriter-2.5.2.AppImage.sha256>`__
+
+   `AppImage website`_ for more info.
 
 **Debian Package**
    The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_.
@@ -32,7 +36,9 @@ Windows
    This is a standard setup installer for Windows. It is made for Windows 10 or newer.
 
    | **Download:** :octicon:`download` `novelwriter-2.5.2-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v2.5.2/novelwriter-2.5.2-amd64-setup.exe>`__ [ 46.1 MB ]
-   | **Checksum:** :octicon:`hash` ``2075b5119d16f0a22a662b7006c19887eaccd5b31f26fe6324dc220cd95280c9`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.2/novelwriter-2.5.2-amd64-setup.exe.sha256>`__
+   | **Checksum:** :octicon:`hash` ``77af1e1220c1fce9571cb3931802e4b479a78e5aa2ceada0a388e3e60c0c8c7d`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.2/novelwriter-2.5.2-amd64-setup.exe.sha256>`__
+
+   Free code signing provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
 
 MacOS

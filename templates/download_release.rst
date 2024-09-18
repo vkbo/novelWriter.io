@@ -3,6 +3,8 @@
 .. _Debian: https://www.debian.org/
 .. _Linux Mint: https://linuxmint.com/
 .. _novelWriter Repository: https://github.com/vkbo/novelWriter/
+.. _SignPath.io: https://about.signpath.io/
+.. _SignPath Foundation: https://signpath.org/
 
 | **Release Version:** {release_version}
 | **Release Date:** {release_date}

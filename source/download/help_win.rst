@@ -6,10 +6,19 @@ Installing on Windows
 
 .. _GitHub Releases: https://github.com/vkbo/novelWriter/releases
 .. _SHA256: https://en.wikipedia.org/wiki/SHA-2
+.. _SignPath.io: https://about.signpath.io/
+.. _SignPath Foundation: https://signpath.org/
 
-The novelWriter installer is not signed, so you will therefore be presented with security warnings
-when trying to install it on your PC. All this means is that Windows doesn't know who created the
-install file.
+As of release 2.5.2, the novelWriter installer for Windows is signed by the `SignPath Foundation`_.
+Earlier versions were not, and will warn that the installers are not signed.
+
+However, even if the installer is signed, your browser may issue a warning that the application
+isn't commonly downloaded. In for instance Edge, you can click the three dots next to the download
+and select "Keep". You may have to also click "Show more" and "Keep anyway."
+
+.. figure:: ../images/help_win11_dl.png
+
+If you use another browser, you may see a similar warning.
 
 Knowing where you download software from is important, so make sure you **only** download the
 installer from either here on the novelwriter.io website, or directly from the project's
@@ -23,38 +32,6 @@ installer from either here on the novelwriter.io website, or directly from the p
    of the file. The correct value is listed nearby where you downloaded the installer, either on
    the :ref:`Home <main_home>` page or the :ref:`main_download` page. You can also download the
    ``.sha256`` file on the `GitHub Releases`_ page alongside the installer.
-
-In order to get rid of the "Unknown Publisher" warnings in Windows, I would have to buy a code
-signing certificate that Microsoft accepts. They cost several hundred US dollars per year -- for
-the cheap ones. This is a free app, and there is nowhere near enough donations made to this project
-to pay for that at this point.
-
-Sometimes, Windows will try to prevent you from installing unknown applications. Below is a quick
-guide on how to disable the block for the novelWriter installer file.
-
-
-Windows 11 and Windows Defender
-===============================
-
-When you've downloaded the installer, and try to run it, Windows Defender may not allow you to run
-it. This is due to the missing signature, as mentioned above.
-
-You can explicitly unblock the installer by going to your Downloads folder, find the novelWriter
-installer file, right click it, and select **"Properties"**.
-
-.. figure:: ../images/help_win11_a.png
-
-In the **"Properties"** window that opens up, make sure you're on the **"General"** tab, and check
-the **"Unblock"** check box at the bottom next to **"Security"**.
-
-.. figure:: ../images/help_win11_b.png
-
-You should now be able to run the installer.
-
-It will still show you this notification when you start the installation, again reminding you that
-the installer is from an **"Unknown Publisher"**. Select **"Yes"** to continue.
-
-.. figure:: ../images/help_win11_c.png
 
 
 .. _main_install_win_content:

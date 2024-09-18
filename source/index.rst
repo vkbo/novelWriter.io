@@ -1,11 +1,14 @@
 :html_theme.sidebar_secondary.remove:
 
-.. _main_home:
+.. _SignPath.io: https://about.signpath.io/
+.. _SignPath Foundation: https://signpath.org/
 
 .. div:: main-page-icon
 
    .. image:: _static/novelwriter-icon.svg
       :class: dark-light
+
+.. _main_home:
 
 ***********
 novelWriter
@@ -51,6 +54,8 @@ novelWriter
    novelWriter is Free and `Open Source <https://www.gnu.org/licenses/gpl-3.0.en.html>`_, and runs on Linux, Windows and MacOS
 
 .. include:: generated/download_block.rst
+
+\* Free code signing on Windows is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
 
 Other Install Options
