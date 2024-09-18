@@ -5,10 +5,10 @@ Downloads
 *********
 
 .. toctree::
-   :caption: Help with Installation
    :hidden:
 
    help_win
+   code_signing
 
 This page includes all available packages for the latest release.
 
