@@ -5,7 +5,7 @@ Release 2.5
 ***********
 
 | **Release Date:** July 10, 2024
-| **Patches:** :ref:`2.5.1 <main_release_2_5_1>`, :ref:`2.5.2 <main_release_2_5_2>`
+| **Patches:** :ref:`2.5.1 <main_release_2_5_1>`, :ref:`2.5.2 <main_release_2_5_2>`, :ref:`2.5.3 <main_release_2_5_3>`
 
 Release Notes
 =============
@@ -153,6 +153,20 @@ Patch 2.5.2
 This is a patch release that fixes a series of issues mostly affecting dialogue highlighting in the document viewer. The way the
 text is formatted in the viewer changed a lot in 2.5, and there were a few issues with the new implementation. The tab stop distance
 setting was also ignored by the updated document viewer, but has now been fixed as well.
+
+
+.. _main_release_2_5_3:
+
+Patch 2.5.3
+-----------
+
+**Release Date:** November 26, 2024
+
+This is a patch release that fixes an issue with swapped colours for the saved indicator in the status bar for the Default Light
+theme, a bug for some platforms where drag and drop onto the root of the project tree was possible, and ans issue with the HTML
+manuscript format.
+
+This patch also adds a Russian translation, and updates the German and Portuguese translations.
 
 
 Download Links
