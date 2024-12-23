@@ -1,12 +1,13 @@
 .. _main_release_2_6:
 
 **********************
-Pre-Release 2.6 Beta 1
+Pre-Release 2.6 Beta 2
 **********************
 
-| **Release Date:** November 12, 2024
+| **Release Date:** December 23, 2024
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
+
 
 Release Notes
 =============
@@ -16,7 +17,7 @@ Release Notes
    This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
    on live writing projects, and make sure you take frequent backups.
 
-   You can follow the development progress on the `2.6 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/90>`__.
+   You can follow the development progress on the `2.6 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/91>`__.
 
 
 New Manuscript Features
@@ -81,7 +82,15 @@ symbols. Horizontal bars are inserted automatically in the text when you type 4 
 User Interface Improvements
 ---------------------------
 
-There are a few improvements to the overall user interface as well.
+The functionality behind the project tree has been completely rewritten. For you as the user, the changes should be minimal. The
+change mainly provides better control of the project tree's behaviour. The main change for users is a better implementation of
+drag and drop where multiple items can be moved around without as many restrictions as before. The root level of the tree is still
+locked though.
+
+A new bonus feature from the project tree changes is that you can now drag and drop project documents onto the editor and viewer
+panels to open them.
+
+There are a few other improvements to the overall user interface as well.
 
 * URLs starting with "http" are now clickable in both editor and viewer, and are also exported as links in manuscript documents.
 * A new edit button is available from the top-right corner if the document viewer. Clicking it will open the current document in the
@@ -95,3 +104,11 @@ Download Links
 ==============
 
 .. include:: ../generated/download_pre_release.rst
+
+
+Older Releases
+==============
+
+Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 2.6 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b1>`__
