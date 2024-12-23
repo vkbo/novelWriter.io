@@ -43,8 +43,8 @@ The new features are:
   the document itself in the editor, using the new **Insert > Word/Character Count** menu entry. In the document viewer, they are
   shown as 0, but they are set to the correct value in the Manuscript preview.
 * If you have enabled the option to ignore line breaks in text paragraphs in your Build Settings, you can still force line breaks in
-  the text where you still want them by adding ``[br]`` shortcodes. You can still add a line break after these, for a better visual
-  look in the editor. this will not produce double line breaks.
+  the text where you want them by adding ``[br]`` shortcodes. You can also add a line break after these, for a better visual
+  look in the editor. This will not produce double line breaks.
 * You now have the option to show page breaks in the Manuscript preview panel. They are enabled by default, but can be disabled with
   a little switch below the preview window.
 
@@ -77,6 +77,10 @@ To allow for resolving ambiguities where the syntax highlighter guesses somethin
 be, you can use a horizontal bar as a replacement for long dash. They look more or less identical in most fonts, and horizontal bars
 are automatically replaced with long dashes in the manuscript. However, the dialogue highlighting feature sees them as different
 symbols. Horizontal bars are inserted automatically in the text when you type 4 hyphens after one another.
+
+The requirement that dialogue in quotes must also include whitespaces on the outer margin has been removed. These are not
+necessarily present in languages that don't rely on whitespaces to separate words. The whitespaces *are* still required if the open
+and close symbols are identical, and therefore indistinguishable.
 
 
 User Interface Improvements
