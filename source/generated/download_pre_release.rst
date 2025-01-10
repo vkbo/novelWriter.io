@@ -6,10 +6,10 @@
 .. _SignPath.io: https://about.signpath.io/
 .. _SignPath Foundation: https://signpath.org/
 
-| **Release Version:** Version 2.6 Beta 2
-| **Release Date:** December 23, 2024
+| **Release Version:** Version 2.6 RC 1
+| **Release Date:** January 10, 2025
 | **Release Notes:** :ref:`main_release_2_6`
-| **GitHub Release:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.6b2>`__
+| **GitHub Release:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.6rc1>`__
 
 Linux
 -----
@@ -17,16 +17,16 @@ Linux
 **AppImage**
    The AppImage should run on any recent Linux distro. See the 
 
-   | **Download:** :octicon:`download` `novelWriter-2.6b2.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2.AppImage>`__ [ 91.8 MB ]
-   | **Checksum:** :octicon:`hash` ``93ab18726561727592abdb40c4bb80116f5ec337f3358ed9d98475d034331d81`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2.AppImage.sha256>`__
+   | **Download:** :octicon:`download` `novelWriter-2.6rc1.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1.AppImage>`__ [ 91.8 MB ]
+   | **Checksum:** :octicon:`hash` ``a2daa4dc3ba6805d9673037edb44eec3f27fc0d19c081b9dc95bc231807b9afd`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1.AppImage.sha256>`__
 
    `AppImage website`_ for more info.
 
 **Debian Package**
    The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_.
 
-   | **Download:** :octicon:`download` `novelwriter_2.6b2_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelwriter_2.6b2_all.deb>`__ [ 3.63 MB ]
-   | **Checksum:** :octicon:`hash` ``1735d1191f442f3a6e1a4c14a6967849696e8d422b71134e43ee92c05c1e47e3`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelwriter_2.6b2_all.deb.sha256>`__
+   | **Download:** :octicon:`download` `novelwriter_2.6rc1_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelwriter_2.6rc1_all.deb>`__ [ 3.63 MB ]
+   | **Checksum:** :octicon:`hash` ``070dddaf7d3b238ac991a4dd75d428c4d45a1e43d82dbd51ee46b8a5da76c37f`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelwriter_2.6rc1_all.deb.sha256>`__
 
 
 Windows
@@ -35,8 +35,8 @@ Windows
 **Setup Installer**
    This is a standard setup installer for Windows. It is made for Windows 10 or newer.
 
-   | **Download:** :octicon:`download` `novelwriter-2.6b2-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelwriter-2.6b2-amd64-setup.exe>`__ [ 46.2 MB ]
-   | **Checksum:** :octicon:`hash` ``8bda80249833455c5aa5e053107a93b0aa6f5a6bad832acedb6fa6dc20001e9b`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelwriter-2.6b2-amd64-setup.exe.sha256>`__
+   | **Download:** :octicon:`download` `novelwriter-2.6rc1-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelwriter-2.6rc1-amd64-setup.exe>`__ [ 46.2 MB ]
+   | **Checksum:** :octicon:`hash` ``449566bbda6539a6e08a63cd7a99b1c70f98ae1a855dbed64eae47ea3fd20e6c`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelwriter-2.6rc1-amd64-setup.exe.sha256>`__
 
    Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
@@ -47,15 +47,15 @@ MacOS
 **DMG Image for Intel**
    This is a DMG image for MacOS with x86_64 architecture. It is built on MacOS 12.
 
-   | **Download:** :octicon:`download` `novelWriter-2.6b2-x86_64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2-x86_64.dmg>`__ [ 93.3 MB ]
-   | **Checksum:** :octicon:`hash` ``2191a86c9ffeafdfd0119a1b415b339485977cc76881c311999eb5d9da2457be`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2-x86_64.dmg.sha256>`__
+   | **Download:** :octicon:`download` `novelWriter-2.6rc1-x86_64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1-x86_64.dmg>`__ [ 93.3 MB ]
+   | **Checksum:** :octicon:`hash` ``23894bbb3ee15039a78ed977d6b1f2f9d7df1c80f3863631527206c1bd4a2593`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1-x86_64.dmg.sha256>`__
 
 
 **DMG Image for Apple Silicon (M1)**
    This is a DMG image for MacOS with aarch64 architecture. It is built on MacOS 14.
 
-   | **Download:** :octicon:`download` `novelWriter-2.6b2-aarch64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2-aarch64.dmg>`__ [ 88.2 MB ]
-   | **Checksum:** :octicon:`hash` ``54299e2c140ba533ae92affce47a1b02ad8cb58b5bb227d1fdbb6126e676637b`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2-aarch64.dmg.sha256>`__
+   | **Download:** :octicon:`download` `novelWriter-2.6rc1-aarch64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1-aarch64.dmg>`__ [ 88.2 MB ]
+   | **Checksum:** :octicon:`hash` ``b064224ddd09f17d4872e359254963d53204f5fa1db9d2ac56238a8a514ff089`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1-aarch64.dmg.sha256>`__
 
 
 Other Packages
@@ -64,12 +64,12 @@ Other Packages
 **Python Wheel**
    The Wheel package can be installed with ``pip install <file_path>``.
 
-   | **Download:** :octicon:`download` `novelWriter-2.6b2-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2-py3-none-any.whl>`__ [ 4.16 MB ]
-   | **Checksum:** :octicon:`hash` ``15b4d2853904e584e0bf79ebdae69a2bc1b1bdc5e2641deebba446938d8aa955`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6b2/novelWriter-2.6b2-py3-none-any.whl.sha256>`__
+   | **Download:** :octicon:`download` `novelWriter-2.6rc1-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1-py3-none-any.whl>`__ [ 4.15 MB ]
+   | **Checksum:** :octicon:`hash` ``423637c11ef4692e486c3ac1d876686997f83ba635583ff0b036243ee691c2a8`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6rc1/novelWriter-2.6rc1-py3-none-any.whl.sha256>`__
 
 **Source Code**
 The source code packages are archived files of the entire source code. See also the `novelWriter Repository`_.
 
-| **Download:** :octicon:`download` `novelWriter-2.6b2.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v2.6b2>`__
-| **Download:** :octicon:`download` `novelWriter-2.6b2.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v2.6b2>`__
+| **Download:** :octicon:`download` `novelWriter-2.6rc1.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v2.6rc1>`__
+| **Download:** :octicon:`download` `novelWriter-2.6rc1.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v2.6rc1>`__
 

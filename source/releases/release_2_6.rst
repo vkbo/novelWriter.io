@@ -1,10 +1,10 @@
 .. _main_release_2_6:
 
-**********************
-Pre-Release 2.6 Beta 2
-**********************
+********************
+Pre-Release 2.6 RC 1
+********************
 
-| **Release Date:** December 23, 2024
+| **Release Date:** January 9, 2025
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
 
@@ -17,7 +17,7 @@ Release Notes
    This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
    on live writing projects, and make sure you take frequent backups.
 
-   You can follow the development progress on the `2.6 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/91>`__.
+   You can follow the development progress on the `2.6 Milestone <https://github.com/vkbo/novelWriter/milestone/92>`__.
 
 
 New Manuscript Features
@@ -102,6 +102,9 @@ There are a few other improvements to the overall user interface as well.
 * The current open document in the editor is now highlighted in the project tree, just like it is in the novel view.
 * You can now resize the two parts of the details panel below the Outline View.
 * You can select to show the status label and icon for the entries in the Outline View.
+* If you don't want to see the clock on the status bar that measures the amount of time used in the current session, you can now
+  click on it to hide it. Only the icon will be visible. Clicking the icon, will show the timer again.
+* Status and importance labels can now be exported to a CSV file, and imported into another project.
 
 
 Download Links
@@ -115,4 +118,5 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.6 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b2>`__
 | :octicon:`mark-github` `Download Release 2.6 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b1>`__
