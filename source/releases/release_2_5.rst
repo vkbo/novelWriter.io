@@ -7,6 +7,7 @@ Release 2.5
 | **Release Date:** July 10, 2024
 | **Patches:** :ref:`2.5.1 <main_release_2_5_1>`, :ref:`2.5.2 <main_release_2_5_2>`, :ref:`2.5.3 <main_release_2_5_3>`
 
+
 Release Notes
 =============
 

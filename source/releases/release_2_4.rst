@@ -1,4 +1,3 @@
-.. _main_release_latest:
 .. _main_release_2_4:
 
 ***********
@@ -8,6 +7,7 @@ Release 2.4
 | **Release Date:** April 20, 2024
 | **Patches:** :ref:`2.4.1 <main_release_2_4_1>`, :ref:`2.4.2 <main_release_2_4_2>`, :ref:`2.4.3 <main_release_2_4_3>`,
   :ref:`2.4.4 <main_release_2_4_4>`
+
 
 Release Notes
 =============

@@ -7,6 +7,7 @@ Release 2.3
 | **Release Date:** March 10, 2024
 | **Patches:** :ref:`2.3.1 <main_release_2_3_1>`
 
+
 Release Notes
 =============
 

@@ -12,6 +12,7 @@ PDF Manuals
 
 A selection of PDF manuals are available here for download, including for earlier versions of novelWriter:
 
+| :download:`novelWriter-2.6.pdf`
 | :download:`novelWriter-2.5.pdf`
 | :download:`novelWriter-2.4.pdf`
 | :download:`novelWriter-2.3.pdf`

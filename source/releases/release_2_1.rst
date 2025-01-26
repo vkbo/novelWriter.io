@@ -7,6 +7,7 @@ Release 2.1
 | **Release Date:** October 17, 2023
 | **Patches:** :ref:`2.1.1 <main_release_2_1_1>`
 
+
 Release Notes
 =============
 

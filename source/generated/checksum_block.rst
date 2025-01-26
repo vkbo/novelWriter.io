@@ -1,16 +1,16 @@
 Sha256 Checksums
 ----------------
 
-* | **Linux AppImage:** novelWriter-2.5.3.AppImage
-  | Sha256: ``0a2be9e3c2363e336005d90bffcef013dee3a077801b9a1a200d33305b8a344c`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.3/novelWriter-2.5.3.AppImage.sha256>`__
-* | **Debian Package:** novelwriter_2.5.3_all.deb
-  | Sha256: ``f8f1e7017da68ad9d5ad979190e565588ddd67ca64c1c139da0840986dd4173b`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.3/novelwriter_2.5.3_all.deb.sha256>`__
-* | **Windows Installer:** novelwriter-2.5.3-amd64-setup.exe
-  | Sha256: ``4cb5d359e4dd17065186e977e3817bf9793c4f2ae71cc218d30dd0284bd8c091`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.3/novelwriter-2.5.3-amd64-setup.exe.sha256>`__
-* | **MacOS DMG Image (Intel):** novelWriter-2.5.3-x86_64.dmg
-  | Sha256: ``9bb2d292ecac9297cf26b2a1eafe969812a34714c6d185d29c116c2464bf51ad`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.3/novelWriter-2.5.3-x86_64.dmg.sha256>`__
-* | **MacOS DMG Image (M1):** novelWriter-2.5.3-aarch64.dmg
-  | Sha256: ``1586d06659f727583a853aae5a6aec371b156879c688a3b5633ad1acb7f906b1`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.5.3/novelWriter-2.5.3-aarch64.dmg.sha256>`__
+* | **Linux AppImage:** novelWriter-2.6.AppImage
+  | Sha256: ``9e1a73ccbdee5f9e56350ae6babd72daa626dc5913a520608732485d58c4d05b`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6/novelWriter-2.6.AppImage.sha256>`__
+* | **Debian Package:** novelwriter_2.6_all.deb
+  | Sha256: ``589e17e39c0a070d59d39d45f52bd3e0f0b42746fff509c970b0e1f3d3d8338d`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6/novelwriter_2.6_all.deb.sha256>`__
+* | **Windows Installer:** novelwriter-2.6-amd64-setup.exe
+  | Sha256: ``4b2e0201cd1beac746ba08b705ac25f48b331a636c4d01e2ca21abade981d130`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6/novelwriter-2.6-amd64-setup.exe.sha256>`__
+* | **MacOS DMG Image (Intel):** novelWriter-2.6-x86_64.dmg
+  | Sha256: ``5212c6e986976301e6b5eb7c29416d5cb63c40d21733f054ab40f75e8376bf8e`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6/novelWriter-2.6-x86_64.dmg.sha256>`__
+* | **MacOS DMG Image (M1):** novelWriter-2.6-aarch64.dmg
+  | Sha256: ``488da1be890a0a38acc07fea743791e3624863f079d94b2cff7049919df922ab`` :octicon:`download` `ShaSum File <https://github.com/vkbo/novelWriter/releases/download/v2.6/novelWriter-2.6-aarch64.dmg.sha256>`__
 
 .. rubric:: Verify the Checksum
 
@@ -23,8 +23,8 @@ Sha256 Checksums
 
       .. code-block:: bash
 
-         shasum -c novelWriter-2.5.3.AppImage.sha256
-         shasum -c novelwriter_2.5.3_all.deb.sha256
+         shasum -c novelWriter-2.6.AppImage.sha256
+         shasum -c novelwriter_2.6_all.deb.sha256
 
    .. tab-item:: Windows
 
@@ -33,7 +33,7 @@ Sha256 Checksums
 
       .. code-block:: powershell
 
-         Get-FileHash -Algorithm SHA256 novelwriter-2.5.3-amd64-setup.exe | Format-List
+         Get-FileHash -Algorithm SHA256 novelwriter-2.6-amd64-setup.exe | Format-List
 
    .. tab-item:: MacOS
 
@@ -42,4 +42,4 @@ Sha256 Checksums
 
       .. code-block:: bash
 
-         shasum -c novelWriter-2.5.3-x86_64.dmg.sha256
+         shasum -c novelWriter-2.6-x86_64.dmg.sha256

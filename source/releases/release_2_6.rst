@@ -1,10 +1,11 @@
+.. _main_release_latest:
 .. _main_release_2_6:
 
-********************
-Pre-Release 2.6 RC 1
-********************
+***********
+Release 2.6
+***********
 
-| **Release Date:** January 9, 2025
+| **Release Date:** January 26, 2025
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
 
@@ -12,16 +13,12 @@ Pre-Release 2.6 RC 1
 Release Notes
 =============
 
-.. attention::
-
-   This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
-   on live writing projects, and make sure you take frequent backups.
-
-   You can follow the development progress on the `2.6 Milestone <https://github.com/vkbo/novelWriter/milestone/92>`__.
-
-
 New Manuscript Features
 -----------------------
+
+.. image:: images/2_6_build_settings.png
+   :width: 40%
+   :align: right
 
 This release has largely focused on the Manuscript Build tool, and a number of new features have been added. The code behind all the
 output formats has also been extensively restructured to ensure better consistency between the preview and the various outputs.
@@ -48,9 +45,20 @@ The new features are:
 * You now have the option to show page breaks in the Manuscript preview panel. They are enabled by default, but can be disabled with
   a little switch below the preview window.
 
+Other changes include:
+
+* Chapters in your manuscript are now exported as level 1 headings for all document formats. Previously they were level 2, but this
+  is not the convention for chapters as chapters are the primary division of a novel. Scenes are level 2 if scene headings are
+  included. Partition titles are still included, but they are no longer marked as headings in office documents, but are marked as
+  level 1 headings in Markdown and HTML output. Headings in notes remain as before.
+
 
 Tags and References
 -------------------
+
+.. image:: images/2_6_keywords.png
+   :width: 40%
+   :align: right
 
 It has always been possible to add a ``@tag`` to your novel documents. However, there was no dedicated keyword to reference these
 tags if you needed to cross-reference between novel documents or from notes. You can now do that with the ``@story`` keyword. It
@@ -65,11 +73,11 @@ precisely what the ``@mention`` keyword is for.
 Better Dialogue Highlighting
 ----------------------------
 
-The dialogue highlighting was redesigned for 2.5 to not be mere quotes text highlighting, but also support other dialogue styles
+The dialogue highlighting was redesigned for 2.5 to not be mere quoted text highlighting, but also support other dialogue styles
 that don't rely on quote symbols like English and other languages do. A few features tailored for Spanish were added in 2.5.
 
-However, the Spanish style did not work for Portuguese and Polish, based on user feedback. In this release, the dialogue
-highlighting has been redesigned again to accommodate more style variations. There are now three highlighting settings in
+However, the Spanish style added in 2.5 did not work for Portuguese and Polish, based on user feedback. In this release, the
+dialogue highlighting has been redesigned again to accommodate more style variations. There are now three highlighting settings in
 Preferences dedicated to this, and you can play around with them to test it out. They are all intended to be used with dashes, but
 you decide what symbols they should detect.
 
@@ -79,8 +87,8 @@ are automatically replaced with long dashes in the manuscript. However, the dial
 symbols. Horizontal bars are inserted automatically in the text when you type 4 hyphens after one another.
 
 The requirement that dialogue in quotes must also include whitespaces on the outer margin has been removed. These are not
-necessarily present in languages that don't rely on whitespaces to separate words. The whitespaces *are* still required if the open
-and close symbols are identical, and therefore indistinguishable.
+necessarily present in languages that don't rely on whitespaces to separate words like in Chinese. The whitespaces *are* still
+required if the open and close symbols are identical, and therefore indistinguishable.
 
 
 User Interface Improvements
@@ -97,20 +105,21 @@ panels to open them.
 There are a few other improvements to the overall user interface as well.
 
 * URLs starting with "http" are now clickable in both editor and viewer, and are also exported as links in manuscript documents.
-* A new edit button is available from the top-right corner if the document viewer. Clicking it will open the current document in the
-  document editor.
-* The current open document in the editor is now highlighted in the project tree, just like it is in the novel view.
-* You can now resize the two parts of the details panel below the Outline View.
-* You can select to show the status label and icon for the entries in the Outline View.
+* A new edit button is available from the top--right corner if the document viewer. Clicking it will open the current document in
+  the document editor.
+* The currently open document in the editor is now highlighted in the project tree, just like it is in the novel view.
+* You can now changes the size of the two parts of the details panel below the Outline View.
+* The status label with icon is now available as an optional column in the Outline View.
+* The story tag is now available as an optional column in the Outline View, if you use such tags.
 * If you don't want to see the clock on the status bar that measures the amount of time used in the current session, you can now
   click on it to hide it. Only the icon will be visible. Clicking the icon, will show the timer again.
-* Status and importance labels can now be exported to a CSV file, and imported into another project.
+* Status and importance labels can now be exported to a CSV file from Project Settings, and imported into another project.
 
 
 Download Links
 ==============
 
-.. include:: ../generated/download_pre_release.rst
+.. include:: ../generated/download_release.rst
 
 
 Older Releases
@@ -118,5 +127,6 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.6 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6rc1>`__
 | :octicon:`mark-github` `Download Release 2.6 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b2>`__
 | :octicon:`mark-github` `Download Release 2.6 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b1>`__

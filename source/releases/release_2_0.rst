@@ -9,6 +9,7 @@ Release 2.0
   :ref:`2.0.4 <main_release_2_0_4>`, :ref:`2.0.5 <main_release_2_0_5>`, :ref:`2.0.6 <main_release_2_0_6>`,
   :ref:`2.0.7 <main_release_2_0_7>`
 
+
 Release Notes
 =============
 
