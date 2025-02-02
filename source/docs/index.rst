@@ -4,9 +4,9 @@
 Documentation
 *************
 
-| **Release Version:** 2.6
-| **Release Date:** Sunday, 26 January 2025
-| **Docs Updated:** Sunday, 26 January 2025
+| **Release Version:** 2.6.1
+| **Release Date:** Sunday, 2 February 2025
+| **Docs Updated:** Sunday, 2 February 2025
 
 **PDF:** :download:`novelWriter-2.6.pdf <../about/novelWriter-2.6.pdf>` [ :ref:`Older Versions <main_about_docs>` ]
 

@@ -42,8 +42,8 @@ Latest release is :ref:`main_release_latest`.
      - Status
    * - :ref:`main_release_2_6`
      - 2025-01-26
-     - N/A
-     - N/A
+     - 2.6.1
+     - 2025-02-02
      - Latest Release: :ref:`Download <main_download>`
    * - :ref:`main_release_2_5`
      - 2024-07-10

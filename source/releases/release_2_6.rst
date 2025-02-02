@@ -6,6 +6,7 @@ Release 2.6
 ***********
 
 | **Release Date:** January 26, 2025
+| **Patches:** :ref:`2.6.1 <main_release_2_6_1>`
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
 
@@ -116,6 +117,23 @@ There are a few other improvements to the overall user interface as well.
 * Status and importance labels can now be exported to a CSV file from Project Settings, and imported into another project.
 
 
+Patch Releases
+==============
+
+.. _main_release_2_6_1:
+
+Patch 2.6.1
+-----------
+
+**Release Date:** February 2, 2025
+
+This is a patch release that fixes an issue with creating new notes from the editor context menu, adds an option to turn off the
+confirmation box that pops up when closing novelWriter, and improves the recent project list on the Welcome dialog.
+
+A French version of the user guide is now also available when the localisation is set to French, and the French, Latin American
+Spanish, Norwegian, US English, German and Japanese translations of the application have been updated.
+
+
 Download Links
 ==============
 
@@ -127,6 +145,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.6 <https://github.com/vkbo/novelWriter/releases/tag/v2.6>`__
 | :octicon:`mark-github` `Download Release 2.6 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6rc1>`__
 | :octicon:`mark-github` `Download Release 2.6 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b2>`__
 | :octicon:`mark-github` `Download Release 2.6 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b1>`__
