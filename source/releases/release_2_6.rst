@@ -6,7 +6,7 @@ Release 2.6
 ***********
 
 | **Release Date:** January 26, 2025
-| **Patches:** :ref:`2.6.1 <main_release_2_6_1>`, :ref:`2.6.2 <main_release_2_6_2>`
+| **Patches:** :ref:`2.6.1 <main_release_2_6_1>`, :ref:`2.6.2 <main_release_2_6_2>`, :ref:`2.6.3 <main_release_2_6_3>`
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
 
@@ -149,6 +149,17 @@ In addition, a Czech translation has been added by Tomáš Zmek, and the Italian
 been updated.
 
 
+.. _main_release_2_6_3:
+
+Patch 2.6.3
+-----------
+
+**Release Date:** February 16, 2025
+
+This is a patch release that fixes a translation issue that affected several labels on the user interface where the wrong or no
+translation was used. The bug affected all languages except for English.
+
+
 Download Links
 ==============
 
@@ -160,6 +171,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.6.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6.2>`__
 | :octicon:`mark-github` `Download Release 2.6.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6.1>`__
 | :octicon:`mark-github` `Download Release 2.6 <https://github.com/vkbo/novelWriter/releases/tag/v2.6>`__
 | :octicon:`mark-github` `Download Release 2.6 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6rc1>`__
