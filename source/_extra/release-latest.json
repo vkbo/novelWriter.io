@@ -1,21 +1,21 @@
 {
   "release": {
-    "version": "2.6.1",
+    "version": "2.6.2",
     "major": 2,
     "minor": 6,
-    "patch": 1,
+    "patch": 2,
     "info": {
-      "name": "Version 2.6.1",
-      "date": "2025-02-02T17:27:21Z",
-      "url": "https://github.com/vkbo/novelWriter/releases/tag/v2.6.1",
+      "name": "Version 2.6.2",
+      "date": "2025-02-16T17:43:08Z",
+      "url": "https://github.com/vkbo/novelWriter/releases/tag/v2.6.2",
       "assets": {
-        "appimage": "https://github.com/vkbo/novelWriter/releases/download/v2.6.1/novelWriter-2.6.1.AppImage",
-        "debian": "https://github.com/vkbo/novelWriter/releases/download/v2.6.1/novelwriter_2.6.1_all.deb",
-        "winexe": "https://github.com/vkbo/novelWriter/releases/download/v2.6.1/novelwriter-2.6.1-amd64-setup.exe",
-        "macx86": "https://github.com/vkbo/novelWriter/releases/download/v2.6.1/novelWriter-2.6.1-x86_64.dmg",
-        "macarm": "https://github.com/vkbo/novelWriter/releases/download/v2.6.1/novelWriter-2.6.1-aarch64.dmg",
-        "zipball": "https://api.github.com/repos/vkbo/novelWriter/zipball/v2.6.1",
-        "tarball": "https://api.github.com/repos/vkbo/novelWriter/tarball/v2.6.1"
+        "appimage": "https://github.com/vkbo/novelWriter/releases/download/v2.6.2/novelWriter-2.6.2.AppImage",
+        "debian": "https://github.com/vkbo/novelWriter/releases/download/v2.6.2/novelwriter_2.6.2_all.deb",
+        "winexe": "https://github.com/vkbo/novelWriter/releases/download/v2.6.2/novelwriter-2.6.2-amd64-setup.exe",
+        "macx86": "https://github.com/vkbo/novelWriter/releases/download/v2.6.2/novelWriter-2.6.2-x86_64.dmg",
+        "macarm": "https://github.com/vkbo/novelWriter/releases/download/v2.6.2/novelWriter-2.6.2-aarch64.dmg",
+        "zipball": "https://api.github.com/repos/vkbo/novelWriter/zipball/v2.6.2",
+        "tarball": "https://api.github.com/repos/vkbo/novelWriter/tarball/v2.6.2"
       }
     }
   }

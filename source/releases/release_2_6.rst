@@ -6,7 +6,7 @@ Release 2.6
 ***********
 
 | **Release Date:** January 26, 2025
-| **Patches:** :ref:`2.6.1 <main_release_2_6_1>`
+| **Patches:** :ref:`2.6.1 <main_release_2_6_1>`, :ref:`2.6.2 <main_release_2_6_2>`
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
 
@@ -120,6 +120,7 @@ There are a few other improvements to the overall user interface as well.
 Patch Releases
 ==============
 
+
 .. _main_release_2_6_1:
 
 Patch 2.6.1
@@ -134,6 +135,20 @@ A French version of the user guide is now also available when the localisation i
 Spanish, Norwegian, US English, German and Japanese translations of the application have been updated.
 
 
+.. _main_release_2_6_2:
+
+Patch 2.6.2
+-----------
+
+**Release Date:** February 16, 2025
+
+This is a patch release that fixes a few issues with the project tree: The Empty Trash option in the menu now works again, and it is
+no longer possible to accidentally drag and drop project items onto the root of the project tree.
+
+In addition, a Czech translation has been added by Tomáš Zmek, and the Italian, Polish and Brazilian Portuguese translations have
+been updated.
+
+
 Download Links
 ==============
 
@@ -145,6 +160,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.6.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6.1>`__
 | :octicon:`mark-github` `Download Release 2.6 <https://github.com/vkbo/novelWriter/releases/tag/v2.6>`__
 | :octicon:`mark-github` `Download Release 2.6 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6rc1>`__
 | :octicon:`mark-github` `Download Release 2.6 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v2.6b2>`__
