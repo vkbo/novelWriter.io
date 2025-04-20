@@ -23,7 +23,7 @@ class Documentation:
         self._extPath = self._tempDir / "novelWriter"
         self._tplPath = ROOT_DIR / "templates"
         self._dstPath = ROOT_DIR / "source" / "docs"
-        self._pdfPath = ROOT_DIR / "source" / "about"
+        self._pdfPath = ROOT_DIR / "source" / "more"
 
         self._nwRelease = "Unknown"
         self._nwDate = "1970-01-01"
@@ -133,15 +133,24 @@ class Documentation:
         pdfs = []
         for item in self._pdfPath.iterdir():
             if item.is_file() and item.suffix == ".pdf":
-                bits = item.stem[12:].split(".")
-                key = f"{int(bits[0]):02d}.{int(bits[1]):03d}"
+                _, _, version = item.stem.partition("-")
+                key = ".".join(version.split(".")[:2])
                 pdfs.append((key, item.name))
 
-        with open(self._pdfPath / "docs.rst", mode="w", encoding="utf-8") as of:
-            of.write((self._tplPath / "about_docs.rst").read_text(encoding="utf-8"))
-            of.write("\n")
-            for _, pdf in sorted(pdfs, key=lambda x: x[0], reverse=True):
-                of.write(f"| :download:`{pdf}`\n")
+        docsPDF = []
+        specPDF = []
+        for _, pdf in sorted(pdfs, key=lambda x: x[0], reverse=True):
+            if pdf.startswith("novelWriter"):
+                docsPDF.append(pdf)
+            elif pdf.startswith("FileFormat"):
+                specPDF.append(pdf)
+
+        with open(self._pdfPath / "index.rst", mode="w", encoding="utf-8") as of:
+            of.write((self._tplPath / "more_docs.rst").read_text(encoding="utf-8").format(
+                doc_pdfs="\n".join(f"| :download:`{pdf}`" for pdf in docsPDF),
+                spec_pdfs="\n".join(f"| :download:`{pdf}`" for pdf in specPDF),
+            ))
+
         return
 
     def _rewriteIndex(self, indexFile: Path):
@@ -162,6 +171,7 @@ class Documentation:
             relVersionStr = relVersion
 
         indexText = indexFile.read_text(encoding="utf-8")
+        indexText = indexText.replace("<https://novelwriter.io/about/docs.html>", "<../more/index>")
         indexBuffer = [
             ".. _main_documentation:",
             "",
@@ -175,8 +185,8 @@ class Documentation:
             "",
             (
                 f"**PDF:** :download:`novelWriter-{self._nwMajor}.{self._nwMinor}.pdf "
-                f"<../about/novelWriter-{self._nwMajor}.{self._nwMinor}.pdf>` "
-                "[ :ref:`Older Versions <main_about_docs>` ]"
+                f"<../more/novelWriter-{self._nwMajor}.{self._nwMinor}.pdf>` "
+                "[ :ref:`Older Versions <more_docs>` ]"
             ),
             "",
         ]
@@ -212,6 +222,13 @@ class Documentation:
                 raise Exception("Could not find release version and date")
 
         version, _, dev = self._nwRelease.partition("-")
+        if "a" in version:
+            version = version.partition("a")[0]
+        elif "b" in version:
+            version = version.partition("b")[0]
+        elif "rc" in version:
+            version = version.partition("rc")[0]
+
         self._nwDev = dev
         bits = version.split(".")
         if len(bits) > 0:

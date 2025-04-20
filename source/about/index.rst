@@ -9,7 +9,6 @@ About
 
    self
    privacy_policy
-   docs
    contribute
    donate
 
