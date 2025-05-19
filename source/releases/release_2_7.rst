@@ -17,7 +17,7 @@ Release Notes
    This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
    on live writing projects, and make sure you take frequent backups.
 
-   You can follow the development progress on the `2.7 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/96>`__.
+   You can follow the development progress on the `2.7 Milestone <https://github.com/vkbo/novelWriter/milestone/97>`__.
 
 
 Major Theme and Icon Updates
@@ -118,7 +118,8 @@ styles for the editor.
 In addition to the above, and other under-the-hood changes, a few smaller improvements have also been made:
 
 * A new setting in Preferences lets you switch from word count to character count as the main value shown on the main user
-  interface in the project tree, novel view, and on the status bar. Word count is not a useful statistics in all languages.
+  interface in the project tree, novel view, and on the status bar. Character count is often a more useful statistics in some
+  languages.
 * The thickness of the editor cursor can now be adjusted in Preferences under "Text Editing".
 * The logic of where new documents are added in the project tree has been enhanced, and hopefully it should pick a sensible location
   near the document you have selected.
