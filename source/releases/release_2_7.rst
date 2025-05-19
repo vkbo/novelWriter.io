@@ -1,10 +1,10 @@
 .. _main_release_2_7:
 
-**********************
-Pre-Release 2.7 Beta 1
-**********************
+********************
+Pre-Release 2.7 RC 1
+********************
 
-| **Release Date:** April 20, 2025
+| **Release Date:** May 19, 2025
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
 
@@ -90,6 +90,24 @@ More ways of displaying these comments will be added in later releases. We're pl
 instance.
 
 
+Manuscript Notes
+----------------
+
+While Story Structure Comments are designed for a very specific purpose, Manuscript Notes are more general. They are written the
+same way though, and you can include or exclude them independently from Story Structure Comments in the Manuscript Build Settings.
+They are formatted like this:
+
+.. code-block:: md
+
+   ### Scene
+
+   %Synopsis: Carol overcomes her fear of giving a speech.
+
+   %Note.consistency: This is where Carol meets her coach for the first time.
+
+More ways to display and search these notes will be added in future releases.
+
+
 Other Changes
 -------------
 
@@ -99,12 +117,18 @@ styles for the editor.
 
 In addition to the above, and other under-the-hood changes, a few smaller improvements have also been made:
 
+* A new setting in Preferences lets you switch from word count to character count as the main value shown on the main user
+  interface in the project tree, novel view, and on the status bar. Word count is not a useful statistics in all languages.
 * The thickness of the editor cursor can now be adjusted in Preferences under "Text Editing".
 * The logic of where new documents are added in the project tree has been enhanced, and hopefully it should pick a sensible location
   near the document you have selected.
 * Dialogue highlighting for single quoted dialogue in conjunction with apostrophes has been improved somewhat. Distinguishing
   between the end of dialogue and an apostrophe used to contract the tail end of a word is still not possible, but it should behave
   better for contractions inside words.
+* Improvements to accessibility has been made in several areas. Screen reader support is improving, but not yet complete, but all
+  switches have been associated with a label now. Keyboard navigation support is improved, especially for switches, and new projects
+  will now generate defaults status and importance labels using shapes in addition to colours to make them easier to distinguish for
+  users with low colour vision.
 
 
 Download Links
@@ -116,4 +140,9 @@ Download Links
 Older Releases
 ==============
 
+Older Releases
+==============
+
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 2.7 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7b1>`__
