@@ -7,16 +7,27 @@ Downloads
 .. toctree::
    :hidden:
 
-   help_win
+   self
+
+.. toctree::
+   :caption: Installation Help
+   :hidden:
+
+   install_linux
+   install_win
+   install_mac
+   install_pypi
+
+.. toctree::
+   :caption: Additional Info
+   :hidden:
+
    code_signing
 
 This page includes all available packages for the latest release.
 
 When pre-release packages for the next version of novelWriter are available, these release packages
 are also listed on this page. When there is no pre-release available, the section is empty.
-
-You can find more information on how to set up novelWriter on the :ref:`a_started` page of the
-documentation.
 
 
 Latest Release

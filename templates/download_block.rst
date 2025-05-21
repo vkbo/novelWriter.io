@@ -24,6 +24,7 @@ Latest Release
             | **Download**
             | :octicon:`download` `AppImage <{appimage_download}>`__
             | :octicon:`download` `Debian Package <{debian_download}>`__
+            | :octicon:`light-bulb` :ref:`Install Help <main_install_linux>`
 
          .. grid-item::
             :columns: 5
@@ -72,7 +73,7 @@ Latest Release
             | **Download**
             | :octicon:`download` `DMG Image (Intel) <{macx86_download}>`__
             | :octicon:`download` `DMG Image (M1) <{macarm_download}>`__
-            | :octicon:`light-bulb` :ref:`Install Help <a_started_macos>`
+            | :octicon:`light-bulb` :ref:`Install Help <main_install_mac>`
 
          .. grid-item::
             :columns: 5

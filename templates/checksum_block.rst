@@ -1,16 +1,13 @@
-Sha256 Checksums
-----------------
+Sha256 Checksum Files
+---------------------
 
-* | **Linux AppImage:** {appimage_name}
-  | Sha256: ``{appimage_shasum}`` :octicon:`download` `ShaSum File <{appimage_shasumfile}>`__
-* | **Debian Package:** {debian_name}
-  | Sha256: ``{debian_shasum}`` :octicon:`download` `ShaSum File <{debian_shasumfile}>`__
-* | **Windows Installer:** {winexe_name}
-  | Sha256: ``{winexe_shasum}`` :octicon:`download` `ShaSum File <{winexe_shasumfile}>`__
-* | **MacOS DMG Image (Intel):** {macx86_name}
-  | Sha256: ``{macx86_shasum}`` :octicon:`download` `ShaSum File <{macx86_shasumfile}>`__
-* | **MacOS DMG Image (M1):** {macarm_name}
-  | Sha256: ``{macarm_shasum}`` :octicon:`download` `ShaSum File <{macarm_shasumfile}>`__
+Checksum files are released alongside the packages. These files can be used to verify the downloaded package.
+
+* **Linux AppImage:** :octicon:`download` `ShaSum File <{appimage_shasumfile}>`__
+* **Debian Package:** :octicon:`download` `ShaSum File <{debian_shasumfile}>`__
+* **Windows Installer:** :octicon:`download` `ShaSum File <{winexe_shasumfile}>`__
+* **MacOS DMG Image (Intel):** :octicon:`download` `ShaSum File <{macx86_shasumfile}>`__
+* **MacOS DMG Image (M1):** :octicon:`download` `ShaSum File <{macarm_shasumfile}>`__
 
 .. rubric:: Verify the Checksum
 

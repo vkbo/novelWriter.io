@@ -24,6 +24,7 @@ Latest Release
             | **Download**
             | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelWriter-2.6.3.AppImage>`__
             | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelwriter_2.6.3_all.deb>`__
+            | :octicon:`light-bulb` :ref:`Install Help <main_install_linux>`
 
          .. grid-item::
             :columns: 5
@@ -72,7 +73,7 @@ Latest Release
             | **Download**
             | :octicon:`download` `DMG Image (Intel) <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelWriter-2.6.3-x86_64.dmg>`__
             | :octicon:`download` `DMG Image (M1) <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelWriter-2.6.3-aarch64.dmg>`__
-            | :octicon:`light-bulb` :ref:`Install Help <a_started_macos>`
+            | :octicon:`light-bulb` :ref:`Install Help <main_install_mac>`
 
          .. grid-item::
             :columns: 5

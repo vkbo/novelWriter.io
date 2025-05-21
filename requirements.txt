@@ -1,4 +1,5 @@
-sphinx<7.0
 pydata-sphinx-theme>=0.15
+sphinx-copybutton
 sphinx-design
 sphinx-favicon
+sphinx<7.0

@@ -27,7 +27,7 @@ version = release
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinx_design", "sphinx_favicon"]
+extensions = ["sphinx_design", "sphinx_favicon", "sphinx_copybutton"]
 templates_path = ["_templates"]
 exclude_patterns = ["generated/*.rst"]
 today_fmt = "%A, %-d %B %Y at %H:%M"
@@ -44,6 +44,7 @@ html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 html_extra_path = ["_extra"]
 html_css_files = ["custom.css"]
+html_show_sourcelink = False
 html_context = {
     "default_mode": "auto",
     "build_time": datetime.now().strftime("%Y-%m-%d %H:%M"),

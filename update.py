@@ -242,19 +242,14 @@ def pullRelease(args):
 
         buildFromTemplate("checksum_block.rst", "checksum_block.rst", {
             "appimage_name": aAppImg.assetName,
-            "appimage_shasum": aAppImg.assetShaSum,
             "appimage_shasumfile": aAppImg.assetShaSumUrl,
             "debian_name": aDebian.assetName,
-            "debian_shasum": aDebian.assetShaSum,
             "debian_shasumfile": aDebian.assetShaSumUrl,
             "winexe_name": aWinExe.assetName,
-            "winexe_shasum": aWinExe.assetShaSum,
             "winexe_shasumfile": aWinExe.assetShaSumUrl,
             "macx86_name": aMacAMD.assetName,
-            "macx86_shasum": aMacAMD.assetShaSum,
             "macx86_shasumfile": aMacAMD.assetShaSumUrl,
             "macarm_name": aMacARM.assetName,
-            "macarm_shasum": aMacARM.assetShaSum,
             "macarm_shasumfile": aMacARM.assetShaSumUrl,
         })
 
