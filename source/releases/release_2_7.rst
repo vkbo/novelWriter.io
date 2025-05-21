@@ -141,9 +141,6 @@ Download Links
 Older Releases
 ==============
 
-Older Releases
-==============
-
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
 | :octicon:`mark-github` `Download Release 2.7 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7b1>`__

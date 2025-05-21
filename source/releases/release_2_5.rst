@@ -173,14 +173,10 @@ This patch also adds a Russian translation, and updates the German and Portugues
 Download Links
 ==============
 
-.. include:: ../generated/download_release.rst
-
-
-Older Releases
-==============
-
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.5.3 <https://github.com/vkbo/novelWriter/releases/tag/v2.5.3>`__
+| :octicon:`mark-github` `Download Release 2.5.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.5.2>`__
 | :octicon:`mark-github` `Download Release 2.5.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.5.1>`__
 | :octicon:`mark-github` `Download Release 2.5 <https://github.com/vkbo/novelWriter/releases/tag/v2.5>`__
 | :octicon:`mark-github` `Download Release 2.5 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.5rc1>`__

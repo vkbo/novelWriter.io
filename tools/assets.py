@@ -21,8 +21,6 @@ class AssetType(Enum):
     MAC_DMG_ARM   = 6
     PYTHON_WHEEL  = 7
 
-# END Enum AssetType
-
 
 class AssetOS(Enum):
 
@@ -30,42 +28,6 @@ class AssetOS(Enum):
     WINDOWS = 1
     MACOS   = 2
     OTHER   = 3
-
-# END Enum AssetOS
-
-
-ASSET_TEXT: dict[AssetType, tuple[str, ...]] = {
-    AssetType.APP_IMAGE: (
-        "AppImage",
-        "The AppImage should run on any recent Linux distro. See the ",
-        "`AppImage website`_ for more info."
-    ),
-    AssetType.APP_IMAGE_OLD: (
-        "AppImage (Legacy)",
-        "For older Linux distros you may need to download this AppImage instead.",
-    ),
-    AssetType.DEBIAN: (
-        "Debian Package",
-        "The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_.",
-    ),
-    AssetType.WINDOWS_EXE: (
-        "Setup Installer",
-        "This is a standard setup installer for Windows. It is made for Windows 10 or newer.",
-        "Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.",
-    ),
-    AssetType.MAC_DMG_INTEL: (
-        "DMG Image for Intel",
-        "This is a DMG image for MacOS with x86_64 architecture. It is built on MacOS 12.",
-    ),
-    AssetType.MAC_DMG_ARM: (
-        "DMG Image for Apple Silicon (M1)",
-        "This is a DMG image for MacOS with aarch64 architecture. It is built on MacOS 14.",
-    ),
-    AssetType.PYTHON_WHEEL: (
-        "Python Wheel",
-        "The Wheel package can be installed with ``pip install <file_path>``.",
-    ),
-}
 
 
 def fmtSize(size):
@@ -214,65 +176,6 @@ class DownloadAssets:
             return asset
         return Asset({})
 
-    def generateDownloadTabs(self, zipName, zipUrl, tarName, tarUrl):
-        """Generate the full list of download links."""
-        def appendType(aType, target):
-            asset = self._assets[aType]
-            if not isinstance(asset, Asset):
-                return
-            target.append(f"**{ASSET_TEXT[aType][0]}**")
-            target.append(f"   {ASSET_TEXT[aType][1]}")
-            target.append("")
-            target.append(
-                f"   | **Download:** :octicon:`download` `{asset.assetName} "
-                f"<{asset.assetUrl}>`__ [ {asset.assetSizeString} ]"
-            )
-            target.append(
-                f"   | **Checksum:** :octicon:`hash` ``{asset.assetShaSum}`` "
-                f":octicon:`download` `ShaSum File <{asset.assetShaSumUrl}>`__"
-            )
-            target.append("")
-            if len(ASSET_TEXT[aType]) > 2:
-                target.append(f"   {ASSET_TEXT[aType][2]}")
-                target.append("")
-            return
-
-        buffer = []
-        buffer.append("Linux")
-        buffer.append("-----")
-        buffer.append("")
-        appendType(AssetType.APP_IMAGE, buffer)
-        appendType(AssetType.APP_IMAGE_OLD, buffer)
-        appendType(AssetType.DEBIAN, buffer)
-        buffer.append("")
-        buffer.append("Windows")
-        buffer.append("-------")
-        buffer.append("")
-        appendType(AssetType.WINDOWS_EXE, buffer)
-        buffer.append("")
-        buffer.append("MacOS")
-        buffer.append("-----")
-        buffer.append("")
-        appendType(AssetType.MAC_DMG_INTEL, buffer)
-        buffer.append("")
-        appendType(AssetType.MAC_DMG_ARM, buffer)
-        buffer.append("")
-        buffer.append("Other Packages")
-        buffer.append("--------------")
-        buffer.append("")
-        appendType(AssetType.PYTHON_WHEEL, buffer)
-        buffer.append("**Source Code**")
-        buffer.append(
-            "The source code packages are archived files of the entire source code. "
-            "See also the `novelWriter Repository`_."
-        )
-        buffer.append("")
-        buffer.append(f"| **Download:** :octicon:`download` `{zipName} <{zipUrl}>`__")
-        buffer.append(f"| **Download:** :octicon:`download` `{tarName} <{tarUrl}>`__")
-        buffer.append("")
-
-        return "\n".join(buffer)
-
     def _processAsset(self, data):
         """Process an asset."""
         asset = Asset(data)
@@ -284,5 +187,3 @@ class DownloadAssets:
             else:
                 print(f"ERROR: Duplicate asset of type {aType.name}")
         return
-
-# END Class DownloadBlock

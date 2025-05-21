@@ -197,6 +197,7 @@ def pullRelease(args):
     aWinExe = assets.getAsset(AssetType.WINDOWS_EXE)
     aMacAMD = assets.getAsset(AssetType.MAC_DMG_INTEL)
     aMacARM = assets.getAsset(AssetType.MAC_DMG_ARM)
+    aPWheel = assets.getAsset(AssetType.PYTHON_WHEEL)
 
     if isPreRelease:
         # Updating Pre-Release Info
@@ -205,10 +206,33 @@ def pullRelease(args):
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
             "release_ref": releaseRef,
-            "download_tabs": assets.generateDownloadTabs(
-                f"novelWriter-{shortVersion}.zip", zipBall,
-                f"novelWriter-{shortVersion}.tar.gz", tarBall
-            ),
+            "appimage_name": aAppImg.assetName,
+            "appimage_url": aAppImg.assetUrl,
+            "appimage_size": aAppImg.assetSizeString,
+            "appimage_shasumfile": aAppImg.assetShaSumUrl,
+            "debian_name": aDebian.assetName,
+            "debian_url": aDebian.assetUrl,
+            "debian_size": aDebian.assetSizeString,
+            "debian_shasumfile": aDebian.assetShaSumUrl,
+            "winexe_name": aWinExe.assetName,
+            "winexe_url": aWinExe.assetUrl,
+            "winexe_size": aWinExe.assetSizeString,
+            "winexe_shasumfile": aWinExe.assetShaSumUrl,
+            "macx86_name": aMacAMD.assetName,
+            "macx86_url": aMacAMD.assetUrl,
+            "macx86_size": aMacAMD.assetSizeString,
+            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+            "macarm_name": aMacARM.assetName,
+            "macarm_url": aMacARM.assetUrl,
+            "macarm_size": aMacARM.assetSizeString,
+            "macarm_shasumfile": aMacARM.assetShaSumUrl,
+            "wheel_name": aPWheel.assetName,
+            "wheel_url": aPWheel.assetUrl,
+            "wheel_size": aPWheel.assetSizeString,
+            "wheel_shasumfile": aPWheel.assetShaSumUrl,
+            "short_version": shortVersion,
+            "zip_url": zipBall,
+            "tar_url": tarBall,
         })
 
     else:
@@ -258,10 +282,33 @@ def pullRelease(args):
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
             "release_ref": releaseRef,
-            "download_tabs": assets.generateDownloadTabs(
-                f"novelWriter-{shortVersion}.zip", zipBall,
-                f"novelWriter-{shortVersion}.tar.gz", tarBall
-            ),
+            "appimage_name": aAppImg.assetName,
+            "appimage_url": aAppImg.assetUrl,
+            "appimage_size": aAppImg.assetSizeString,
+            "appimage_shasumfile": aAppImg.assetShaSumUrl,
+            "debian_name": aDebian.assetName,
+            "debian_url": aDebian.assetUrl,
+            "debian_size": aDebian.assetSizeString,
+            "debian_shasumfile": aDebian.assetShaSumUrl,
+            "winexe_name": aWinExe.assetName,
+            "winexe_url": aWinExe.assetUrl,
+            "winexe_size": aWinExe.assetSizeString,
+            "winexe_shasumfile": aWinExe.assetShaSumUrl,
+            "macx86_name": aMacAMD.assetName,
+            "macx86_url": aMacAMD.assetUrl,
+            "macx86_size": aMacAMD.assetSizeString,
+            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+            "macarm_name": aMacARM.assetName,
+            "macarm_url": aMacARM.assetUrl,
+            "macarm_size": aMacARM.assetSizeString,
+            "macarm_shasumfile": aMacARM.assetShaSumUrl,
+            "wheel_name": aPWheel.assetName,
+            "wheel_url": aPWheel.assetUrl,
+            "wheel_size": aPWheel.assetSizeString,
+            "wheel_shasumfile": aPWheel.assetShaSumUrl,
+            "short_version": shortVersion,
+            "zip_url": zipBall,
+            "tar_url": tarBall,
         })
 
     print("")
