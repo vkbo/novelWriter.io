@@ -4,5 +4,12 @@
 Page Not Found
 ##############
 
-The URL you requested cannot be resolved. Please use the search function to try
-and find the content you were looking for, or navigate the menu.
+.. image:: images/404_dark.gif
+   :class: only-dark
+
+.. image:: images/404_light.gif
+   :class: only-light
+
+We have scanned the Matrix, and the URL you requested cannot be resolved.
+
+Please use the search function to try and find the content you were looking for, or navigate the menu.
