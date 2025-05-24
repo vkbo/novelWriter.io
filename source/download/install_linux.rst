@@ -63,8 +63,8 @@ Debian and Mint
 A Debian package can be downloaded from :ref:`main_download`, or from the Releases_ page on GitHub_.
 This package should work on both Debian, Ubuntu and Linux Mint, at least.
 
-The install instructions for Ubuntu do not work on Debian and Mint as they are Ubuntu-specific.
-Instead, do one of the following:
+The install instructions for adding the Launchpad repository on Ubuntu do not work on Debian and
+Mint as they are Ubuntu-specific. Instead, do one of the following:
 
 .. tab-set::
 

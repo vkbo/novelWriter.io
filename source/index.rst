@@ -55,8 +55,8 @@ novelWriter
 
 .. include:: generated/download_main.rst
 
-\* Free code signing on Windows is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
-See :ref:`main_install_signing`.
+\* Code signing on Windows is sponsored by `SignPath.io`_, certificate by the `SignPath Foundation`_.
+See the :ref:`main_install_signing`.
 
 
 Other Install Options
