@@ -17,6 +17,8 @@ Release Notes
    This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
    on live writing projects, and make sure you take frequent backups.
 
+   Have any feedback or issues? Make a comment on the `Release Discussion <https://github.com/vkbo/novelWriter/discussions/2348>`__.
+
    You can follow the development progress on the `2.7 Milestone <https://github.com/vkbo/novelWriter/milestone/97>`__.
 
 

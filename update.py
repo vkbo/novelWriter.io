@@ -235,6 +235,19 @@ def pullRelease(args):
             "tar_url": tarBall,
         })
 
+        buildFromTemplate("checksum.rst", "checksum_pre_release.rst", {
+            "appimage_name": aAppImg.assetName,
+            "appimage_shasumfile": aAppImg.assetShaSumUrl,
+            "debian_name": aDebian.assetName,
+            "debian_shasumfile": aDebian.assetShaSumUrl,
+            "winexe_name": aWinExe.assetName,
+            "winexe_shasumfile": aWinExe.assetShaSumUrl,
+            "macx86_name": aMacAMD.assetName,
+            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+            "macarm_name": aMacARM.assetName,
+            "macarm_shasumfile": aMacARM.assetShaSumUrl,
+        })
+
     else:
         # Write the release-info.json file
         writeReleaseInfo(shortVersion, args.force, {
@@ -253,7 +266,7 @@ def pullRelease(args):
         })
 
         # Updating Latest Release Info
-        buildFromTemplate("download_block.rst", "download_block.rst", {
+        buildFromTemplate("download.rst", "download_main.rst", {
             "release_version": releaseVersion,
             "release_date": releaseDateFmt,
             "release_ref": releaseRef,
@@ -264,7 +277,7 @@ def pullRelease(args):
             "macarm_download": aMacARM.assetUrl,
         })
 
-        buildFromTemplate("checksum_block.rst", "checksum_block.rst", {
+        buildFromTemplate("checksum.rst", "checksum_release.rst", {
             "appimage_name": aAppImg.assetName,
             "appimage_shasumfile": aAppImg.assetShaSumUrl,
             "debian_name": aDebian.assetName,

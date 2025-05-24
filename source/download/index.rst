@@ -28,3 +28,5 @@ Downloads
 This page includes all available packages for the latest release.
 
 .. include:: ../generated/download_release.rst
+
+.. include:: ../generated/checksum_release.rst

@@ -1,5 +1,5 @@
-Sha256 Checksum Files
----------------------
+Checksum Files
+--------------
 
 Checksum files are released alongside the packages. These files can be used to verify the downloaded package.
 

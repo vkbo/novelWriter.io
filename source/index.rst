@@ -53,7 +53,7 @@ novelWriter
 
    novelWriter is Free and `Open Source <https://www.gnu.org/licenses/gpl-3.0.en.html>`_, and runs on Linux, Windows and MacOS
 
-.. include:: generated/download_block.rst
+.. include:: generated/download_main.rst
 
 \* Free code signing on Windows is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 See :ref:`main_install_signing`.
@@ -120,8 +120,6 @@ Other Install Options
          sudo apt install novelwriter
 
 
-* For more download options, including pre-releases, see the :ref:`main_download` page.
+* For more download options, including pre-releases and checksum files, see the :ref:`main_download` page.
 * You can also use the Ubuntu PPA on other Debian-based distros. See :ref:`main_install_linux` for more details.
 * Ubuntu pre-releases are available on the `Pre-Release PPA`_, by adding ``ppa:vkbo/novelwriter-pre`` instead.
-
-.. include:: generated/checksum_block.rst

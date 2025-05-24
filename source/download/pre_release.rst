@@ -8,3 +8,5 @@ When pre-release packages for the next version of novelWriter are available, the
 downloaded from this page. When there is no pre-release available, this section is empty.
 
 .. include:: ../generated/download_pre_release.rst
+
+.. include:: ../generated/checksum_pre_release.rst
