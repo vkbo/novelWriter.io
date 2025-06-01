@@ -89,7 +89,7 @@ class Documentation:
             if item.is_file() and item.suffix in (".rst", ".pdf"):
                 print(f"Copying: {item}")
                 shutil.copyfile(item, docsDst / item.name)
-            elif item.is_dir() and item.name == "images":
+            elif item.is_dir() and not item.name.startswith("_") and item.name != "locales":
                 print(f"Copying: {item}")
                 shutil.copytree(item, docsDst / item.name)
 
@@ -171,7 +171,7 @@ class Documentation:
             relVersionStr = relVersion
 
         indexText = indexFile.read_text(encoding="utf-8")
-        indexText = indexText.replace("<https://novelwriter.io/about/docs.html>", "<../more/index>")
+        indexText = indexText.replace("<https://novelwriter.io/more/>", "<../more/index>")
         indexBuffer = [
             ".. _main_documentation:",
             "",
@@ -186,7 +186,7 @@ class Documentation:
             (
                 f"**PDF:** :download:`novelWriter-{self._nwMajor}.{self._nwMinor}.pdf "
                 f"<../more/novelWriter-{self._nwMajor}.{self._nwMinor}.pdf>` "
-                "[ :ref:`Older Versions <more_docs>` ]"
+                "[ :ref:`Other Versions <more_docs>` ]"
             ),
             "",
         ]

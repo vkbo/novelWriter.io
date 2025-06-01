@@ -17,7 +17,7 @@ Features
       :padding: 1 0 0 3
 
       novelWriter allows you to break down your novel in whatever way you need, and into as many
-      documents as you want to. They can be dragged and dropped into a custom order, and organised
+      documents as you want to. You can drag and drop them into a custom order, and organised them
       into folders. Documents can even have sub-documents.
 
       Cross-references to your project notes are defined by convenient meta keyword/value tags in
@@ -33,8 +33,9 @@ Features
 
 **More Info from the Documentation**
 
-| :octicon:`book` :ref:`a_breakdown`
-| :octicon:`book` :ref:`a_ui_tree`
+| :octicon:`book` :ref:`docs_usage_headings`
+| :octicon:`book` :ref:`docs_usage_tags_refs`
+| :octicon:`book` :ref:`docs_ui_projects`
 
 
 Alternative Novel Overview
@@ -49,11 +50,11 @@ Alternative Novel Overview
       :padding: 1 0 0 3
 
       When you have structured the main sections of your novel in terms of chapters and scenes,
-      you can switch to the :guilabel:`Novel Outline` view instead.
+      you can switch to the **Novel View** instead.
 
-      The Novel Outline view lets you see the full structure of your novel in terms of headings
-      rather than document files. You can still open each chapter or scene for editing like from
-      the regular :guilabel:`Project Tree`.
+      The **Novel View** lets you see the full structure of your novel in terms of headings rather
+      than document files. You can still open each chapter or scene for editing like from
+      the regular **Project Tree**.
 
    .. grid-item::
       :padding: 0 0 3 0
@@ -64,8 +65,8 @@ Alternative Novel Overview
 
 **More Info from the Documentation**
 
-| :octicon:`book` :ref:`a_ui_tree_novel`
-| :octicon:`book` :ref:`a_struct_heads`
+| :octicon:`book` :ref:`docs_ui_main_novel`
+| :octicon:`book` :ref:`docs_usage_headings`
 
 
 Project Outline
@@ -79,8 +80,8 @@ Project Outline
    .. grid-item::
       :padding: 1 0 0 3
 
-      The :guilabel:`Outline View` gives you a complete overview of the structure of your novel in
-      terms of your chapters and scenes.
+      The **Outline View** gives you a complete overview of the structure of your novel in terms of
+      your chapters and scenes.
 
       It also shows you all the associated meta data and cross-references in columns. A default set
       of columns are visible, but you can add more from the configuration button in the toolbar.
@@ -94,7 +95,7 @@ Project Outline
 
 **More Info from the Documentation**
 
-| :octicon:`book` :ref:`a_ui_outline`
+| :octicon:`book` :ref:`docs_ui_main_outline`
 
 
 Build & Export
@@ -108,13 +109,13 @@ Build & Export
    .. grid-item::
       :padding: 1 0 0 3
 
-      The :guilabel:`Build Manuscript` tool lets you assemble all your files into a single
-      document. You can filter what to include to make a manuscript, make a draft of your novel
-      outline, or compile a document of all your notes.
+      The **Build Manuscript** tool lets you assemble all your files into a single document. You
+      can filter what to include to make a manuscript, make a draft of your novel outline, or
+      compile a document of all your notes.
 
-      The result can be printed or saved to HTML, Open Document and Markdown. The `Open Document`_
-      format is supported by most open source and commercial word processors. You can also print
-      the manuscript, including Print to PDF.
+      The result can be printed or saved to an Open Document, a Word Document, as well as PDF, HTML
+      and Markdown. The `Open Document`_ format is supported by most open source and commercial
+      word processors. You can also print the manuscript.
 
    .. grid-item::
       :padding: 1 0 3 0
@@ -125,7 +126,7 @@ Build & Export
 
 **More Info from the Documentation**
 
-| :octicon:`book` :ref:`a_manuscript`
+| :octicon:`book` :ref:`docs_ui_manuscript`
 
 
 Dark Theme & Syntax
@@ -139,14 +140,11 @@ Dark Theme & Syntax
    .. grid-item::
       :padding: 1 0 0 3
 
-      novelWriter defaults to the Qt framework's default colour theme for your system. But it also
-      comes with an optional standard dark theme. All themes have matching icon themes based on the
-      Typicons_ icon set.
+      novelWriter comes with a number of colour themes. You also have several icon themes and icon
+      styles to choose from. The icon colours are matched to the colour theme.
 
-      A few user-contributed themes are also available, and you can also create your own.
-
-      In addition, you can choose from a number of light and dark syntax highlighting themes for
-      the text editor and viewer. These are chosen separately from the GUI theme as there are a lot
+      In addition, you can choose from a number of light and dark document "syntax" themes for the
+      text editor and viewer. These are chosen separately from the GUI theme as there are a lot
       more of them.
 
    .. grid-item::
@@ -158,7 +156,7 @@ Dark Theme & Syntax
 
 **More Info from the Documentation**
 
-| :octicon:`book` :ref:`a_custom_theme`
+| :octicon:`book` :ref:`docs_more_custom_theme`
 
 
 Other Features
@@ -179,8 +177,8 @@ Other Features
 
       **Editor Focus Mode**
 
-      In :guilabel:`Focus Mode`, the editor covers the full window, hiding away the project tree
-      and the view panel so you can focus on your text.
+      In **Focus Mode**, the editor covers the full window, hiding away the project tree and the
+      view panel so you can focus on your text.
 
    .. grid-item::
       :padding: 1 0 3 0
@@ -191,4 +189,4 @@ Other Features
       can quickly navigate between your notes while writing.
 
       Documents open in the view panel will also have a list of all other documents pointing back
-      to it in the :guilabel:`References` box at the bottom.
+      to it in the **References** box at the bottom.

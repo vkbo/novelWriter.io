@@ -4,11 +4,11 @@
 Documentation
 *************
 
-| **Release Version:** 2.6.1
-| **Release Date:** Sunday, 2 February 2025
-| **Docs Updated:** Sunday, 2 February 2025
+| **Release Version:** 2.7
+| **Release Date:** Sunday, 1 June 2025
+| **Docs Updated:** Sunday, 1 June 2025
 
-**PDF:** :download:`novelWriter-2.6.pdf <../more/novelWriter-2.6.pdf>` [ :ref:`Older Versions <more_docs>` ]
+**PDF:** :download:`novelWriter-2.7.pdf <../more/novelWriter-2.7.pdf>` [ :ref:`Older Versions <more_docs>` ]
 
 novelWriter is an open source plain text editor designed for writing novels assembled from
 individual text documents. It uses a minimal formatting syntax inspired by Markdown, and adds a
@@ -20,14 +20,6 @@ storage for robustness.
    :class: dark-light
    :align: center
    :width: 500
-
-The project storage is suitable for version control software, and also well suited for file
-synchronisation tools. All text is saved as plain text files, and your project data as standard
-data formats in XML and JSON. See :ref:`a_storage` for more details.
-
-Any operating system that has Python 3 and the Qt 5 libraries should be able to run novelWriter.
-It runs fine on Linux, Windows and MacOS, and users have tested it on other platforms as well.
-See :ref:`a_started` for more details.
 
 **Useful Links**
 
@@ -45,57 +37,58 @@ See :ref:`a_started` for more details.
 .. toctree::
    :hidden:
 
-   Main Page <self>
+   self
    More Documents <../more/index>
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Introduction
+   :caption: Getting Started
    :hidden:
 
-   int_introduction
-   int_overview
-   int_started
-   int_howto
-   int_glossary
+   usage/introduction
+   usage/organising_project
+   usage/chapters_and_scenes
+   usage/basic_formatting
+   usage/comments
+   usage/tags_and_references
+   usage/alignment_and_indent
+   usage/advanced_formatting
+   usage/front_back_matter
+   usage/howto
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Using novelWriter
+   :caption: The User Interface
    :hidden:
 
-   usage_breakdown
-   usage_project
-   usage_writing
-   usage_format
-   usage_shortcuts
-   usage_typography
+   user_interface/main_window
+   user_interface/projects
+   user_interface/editor_viewer
+   user_interface/split_and_merge
+   user_interface/manuscript
+   user_interface/statistics
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Organising Your Project
+   :caption: Other Features
    :hidden:
 
-   project_overview
-   project_structure
-   project_references
-   project_manuscript
+   features/dialogue
+   features/story_comments
+   features/shortcuts
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Additional Details
+   :caption: In-Depth Topics
    :hidden:
 
-   more_customise
-   more_projectformat
-   more_counting
+   more/counting
+   more/typography
+   more/customise
+   more/handling_errors
+   more/project_format
 
 .. toctree::
-   :maxdepth: 1
    :caption: Technical Topics
    :hidden:
 
-   tech_locations
-   tech_storage
-   tech_source
-   tech_tests
+   technical/locations
+   technical/storage
+   technical/source
+   technical/tests
