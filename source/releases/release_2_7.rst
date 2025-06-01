@@ -1,25 +1,22 @@
+.. _main_release_latest:
 .. _main_release_2_7:
 
-********************
-Pre-Release 2.7 RC 1
-********************
+***********
+Release 2.7
+***********
 
-| **Release Date:** May 19, 2025
-
-.. _Issues: https://github.com/vkbo/novelWriter/issues
+| **Release Date:** June 1, 2025
 
 
 Release Notes
 =============
 
-.. attention::
+Release 2.7 features an update of the apps icons. In addition, a new style of comments for tracking story structure are available
+for those that really like to dig into story planning and mapping.
 
-   This is a pre-release of the next release version, and is intended for testing only. Please be careful when using this version
-   on live writing projects, and make sure you take frequent backups.
-
-   Have any feedback or issues? Make a comment on the `Release Discussion <https://github.com/vkbo/novelWriter/discussions/2348>`__.
-
-   You can follow the development progress on the `2.7 Milestone <https://github.com/vkbo/novelWriter/milestone/97>`__.
+Under the hood, novelWriter has switched to version 6 of the Qt library which is used to draw the user interface. The change has
+been in the works behind the scenes for a year now, and is finally here. For you as the user it may not be very visible, but it is
+making it easier to improve colour theme support at the very least. More theme improvements are planned for version 2.8.
 
 
 Major Theme and Icon Updates
@@ -137,7 +134,7 @@ In addition to the above, and other under-the-hood changes, a few smaller improv
 Download Links
 ==============
 
-.. include:: ../generated/download_pre_release.rst
+.. include:: ../generated/download_release.rst
 
 
 Older Releases
@@ -145,4 +142,5 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.7 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7rc1>`__
 | :octicon:`mark-github` `Download Release 2.7 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7b1>`__

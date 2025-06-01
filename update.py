@@ -149,7 +149,7 @@ def pullRelease(args):
     if args.remove_pre:
         print("Removing Pre-Release")
         Path("source/generated/download_pre_release.rst").write_text(
-            "*There is currently no pre-release available ...*", encoding="utf-8"
+            "*There are currently no pre-release downloads available ...*", encoding="utf-8"
         )
         return
 

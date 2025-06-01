@@ -1,7 +1,7 @@
 Latest Release
 ==============
 
-**Version 2.6.3** -- Released on February 16, 2025 -- Read the :ref:`Release Notes <main_release_2_6>`
+**Version 2.7** -- Released on June 1, 2025 -- Read the :ref:`Release Notes <main_release_2_7>`
 
 .. grid:: 1 1 3 3
    :margin: 4 4 0 0
@@ -22,8 +22,8 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelWriter-2.6.3.AppImage>`__
-            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelwriter_2.6.3_all.deb>`__
+            | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelWriter-2.7.AppImage>`__
+            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelwriter_2.7_all.deb>`__
             | :octicon:`light-bulb` :ref:`Install Help <main_install_linux>`
 
          .. grid-item::
@@ -47,7 +47,7 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelwriter-2.6.3-amd64-setup.exe>`__\*
+            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelwriter-2.7-amd64-setup.exe>`__\*
             | :octicon:`light-bulb` :ref:`Install Help <main_install_windows>`
 
          .. grid-item::
@@ -71,8 +71,8 @@ Latest Release
             :columns: 7
 
             | **Download**
-            | :octicon:`download` `DMG Image (Intel) <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelWriter-2.6.3-x86_64.dmg>`__
-            | :octicon:`download` `DMG Image (M1) <https://github.com/vkbo/novelWriter/releases/download/v2.6.3/novelWriter-2.6.3-aarch64.dmg>`__
+            | :octicon:`download` `DMG Image (Intel) <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelWriter-2.7-x86_64.dmg>`__
+            | :octicon:`download` `DMG Image (M1) <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelWriter-2.7-aarch64.dmg>`__
             | :octicon:`light-bulb` :ref:`Install Help <main_install_mac>`
 
          .. grid-item::

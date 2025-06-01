@@ -1,4 +1,3 @@
-.. _main_release_latest:
 .. _main_release_2_6:
 
 ***********
