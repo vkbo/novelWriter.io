@@ -95,9 +95,11 @@ Other Install Options
             :padding: 0
 
             .. code-block:: bash
-               :caption: |fedora-logo| Install on Fedora 41+
+               :caption: |ubuntu-logo| Add the Ubuntu PPA_ to your system
 
-               sudo dnf install novelwriter
+               sudo add-apt-repository ppa:vkbo/novelwriter
+               sudo apt update
+               sudo apt install novelwriter
 
          .. grid-item::
             :margin: 0
@@ -112,12 +114,21 @@ Other Install Options
       :padding: 0 0 2 0
       :margin: 0
 
-      .. code-block:: bash
-         :caption: |ubuntu-logo| Add the Ubuntu PPA_ to your system
+      .. grid:: 1
+         :margin: 0
+         :gutter: 0
+         :padding: 0
 
-         sudo add-apt-repository ppa:vkbo/novelwriter
-         sudo apt update
-         sudo apt install novelwriter
+         .. grid-item::
+            :margin: 0
+            :padding: 0
+
+            .. code-block:: bash
+               :caption: |fedora-logo| Install on Fedora 41+
+
+               sudo dnf install novelwriter
+
+            *Note that the Fedora package is maintained by Fedora package managers and will have a delayed release cycle.*
 
 
 * For more download options, including pre-releases and checksum files, see the :ref:`main_download` page.
