@@ -14,6 +14,11 @@ A selection of PDF manuals are available here for download, including for earlie
 
 {doc_pdfs}
 
+Translated PDF Manuals
+----------------------
+
+{doc_pdfs_i18n}
+
 
 For Developers
 ==============

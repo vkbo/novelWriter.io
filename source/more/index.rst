@@ -22,6 +22,12 @@ A selection of PDF manuals are available here for download, including for earlie
 | :download:`novelWriter-2.0.pdf`
 | :download:`novelWriter-1.6.pdf`
 
+Translated PDF Manuals
+----------------------
+
+| :download:`novelWriter-fr-2.7.pdf`
+| :download:`novelWriter-fr-2.6.pdf`
+
 
 For Developers
 ==============

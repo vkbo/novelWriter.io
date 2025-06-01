@@ -2,6 +2,7 @@
 Custom code to handle documentation versions from the main repo.
 """
 
+import os
 import shutil
 import subprocess
 import urllib.request
@@ -104,51 +105,68 @@ class Documentation:
     ##
 
     def _buildPdfManual(self):
-        """This function will build the documentation as manual.pdf."""
-        buildDir = str(self._extPath / "docs")
-        buildFile = self._extPath / "docs" / "build" / "latex" / "manual.pdf"
-        buildFile.unlink(missing_ok=True)
+        """Build the documentation as manual.pdf."""
+        docsDir = self._extPath / "docs"
+        locsDir = self._extPath / "docs" / "source" / "locales"
+        pdfFile = self._extPath / "docs" / "build" / "latex" / "manual.pdf"
+        locsDir.mkdir(exist_ok=True)
 
-        print("Building PDF manual ... ", end="")
-        subprocess.call(["make", "clean"], cwd=buildDir)
-        exCode = subprocess.call(
-            ["make", "latexpdf"], cwd=buildDir,
-            stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT
-        )
-        if exCode != 0:
-            raise Exception(f"Build returned error code {exCode}")
+        build = ["en"] + [i.stem for i in locsDir.iterdir() if i.is_dir()]
 
-        if buildFile.exists():
-            newDoc = self._pdfPath / f"novelWriter-{self._nwMajor}.{self._nwMinor}.pdf"
-            newDoc.unlink(missing_ok=True)
-            buildFile.rename(newDoc)
-            print("Done")
-        else:
-            print("FAILED")
+        for code in build:
+            print(f"Building PDF manual ({code}) ... ", end="", flush=True)
+            env = os.environ.copy()
+            cmd = "make clean latexpdf"
+            name = "novelWriter"
+            if code != "en":
+                data = (locsDir / f"authors_{code}.conf").read_text(encoding="utf-8")
+                authors = [x for x in data.splitlines() if x and not x.startswith("#")]
+                env["SPHINX_I18N_AUTHORS"] = ", ".join(authors)
+                cmd += f" -e SPHINXOPTS=\"-D language='{code}'\""
+                name = f"novelWriter-{code}"
+
+            if subprocess.call(cmd, cwd=docsDir, env=env, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT) == 0:
+                newDoc = self._pdfPath / f"{name}-{self._nwMajor}.{self._nwMinor}.pdf"
+                newDoc.unlink(missing_ok=True)
+                pdfFile.rename(newDoc)
+                print("Done")
+            else:
+                print("FAILED")
 
         return
 
     def _createPdfPage(self):
         """Create the index of PDF manuals."""
-        pdfs = []
+        pdfs: list[tuple[str, str, str, str]] = []
         for item in self._pdfPath.iterdir():
             if item.is_file() and item.suffix == ".pdf":
-                _, _, version = item.stem.partition("-")
-                key = ".".join(version.split(".")[:2])
-                pdfs.append((key, item.name))
+                kind, _, spec = item.stem.partition("-")
+                one, _, two = spec.partition("-")
+                if two:
+                    lang = one
+                    version = ".".join(two.split(".")[:2])
+                else:
+                    lang = "en"
+                    version = ".".join(one.split(".")[:2])
+                pdfs.append((kind, lang, version, item.name))
 
-        docsPDF = []
-        specPDF = []
-        for _, pdf in sorted(pdfs, key=lambda x: x[0], reverse=True):
-            if pdf.startswith("novelWriter"):
-                docsPDF.append(pdf)
-            elif pdf.startswith("FileFormat"):
-                specPDF.append(pdf)
+        docsPdfEn = []
+        docsPdfTr = []
+        specPdfEn = []
+        for kind, lang, version, pdf in sorted(pdfs, key=lambda x: x[2], reverse=True):
+            if kind == "novelWriter":
+                if lang == "en":
+                    docsPdfEn.append(pdf)
+                else:
+                    docsPdfTr.append(pdf)
+            elif kind == "FileFormatSpec":
+                specPdfEn.append(pdf)
 
         with open(self._pdfPath / "index.rst", mode="w", encoding="utf-8") as of:
             of.write((self._tplPath / "more_docs.rst").read_text(encoding="utf-8").format(
-                doc_pdfs="\n".join(f"| :download:`{pdf}`" for pdf in docsPDF),
-                spec_pdfs="\n".join(f"| :download:`{pdf}`" for pdf in specPDF),
+                doc_pdfs="\n".join(f"| :download:`{pdf}`" for pdf in docsPdfEn),
+                doc_pdfs_i18n="\n".join(f"| :download:`{pdf}`" for pdf in docsPdfTr),
+                spec_pdfs="\n".join(f"| :download:`{pdf}`" for pdf in specPdfEn),
             ))
 
         return
@@ -241,5 +259,3 @@ class Documentation:
         print("Done")
 
         return
-
-# END Class Documentation
