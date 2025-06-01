@@ -151,6 +151,9 @@ def pullRelease(args):
         Path("source/generated/download_pre_release.rst").write_text(
             "*There are currently no pre-release downloads available ...*", encoding="utf-8"
         )
+        Path("source/generated/checksum_pre_release.rst").write_text(
+            "", encoding="utf-8"
+        )
         return
 
     print(f"Tag: {args.tag}")
