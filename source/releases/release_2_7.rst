@@ -11,7 +11,7 @@ Release 2.7
 Release Notes
 =============
 
-Release 2.7 features an update of the apps icons. In addition, a new style of comments for tracking story structure are available
+Release 2.7 features an update of the app icons. In addition, a new style of comments for tracking story structure are available
 for those that really like to dig into story planning and mapping.
 
 Under the hood, novelWriter has switched to version 6 of the Qt library which is used to draw the user interface. The change has
