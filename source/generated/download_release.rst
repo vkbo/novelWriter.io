@@ -42,7 +42,7 @@ Linux
             ^^^^^^^^^^^^
             The AppImage_ should run on any recent Linux distro.
 
-            **Download:** :octicon:`download` `novelWriter-2.7.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelWriter-2.7.AppImage>`__ [106 MB]
+            **Download:** :octicon:`download` `novelWriter-2.7.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelWriter-2.7.AppImage>`__ [119 MB]
             :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.7/novelWriter-2.7.AppImage.sha256>`
 
          .. grid-item-card::

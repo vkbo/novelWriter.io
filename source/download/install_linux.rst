@@ -15,7 +15,7 @@ There are different ways to install novelWriter, depending on your Linux distro.
 
 
 Fedora
-------
+======
 
 novelWriter is available in the main `Fedora repository`_ as of Fedora 41.
 
@@ -27,7 +27,7 @@ You can install it with:
 
 
 Ubuntu
-------
+======
 
 A Personal Package Archive (PPA) is available for novelWriter on Launchpad. This is the most
 straightforward way to install and update novelWriter on Ubuntu. It also works for other
@@ -58,7 +58,7 @@ You can add the Ubuntu PPA_ and install novelWriter with the following commands.
 
 
 Debian and Mint
----------------
+===============
 
 A Debian package can be downloaded from :ref:`main_download`, or from the Releases_ page on GitHub_.
 This package should work on both Debian, Ubuntu and Linux Mint, at least.
@@ -164,13 +164,29 @@ Then run the update and install commands as for Ubuntu:
 
 
 AppImage Releases
------------------
+=================
 
 For other Linux distros than the ones mentioned above, the primary option is AppImage_. These are
 completely standalone images for the app that include the necessary environment to run novelWriter.
 They can of course be run on any Linux distro, if you prefer this to native packages.
 
-.. note::
-   novelWriter generally doesn't support Python versions that have reached end of life. If your
-   Linux distro still uses older Python versions and novelWriter won't run, you may want to try the
-   AppImage instead.
+
+Known Issues
+------------
+
+There are some known issues with the new AppImage files on some distros and desktop environments
+after the switch to Qt6. If you get the following error:
+
+.. code-block::
+
+   qt.qpa.plugin: From 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
+   qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+   This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Try installing one of the suggested packages:
+
+.. code-block:: bash
+
+   sudo apt install libxcb-cursor0
+
+A more permanent solution will come, but for the time being, installing the library should solve the issue.
