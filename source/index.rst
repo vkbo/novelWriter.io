@@ -33,7 +33,7 @@ novelWriter
    .. grid-item::
       :padding: 1 0 0 3
 
-      **A markdown-like editor for novels**
+      **A plain text editor for novels**
 
       A markdown-like text editor designed for writing novels and larger projects of many smaller
       plain text documents.
