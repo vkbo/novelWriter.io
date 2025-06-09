@@ -9,7 +9,8 @@
 | **Release Version:** Version 2.7.1
 | **Release Date:** June 9, 2025
 | **Release Notes:** :ref:`main_release_2_7`
-| **GitHub Release:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.7.1>`__
+| **Release Feedback:** :octicon:`comment-discussion` `Discussion <https://github.com/vkbo/novelWriter/discussions/2394>`__
+| **Release on GitHub:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.7.1>`__
 
 
 Linux

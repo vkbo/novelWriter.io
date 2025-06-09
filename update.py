@@ -171,6 +171,7 @@ def pullRelease(args):
     with open(outDir / "api_data.json", mode="w") as apiDump:
         json.dump(data, apiDump, indent=2)
 
+    discussUrl = data.get("discussion_url", "Unknown")
     releaseUrl = data.get("html_url", "Unknown")
     releaseVersion = data.get("name", "Version ???")
     releaseDate = data.get("published_at", "")
@@ -209,6 +210,7 @@ def pullRelease(args):
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
             "release_ref": releaseRef,
+            "discuss_url": discussUrl,
             "appimage_name": aAppImg.assetName,
             "appimage_url": aAppImg.assetUrl,
             "appimage_size": aAppImg.assetSizeString,
@@ -298,6 +300,7 @@ def pullRelease(args):
             "release_date": releaseDateFmt,
             "release_url": releaseUrl,
             "release_ref": releaseRef,
+            "discuss_url": discussUrl,
             "appimage_name": aAppImg.assetName,
             "appimage_url": aAppImg.assetUrl,
             "appimage_size": aAppImg.assetSizeString,

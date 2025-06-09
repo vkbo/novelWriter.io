@@ -9,7 +9,8 @@
 | **Release Version:** {release_version}
 | **Release Date:** {release_date}
 | **Release Notes:** :ref:`{release_ref}`
-| **GitHub Release:** :octicon:`mark-github` `GitHub <{release_url}>`__
+| **Release Feedback:** :octicon:`comment-discussion` `Discussion <{discuss_url}>`__
+| **Release on GitHub:** :octicon:`mark-github` `GitHub <{release_url}>`__
 
 
 Linux
