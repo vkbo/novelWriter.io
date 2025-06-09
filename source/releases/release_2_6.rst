@@ -159,17 +159,12 @@ This is a patch release that fixes a translation issue that affected several lab
 translation was used. The bug affected all languages except for English.
 
 
-Download Links
-==============
-
-.. include:: ../generated/download_release.rst
-
-
 Older Releases
 ==============
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.6.3 <https://github.com/vkbo/novelWriter/releases/tag/v2.6.3>`__
 | :octicon:`mark-github` `Download Release 2.6.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.6.2>`__
 | :octicon:`mark-github` `Download Release 2.6.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.6.1>`__
 | :octicon:`mark-github` `Download Release 2.6 <https://github.com/vkbo/novelWriter/releases/tag/v2.6>`__

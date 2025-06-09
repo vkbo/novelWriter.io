@@ -6,6 +6,7 @@ Release 2.7
 ***********
 
 | **Release Date:** June 1, 2025
+| **Patches:** :ref:`2.7.1 <main_release_2_7_1>`
 
 
 Release Notes
@@ -131,6 +132,21 @@ In addition to the above, and other under-the-hood changes, a few smaller improv
   users with low colour vision.
 
 
+Patch Releases
+==============
+
+
+.. _main_release_2_7_1:
+
+Patch 2.7.1
+-----------
+
+**Release Date:** June 9, 2025
+
+This patch release fixes some issues with tags and references, an issue with the auto-complete menu on Windows, and some issues with
+the AppImage on Linux. The Czech translation for 2.7 has also been completed.
+
+
 Download Links
 ==============
 
@@ -142,5 +158,6 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.7 <https://github.com/vkbo/novelWriter/releases/tag/v2.7>`__
 | :octicon:`mark-github` `Download Release 2.7 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7rc1>`__
 | :octicon:`mark-github` `Download Release 2.7 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7b1>`__
