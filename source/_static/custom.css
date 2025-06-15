@@ -43,7 +43,7 @@
  */
 
 html {
-    --pst-font-size-base: 13pt;
+    --pst-font-size-base: 1.083rem;
     --pst-font-weight-heading: 600;
     --pst-font-family-base-system: "Source Sans Pro", sans-serif;
 }
