@@ -6,7 +6,7 @@ Release 2.7
 ***********
 
 | **Release Date:** June 1, 2025
-| **Patches:** :ref:`2.7.1 <main_release_2_7_1>`
+| **Patches:** :ref:`2.7.1 <main_release_2_7_1>`, :ref:`2.7.2 <main_release_2_7_2>`
 
 
 Release Notes
@@ -147,6 +147,17 @@ This patch release fixes some issues with tags and references, an issue with the
 the AppImage on Linux. The Czech translation for 2.7 has also been completed.
 
 
+.. _main_release_2_7_2:
+
+Patch 2.7.2
+-----------
+
+**Release Date:** June 24, 2025
+
+This is a patch release that fixes several issues related to DocX and PDF manuscript documents, improves how line breaks, alignment
+and indentation is processed, and fixes some issues with displaying tags for novel documents on the user interface.
+
+
 Download Links
 ==============
 
@@ -158,6 +169,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.7.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7.1>`__
 | :octicon:`mark-github` `Download Release 2.7 <https://github.com/vkbo/novelWriter/releases/tag/v2.7>`__
 | :octicon:`mark-github` `Download Release 2.7 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7rc1>`__
 | :octicon:`mark-github` `Download Release 2.7 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7b1>`__

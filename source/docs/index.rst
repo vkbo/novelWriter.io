@@ -4,9 +4,9 @@
 Documentation
 *************
 
-| **Release Version:** 2.7
-| **Release Date:** Sunday, 1 June 2025
-| **Docs Updated:** Sunday, 1 June 2025
+| **Release Version:** 2.7.2
+| **Release Date:** Tuesday, 24 June 2025
+| **Docs Updated:** Tuesday, 24 June 2025
 
 **PDF:** :download:`novelWriter-2.7.pdf <../more/novelWriter-2.7.pdf>` [ :ref:`Other Versions <more_docs>` ]
 
