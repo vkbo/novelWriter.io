@@ -57,14 +57,46 @@ You can add the Ubuntu PPA_ and install novelWriter with the following commands.
          sudo apt install novelwriter
 
 
-Debian and Mint
-===============
+Mint
+====
+
+The PPAs for Ubuntu can also be added to Linux Mint. The easiest way to do this is by using the
+**Software Sources** app. Open it, and navigate to "PPAs" and click "Add". Enter the following:
+
+.. tab-set::
+
+   .. tab-item:: Releases
+      :selected:
+
+      .. code-block:: bash
+
+         ppa:vkbo/novelwriter
+
+   .. tab-item:: Pre-Releases
+
+      .. code-block:: bash
+
+         ppa:vkbo/novelwriter-pre
+
+Remember to update your APT cache by clicking "OK" in the banner at the bottom of the window.
+
+.. figure:: ../images/install_mint.png
+   :class: dark-light
+   :align: center
+   :width: 80%
+
+After that, you should be able to install novelWriter from the package installer tool or from the
+command line.
+
+
+Debian
+======
 
 A Debian package can be downloaded from :ref:`main_download`, or from the Releases_ page on GitHub_.
 This package should work on both Debian, Ubuntu and Linux Mint, at least.
 
-The install instructions for adding the Launchpad repository on Ubuntu do not work on Debian and
-Mint as they are Ubuntu-specific. Instead, do one of the following:
+The install instructions for adding the Launchpad repository on Ubuntu do not work on Debian as
+they are Ubuntu-specific. Instead, do one of the following:
 
 .. tab-set::
 
