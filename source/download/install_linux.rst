@@ -14,6 +14,8 @@ Installing on Linux
 There are different ways to install novelWriter, depending on your Linux distro. Here is a quick overview.
 
 
+.. _main_install_linux_fedora:
+
 Fedora
 ======
 
@@ -26,12 +28,15 @@ You can install it with:
    sudo dnf install novelwriter
 
 
+.. _main_install_linux_ubuntu:
+
 Ubuntu
 ======
 
 A Personal Package Archive (PPA) is available for novelWriter on Launchpad. This is the most
 straightforward way to install and update novelWriter on Ubuntu. It also works for other
-Debian-based distros, but see the next section for more details on this.
+Debian-based distros, but see the :ref:`main_install_linux_debian` section for more details on
+this.
 
 The Launchpad packages `are signed by the author <https://launchpad.net/~vkbo>`__.
 
@@ -56,6 +61,8 @@ You can add the Ubuntu PPA_ and install novelWriter with the following commands.
          sudo apt update
          sudo apt install novelwriter
 
+
+.. _main_install_linux_mint:
 
 Mint
 ====
@@ -88,6 +95,8 @@ Remember to update your APT cache by clicking "OK" in the banner at the bottom o
 After that, you should be able to install novelWriter from the package installer tool or from the
 command line.
 
+
+.. _main_install_linux_debian:
 
 Debian
 ======
