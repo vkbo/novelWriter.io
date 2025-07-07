@@ -6,7 +6,7 @@ Release 2.7
 ***********
 
 | **Release Date:** June 1, 2025
-| **Patches:** :ref:`2.7.1 <main_release_2_7_1>`, :ref:`2.7.2 <main_release_2_7_2>`
+| **Patches:** :ref:`2.7.1 <main_release_2_7_1>`, :ref:`2.7.2 <main_release_2_7_2>`, :ref:`2.7.3 <main_release_2_7_3>`
 
 
 Release Notes
@@ -158,6 +158,18 @@ This is a patch release that fixes several issues related to DocX and PDF manusc
 and indentation is processed, and fixes some issues with displaying tags for novel documents on the user interface.
 
 
+.. _main_release_2_7_3:
+
+Patch 2.7.3
+-----------
+
+**Release Date:** July 7, 2025
+
+This is a patch release that fixes a bug in, and makes a few improvement to, Preferences. The bug is related to a crash when using
+the ``%`` symbol in text field settings, and the improvements should make it easier to use the special dialogue highlighting
+settings.
+
+
 Download Links
 ==============
 
@@ -169,6 +181,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.7.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.7.2>`__
 | :octicon:`mark-github` `Download Release 2.7.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7.1>`__
 | :octicon:`mark-github` `Download Release 2.7 <https://github.com/vkbo/novelWriter/releases/tag/v2.7>`__
 | :octicon:`mark-github` `Download Release 2.7 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7rc1>`__
