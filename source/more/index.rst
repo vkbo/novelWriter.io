@@ -36,4 +36,4 @@ A full description of the current novelWriter project file format is available i
 This document is intended for contributors to novelWriter, those building project conversion tools, either to or from the
 novelWriter format, and for those who wish to make their own templating system.
 
-| :download:`FileFormatSpec-1.5.pdf`
+| :download:`FileFormatSpec-1.5-R6.pdf` Updated July 9, 2025
