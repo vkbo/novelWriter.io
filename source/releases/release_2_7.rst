@@ -7,7 +7,7 @@ Release 2.7
 
 | **Release Date:** June 1, 2025
 | **Patches:** :ref:`2.7.1 <main_release_2_7_1>`, :ref:`2.7.2 <main_release_2_7_2>`, :ref:`2.7.3 <main_release_2_7_3>`,
-  :ref:`2.7.4 <main_release_2_7_4>`
+  :ref:`2.7.4 <main_release_2_7_4>`, :ref:`2.7.5 <main_release_2_7_5>`
 
 
 Release Notes
@@ -182,6 +182,17 @@ This is a patch release that updates the Czech and French translations, and make
 icon themes. Additional icon themes are no longer automatically included in all release packages due to license constraints.
 
 
+.. _main_release_2_7_5:
+
+Patch 2.7.5
+-----------
+
+**Release Date:** September 14, 2025
+
+This is a patch release that fixes an issue related to crashes when using the completer menu under certain conditions, and improves
+positioning of the input box for CJK languages.
+
+
 Download Links
 ==============
 
@@ -193,6 +204,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.7.4 <https://github.com/vkbo/novelWriter/releases/tag/v2.7.4>`__
 | :octicon:`mark-github` `Download Release 2.7.3 <https://github.com/vkbo/novelWriter/releases/tag/v2.7.3>`__
 | :octicon:`mark-github` `Download Release 2.7.2 <https://github.com/vkbo/novelWriter/releases/tag/v2.7.2>`__
 | :octicon:`mark-github` `Download Release 2.7.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.7.1>`__
