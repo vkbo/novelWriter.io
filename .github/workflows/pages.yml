@@ -6,47 +6,49 @@ on:
       - "main"
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Python Setup
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: 3
           architecture: x64
 
       - name: Checkout Source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Install Packages
         run: |
           pip install -r requirements.txt
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Build Pages
         run: |
           make html
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "build/html/"
 
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
