@@ -1,5 +1,6 @@
 # Build Files
 build/
+uv.lock
 
 # Dev Stuff
 .pytest_cache/
