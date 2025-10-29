@@ -72,7 +72,6 @@ New Features
 Other Changes
 -------------
 
-
 * You can now switch to the Project Tree or Outline View using keyboard shortcuts while in Focus Mode.
 * When creating a new document from a template, the main title of the template document is replaced with the label
   chosen for the new document.
@@ -83,6 +82,7 @@ Other Changes
 * Trailing spaces are no longer highlighted in the editor with an error underline.
 * A switch on the **Manuscript Build Settings** dialog now allows for automatic preview of the build when the Apply or
   Save button is clicked.
+* The editor now properly supports 4 byte Unicode characters without breaking the syntax highlighting and spell checker.
 
 
 Download Links
