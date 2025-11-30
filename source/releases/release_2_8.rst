@@ -1,10 +1,10 @@
 .. _main_release_2_8:
 
-**********************
-Pre-Release 2.8 Beta 1
-**********************
+********************
+Pre-Release 2.8 RC 1
+********************
 
-| **Release Date:** October 29, 2025
+| **Release Date:** November 30, 2025
 
 
 Release Notes
@@ -12,10 +12,10 @@ Release Notes
 
 .. attention::
 
-   This is a beta release of the next release version, and is intended for testing purposes. Please be careful when
+   This is a release candidate of the next release version, and is intended for testing purposes. Please be careful when
    using this version on live writing projects, and make sure you take frequent backups.
 
-   You can follow the development progress on the `2.8 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/104>`__.
+   You can follow the development progress on the `2.8 Milestone <https://github.com/vkbo/novelWriter/milestone/106>`__.
 
 
 Theme Revamp
@@ -26,8 +26,9 @@ a separate theme for the app and the documents separately. Instead you can now s
 theme, and switch between them using a new button on the side bar. You can also set the theme to automatically follow
 the light or dark mode choice of your operating system.
 
-In addition to a redesign of the colour theme system, a large number of new colour themes have been added. There are
-many new choices for both light and dark themes, and a lot of them come in matching pairs.
+In addition to a redesign of the colour theme system, a large number of new colour themes have been added. Many of them
+were contributed by Myian. There are several new choices for both light and dark themes, and a lot of them come in
+matching pairs.
 
 
 Icon and Button Consistency
@@ -49,6 +50,11 @@ theme, or to a different colour theme, the **Status** and **Importance** label i
 
 New Features
 ------------
+
+**Vim Mode**
+   You can now enable Vim mode in the text editor panel. Vim mode gives you access to Vim-style command modes and
+   commands. You can enable this feature in a new section called "Features" in **Preferences**. This feature is still
+   experimental and may be changed or extended in future releases. Vim mode was contributed by Alexis Dumelie.
 
 **Markdown Highlighting**
    You can now use Markdown highlighting tags in the text, like this:
@@ -89,3 +95,11 @@ Download Links
 ==============
 
 .. include:: ../generated/download_pre_release.rst
+
+
+Older Releases
+==============
+
+Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 2.8 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8b1>`__
