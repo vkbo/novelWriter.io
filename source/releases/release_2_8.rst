@@ -1,21 +1,19 @@
+.. _main_release_latest:
 .. _main_release_2_8:
 
-********************
-Pre-Release 2.8 RC 1
-********************
+***********
+Release 2.8
+***********
 
-| **Release Date:** November 30, 2025
+| **Release Date:** December 14, 2025
 
 
 Release Notes
 =============
 
-.. attention::
-
-   This is a release candidate of the next release version, and is intended for testing purposes. Please be careful when
-   using this version on live writing projects, and make sure you take frequent backups.
-
-   You can follow the development progress on the `2.8 Milestone <https://github.com/vkbo/novelWriter/milestone/106>`__.
+Release 2.8 of novelWriter focuses primarily on the look and feel of the application, with a new way of handling colour
+themes, and updated icons colours and buttons. The theme colours can now also be used for your own document status
+labels.
 
 
 Theme Revamp
@@ -94,7 +92,7 @@ Other Changes
 Download Links
 ==============
 
-.. include:: ../generated/download_pre_release.rst
+.. include:: ../generated/download_release.rst
 
 
 Older Releases
@@ -102,4 +100,5 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.8 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8rc1>`__
 | :octicon:`mark-github` `Download Release 2.8 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8b1>`__

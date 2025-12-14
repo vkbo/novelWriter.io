@@ -1,4 +1,3 @@
-.. _main_release_latest:
 .. _main_release_2_7:
 
 ***********
@@ -194,12 +193,6 @@ positioning of the input box for CJK languages.
 
 
 Download Links
-==============
-
-.. include:: ../generated/download_release.rst
-
-
-Older Releases
 ==============
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
