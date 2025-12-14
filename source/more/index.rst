@@ -12,6 +12,7 @@ PDF Manuals
 
 A selection of PDF manuals are available here for download, including for earlier versions of novelWriter:
 
+| :download:`novelWriter-2.8.pdf`
 | :download:`novelWriter-2.7.pdf`
 | :download:`novelWriter-2.6.pdf`
 | :download:`novelWriter-2.5.pdf`
@@ -25,6 +26,7 @@ A selection of PDF manuals are available here for download, including for earlie
 Translated PDF Manuals
 ----------------------
 
+| :download:`novelWriter-fr-2.8.pdf`
 | :download:`novelWriter-fr-2.7.pdf`
 | :download:`novelWriter-fr-2.6.pdf`
 
@@ -36,4 +38,4 @@ A full description of the current novelWriter project file format is available i
 This document is intended for contributors to novelWriter, those building project conversion tools, either to or from the
 novelWriter format, and for those who wish to make their own templating system.
 
-| :download:`FileFormatSpec-1.5-R6.pdf` Updated July 9, 2025
+| :download:`FileFormatSpec-1.5-R6.pdf`
