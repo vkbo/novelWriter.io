@@ -49,12 +49,22 @@ Linux
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
 
-            **Debian Package**
-            ^^^^^^^^^^^^^^^^^^
-            The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_.
+            **Debian Package (Trixie)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            The package is built for Debian_ Trixie, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
             **Download:** :octicon:`download` `novelwriter_2.8_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8_all.deb>`__ [3.50 MB]
             :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8_all.deb.sha256>`
+
+         .. grid-item-card::
+            :class-header: nw-sd-os-card-header
+
+            **Debian Package (Bookworm)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            The package is built for Debian_ Bookworm, but should also work for older Ubuntu_, `Linux Mint`_ and other Debian-based releases.
+
+            **Download:** :octicon:`download` `novelwriter_2.8-oldstable_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8-oldstable_all.deb>`__ [3.50 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8-oldstable_all.deb.sha256>`
 
 
 Windows

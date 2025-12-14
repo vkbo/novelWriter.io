@@ -198,6 +198,7 @@ def pullRelease(args):
 
     aAppImg = assets.getAsset(AssetType.APP_IMAGE)
     aDebian = assets.getAsset(AssetType.DEBIAN)
+    aDebOld = assets.getAsset(AssetType.DEBIAN_OLD)
     aWinExe = assets.getAsset(AssetType.WINDOWS_EXE)
     aMacAMD = assets.getAsset(AssetType.MAC_DMG_INTEL)
     aMacARM = assets.getAsset(AssetType.MAC_DMG_ARM)
@@ -219,6 +220,10 @@ def pullRelease(args):
             "debian_url": aDebian.assetUrl,
             "debian_size": aDebian.assetSizeString,
             "debian_shasumfile": aDebian.assetShaSumUrl,
+            "debian_old_name": aDebOld.assetName,
+            "debian_old_url": aDebOld.assetUrl,
+            "debian_old_size": aDebOld.assetSizeString,
+            "debian_old_shasumfile": aDebOld.assetShaSumUrl,
             "winexe_name": aWinExe.assetName,
             "winexe_url": aWinExe.assetUrl,
             "winexe_size": aWinExe.assetSizeString,
@@ -309,6 +314,10 @@ def pullRelease(args):
             "debian_url": aDebian.assetUrl,
             "debian_size": aDebian.assetSizeString,
             "debian_shasumfile": aDebian.assetShaSumUrl,
+            "debian_old_name": aDebOld.assetName,
+            "debian_old_url": aDebOld.assetUrl,
+            "debian_old_size": aDebOld.assetSizeString,
+            "debian_old_shasumfile": aDebOld.assetShaSumUrl,
             "winexe_name": aWinExe.assetName,
             "winexe_url": aWinExe.assetUrl,
             "winexe_size": aWinExe.assetSizeString,

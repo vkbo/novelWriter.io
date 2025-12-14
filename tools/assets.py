@@ -16,10 +16,11 @@ class AssetType(Enum):
     APP_IMAGE     = 1
     APP_IMAGE_OLD = 2
     DEBIAN        = 3
-    WINDOWS_EXE   = 4
-    MAC_DMG_INTEL = 5
-    MAC_DMG_ARM   = 6
-    PYTHON_WHEEL  = 7
+    DEBIAN_OLD    = 4
+    WINDOWS_EXE   = 5
+    MAC_DMG_INTEL = 6
+    MAC_DMG_ARM   = 7
+    PYTHON_WHEEL  = 8
 
 
 class AssetOS(Enum):
@@ -105,6 +106,9 @@ class Asset:
         elif name.endswith(".AppImage"):
             self._type = AssetType.APP_IMAGE
             self._os = AssetOS.LINUX
+        elif name.endswith(".deb") and "oldstable" in name:
+            self._type = AssetType.DEBIAN_OLD
+            self._os = AssetOS.LINUX
         elif name.endswith(".deb"):
             self._type = AssetType.DEBIAN
             self._os = AssetOS.LINUX
@@ -159,6 +163,7 @@ class DownloadAssets:
             AssetType.APP_IMAGE:     None,
             AssetType.APP_IMAGE_OLD: None,
             AssetType.DEBIAN:        None,
+            AssetType.DEBIAN_OLD:    None,
             AssetType.WINDOWS_EXE:   None,
             AssetType.MAC_DMG_INTEL: None,
             AssetType.MAC_DMG_ARM:   None,

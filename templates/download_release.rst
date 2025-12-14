@@ -49,12 +49,22 @@ Linux
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
 
-            **Debian Package**
-            ^^^^^^^^^^^^^^^^^^
-            The package is built for Debian_, but should also work for Ubuntu_ and `Linux Mint`_.
+            **Debian Package (Trixie)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            The package is built for Debian_ Trixie, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
             **Download:** :octicon:`download` `{debian_name} <{debian_url}>`__ [{debian_size}]
             :bdg-link-primary-line:`Checksum File <{debian_shasumfile}>`
+
+         .. grid-item-card::
+            :class-header: nw-sd-os-card-header
+
+            **Debian Package (Bookworm)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            The package is built for Debian_ Bookworm, but should also work for older Ubuntu_, `Linux Mint`_ and other Debian-based releases.
+
+            **Download:** :octicon:`download` `{debian_old_name} <{debian_old_url}>`__ [{debian_old_size}]
+            :bdg-link-primary-line:`Checksum File <{debian_old_shasumfile}>`
 
 
 Windows
