@@ -49,8 +49,8 @@ Linux
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
 
-            **Debian Package (Trixie)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            **Debian Package (Trixie, Ubuntu 25.10+)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             The package is built for Debian_ Trixie, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
             **Download:** :octicon:`download` `{debian_name} <{debian_url}>`__ [{debian_size}]
@@ -59,8 +59,8 @@ Linux
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
 
-            **Debian Package (Bookworm)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            **Debian Package (Bookworm, Ubuntu 24.04)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             The package is built for Debian_ Bookworm, but should also work for older Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
             **Download:** :octicon:`download` `{debian_old_name} <{debian_old_url}>`__ [{debian_old_size}]
@@ -105,6 +105,11 @@ Windows
 
 MacOS
 -----
+
+.. attention::
+
+   The DMG images for MacOS will be discontinued from release 2.9.
+   See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
 
 .. grid:: 2
    :margin: 0

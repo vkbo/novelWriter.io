@@ -5,6 +5,7 @@ Custom code to handle documentation versions from the main repo.
 import os
 import shutil
 import subprocess
+import tomllib
 import urllib.request
 
 from datetime import datetime
@@ -112,21 +113,28 @@ class Documentation:
         locsDir.mkdir(exist_ok=True)
 
         build = ["en"] + [i.stem for i in locsDir.iterdir() if i.is_dir()]
+        locConf = tomllib.loads((locsDir / "config.toml").read_text(encoding="utf-8"))
 
         for code in build:
             print(f"Building PDF manual ({code}) ... ", end="", flush=True)
             env = os.environ.copy()
             cmd = "make clean latexpdf"
             name = "novelWriter"
+            vMaj = self._nwMajor
+            vMin = self._nwMinor
             if code != "en":
-                data = (locsDir / f"authors_{code}.conf").read_text(encoding="utf-8")
-                authors = [x for x in data.splitlines() if x and not x.startswith("#")]
-                env["SPHINX_I18N_AUTHORS"] = ", ".join(authors)
+                if code not in locConf:
+                    print(f"ERROR: No config for language code '{code}' in config.toml")
+                vBits = locConf[code].get("version", "ERR").split(".")
+                vMaj = vBits[0]
+                vMin = vBits[1] if len(vBits) > 0 else "X"
+                env["SPHINX_I18N_VERSION"] = locConf[code].get("version", "ERR")
+                env["SPHINX_I18N_AUTHORS"] = ", ".join(locConf[code].get("authors", []))
                 cmd += f" -e SPHINXOPTS=\"-D language='{code}'\""
                 name = f"novelWriter-{code}"
 
             if subprocess.call(cmd, cwd=docsDir, env=env, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT) == 0:
-                newDoc = self._pdfPath / f"{name}-{self._nwMajor}.{self._nwMinor}.pdf"
+                newDoc = self._pdfPath / f"{name}-{vMaj}.{vMin}.pdf"
                 newDoc.unlink(missing_ok=True)
                 pdfFile.rename(newDoc)
                 print("Done")

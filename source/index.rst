@@ -55,9 +55,8 @@ novelWriter
 
 .. include:: generated/download_main.rst
 
-\* Code signing on Windows is sponsored by `SignPath.io`_, certificate by the `SignPath Foundation`_.
-See the :ref:`main_install_signing`.
-
+| \* Code signing on Windows is sponsored by `SignPath.io`_, certificate by the `SignPath Foundation`_. See the :ref:`main_install_signing`.
+| \*\* The DMG images for MacOS will be discontinued from release 2.9. See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
 
 Other Install Options
 ---------------------

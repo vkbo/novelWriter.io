@@ -6,6 +6,7 @@ Release 2.8
 ***********
 
 | **Release Date:** December 14, 2025
+| **Patches:** :ref:`2.8.1 <main_release_2_8_1>`
 
 
 Release Notes
@@ -89,6 +90,22 @@ Other Changes
 * The editor now properly supports 4 byte Unicode characters without breaking the syntax highlighting and spell checker.
 
 
+Patch Releases
+==============
+
+
+.. _main_release_2_8_1:
+
+Patch 2.8.1
+-----------
+
+**Release Date:** December 28, 2025
+
+This patch fixes an issue where the application could crash due to a change in the framework novelWriter is built on.
+The issue is related to certain input methods, and is at least triggered when using Spotlight on MacOS. It could
+potentially affect other platforms too.
+
+
 Download Links
 ==============
 
@@ -100,5 +117,6 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.8 <https://github.com/vkbo/novelWriter/releases/tag/v2.8>`__
 | :octicon:`mark-github` `Download Release 2.8 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8rc1>`__
 | :octicon:`mark-github` `Download Release 2.8 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8b1>`__

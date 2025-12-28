@@ -60,8 +60,8 @@ Latest Release
    .. grid-item-card::
       :class-header: nw-sd-os-card-header
 
-      **MacOS**
-      ^^^^^^^^^
+      **MacOS**\*\*
+      ^^^^^^^^^^^^^
       .. grid:: 2
          :margin: 0
          :padding: 0

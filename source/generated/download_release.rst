@@ -6,11 +6,11 @@
 .. _SignPath.io: https://about.signpath.io/
 .. _SignPath Foundation: https://signpath.org/
 
-| **Release Version:** Version 2.8
-| **Release Date:** December 14, 2025
+| **Release Version:** Version 2.8.1
+| **Release Date:** December 28, 2025
 | **Release Notes:** :ref:`main_release_2_8`
-| **Release Feedback:** :octicon:`comment-discussion` `Discussion <https://github.com/vkbo/novelWriter/discussions/2609>`__
-| **Release on GitHub:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.8>`__
+| **Release Feedback:** :octicon:`comment-discussion` `Discussion <https://github.com/vkbo/novelWriter/discussions/2627>`__
+| **Release on GitHub:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v2.8.1>`__
 
 
 Linux
@@ -43,28 +43,28 @@ Linux
             ^^^^^^^^^^^^
             The AppImage_ should run on any recent Linux distro.
 
-            **Download:** :octicon:`download` `novelwriter-2.8-x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-x86_64.AppImage>`__ [83.9 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-x86_64.AppImage.sha256>`
+            **Download:** :octicon:`download` `novelwriter-2.8.1-x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-x86_64.AppImage>`__ [83.9 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-x86_64.AppImage.sha256>`
 
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
 
-            **Debian Package (Trixie)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            **Debian Package (Trixie, Ubuntu 25.10+)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             The package is built for Debian_ Trixie, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
-            **Download:** :octicon:`download` `novelwriter_2.8_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8_all.deb>`__ [3.50 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8_all.deb.sha256>`
+            **Download:** :octicon:`download` `novelwriter_2.8.1_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter_2.8.1_all.deb>`__ [3.50 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter_2.8.1_all.deb.sha256>`
 
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
 
-            **Debian Package (Bookworm)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            **Debian Package (Bookworm, Ubuntu 24.04)**
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             The package is built for Debian_ Bookworm, but should also work for older Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
-            **Download:** :octicon:`download` `novelwriter_2.8-oldstable_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8-oldstable_all.deb>`__ [3.50 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8-oldstable_all.deb.sha256>`
+            **Download:** :octicon:`download` `novelwriter_2.8.1-oldstable_all.deb <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter_2.8.1-oldstable_all.deb>`__ [3.50 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter_2.8.1-oldstable_all.deb.sha256>`
 
 
 Windows
@@ -97,14 +97,19 @@ Windows
             ^^^^^^^^^^^^^^^^^^^
             This is a standard setup installer for Windows. It is made for Windows 10 or newer.
 
-            **Download:** :octicon:`download` `novelwriter-2.8-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-amd64-setup.exe>`__ [104 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-amd64-setup.exe.sha256>`
+            **Download:** :octicon:`download` `novelwriter-2.8.1-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-amd64-setup.exe>`__ [104 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-amd64-setup.exe.sha256>`
 
             Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
 
 MacOS
 -----
+
+.. attention::
+
+   The DMG images for MacOS will be discontinued from release 2.9.
+   See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
 
 .. grid:: 2
    :margin: 0
@@ -134,8 +139,8 @@ MacOS
 
             This is a DMG image for MacOS with x86_64 architecture.
 
-            **Download:** :octicon:`download` `novelwriter-2.8-x86_64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-x86_64.dmg>`__ [120 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-x86_64.dmg.sha256>`
+            **Download:** :octicon:`download` `novelwriter-2.8.1-x86_64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-x86_64.dmg>`__ [121 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-x86_64.dmg.sha256>`
 
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
@@ -145,8 +150,8 @@ MacOS
 
             This is a DMG image for MacOS with aarch64 architecture.
 
-            **Download:** :octicon:`download` `novelwriter-2.8-aarch64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-aarch64.dmg>`__ [98.6 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-aarch64.dmg.sha256>`
+            **Download:** :octicon:`download` `novelwriter-2.8.1-aarch64.dmg <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-aarch64.dmg>`__ [98.6 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-aarch64.dmg.sha256>`
 
 
 Other Packages
@@ -180,8 +185,8 @@ Other Packages
 
             The Wheel package can be installed with ``pip install <file_path>``.
 
-            **Download:** :octicon:`download` `novelwriter-2.8-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-py3-none-any.whl>`__ [5.66 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-py3-none-any.whl.sha256>`
+            **Download:** :octicon:`download` `novelwriter-2.8.1-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-py3-none-any.whl>`__ [5.66 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-py3-none-any.whl.sha256>`
 
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
@@ -191,7 +196,7 @@ Other Packages
 
             The source code packages are archived files of the entire source code.
 
-            | **Download:** :octicon:`download` `novelWriter-2.8.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v2.8>`__
-            | **Download:** :octicon:`download` `novelWriter-2.8.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v2.8>`__
+            | **Download:** :octicon:`download` `novelWriter-2.8.1.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v2.8.1>`__
+            | **Download:** :octicon:`download` `novelWriter-2.8.1.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v2.8.1>`__
             
             See also the `novelWriter Repository`_.

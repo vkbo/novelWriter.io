@@ -26,7 +26,6 @@ A selection of PDF manuals are available here for download, including for earlie
 Translated PDF Manuals
 ----------------------
 
-| :download:`novelWriter-fr-2.8.pdf`
 | :download:`novelWriter-fr-2.7.pdf`
 | :download:`novelWriter-fr-2.6.pdf`
 

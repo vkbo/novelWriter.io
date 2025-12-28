@@ -3,11 +3,11 @@ Checksum Files
 
 Checksum files are released alongside the packages. These files can be used to verify the downloaded package.
 
-* **Linux AppImage:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-x86_64.AppImage.sha256>`__
-* **Debian Package:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter_2.8_all.deb.sha256>`__
-* **Windows Installer:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-amd64-setup.exe.sha256>`__
-* **MacOS DMG Image (Intel):** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-x86_64.dmg.sha256>`__
-* **MacOS DMG Image (M1):** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8/novelwriter-2.8-aarch64.dmg.sha256>`__
+* **Linux AppImage:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-x86_64.AppImage.sha256>`__
+* **Debian Package:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter_2.8.1_all.deb.sha256>`__
+* **Windows Installer:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-amd64-setup.exe.sha256>`__
+* **MacOS DMG Image (Intel):** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-x86_64.dmg.sha256>`__
+* **MacOS DMG Image (M1):** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.1/novelwriter-2.8.1-aarch64.dmg.sha256>`__
 
 .. rubric:: Verify the Checksum
 
@@ -20,8 +20,8 @@ Checksum files are released alongside the packages. These files can be used to v
 
       .. code-block:: bash
 
-         shasum -c novelwriter-2.8-x86_64.AppImage.sha256
-         shasum -c novelwriter_2.8_all.deb.sha256
+         shasum -c novelwriter-2.8.1-x86_64.AppImage.sha256
+         shasum -c novelwriter_2.8.1_all.deb.sha256
 
    .. tab-item:: Windows
 
@@ -30,7 +30,7 @@ Checksum files are released alongside the packages. These files can be used to v
 
       .. code-block:: powershell
 
-         Get-FileHash -Algorithm SHA256 novelwriter-2.8-amd64-setup.exe | Format-List
+         Get-FileHash -Algorithm SHA256 novelwriter-2.8.1-amd64-setup.exe | Format-List
 
    .. tab-item:: MacOS
 
@@ -39,4 +39,4 @@ Checksum files are released alongside the packages. These files can be used to v
 
       .. code-block:: bash
 
-         shasum -c novelwriter-2.8-x86_64.dmg.sha256
+         shasum -c novelwriter-2.8.1-x86_64.dmg.sha256
