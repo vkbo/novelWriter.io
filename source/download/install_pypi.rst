@@ -6,6 +6,7 @@ Installing from PyPi
 
 .. _PyPi: https://pypi.org/project/novelWriter/
 .. _python.org: https://www.python.org/downloads/
+.. _pipx installation: https://pipx.pypa.io/latest/installation/
 
 novelWriter is also available on the Python Package Index, or PyPi_. This install method works on
 all supported operating systems with a suitable Python environment already installed.
@@ -15,23 +16,23 @@ system. You can download Python from `python.org`_. It is recommended that you i
 version. If you are on Windows, also make sure to select the "Add Python to PATH" option during
 installation.
 
+It is recommended to install novelWriter as a tool using ``pipx``. See the `pipx installation`
+documentation for more details.
+
 To install novelWriter from PyPi, use the following command:
 
 .. code-block:: bash
 
-   pip install novelwriter
+   pipx install novelwriter
 
 To upgrade an existing installation, use:
 
 .. code-block:: bash
 
-   pip install --upgrade novelwriter
+   pipx install --upgrade novelwriter
 
-When installing via pip, novelWriter can be launched from command line with:
+When installed, novelWriter can be launched from the command line with:
 
 .. code-block:: bash
 
    novelwriter
-
-Make sure the install location for pip is in your PATH variable. This is not always the case by
-default, and then you may get a "Not Found" error when running the ``novelwriter`` command.
