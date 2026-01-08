@@ -105,9 +105,9 @@ Other Install Options
             :padding: 0
 
             .. code-block:: bash
-               :caption: |pypi-logo| Install from the `Python Package Index`_
+               :caption: |pypi-logo| Install from the `Python Package Index`_ (:ref:`Install Help <main_install_pypi>`)
 
-               pip install --user novelwriter
+               pipx install novelwriter
 
    .. grid-item::
       :padding: 0 0 2 0
