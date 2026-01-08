@@ -16,7 +16,7 @@ system. You can download Python from `python.org`_. It is recommended that you i
 version. If you are on Windows, also make sure to select the "Add Python to PATH" option during
 installation.
 
-It is recommended to install novelWriter as a tool using ``pipx``. See the `pipx installation`
+It is recommended to install novelWriter as a tool using ``pipx``. See the `pipx installation`_
 documentation for more details.
 
 To install novelWriter from PyPi, use the following command:
