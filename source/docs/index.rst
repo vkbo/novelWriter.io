@@ -4,9 +4,9 @@
 Documentation
 *************
 
-| **Release Version:** 2.8.1
-| **Release Date:** Sunday, 28 December 2025
-| **Docs Updated:** Sunday, 28 December 2025
+| **Release Version:** 2.8.2
+| **Release Date:** Sunday, 25 January 2026
+| **Docs Updated:** Sunday, 25 January 2026
 
 **PDF:** :download:`novelWriter-2.8.pdf <../more/novelWriter-2.8.pdf>` [ :ref:`Other Versions <more_docs>` ]
 

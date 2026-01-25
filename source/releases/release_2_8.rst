@@ -6,7 +6,7 @@ Release 2.8
 ***********
 
 | **Release Date:** December 14, 2025
-| **Patches:** :ref:`2.8.1 <main_release_2_8_1>`
+| **Patches:** :ref:`2.8.1 <main_release_2_8_1>`,  :ref:`2.8.2 <main_release_2_8_2>`
 
 
 Release Notes
@@ -106,6 +106,18 @@ The issue is related to certain input methods, and is at least triggered when us
 potentially affect other platforms too.
 
 
+.. _main_release_2_8_2:
+
+Patch 2.8.2
+-----------
+
+**Release Date:** January 25, 2026
+
+This is a patch release that fixes an issue with launching novelWriter via a project file on Windows, adds an alert when
+the spell check dictionary cannot be loaded, handles headings in HTML manuscripts the same way as for documents, and
+updates the documentation on how heading levels are handled in the manuscript build process.
+
+
 Download Links
 ==============
 
@@ -117,6 +129,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 2.8.1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8.1>`__
 | :octicon:`mark-github` `Download Release 2.8 <https://github.com/vkbo/novelWriter/releases/tag/v2.8>`__
 | :octicon:`mark-github` `Download Release 2.8 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8rc1>`__
 | :octicon:`mark-github` `Download Release 2.8 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v2.8b1>`__
