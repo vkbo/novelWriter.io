@@ -14,7 +14,7 @@ Releases
    :caption: Next Release
    :hidden:
 
-   release_2_9
+   release_26_1
 
 .. toctree::
    :caption: Previous Releases
@@ -31,9 +31,17 @@ Releases
 
 This is an overview of novelWriter releases.
 
-Latest release is :ref:`main_release_latest`.
+You can find the latest release notes here: :ref:`main_release_latest`
 
-.. list-table:: More Releases
+.. note::
+   From 2026 and on, releases will use the release year as the version number, followed by a number indicating the
+   incremental release within that year.
+
+
+Release History
+===============
+
+.. list-table::
    :header-rows: 1
    :class: releases-table
 
