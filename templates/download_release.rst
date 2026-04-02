@@ -103,57 +103,6 @@ Windows
             Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
 
-MacOS
------
-
-.. attention::
-
-   The DMG images for MacOS will be discontinued from release 2.9.
-   See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
-
-.. grid:: 2
-   :margin: 0
-   :padding: 0
-   :gutter: 0
-
-   .. grid-item::
-      :columns: 2
-      :padding: 0 0 0 4
-
-      .. image:: /images/macos.svg
-         :class: dark-light
-
-   .. grid-item::
-      :columns: 10
-
-      .. grid:: 1
-         :margin: 0
-         :gutter: 4
-         :padding: 0
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **DMG Image for Intel**
-            ^^^^^^^^^^^^^^^^^^^^^^^
-
-            This is a DMG image for MacOS with x86_64 architecture.
-
-            **Download:** :octicon:`download` `{macx86_name} <{macx86_url}>`__ [{macx86_size}]
-            :bdg-link-primary-line:`Checksum File <{macx86_shasumfile}>`
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **DMG Image for Apple Silicon (M1)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-            This is a DMG image for MacOS with aarch64 architecture.
-
-            **Download:** :octicon:`download` `{macarm_name} <{macarm_url}>`__ [{macarm_size}]
-            :bdg-link-primary-line:`Checksum File <{macarm_shasumfile}>`
-
-
 Other Packages
 --------------
 

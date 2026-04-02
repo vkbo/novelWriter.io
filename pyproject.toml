@@ -3,10 +3,11 @@ name = "novelWriter.io"
 version = "1.0"
 description = "The novelWriter website"
 readme = "README.md"
+requires-python = ">=3.11"
 dependencies = [
     "pydata-sphinx-theme>=0.15",
     "sphinx-copybutton",
     "sphinx-design",
     "sphinx-favicon",
-    "sphinx<7.0",
+    "sphinx>=6.0",
 ]

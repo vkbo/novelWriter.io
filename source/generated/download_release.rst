@@ -108,7 +108,7 @@ MacOS
 
 .. attention::
 
-   The DMG images for MacOS will be discontinued from release 2.9.
+   The DMG images for MacOS will be discontinued from release 2026.1.
    See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
 
 .. grid:: 2
