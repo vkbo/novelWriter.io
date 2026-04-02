@@ -147,5 +147,14 @@ Other Packages
 
             | **Download:** :octicon:`download` `novelWriter-{short_version}.zip <{zip_url}>`__
             | **Download:** :octicon:`download` `novelWriter-{short_version}.tar.gz <{tar_url}>`__
-            
+
             See also the `novelWriter Repository`_.
+
+.. note::
+
+   For the time being, the MacOS releases have been discontinued. There are currently no one available to maintain these
+   releases. This is an open source project, and it depends on volunteers and contributors to run.
+   See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
+
+   If you own a Mac and have a Python environment set up, you can still install the Python package of novelWriter and
+   run the latest release. See :ref:`main_install_pypi` for more details.
