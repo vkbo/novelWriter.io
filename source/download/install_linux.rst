@@ -141,7 +141,7 @@ they are Ubuntu-specific. Instead, do one of the following:
                sudo sh -c "cat > /etc/apt/sources.list.d/novelwriter.sources" << EOF
                Types: deb
                URIs: http://ppa.launchpad.net/vkbo/novelwriter/ubuntu/
-               Suites: noble
+               Suites: resolute
                Components: main
                Signed-By: /usr/share/keyrings/novelwriter-ppa-keyring.gpg
                EOF
@@ -153,7 +153,7 @@ they are Ubuntu-specific. Instead, do one of the following:
                sudo sh -c "cat > /etc/apt/sources.list.d/novelwriter-pre.sources" << EOF
                Types: deb
                URIs: http://ppa.launchpad.net/vkbo/novelwriter-pre/ubuntu/
-               Suites: noble
+               Suites: resolute
                Components: main
                Signed-By: /usr/share/keyrings/novelwriter-ppa-keyring.gpg
                EOF
