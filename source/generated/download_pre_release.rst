@@ -6,11 +6,11 @@
 .. _SignPath.io: https://about.signpath.io/
 .. _SignPath Foundation: https://signpath.org/
 
-| **Release Version:** Version 26.1 Beta 1
-| **Release Date:** April 2, 2026
+| **Release Version:** Version 26.1 Beta 2
+| **Release Date:** April 4, 2026
 | **Release Notes:** :ref:`main_release_26_1`
-| **Release Feedback:** :octicon:`comment-discussion` `Discussion <https://github.com/vkbo/novelWriter/discussions/2701>`__
-| **Release on GitHub:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v26.1b1>`__
+| **Release Feedback:** :octicon:`comment-discussion` `Discussion <https://github.com/vkbo/novelWriter/discussions/2708>`__
+| **Release on GitHub:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v26.1b2>`__
 
 
 Linux
@@ -43,8 +43,8 @@ Linux
             ^^^^^^^^^^^^
             The AppImage_ should run on any recent Linux distro.
 
-            **Download:** :octicon:`download` `novelwriter-26.1b1-x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-x86_64.AppImage>`__ [84.5 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-x86_64.AppImage.sha256>`
+            **Download:** :octicon:`download` `novelwriter-26.1b2-x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-x86_64.AppImage>`__ [84.5 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-x86_64.AppImage.sha256>`
 
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
@@ -53,8 +53,8 @@ Linux
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             The package is built for Debian_ Trixie, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
-            **Download:** :octicon:`download` `novelwriter_26.1b1_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter_26.1b1_all.deb>`__ [3.51 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter_26.1b1_all.deb.sha256>`
+            **Download:** :octicon:`download` `novelwriter_26.1b2_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter_26.1b2_all.deb>`__ [3.51 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter_26.1b2_all.deb.sha256>`
 
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
@@ -63,8 +63,8 @@ Linux
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             The package is built for Debian_ Bookworm, but should also work for older Ubuntu_, `Linux Mint`_ and other Debian-based releases.
 
-            **Download:** :octicon:`download` `novelwriter_26.1b1-oldstable_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter_26.1b1-oldstable_all.deb>`__ [3.51 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter_26.1b1-oldstable_all.deb.sha256>`
+            **Download:** :octicon:`download` `novelwriter_26.1b2-oldstable_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter_26.1b2-oldstable_all.deb>`__ [3.51 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter_26.1b2-oldstable_all.deb.sha256>`
 
 
 Windows
@@ -97,8 +97,8 @@ Windows
             ^^^^^^^^^^^^^^^^^^^
             This is a standard setup installer for Windows. It is made for Windows 10 or newer.
 
-            **Download:** :octicon:`download` `novelwriter-26.1b1-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-amd64-setup.exe>`__ [104 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-amd64-setup.exe.sha256>`
+            **Download:** :octicon:`download` `novelwriter-26.1b2-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-amd64-setup.exe>`__ [104 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-amd64-setup.exe.sha256>`
 
             Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
@@ -134,8 +134,8 @@ Other Packages
 
             The Wheel package can be installed with ``pip install <file_path>``.
 
-            **Download:** :octicon:`download` `novelwriter-26.1b1-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-py3-none-any.whl>`__ [5.67 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-py3-none-any.whl.sha256>`
+            **Download:** :octicon:`download` `novelwriter-26.1b2-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-py3-none-any.whl>`__ [5.67 MB]
+            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-py3-none-any.whl.sha256>`
 
          .. grid-item-card::
             :class-header: nw-sd-os-card-header
@@ -145,8 +145,8 @@ Other Packages
 
             The source code packages are archived files of the entire source code.
 
-            | **Download:** :octicon:`download` `novelWriter-26.1b1.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v26.1b1>`__
-            | **Download:** :octicon:`download` `novelWriter-26.1b1.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v26.1b1>`__
+            | **Download:** :octicon:`download` `novelWriter-26.1b2.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v26.1b2>`__
+            | **Download:** :octicon:`download` `novelWriter-26.1b2.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v26.1b2>`__
 
             See also the `novelWriter Repository`_.
 

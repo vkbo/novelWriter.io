@@ -3,9 +3,9 @@ Checksum Files
 
 Checksum files are released alongside the packages. These files can be used to verify the downloaded package.
 
-* **Linux AppImage:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-x86_64.AppImage.sha256>`__
-* **Debian Package:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter_26.1b1_all.deb.sha256>`__
-* **Windows Installer:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b1/novelwriter-26.1b1-amd64-setup.exe.sha256>`__
+* **Linux AppImage:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-x86_64.AppImage.sha256>`__
+* **Debian Package:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter_26.1b2_all.deb.sha256>`__
+* **Windows Installer:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1b2/novelwriter-26.1b2-amd64-setup.exe.sha256>`__
 
 .. rubric:: Verify the Checksum
 
@@ -18,8 +18,8 @@ Checksum files are released alongside the packages. These files can be used to v
 
       .. code-block:: bash
 
-         shasum -c novelwriter-26.1b1-x86_64.AppImage.sha256
-         shasum -c novelwriter_26.1b1_all.deb.sha256
+         shasum -c novelwriter-26.1b2-x86_64.AppImage.sha256
+         shasum -c novelwriter_26.1b2_all.deb.sha256
 
    .. tab-item:: Windows
 
@@ -28,4 +28,4 @@ Checksum files are released alongside the packages. These files can be used to v
 
       .. code-block:: powershell
 
-         Get-FileHash -Algorithm SHA256 novelwriter-26.1b1-amd64-setup.exe | Format-List
+         Get-FileHash -Algorithm SHA256 novelwriter-26.1b2-amd64-setup.exe | Format-List

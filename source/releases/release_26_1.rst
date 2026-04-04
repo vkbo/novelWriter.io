@@ -1,10 +1,10 @@
 .. _main_release_26_1:
 
 *************************
-Pre-Release 2026.1 Beta 1
+Pre-Release 2026.1 Beta 2
 *************************
 
-| **Release Date:** Not yet releases
+| **Release Date:** April 4, 2026
 
 
 Release Notes
@@ -16,6 +16,12 @@ Release Notes
    using this version on live writing projects, and make sure you take frequent backups.
 
    You can follow the development progress on the `26.1 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/110>`__.
+
+.. note::
+
+   2026.1 Beta 1 had some issues when running on older Linux versions as it was requiring a newer version of a core
+   library. This has been fixed in the Beta 2 release.
+
 
 From this release, novelWriter switches to using the year as the main release version number, starting with 2026.1.
 
@@ -70,3 +76,11 @@ Download Links
 ==============
 
 .. include:: ../generated/download_pre_release.rst
+
+
+Older Releases
+==============
+
+Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 26.1 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b1>`__
