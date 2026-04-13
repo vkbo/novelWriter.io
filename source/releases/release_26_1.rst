@@ -1,10 +1,10 @@
 .. _main_release_26_1:
 
-*************************
-Pre-Release 2026.1 Beta 2
-*************************
+***********************
+Pre-Release 2026.1 RC 1
+***********************
 
-| **Release Date:** April 4, 2026
+| **Release Date:** April 13, 2026
 
 
 Release Notes
@@ -12,15 +12,10 @@ Release Notes
 
 .. attention::
 
-   This is a beta release of the next release version, and is intended for testing purposes. Please be careful when
+   This is a release candidate of the next release version, and is intended for testing purposes. Please be careful when
    using this version on live writing projects, and make sure you take frequent backups.
 
-   You can follow the development progress on the `26.1 RC 1 Milestone <https://github.com/vkbo/novelWriter/milestone/110>`__.
-
-.. note::
-
-   2026.1 Beta 1 had some issues when running on older Linux versions as it was requiring a newer version of a core
-   library. This has been fixed in the Beta 2 release.
+   You can follow the development progress on the `26.1 Milestone <https://github.com/vkbo/novelWriter/milestone/109>`__.
 
 
 From this release, novelWriter switches to using the year as the main release version number, starting with 2026.1.
@@ -29,11 +24,15 @@ From this release, novelWriter switches to using the year as the main release ve
 User Interface
 --------------
 
-The first release of 2026 adds the Lucide icon theme, which you can select from Preferences. Two new light colour themes
-designed specifically for colour blindness have also been added. A new setting in Preferences will add dotted lines
-under formatting codes to further distinguish them from the text in order to make them more visible for people who see
-fewer colour variations. The various settings pages and dialogs should also respond better to screen readers now,
-although there are many further improvements to be made.
+The first release of 2026 adds the Lucide icon theme, which you can select from **Preferences**. Several themes have had
+minor modification to icon colours for consistency.
+
+Two new light colour themes designed specifically for colour blindness have also been added. A new setting in
+**Preferences** will also add dotted lines under formatting codes to further distinguish them from the text in order to
+make them more visible for people who see fewer colour variations.
+
+The various settings pages and dialogs should also respond better to screen readers now, although there are many further
+improvements to be made in this area.
 
 
 Manuscript Features
@@ -58,11 +57,13 @@ Several improvements have been made to the text editor based on user requests.
 * A new option in the right click menu will let you split an open document either at the cursor position, or move a
   section of selected text to a new document. This should make it much easier to split a single document in two.
 * If you use a fixed width font in the editor, you may not want headings to have a larger font size than the text. You
-  can now turn off the scaling of headings in Preferences.
+  can now turn off the scaling of headings in **Preferences**.
 * Each part of the document bread crumbs path in the editor and viewer header is now clickable, and will highlight the
   relevant document or folder in the project tree.
 * The keyboard shortcuts :kbd:`Ctrl+Up` and :kbd:`Ctrl+Down` will now, respectively, move the cursor to the previous or
   next paragraph in your document.
+* A setting in **Preferences** under **Text Editing** now lets you use single asterisks for bold. Enabling this feature
+  does not mean you have to edit all places that use double asterisk notation. They will still work.
 
 
 Other Changes
@@ -83,4 +84,5 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 26.1 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b2>`__
 | :octicon:`mark-github` `Download Release 26.1 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b1>`__
