@@ -7,6 +7,12 @@ Installing on MacOS
 .. _GitHub: https://github.com/vkbo/novelWriter
 .. _Releases: https://github.com/vkbo/novelWriter/releases
 
+.. attention::
+
+   The DMG releases for MacOS are no linger provided. These instructions are still valid for older
+   releases. For recent releases, the only install option on MacOS is by installing the Python
+   package. See :ref:`main_install_pypi` for more details.
+
 You can install novelWriter with both its Python and library dependencies embedded using the DMG
 application image file from :ref:`main_download`, or from the Releases_ page on GitHub_.
 Installing it should be straightforward.
@@ -23,6 +29,7 @@ The context menu can also be accessed by option-clicking if you have a one butto
 done by holding down the option key on your keyboard and clicking on the application in Finder.
 
 .. note::
+
    The novelWriter DMG is not signed because Apple doesn't currently provide a way for non-profit
    open source projects to properly sign their installers. The novelWriter project doesn't have the
    funding to pay for a commercial software signing certificate.

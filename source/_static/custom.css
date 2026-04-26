@@ -7,35 +7,35 @@
  */
 
 @font-face {
-  font-display: swap;
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/source-sans-pro-v21-latin-regular.woff2") format("woff2");
+    font-display: swap;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/source-sans-pro-v21-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-display: swap;
-  font-family: "Source Sans Pro";
-  font-style: italic;
-  font-weight: 400;
-  src: url("fonts/source-sans-pro-v21-latin-italic.woff2") format("woff2");
+    font-display: swap;
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 400;
+    src: url("fonts/source-sans-pro-v21-latin-italic.woff2") format("woff2");
 }
 
 @font-face {
-  font-display: swap;
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 600;
-  src: url("fonts/source-sans-pro-v21-latin-600.woff2") format("woff2");
+    font-display: swap;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 600;
+    src: url("fonts/source-sans-pro-v21-latin-600.woff2") format("woff2");
 }
 
 @font-face {
-  font-display: swap;
-  font-family: "Source Sans Pro";
-  font-style: italic;
-  font-weight: 600;
-  src: url("fonts/source-sans-pro-v21-latin-600italic.woff2") format("woff2");
+    font-display: swap;
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 600;
+    src: url("fonts/source-sans-pro-v21-latin-600italic.woff2") format("woff2");
 }
 
 /*
@@ -91,6 +91,11 @@ img.align-center {
 /* This one ensures that there is no scrollbar on Chrome if it's not needed */
 .sidebar-primary-items__end {
     margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Remove margin above text blocs */
+.line-block {
     margin-top: 0 !important;
 }
 

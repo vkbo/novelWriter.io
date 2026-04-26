@@ -1,9 +1,9 @@
 Latest Release
 ==============
 
-**Version 2.8.2** -- Released on January 25, 2026 -- Read the :ref:`Release Notes <main_release_2_8>`
+**Version 2026.1** -- Released on April 26, 2026 -- Read the :ref:`Release Notes <main_release_26_1>`
 
-.. grid:: 1 1 3 3
+.. grid:: 2
    :margin: 4 4 0 0
    :gutter: 4
    :padding: 0
@@ -19,16 +19,17 @@ Latest Release
          :gutter: 0
 
          .. grid-item::
-            :columns: 7
+            :columns: 9
+            :padding: 0 0 2 0
 
             | **Download**
-            | :octicon:`download` `AppImage <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-x86_64.AppImage>`__
-            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter_2.8.2_all.deb>`__
-            | :octicon:`light-bulb` :ref:`Install Help <main_install_linux>`
+            | :octicon:`download` `Linux AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-x86_64.AppImage>`__
+            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter_26.1_all.deb>`__
+            | :octicon:`light-bulb` :ref:`Installation Help <main_install_linux>`
 
          .. grid-item::
-            :columns: 5
-            :padding: 0 0 2 0
+            :columns: 3
+            :padding: 2 0 2 2
 
             .. image:: /images/linux.svg
                :class: dark-light
@@ -44,40 +45,16 @@ Latest Release
          :gutter: 0
 
          .. grid-item::
-            :columns: 7
+            :columns: 9
+            :padding: 0 0 2 0
 
             | **Download**
-            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-amd64-setup.exe>`__\*
-            | :octicon:`light-bulb` :ref:`Install Help <main_install_windows>`
+            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-amd64-setup.exe>`__\*
+            | :octicon:`light-bulb` :ref:`Installation Help <main_install_windows>`
 
          .. grid-item::
-            :columns: 5
-            :padding: 0 0 2 0
+            :columns: 3
+            :padding: 0 0 2 2
 
             .. image:: /images/windows10.svg
-               :class: dark-light
-
-   .. grid-item-card::
-      :class-header: nw-sd-os-card-header
-
-      **MacOS**\*\*
-      ^^^^^^^^^^^^^
-      .. grid:: 2
-         :margin: 0
-         :padding: 0
-         :gutter: 0
-
-         .. grid-item::
-            :columns: 7
-
-            | **Download**
-            | :octicon:`download` `DMG Image (Intel) <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-x86_64.dmg>`__
-            | :octicon:`download` `DMG Image (M1) <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-aarch64.dmg>`__
-            | :octicon:`light-bulb` :ref:`Install Help <main_install_mac>`
-
-         .. grid-item::
-            :columns: 5
-            :padding: 0 0 2 0
-
-            .. image:: /images/macos.svg
                :class: dark-light

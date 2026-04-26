@@ -1,24 +1,22 @@
+.. _main_release_latest:
 .. _main_release_26_1:
 
-***********************
-Pre-Release 2026.1 RC 1
-***********************
+**************
+Release 2026.1
+**************
 
-| **Release Date:** April 13, 2026
+| **Release Date:** April 26, 2026
 
 
 Release Notes
 =============
 
-.. attention::
+This release focuses on adding improvements to several existing features of novelWriter. There are new settings for the
+manuscript tools, improvements to the text editing experience, and a few new features for the editor. A new icon theme
+has also been added, and a couple more colour themes.
 
-   This is a release candidate of the next release version, and is intended for testing purposes. Please be careful when
-   using this version on live writing projects, and make sure you take frequent backups.
-
-   You can follow the development progress on the `26.1 Milestone <https://github.com/vkbo/novelWriter/milestone/109>`__.
-
-
-From this release, novelWriter switches to using the year as the main release version number, starting with 2026.1.
+Note that from this release, novelWriter switches to using the year as the main release version number, and an
+incremental minor version, starting with 2026.1.
 
 
 User Interface
@@ -76,7 +74,7 @@ Visual improvements with more tooltips labels and icons have been made in variou
 Download Links
 ==============
 
-.. include:: ../generated/download_pre_release.rst
+.. include:: ../generated/download_release.rst
 
 
 Older Releases
@@ -84,5 +82,6 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 26.1 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1rc1>`__
 | :octicon:`mark-github` `Download Release 26.1 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b2>`__
 | :octicon:`mark-github` `Download Release 26.1 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b1>`__

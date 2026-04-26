@@ -3,11 +3,9 @@ Checksum Files
 
 Checksum files are released alongside the packages. These files can be used to verify the downloaded package.
 
-* **Linux AppImage:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-x86_64.AppImage.sha256>`__
-* **Debian Package:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter_2.8.2_all.deb.sha256>`__
-* **Windows Installer:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-amd64-setup.exe.sha256>`__
-* **MacOS DMG Image (Intel):** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-x86_64.dmg.sha256>`__
-* **MacOS DMG Image (M1):** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v2.8.2/novelwriter-2.8.2-aarch64.dmg.sha256>`__
+* **Linux AppImage:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-x86_64.AppImage.sha256>`__
+* **Debian Package:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter_26.1_all.deb.sha256>`__
+* **Windows Installer:** :octicon:`download` `Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-amd64-setup.exe.sha256>`__
 
 .. rubric:: Verify the Checksum
 
@@ -20,8 +18,8 @@ Checksum files are released alongside the packages. These files can be used to v
 
       .. code-block:: bash
 
-         shasum -c novelwriter-2.8.2-x86_64.AppImage.sha256
-         shasum -c novelwriter_2.8.2_all.deb.sha256
+         shasum -c novelwriter-26.1-x86_64.AppImage.sha256
+         shasum -c novelwriter_26.1_all.deb.sha256
 
    .. tab-item:: Windows
 
@@ -30,13 +28,4 @@ Checksum files are released alongside the packages. These files can be used to v
 
       .. code-block:: powershell
 
-         Get-FileHash -Algorithm SHA256 novelwriter-2.8.2-amd64-setup.exe | Format-List
-
-   .. tab-item:: MacOS
-
-      | :octicon:`chevron-right` Download the corresponding Checksum File to the same location
-      | :octicon:`chevron-right` Run the command below in a terminal window in the same folder
-
-      .. code-block:: bash
-
-         shasum -c novelwriter-2.8.2-x86_64.dmg.sha256
+         Get-FileHash -Algorithm SHA256 novelwriter-26.1-amd64-setup.exe | Format-List

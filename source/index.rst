@@ -56,7 +56,28 @@ novelWriter
 .. include:: generated/download_main.rst
 
 | \* Code signing on Windows is sponsored by `SignPath.io`_, certificate by the `SignPath Foundation`_. See the :ref:`main_install_signing`.
-| \*\* The DMG images for MacOS will be discontinued from release 2026.1. See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
+
+.. grid:: 2
+   :margin: 0
+   :padding: 0
+   :gutter: 0
+
+   .. grid-item::
+      :columns: 1
+      :padding: 0 0 0 3
+
+      .. image:: /images/macos.svg
+         :class: dark-light
+
+   .. grid-item::
+      :columns: 11
+      :margin: 0
+      :padding: 0 0 2 2
+
+      | **Note that as of release 2026.1, MacOS DMGs have been discontinued.**
+      | The only current method of running novelWriter on MacOS is to set up a Python environment and install the
+        ``novelwriter`` package. See :ref:`main_install_pypi` for additional details.
+
 
 Other Install Options
 ---------------------
