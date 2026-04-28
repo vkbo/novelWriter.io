@@ -1,1 +1,5 @@
 ErrorDocument 404 https://novelwriter.io/404.html
+
+<IfModule headers_module>
+    header set X-Clacks-Overhead "GNU Terry Pratchett"
+</IfModule>
