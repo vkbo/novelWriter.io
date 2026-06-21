@@ -74,8 +74,8 @@ html_theme_options = {
         {"name": "Discussions", "url": "https://github.com/vkbo/novelWriter/discussions"},
         {"name": "Donate", "url": "https://ko-fi.com/jadzia626"},
     ],
-    "pygment_light_style": "tango",
-    "pygment_dark_style": "dracula",
+    "pygments_light_style": "tango",
+    "pygments_dark_style": "dracula",
     "icon_links_label": "Quick Links",
     "icon_links": [{
         "name": "Mastodon",

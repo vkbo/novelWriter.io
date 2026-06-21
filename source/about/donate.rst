@@ -4,7 +4,7 @@
 Donations
 *********
 
-Devloping and maintaining novelWriter doesn't cost a lot, aside from the modest cost of the
+Developing and maintaining novelWriter doesn't cost a lot, aside from the modest cost of the
 website, but I do use about 4-500 hours a year on the project.
 
 The development is mostly fuelled by coffee, so it is only appropriate that I set up a small

@@ -127,7 +127,7 @@ Among other improvements are:
   **Manuscript Build Settings** dialog.
 * The words in the **Project Word List** can now be exported to a plain text file, and also imported from such a file. Only unique
   words are imported.
-* The content of the table in the **Project Outline** can be exported to a CSV file, which can then be imported as a spread sheet in
+* The content of the table in the **Project Outline** can be exported to a CSV file, which can then be imported as a spreadsheet in
   for instance Excel or Libre Office Calc. The export is initiated from a new "Export CSV" button in the toolbar above the outline.
 
 

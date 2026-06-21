@@ -164,7 +164,7 @@ Patch 2.5.3
 **Release Date:** November 26, 2024
 
 This is a patch release that fixes an issue with swapped colours for the saved indicator in the status bar for the Default Light
-theme, a bug for some platforms where drag and drop onto the root of the project tree was possible, and ans issue with the HTML
+theme, a bug for some platforms where drag and drop onto the root of the project tree was possible, and an issue with the HTML
 manuscript format.
 
 This patch also adds a Russian translation, and updates the German and Portuguese translations.

@@ -152,7 +152,7 @@ Other Packages
 
 .. note::
 
-   For the time being, the MacOS releases have been discontinued. There are currently no one available to maintain these
+   For the time being, the MacOS releases have been discontinued. There is currently no one available to maintain these
    releases. This is an open source project, and it depends on volunteers and contributors to run.
    See `this discussion <https://github.com/vkbo/novelWriter/discussions/2618>`__ for more details.
 

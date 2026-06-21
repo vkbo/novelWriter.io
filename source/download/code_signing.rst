@@ -27,4 +27,4 @@ Your Privacy
 ============
 
 This program will not transfer any information to other networked systems unless specifically requested by the user or the person
-installing or operating it. For more informations, see :ref:`main_about_policy`.
+installing or operating it. For more information, see :ref:`main_about_policy`.

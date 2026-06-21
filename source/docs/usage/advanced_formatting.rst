@@ -17,7 +17,7 @@ Formatting with Shortcodes
 ==========================
 
 For basic formatting, like emphasis, you should use the standard Markdown style formatting tags
-descried in :ref:`docs_usage_basics_emphasis` whenever possible.
+described in :ref:`docs_usage_basics_emphasis` whenever possible.
 
 For additional formatting options, you can use shortcodes. Shortcodes is a form of in-line codes
 that wrap the section of text to be formatted. Shortcodes can be nested to apply multiple formats

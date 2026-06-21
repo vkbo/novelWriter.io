@@ -9,7 +9,7 @@ Installing on MacOS
 
 .. attention::
 
-   The DMG releases for MacOS are no linger provided. These instructions are still valid for older
+  The DMG releases for MacOS are no longer provided. These instructions are still valid for older
    releases. For recent releases, the only install option on MacOS is by installing the Python
    package. See :ref:`main_install_pypi` for more details.
 

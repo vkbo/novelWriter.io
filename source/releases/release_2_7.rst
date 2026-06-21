@@ -79,13 +79,13 @@ itself. Here's an excerpt from the documentation written for this feature to exp
    which element(s) of the story's genre are being satisfied. An author can use this mechanism to
    track any element of a scene. Some examples include time of day, how much time passes in the scene,
    or even the physical form of a shape-shifting character. If a story involves magic, one could track
-   which wand a main character has in hand. It's up to tha author.
+   which wand a main character has in hand. It's up to the author.
 
    When the story and other scene metadata is extracted into a tabular form, it is possible to get a
    comprehensive overview of the story and to identify possible issues. For example, so many
    fast-paced scenes without a break that readers might become fatigued or over-stimulated.
 
-For the time being, the structure comments can be included in the manuscript, or exported to a spread sheet from the Outline View.
+For the time being, the structure comments can be included in the manuscript, or exported to a spreadsheet from the Outline View.
 More ways of displaying these comments will be added in later releases. We're planning several upgrades to the Outline View for
 instance.
 

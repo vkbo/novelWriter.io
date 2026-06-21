@@ -36,7 +36,7 @@ The new features are:
   text above the title on the cover page, and want to turn off the automatic page break.
 * You can now customise the styling of headings, and even turn them off completely if your manuscript standard calls for headings to
   be styled the same way as plain text. You can also adjust top and bottom margins of heading types and text paragraphs.
-* Word count statistics, and other related statics values, can be inserted into the manuscript. The value fields must be added to
+* Word count statistics, and other related statistics values, can be inserted into the manuscript. The value fields must be added to
   the document itself in the editor, using the new **Insert > Word/Character Count** menu entry. In the document viewer, they are
   shown as 0, but they are set to the correct value in the Manuscript preview.
 * If you have enabled the option to ignore line breaks in text paragraphs in your Build Settings, you can still force line breaks in
@@ -65,7 +65,7 @@ tags if you needed to cross-reference between novel documents or from notes. You
 works exactly the same as all other reference keywords.
 
 In addition, a new special ``@mention`` keyword has been added. It is intended for referencing story elements that are not present
-in a given chapter or scene, but is discussed. So if your Point-of-View character takes about someone who isn't present in the
+in a given chapter or scene, but is discussed. So if your Point-of-View character talks about someone who isn't present in the
 scene, you may still want to indicate that they're mentioned so you can go back later and check for story consistency. This is
 precisely what the ``@mention`` keyword is for.
 
