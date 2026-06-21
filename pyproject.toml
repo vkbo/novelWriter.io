@@ -10,4 +10,5 @@ dependencies = [
     "sphinx-design",
     "sphinx-favicon",
     "sphinx>=6.0",
+    "codespell",
 ]

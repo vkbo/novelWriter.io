@@ -1,8 +1,6 @@
 # Build Files
 build/
-pdm.lock
 
 # Dev Stuff
 .pytest_cache/
 _temp/
-.pdm-python
