@@ -17,7 +17,7 @@ Formatting with Shortcodes
 ==========================
 
 For basic formatting, like emphasis, you should use the standard Markdown style formatting tags
-described in :ref:`docs_usage_basics_emphasis` whenever possible.
+descried in :ref:`docs_usage_basics_emphasis` whenever possible.
 
 For additional formatting options, you can use shortcodes. Shortcodes is a form of in-line codes
 that wrap the section of text to be formatted. Shortcodes can be nested to apply multiple formats
@@ -62,7 +62,7 @@ Forced Line Break
 -----------------
 
 Inserting ``[br]`` in the text will ensure a line break is always inserted in that place, even if
-you turn off **Preserve Hard Line Breaks** in your manuscript build settings.
+you turn off **Preserve Hard Line Breaks** in your **Manuscript Build** settings.
 
 You can add a manual line break after it too, for a better visual representation in the editor, but
 keep in mind that this line break is removed before the text is processed, so the text on either

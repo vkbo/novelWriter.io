@@ -4,9 +4,9 @@
 Documentation
 *************
 
-| **Release Version:** 26.1
-| **Release Date:** Sunday, 26 April 2026
-| **Docs Updated:** Sunday, 26 April 2026
+| **Release Version:** 26.1.1
+| **Release Date:** Sunday, 28 June 2026
+| **Docs Updated:** Sunday, 28 June 2026
 
 **PDF:** :download:`novelWriter-26.1.pdf <../more/novelWriter-26.1.pdf>` [ :ref:`Other Versions <more_docs>` ]
 
