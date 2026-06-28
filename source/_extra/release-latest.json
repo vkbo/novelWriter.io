@@ -1,21 +1,21 @@
 {
   "release": {
-    "version": "26.1",
+    "version": "26.1.1",
     "major": 26,
     "minor": 1,
-    "patch": 0,
+    "patch": 1,
     "info": {
-      "name": "Version 2026.1",
-      "date": "2026-04-26T14:06:17Z",
-      "url": "https://github.com/vkbo/novelWriter/releases/tag/v26.1",
+      "name": "Version 2026.1.1",
+      "date": "2026-06-28T16:22:04Z",
+      "url": "https://github.com/vkbo/novelWriter/releases/tag/v26.1.1",
       "assets": {
-        "appimage": "https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-x86_64.AppImage",
-        "debian": "https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter_26.1_all.deb",
-        "winexe": "https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-amd64-setup.exe",
+        "appimage": "https://github.com/vkbo/novelWriter/releases/download/v26.1.1/novelwriter-26.1.1-x86_64.AppImage",
+        "debian": "https://github.com/vkbo/novelWriter/releases/download/v26.1.1/novelwriter_26.1.1_all.deb",
+        "winexe": "https://github.com/vkbo/novelWriter/releases/download/v26.1.1/novelwriter-26.1.1-amd64-setup.exe",
         "macx86": "",
         "macarm": "",
-        "zipball": "https://api.github.com/repos/vkbo/novelWriter/zipball/v26.1",
-        "tarball": "https://api.github.com/repos/vkbo/novelWriter/tarball/v26.1"
+        "zipball": "https://api.github.com/repos/vkbo/novelWriter/zipball/v26.1.1",
+        "tarball": "https://api.github.com/repos/vkbo/novelWriter/tarball/v26.1.1"
       }
     }
   }

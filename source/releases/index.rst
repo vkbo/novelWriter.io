@@ -53,8 +53,8 @@ Release History
      - Status
    * - :ref:`main_release_26_1`
      - 2026-04-26
-     - N/A
-     - N/A
+     - 26.1.1
+     - 2026-06-28
      - Latest Release: :ref:`Download <main_download>`
    * - :ref:`main_release_2_8`
      - 2025-12-14

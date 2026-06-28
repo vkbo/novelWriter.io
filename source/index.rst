@@ -75,6 +75,7 @@ novelWriter
       :padding: 0 0 2 2
 
       | **Note that as of release 2026.1, MacOS DMGs have been discontinued.**
+      | *We are working to bring back the DMG releases soon. Stay tuned!*
       | The only current method of running novelWriter on MacOS is to set up a Python environment and install the
         ``novelwriter`` package. See :ref:`main_install_pypi` for additional details.
 

@@ -5,7 +5,7 @@ Release 2.8
 ***********
 
 | **Release Date:** December 14, 2025
-| **Patches:** :ref:`2.8.1 <main_release_2_8_1>`,  :ref:`2.8.2 <main_release_2_8_2>`
+| **Patches:** :ref:`2.8.1 <main_release_2_8_1>`, :ref:`2.8.2 <main_release_2_8_2>`
 
 
 Release Notes

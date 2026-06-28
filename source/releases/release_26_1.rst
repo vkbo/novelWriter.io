@@ -6,6 +6,7 @@ Release 2026.1
 **************
 
 | **Release Date:** April 26, 2026
+| **Patches:** :ref:`26.1.1 <main_release_26_1_1>`
 
 
 Release Notes
@@ -69,6 +70,21 @@ Other Changes
 
 Minor improvements have been made to navigation by keyboard in the Welcome dialog, and in the project search panel.
 Visual improvements with more tooltips labels and icons have been made in various places in the user interface.
+
+
+Patch Releases
+==============
+
+.. _main_release_26_1_1:
+
+Patch 26.1.1
+------------
+
+**Release Date:** June 28, 2026
+
+This patch release adds Catalan language to the app, and updates translation files for other languages. Some user
+interface labels for the Manuscript tool have been improved, and the documentation updated. A small fix resolves an
+error message printed to the log when launching the app on Linux.
 
 
 Download Links

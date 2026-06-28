@@ -1,7 +1,7 @@
 Latest Release
 ==============
 
-**Version 2026.1** -- Released on April 26, 2026 -- Read the :ref:`Release Notes <main_release_26_1>`
+**Version 2026.1.1** -- Released on June 28, 2026 -- Read the :ref:`Release Notes <main_release_26_1>`
 
 .. grid:: 2
    :margin: 4 4 0 0
@@ -23,8 +23,8 @@ Latest Release
             :padding: 0 0 2 0
 
             | **Download**
-            | :octicon:`download` `Linux AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-x86_64.AppImage>`__
-            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter_26.1_all.deb>`__
+            | :octicon:`download` `Linux AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.1.1/novelwriter-26.1.1-x86_64.AppImage>`__
+            | :octicon:`download` `Debian Package <https://github.com/vkbo/novelWriter/releases/download/v26.1.1/novelwriter_26.1.1_all.deb>`__
             | :octicon:`light-bulb` :ref:`Installation Help <main_install_linux>`
 
          .. grid-item::
@@ -49,7 +49,7 @@ Latest Release
             :padding: 0 0 2 0
 
             | **Download**
-            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v26.1/novelwriter-26.1-amd64-setup.exe>`__\*
+            | :octicon:`download` `Setup Installer <https://github.com/vkbo/novelWriter/releases/download/v26.1.1/novelwriter-26.1.1-amd64-setup.exe>`__\*
             | :octicon:`light-bulb` :ref:`Installation Help <main_install_windows>`
 
          .. grid-item::
