@@ -6,7 +6,7 @@ Installing from PyPi
 
 .. _PyPi: https://pypi.org/project/novelWriter/
 .. _python.org: https://www.python.org/downloads/
-.. _pipx installation: https://pipx.pypa.io/latest/installation/
+.. _pipx installation: https://pipx.pypa.io/stable/how-to/install-pipx.html
 
 novelWriter is also available on the Python Package Index, or PyPi_. This install method works on
 all supported operating systems with a suitable Python environment already installed.
