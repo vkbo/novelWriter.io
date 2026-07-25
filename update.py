@@ -8,7 +8,6 @@ import json
 import re
 import sys
 import urllib.request
-
 from datetime import datetime
 from pathlib import Path
 
@@ -39,8 +38,6 @@ def updateSetting(name: str, value: str) -> None:
         settings[name] = value
         setFile.write_text(json.dumps(settings, indent=2))
 
-    return
-
 
 def writeReleaseInfo(version: str, force: bool, info: dict[str, str | dict[str, str]]) -> None:
     """Write the release info file."""
@@ -50,25 +47,29 @@ def writeReleaseInfo(version: str, force: bool, info: dict[str, str | dict[str, 
     numeric = tuple(int(x) for x in f"{version}.0.0.0".split(".")[:3])
     previous = (release.get("major", 0), release.get("minor", 0), release.get("patch", 0))
     if previous > numeric and not force:
-        print(("Current release info is for %s, not updating. "
-               "Use --force to override.") % release.get("version", "0"))
+        print(f"Current release info is for {release.get('version', '0')}, not updating. Use --force to override.")
         return
     relFile.write_text(
-        json.dumps({
-            "release": {
-                "version": version,
-                "major": numeric[0],
-                "minor": numeric[1],
-                "patch": numeric[2],
-                "info": info,
-            }
-        }, indent=2), encoding="utf-8"
+        json.dumps(
+            {
+                "release": {
+                    "version": version,
+                    "major": numeric[0],
+                    "minor": numeric[1],
+                    "patch": numeric[2],
+                    "info": info,
+                }
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
     )
     return
 
 
 def processReleaseNotes(text):
     """Format the release notes text."""
+
     def ghLinks(x):
         return f"`#{x.group(1)} <https://github.com/vkbo/novelWriter/issues/{x.group(1)}>`_"
 
@@ -105,12 +106,13 @@ def processReleaseNotes(text):
 #  Documentation
 ##
 
+
 def pullDocs(args):
     """Download docs and extract them into the website source."""
-    print("")
+    print()
     print("Pulling Documentation Source")
     print("============================")
-    print("")
+    print()
 
     if args.branch:
         target = args.branch
@@ -128,32 +130,29 @@ def pullDocs(args):
 
     updateSetting("docVersion", docs.release)
 
-    print("")
+    print()
     print("Docs updated")
-    print("")
-
-    return
+    print()
 
 
 ##
 #  Releases
 ##
 
+
 def pullRelease(args):
     """Download release info from the GitHub API."""
-    print("")
+    print()
     print("Pulling Release Info")
     print("====================")
-    print("")
+    print()
 
     if args.remove_pre:
         print("Removing Pre-Release")
         Path("source/generated/download_pre_release.rst").write_text(
             "*There are currently no pre-release downloads available ...*", encoding="utf-8"
         )
-        Path("source/generated/checksum_pre_release.rst").write_text(
-            "", encoding="utf-8"
-        )
+        Path("source/generated/checksum_pre_release.rst").write_text("", encoding="utf-8")
         return
 
     print(f"Tag: {args.tag}")
@@ -173,7 +172,7 @@ def pullRelease(args):
 
     discussUrl = data.get("discussion_url", "Unknown")
     releaseUrl = data.get("html_url", "Unknown")
-    releaseVersion = data.get("name", "Version ???")
+    releaseVersion = "20" + data.get("name", "xx.x").removeprefix("Version ")
     releaseDate = data.get("published_at", "")
     shortVersion = data.get("tag_name", "???").lstrip("v")
     releaseRef = "main_release_" + "_".join(stripVersion(shortVersion).split(".")[:2])
@@ -186,12 +185,12 @@ def pullRelease(args):
     print(f"Release Date:    {releaseDate}")
     print(f"Release TarBall: {tarBall}")
     print(f"Release ZipBall: {zipBall}")
-    print("")
+    print()
 
     releaseDateFmt = datetime.fromisoformat(releaseDate).strftime("%B %-d, %Y")
     assets = DownloadAssets(data)
 
-    print("")
+    print()
 
     # Update Files
     print("Updating Files")
@@ -206,140 +205,164 @@ def pullRelease(args):
 
     if isPreRelease:
         # Updating Pre-Release Info
-        buildFromTemplate("download_release.rst", "download_pre_release.rst", {
-            "release_version": releaseVersion,
-            "release_date": releaseDateFmt,
-            "release_url": releaseUrl,
-            "release_ref": releaseRef,
-            "discuss_url": discussUrl,
-            "appimage_name": aAppImg.assetName,
-            "appimage_url": aAppImg.assetUrl,
-            "appimage_size": aAppImg.assetSizeString,
-            "appimage_shasumfile": aAppImg.assetShaSumUrl,
-            "debian_name": aDebian.assetName,
-            "debian_url": aDebian.assetUrl,
-            "debian_size": aDebian.assetSizeString,
-            "debian_shasumfile": aDebian.assetShaSumUrl,
-            "debian_old_name": aDebOld.assetName,
-            "debian_old_url": aDebOld.assetUrl,
-            "debian_old_size": aDebOld.assetSizeString,
-            "debian_old_shasumfile": aDebOld.assetShaSumUrl,
-            "winexe_name": aWinExe.assetName,
-            "winexe_url": aWinExe.assetUrl,
-            "winexe_size": aWinExe.assetSizeString,
-            "winexe_shasumfile": aWinExe.assetShaSumUrl,
-            "macx86_name": aMacAMD.assetName,
-            "macx86_url": aMacAMD.assetUrl,
-            "macx86_size": aMacAMD.assetSizeString,
-            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
-            "macarm_name": aMacARM.assetName,
-            "macarm_url": aMacARM.assetUrl,
-            "macarm_size": aMacARM.assetSizeString,
-            "macarm_shasumfile": aMacARM.assetShaSumUrl,
-            "wheel_name": aPWheel.assetName,
-            "wheel_url": aPWheel.assetUrl,
-            "wheel_size": aPWheel.assetSizeString,
-            "wheel_shasumfile": aPWheel.assetShaSumUrl,
-            "short_version": shortVersion,
-            "zip_url": zipBall,
-            "tar_url": tarBall,
-        })
+        buildFromTemplate(
+            "download_release.rst",
+            "download_pre_release.rst",
+            {
+                "release_version": releaseVersion,
+                "release_date": releaseDateFmt,
+                "release_url": releaseUrl,
+                "release_ref": releaseRef,
+                "discuss_url": discussUrl,
+                "appimage_name": aAppImg.assetName,
+                "appimage_url": aAppImg.assetUrl,
+                "appimage_size": aAppImg.assetSizeString,
+                "appimage_shasumfile": aAppImg.assetShaSumUrl,
+                "debian_name": aDebian.assetName,
+                "debian_url": aDebian.assetUrl,
+                "debian_size": aDebian.assetSizeString,
+                "debian_shasumfile": aDebian.assetShaSumUrl,
+                "debian_old_name": aDebOld.assetName,
+                "debian_old_url": aDebOld.assetUrl,
+                "debian_old_size": aDebOld.assetSizeString,
+                "debian_old_shasumfile": aDebOld.assetShaSumUrl,
+                "winexe_name": aWinExe.assetName,
+                "winexe_url": aWinExe.assetUrl,
+                "winexe_size": aWinExe.assetSizeString,
+                "winexe_shasumfile": aWinExe.assetShaSumUrl,
+                "macx86_name": aMacAMD.assetName,
+                "macx86_url": aMacAMD.assetUrl,
+                "macx86_size": aMacAMD.assetSizeString,
+                "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+                "macarm_name": aMacARM.assetName,
+                "macarm_url": aMacARM.assetUrl,
+                "macarm_size": aMacARM.assetSizeString,
+                "macarm_shasumfile": aMacARM.assetShaSumUrl,
+                "wheel_name": aPWheel.assetName,
+                "wheel_url": aPWheel.assetUrl,
+                "wheel_size": aPWheel.assetSizeString,
+                "wheel_shasumfile": aPWheel.assetShaSumUrl,
+                "short_version": shortVersion,
+                "zip_url": zipBall,
+                "tar_url": tarBall,
+            },
+        )
 
-        buildFromTemplate("checksum.rst", "checksum_pre_release.rst", {
-            "appimage_name": aAppImg.assetName,
-            "appimage_shasumfile": aAppImg.assetShaSumUrl,
-            "debian_name": aDebian.assetName,
-            "debian_shasumfile": aDebian.assetShaSumUrl,
-            "winexe_name": aWinExe.assetName,
-            "winexe_shasumfile": aWinExe.assetShaSumUrl,
-            "macx86_name": aMacAMD.assetName,
-            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
-            "macarm_name": aMacARM.assetName,
-            "macarm_shasumfile": aMacARM.assetShaSumUrl,
-        })
+        buildFromTemplate(
+            "checksum.rst",
+            "checksum_pre_release.rst",
+            {
+                "appimage_name": aAppImg.assetName,
+                "appimage_shasumfile": aAppImg.assetShaSumUrl,
+                "debian_name": aDebian.assetName,
+                "debian_shasumfile": aDebian.assetShaSumUrl,
+                "winexe_name": aWinExe.assetName,
+                "winexe_shasumfile": aWinExe.assetShaSumUrl,
+                "macx86_name": aMacAMD.assetName,
+                "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+                "macarm_name": aMacARM.assetName,
+                "macarm_shasumfile": aMacARM.assetShaSumUrl,
+            },
+        )
 
     else:
         # Write the release-info.json file
-        writeReleaseInfo(shortVersion, args.force, {
-            "name": releaseVersion,
-            "date": releaseDate,
-            "url": releaseUrl,
-            "assets": {
-                "appimage": aAppImg.assetUrl,
-                "debian": aDebian.assetUrl,
-                "winexe": aWinExe.assetUrl,
-                "macx86": aMacAMD.assetUrl,
-                "macarm": aMacARM.assetUrl,
-                "zipball": zipBall,
-                "tarball": tarBall,
-            }
-        })
+        writeReleaseInfo(
+            shortVersion,
+            args.force,
+            {
+                "name": releaseVersion,
+                "date": releaseDate,
+                "url": releaseUrl,
+                "assets": {
+                    "appimage": aAppImg.assetUrl,
+                    "debian": aDebian.assetUrl,
+                    "winexe": aWinExe.assetUrl,
+                    "macx86": aMacAMD.assetUrl,
+                    "macarm": aMacARM.assetUrl,
+                    "zipball": zipBall,
+                    "tarball": tarBall,
+                },
+            },
+        )
 
         # Updating Latest Release Info
-        buildFromTemplate("download.rst", "download_main.rst", {
-            "release_version": releaseVersion,
-            "release_date": releaseDateFmt,
-            "release_ref": releaseRef,
-            "appimage_download": aAppImg.assetUrl,
-            "debian_download": aDebian.assetUrl,
-            "winexe_download": aWinExe.assetUrl,
-            "macx86_download": aMacAMD.assetUrl,
-            "macarm_download": aMacARM.assetUrl,
-        })
+        buildFromTemplate(
+            "download.rst",
+            "download_main.rst",
+            {
+                "release_version": releaseVersion,
+                "release_date": releaseDateFmt,
+                "release_ref": releaseRef,
+                "appimage_download": aAppImg.assetUrl,
+                "debian_download": aDebian.assetUrl,
+                "winexe_download": aWinExe.assetUrl,
+                "macx86_download": aMacAMD.assetUrl,
+                "macarm_download": aMacARM.assetUrl,
+            },
+        )
 
-        buildFromTemplate("checksum.rst", "checksum_release.rst", {
-            "appimage_name": aAppImg.assetName,
-            "appimage_shasumfile": aAppImg.assetShaSumUrl,
-            "debian_name": aDebian.assetName,
-            "debian_shasumfile": aDebian.assetShaSumUrl,
-            "winexe_name": aWinExe.assetName,
-            "winexe_shasumfile": aWinExe.assetShaSumUrl,
-            "macx86_name": aMacAMD.assetName,
-            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
-            "macarm_name": aMacARM.assetName,
-            "macarm_shasumfile": aMacARM.assetShaSumUrl,
-        })
+        buildFromTemplate(
+            "checksum.rst",
+            "checksum_release.rst",
+            {
+                "appimage_name": aAppImg.assetName,
+                "appimage_shasumfile": aAppImg.assetShaSumUrl,
+                "debian_name": aDebian.assetName,
+                "debian_shasumfile": aDebian.assetShaSumUrl,
+                "winexe_name": aWinExe.assetName,
+                "winexe_shasumfile": aWinExe.assetShaSumUrl,
+                "macx86_name": aMacAMD.assetName,
+                "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+                "macarm_name": aMacARM.assetName,
+                "macarm_shasumfile": aMacARM.assetShaSumUrl,
+            },
+        )
 
-        buildFromTemplate("download_release.rst", "download_release.rst", {
-            "release_version": releaseVersion,
-            "release_date": releaseDateFmt,
-            "release_url": releaseUrl,
-            "release_ref": releaseRef,
-            "discuss_url": discussUrl,
-            "appimage_name": aAppImg.assetName,
-            "appimage_url": aAppImg.assetUrl,
-            "appimage_size": aAppImg.assetSizeString,
-            "appimage_shasumfile": aAppImg.assetShaSumUrl,
-            "debian_name": aDebian.assetName,
-            "debian_url": aDebian.assetUrl,
-            "debian_size": aDebian.assetSizeString,
-            "debian_shasumfile": aDebian.assetShaSumUrl,
-            "debian_old_name": aDebOld.assetName,
-            "debian_old_url": aDebOld.assetUrl,
-            "debian_old_size": aDebOld.assetSizeString,
-            "debian_old_shasumfile": aDebOld.assetShaSumUrl,
-            "winexe_name": aWinExe.assetName,
-            "winexe_url": aWinExe.assetUrl,
-            "winexe_size": aWinExe.assetSizeString,
-            "winexe_shasumfile": aWinExe.assetShaSumUrl,
-            "macx86_name": aMacAMD.assetName,
-            "macx86_url": aMacAMD.assetUrl,
-            "macx86_size": aMacAMD.assetSizeString,
-            "macx86_shasumfile": aMacAMD.assetShaSumUrl,
-            "macarm_name": aMacARM.assetName,
-            "macarm_url": aMacARM.assetUrl,
-            "macarm_size": aMacARM.assetSizeString,
-            "macarm_shasumfile": aMacARM.assetShaSumUrl,
-            "wheel_name": aPWheel.assetName,
-            "wheel_url": aPWheel.assetUrl,
-            "wheel_size": aPWheel.assetSizeString,
-            "wheel_shasumfile": aPWheel.assetShaSumUrl,
-            "short_version": shortVersion,
-            "zip_url": zipBall,
-            "tar_url": tarBall,
-        })
+        buildFromTemplate(
+            "download_release.rst",
+            "download_release.rst",
+            {
+                "release_version": releaseVersion,
+                "release_date": releaseDateFmt,
+                "release_url": releaseUrl,
+                "release_ref": releaseRef,
+                "discuss_url": discussUrl,
+                "appimage_name": aAppImg.assetName,
+                "appimage_url": aAppImg.assetUrl,
+                "appimage_size": aAppImg.assetSizeString,
+                "appimage_shasumfile": aAppImg.assetShaSumUrl,
+                "debian_name": aDebian.assetName,
+                "debian_url": aDebian.assetUrl,
+                "debian_size": aDebian.assetSizeString,
+                "debian_shasumfile": aDebian.assetShaSumUrl,
+                "debian_old_name": aDebOld.assetName,
+                "debian_old_url": aDebOld.assetUrl,
+                "debian_old_size": aDebOld.assetSizeString,
+                "debian_old_shasumfile": aDebOld.assetShaSumUrl,
+                "winexe_name": aWinExe.assetName,
+                "winexe_url": aWinExe.assetUrl,
+                "winexe_size": aWinExe.assetSizeString,
+                "winexe_shasumfile": aWinExe.assetShaSumUrl,
+                "macx86_name": aMacAMD.assetName,
+                "macx86_url": aMacAMD.assetUrl,
+                "macx86_size": aMacAMD.assetSizeString,
+                "macx86_shasumfile": aMacAMD.assetShaSumUrl,
+                "macarm_name": aMacARM.assetName,
+                "macarm_url": aMacARM.assetUrl,
+                "macarm_size": aMacARM.assetSizeString,
+                "macarm_shasumfile": aMacARM.assetShaSumUrl,
+                "wheel_name": aPWheel.assetName,
+                "wheel_url": aPWheel.assetUrl,
+                "wheel_size": aPWheel.assetSizeString,
+                "wheel_shasumfile": aPWheel.assetShaSumUrl,
+                "short_version": shortVersion,
+                "zip_url": zipBall,
+                "tar_url": tarBall,
+            },
+        )
 
-    print("")
+    print()
 
     return
 
@@ -358,7 +381,6 @@ def buildFromTemplate(name, output, data):
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser()
     subParsers = parser.add_subparsers()
 

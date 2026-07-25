@@ -6,7 +6,7 @@ Release 2026.1
 **************
 
 | **Release Date:** April 26, 2026
-| **Patches:** :ref:`26.1.1 <main_release_26_1_1>`
+| **Patches:** :ref:`2026.1.1 <main_release_26_1_1>`, :ref:`2026.1.2 <main_release_26_1_2>`
 
 
 Release Notes
@@ -77,14 +77,26 @@ Patch Releases
 
 .. _main_release_26_1_1:
 
-Patch 26.1.1
-------------
+Patch 2026.1.1
+--------------
 
 **Release Date:** June 28, 2026
 
 This patch release adds Catalan language to the app, and updates translation files for other languages. Some user
 interface labels for the Manuscript tool have been improved, and the documentation updated. A small fix resolves an
 error message printed to the log when launching the app on Linux.
+
+
+.. _main_release_26_1_2:
+
+Patch 2026.1.2
+--------------
+
+**Release Date:** July 25, 2026
+
+This is a patch release that fixes a race condition when searching across multiple documents, restores the application's
+taskbar icon on Windows, and fixes a font setting that failed to load on older versions of Qt. Japanese and Russian
+translations have also been updated.
 
 
 Download Links
@@ -98,6 +110,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 26.1.1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1.1>`__
 | :octicon:`mark-github` `Download Release 26.1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1>`__
 | :octicon:`mark-github` `Download Release 26.1 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1rc1>`__
 | :octicon:`mark-github` `Download Release 26.1 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b2>`__

@@ -1,7 +1,7 @@
 Latest Release
 ==============
 
-**{release_version}** -- Released on {release_date} -- Read the :ref:`Release Notes <{release_ref}>`
+**Version {release_version}** -- Released on {release_date} -- Read the :ref:`Release Notes <{release_ref}>`
 
 .. grid:: 2
    :margin: 4 4 0 0
