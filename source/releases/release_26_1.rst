@@ -98,6 +98,7 @@ Older Releases
 
 Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
 
+| :octicon:`mark-github` `Download Release 26.1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1>`__
 | :octicon:`mark-github` `Download Release 26.1 RC 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1rc1>`__
 | :octicon:`mark-github` `Download Release 26.1 Beta 2 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b2>`__
 | :octicon:`mark-github` `Download Release 26.1 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.1b1>`__

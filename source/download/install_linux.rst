@@ -231,3 +231,23 @@ Try installing one of the suggested packages:
    sudo apt install libxcb-cursor0
 
 A more permanent solution will come, but for the time being, installing the library should solve the issue.
+
+
+ChromeOS
+--------
+
+On ChromeOS Linux (Crostini), some users have reported that the AppImage may fail to start with a
+Wayland error. If this happens, run novelWriter with Qt forced to use the X11 backend.
+
+.. code-block:: bash
+
+   QT_QPA_PLATFORM=xcb /path/to/novelwriter.AppImage
+
+For example:
+
+.. code-block:: bash
+
+   QT_QPA_PLATFORM=xcb ~/applications/novelwriter.AppImage
+
+If you launch novelWriter from a desktop shortcut, you can make this permanent by adding
+``QT_QPA_PLATFORM=xcb`` in front of the AppImage command in the launcher's ``Exec=`` line.
