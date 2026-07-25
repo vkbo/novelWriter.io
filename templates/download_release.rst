@@ -12,143 +12,85 @@
 | **Release Feedback:** :octicon:`comment-discussion` `Discussion <{discuss_url}>`__
 | **Release on GitHub:** :octicon:`mark-github` `GitHub <{release_url}>`__
 
+.. |linux-logo| image:: ../images/linux.svg
+   :class: dark-light custom-inline-image-title
 
-Linux
------
+.. |windows10-logo| image:: ../images/windows10.svg
+   :class: dark-light custom-inline-image-title
 
-.. grid:: 2
-   :margin: 0
-   :padding: 0
-   :gutter: 0
-
-   .. grid-item::
-      :columns: 2
-      :padding: 0 0 0 4
-
-      .. image:: /images/linux.svg
-         :class: dark-light
-
-   .. grid-item::
-      :columns: 10
-
-      .. grid:: 1
-         :margin: 0
-         :gutter: 4
-         :padding: 0
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **AppImage**
-            ^^^^^^^^^^^^
-            The AppImage_ should run on any recent Linux distro.
-
-            **Download:** :octicon:`download` `{appimage_name} <{appimage_url}>`__ [{appimage_size}]
-            :bdg-link-primary-line:`Checksum File <{appimage_shasumfile}>`
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **Debian Package (Trixie, Ubuntu 25.10+)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            The package is built for Debian_ Trixie, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based releases.
-
-            **Download:** :octicon:`download` `{debian_name} <{debian_url}>`__ [{debian_size}]
-            :bdg-link-primary-line:`Checksum File <{debian_shasumfile}>`
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **Debian Package (Bookworm, Ubuntu 24.04)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            The package is built for Debian_ Bookworm, but should also work for older Ubuntu_, `Linux Mint`_ and other Debian-based releases.
-
-            **Download:** :octicon:`download` `{debian_old_name} <{debian_old_url}>`__ [{debian_old_size}]
-            :bdg-link-primary-line:`Checksum File <{debian_old_shasumfile}>`
+.. |package-logo| image:: ../images/package.png
+   :class: dark-light custom-inline-image-title
 
 
-Windows
--------
+Linux |linux-logo|
+------------------
 
-.. grid:: 2
-   :margin: 0
-   :padding: 0
-   :gutter: 0
+AppImage
+^^^^^^^^
 
-   .. grid-item::
-      :columns: 2
-      :padding: 0 0 0 4
+.. card::
 
-      .. image:: /images/windows10.svg
-         :class: dark-light
+   The AppImage_ should run on any recent Linux distro.
 
-   .. grid-item::
-      :columns: 10
-
-      .. grid:: 1
-         :margin: 0
-         :gutter: 4
-         :padding: 0
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **Setup Installer**
-            ^^^^^^^^^^^^^^^^^^^
-            This is a standard setup installer for Windows. It is made for Windows 10 or newer.
-
-            **Download:** :octicon:`download` `{winexe_name} <{winexe_url}>`__ [{winexe_size}]
-            :bdg-link-primary-line:`Checksum File <{winexe_shasumfile}>`
-
-            Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
+   :octicon:`download` `{appimage_name} <{appimage_url}>`__ [{appimage_size}]
+   :bdg-link-primary-line:`Checksum File <{appimage_shasumfile}>`
 
 
-Other Packages
---------------
+Debian Package
+^^^^^^^^^^^^^^
 
-.. grid:: 2
-   :margin: 0
-   :padding: 0
-   :gutter: 0
+.. card::
 
-   .. grid-item::
-      :columns: 2
-      :padding: 0 0 0 4
+   These packages are built for Debian_, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based
+   distros. The "oldstable" version is needed for Debian Bookworm, Ubuntu 24.04, and distros of a similar age.
 
-      .. image:: /images/package.png
-         :class: dark-light
+   | :octicon:`download` `{debian_name} <{debian_url}>`__ [{debian_size}]
+     :bdg-link-primary-line:`Checksum File <{debian_shasumfile}>` :bdg-warning-line:`Trixie, Ubuntu 25.10+`
+   | :octicon:`download` `{debian_old_name} <{debian_old_url}>`__ [{debian_old_size}]
+     :bdg-link-primary-line:`Checksum File <{debian_old_shasumfile}>` :bdg-warning-line:`Bookworm, Ubuntu 24.04`
 
-   .. grid-item::
-      :columns: 10
 
-      .. grid:: 1
-         :margin: 0
-         :gutter: 4
-         :padding: 0
+Windows |windows10-logo|
+------------------------
 
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
+Setup Installer
+^^^^^^^^^^^^^^^
 
-            **Python Wheel**
-            ^^^^^^^^^^^^^^^^
+.. card::
 
-            The Wheel package can be installed with ``pip install <file_path>``.
+   This is a standard setup installer for Windows. It is made for Windows 10 or newer.
 
-            **Download:** :octicon:`download` `{wheel_name} <{wheel_url}>`__ [{wheel_size}]
-            :bdg-link-primary-line:`Checksum File <{wheel_shasumfile}>`
+   :octicon:`download` `{winexe_name} <{winexe_url}>`__ [{winexe_size}]
+   :bdg-link-primary-line:`Checksum File <{winexe_shasumfile}>`
 
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
+   Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
-            **Source Code**
-            ^^^^^^^^^^^^^^^
 
-            The source code packages are archived files of the entire source code.
+Other Packages |package-logo|
+-----------------------------
 
-            | **Download:** :octicon:`download` `novelWriter-{short_version}.zip <{zip_url}>`__
-            | **Download:** :octicon:`download` `novelWriter-{short_version}.tar.gz <{tar_url}>`__
+Python Wheel
+^^^^^^^^^^^^
 
-            See also the `novelWriter Repository`_.
+.. card::
+
+   A standard Python wheel package is available for installation via pip.
+
+   :octicon:`download` `{wheel_name} <{wheel_url}>`__ [{wheel_size}]
+   :bdg-link-primary-line:`Checksum File <{wheel_shasumfile}>`
+
+
+Source Code
+^^^^^^^^^^^
+
+.. card::
+
+   The source code packages are archived files of the entire source code.
+
+   | :octicon:`download` `novelWriter-{short_version}.zip <{zip_url}>`__
+   | :octicon:`download` `novelWriter-{short_version}.tar.gz <{tar_url}>`__
+
+   See also the `novelWriter Repository`_.
 
 .. note::
 

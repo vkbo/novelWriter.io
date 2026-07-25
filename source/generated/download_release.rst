@@ -12,143 +12,85 @@
 | **Release Feedback:** :octicon:`comment-discussion` `Discussion <https://github.com/vkbo/novelWriter/discussions/2899>`__
 | **Release on GitHub:** :octicon:`mark-github` `GitHub <https://github.com/vkbo/novelWriter/releases/tag/v26.1.2>`__
 
+.. |linux-logo| image:: ../images/linux.svg
+   :class: dark-light custom-inline-image-title
 
-Linux
------
+.. |windows10-logo| image:: ../images/windows10.svg
+   :class: dark-light custom-inline-image-title
 
-.. grid:: 2
-   :margin: 0
-   :padding: 0
-   :gutter: 0
-
-   .. grid-item::
-      :columns: 2
-      :padding: 0 0 0 4
-
-      .. image:: /images/linux.svg
-         :class: dark-light
-
-   .. grid-item::
-      :columns: 10
-
-      .. grid:: 1
-         :margin: 0
-         :gutter: 4
-         :padding: 0
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **AppImage**
-            ^^^^^^^^^^^^
-            The AppImage_ should run on any recent Linux distro.
-
-            **Download:** :octicon:`download` `novelwriter-26.1.2-x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-x86_64.AppImage>`__ [84.5 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-x86_64.AppImage.sha256>`
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **Debian Package (Trixie, Ubuntu 25.10+)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            The package is built for Debian_ Trixie, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based releases.
-
-            **Download:** :octicon:`download` `novelwriter_26.1.2_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2_all.deb>`__ [3.56 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2_all.deb.sha256>`
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **Debian Package (Bookworm, Ubuntu 24.04)**
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            The package is built for Debian_ Bookworm, but should also work for older Ubuntu_, `Linux Mint`_ and other Debian-based releases.
-
-            **Download:** :octicon:`download` `novelwriter_26.1.2-oldstable_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2-oldstable_all.deb>`__ [3.56 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2-oldstable_all.deb.sha256>`
+.. |package-logo| image:: ../images/package.png
+   :class: dark-light custom-inline-image-title
 
 
-Windows
--------
+Linux |linux-logo|
+------------------
 
-.. grid:: 2
-   :margin: 0
-   :padding: 0
-   :gutter: 0
+AppImage
+^^^^^^^^
 
-   .. grid-item::
-      :columns: 2
-      :padding: 0 0 0 4
+.. card::
 
-      .. image:: /images/windows10.svg
-         :class: dark-light
+   The AppImage_ should run on any recent Linux distro.
 
-   .. grid-item::
-      :columns: 10
-
-      .. grid:: 1
-         :margin: 0
-         :gutter: 4
-         :padding: 0
-
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
-
-            **Setup Installer**
-            ^^^^^^^^^^^^^^^^^^^
-            This is a standard setup installer for Windows. It is made for Windows 10 or newer.
-
-            **Download:** :octicon:`download` `novelwriter-26.1.2-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-amd64-setup.exe>`__ [104 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-amd64-setup.exe.sha256>`
-
-            Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
+   :octicon:`download` `novelwriter-26.1.2-x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-x86_64.AppImage>`__ [84.5 MB]
+   :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-x86_64.AppImage.sha256>`
 
 
-Other Packages
---------------
+Debian Package
+^^^^^^^^^^^^^^
 
-.. grid:: 2
-   :margin: 0
-   :padding: 0
-   :gutter: 0
+.. card::
 
-   .. grid-item::
-      :columns: 2
-      :padding: 0 0 0 4
+   These packages are built for Debian_, but should also work for newer Ubuntu_, `Linux Mint`_ and other Debian-based
+   distros. The "oldstable" version is needed for Debian Bookworm, Ubuntu 24.04, and distros of a similar age.
 
-      .. image:: /images/package.png
-         :class: dark-light
+   | :octicon:`download` `novelwriter_26.1.2_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2_all.deb>`__ [3.56 MB]
+     :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2_all.deb.sha256>` :bdg-warning-line:`Trixie, Ubuntu 25.10+`
+   | :octicon:`download` `novelwriter_26.1.2-oldstable_all.deb <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2-oldstable_all.deb>`__ [3.56 MB]
+     :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter_26.1.2-oldstable_all.deb.sha256>` :bdg-warning-line:`Bookworm, Ubuntu 24.04`
 
-   .. grid-item::
-      :columns: 10
 
-      .. grid:: 1
-         :margin: 0
-         :gutter: 4
-         :padding: 0
+Windows |windows10-logo|
+------------------------
 
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
+Setup Installer
+^^^^^^^^^^^^^^^
 
-            **Python Wheel**
-            ^^^^^^^^^^^^^^^^
+.. card::
 
-            The Wheel package can be installed with ``pip install <file_path>``.
+   This is a standard setup installer for Windows. It is made for Windows 10 or newer.
 
-            **Download:** :octicon:`download` `novelwriter-26.1.2-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-py3-none-any.whl>`__ [5.78 MB]
-            :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-py3-none-any.whl.sha256>`
+   :octicon:`download` `novelwriter-26.1.2-amd64-setup.exe <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-amd64-setup.exe>`__ [104 MB]
+   :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-amd64-setup.exe.sha256>`
 
-         .. grid-item-card::
-            :class-header: nw-sd-os-card-header
+   Free code signing is provided by `SignPath.io`_, certificate by `SignPath Foundation`_.
 
-            **Source Code**
-            ^^^^^^^^^^^^^^^
 
-            The source code packages are archived files of the entire source code.
+Other Packages |package-logo|
+-----------------------------
 
-            | **Download:** :octicon:`download` `novelWriter-26.1.2.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v26.1.2>`__
-            | **Download:** :octicon:`download` `novelWriter-26.1.2.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v26.1.2>`__
+Python Wheel
+^^^^^^^^^^^^
 
-            See also the `novelWriter Repository`_.
+.. card::
+
+   A standard Python wheel package is available for installation via pip.
+
+   :octicon:`download` `novelwriter-26.1.2-py3-none-any.whl <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-py3-none-any.whl>`__ [5.78 MB]
+   :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.1.2/novelwriter-26.1.2-py3-none-any.whl.sha256>`
+
+
+Source Code
+^^^^^^^^^^^
+
+.. card::
+
+   The source code packages are archived files of the entire source code.
+
+   | :octicon:`download` `novelWriter-26.1.2.zip <https://api.github.com/repos/vkbo/novelWriter/zipball/v26.1.2>`__
+   | :octicon:`download` `novelWriter-26.1.2.tar.gz <https://api.github.com/repos/vkbo/novelWriter/tarball/v26.1.2>`__
+
+   See also the `novelWriter Repository`_.
 
 .. note::
 

@@ -88,12 +88,6 @@ img.align-center {
  * Hacks
  */
 
-/* This one ensures that there is no scrollbar on Chrome if it's not needed */
-.sidebar-primary-items__end {
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
-}
-
 /* Remove margin above text blocs */
 .line-block {
     margin-top: 0 !important;
@@ -146,6 +140,13 @@ kbd.compound {
     vertical-align: middle;
     height: 1.8rem;
     margin-right: 0.2rem;
+}
+
+.custom-inline-image-title {
+    display: inline-block;
+    vertical-align: bottom;
+    height: 2.2rem;
+    margin-left: 0.5rem;
 }
 
 .releases-table tbody tr:nth-child(1) {
