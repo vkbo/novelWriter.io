@@ -211,6 +211,7 @@ def pullRelease(args):
     print("Updating Files")
 
     aAppImg = assets.getAsset(AssetType.APP_IMAGE)
+    aFlatpk = assets.getAsset(AssetType.FLATPAK)
     aDebian = assets.getAsset(AssetType.DEBIAN)
     aDebOld = assets.getAsset(AssetType.DEBIAN_OLD)
     aWinExe = assets.getAsset(AssetType.WINDOWS_EXE)
@@ -233,6 +234,10 @@ def pullRelease(args):
                 "appimage_url": aAppImg.assetUrl,
                 "appimage_size": aAppImg.assetSizeString,
                 "appimage_shasumfile": aAppImg.assetShaSumUrl,
+                "flatpak_name": aFlatpk.assetName,
+                "flatpak_url": aFlatpk.assetUrl,
+                "flatpak_size": aFlatpk.assetSizeString,
+                "flatpak_shasumfile": aFlatpk.assetShaSumUrl,
                 "debian_name": aDebian.assetName,
                 "debian_url": aDebian.assetUrl,
                 "debian_size": aDebian.assetSizeString,
@@ -291,7 +296,9 @@ def pullRelease(args):
                 "url": releaseUrl,
                 "assets": {
                     "appimage": aAppImg.assetUrl,
+                    "flatpak": aFlatpk.assetUrl,
                     "debian": aDebian.assetUrl,
+                    "olddebian": aDebOld.assetUrl,
                     "winexe": aWinExe.assetUrl,
                     "macx86": aMacAMD.assetUrl,
                     "macarm": aMacARM.assetUrl,

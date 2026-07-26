@@ -3,7 +3,6 @@ Custom code to handle assets from the GitHub API.
 """
 
 import urllib.request
-
 from enum import Enum
 from pathlib import Path
 
@@ -11,24 +10,23 @@ ROOT_DIR = Path(__file__).parent.parent
 
 
 class AssetType(Enum):
-
-    NONE          = 0
-    APP_IMAGE     = 1
+    NONE = 0
+    APP_IMAGE = 1
     APP_IMAGE_OLD = 2
-    DEBIAN        = 3
-    DEBIAN_OLD    = 4
-    WINDOWS_EXE   = 5
-    MAC_DMG_INTEL = 6
-    MAC_DMG_ARM   = 7
-    PYTHON_WHEEL  = 8
+    FLATPAK = 3
+    DEBIAN = 4
+    DEBIAN_OLD = 5
+    WINDOWS_EXE = 6
+    MAC_DMG_INTEL = 7
+    MAC_DMG_ARM = 8
+    PYTHON_WHEEL = 9
 
 
 class AssetOS(Enum):
-
-    LINUX   = 0
+    LINUX = 0
     WINDOWS = 1
-    MACOS   = 2
-    OTHER   = 3
+    MACOS = 2
+    OTHER = 3
 
 
 def fmtSize(size):
@@ -48,7 +46,6 @@ def fmtSize(size):
 
 
 class Asset:
-
     def __init__(self, data):
         self._raw = data
         self._type = AssetType.NONE
@@ -59,7 +56,6 @@ class Asset:
         self._shasumUrl = ""
         self._size = -1
         self._processAsset()
-        return
 
     @property
     def assetType(self):
@@ -106,6 +102,9 @@ class Asset:
         elif name.endswith(".AppImage"):
             self._type = AssetType.APP_IMAGE
             self._os = AssetOS.LINUX
+        elif name.endswith(".flatpak"):
+            self._type = AssetType.FLATPAK
+            self._os = AssetOS.LINUX
         elif name.endswith(".deb") and "oldstable" in name:
             self._type = AssetType.DEBIAN_OLD
             self._os = AssetOS.LINUX
@@ -150,29 +149,26 @@ class Asset:
         self._shasum = shaFile.read_text()[:64]
         self._shasumUrl = shaUrl
 
-        return
 
 # END Class DownloadAsset
 
 
 class DownloadAssets:
-
     def __init__(self, data):
         self._raw = data
         self._assets: dict[AssetType, Asset | None] = {
-            AssetType.APP_IMAGE:     None,
+            AssetType.APP_IMAGE: None,
             AssetType.APP_IMAGE_OLD: None,
-            AssetType.DEBIAN:        None,
-            AssetType.DEBIAN_OLD:    None,
-            AssetType.WINDOWS_EXE:   None,
+            AssetType.FLATPAK: None,
+            AssetType.DEBIAN: None,
+            AssetType.DEBIAN_OLD: None,
+            AssetType.WINDOWS_EXE: None,
             AssetType.MAC_DMG_INTEL: None,
-            AssetType.MAC_DMG_ARM:   None,
-            AssetType.PYTHON_WHEEL:  None,
+            AssetType.MAC_DMG_ARM: None,
+            AssetType.PYTHON_WHEEL: None,
         }
         for asset in data.get("assets", []):
             self._processAsset(asset)
-
-        return
 
     def getAsset(self, assetType):
         """Return an asset from the records."""
@@ -191,4 +187,3 @@ class DownloadAssets:
                 print(f"Found Asset: {asset.assetName}")
             else:
                 print(f"ERROR: Duplicate asset of type {aType.name}")
-        return

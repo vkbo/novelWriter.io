@@ -1,4 +1,5 @@
 .. _AppImage: https://appimage.org/
+.. _Flatpak: https://flatpak.org/
 .. _Ubuntu: https://ubuntu.com/
 .. _Debian: https://www.debian.org/
 .. _Linux Mint: https://linuxmint.com/
@@ -34,6 +35,17 @@ AppImage
 
    :octicon:`download` `{appimage_name} <{appimage_url}>`__ [{appimage_size}]
    :bdg-link-primary-line:`Checksum File <{appimage_shasumfile}>`
+
+
+Flatpak (Experimental)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. card::
+
+   The Flatpak_ should run on any recent Linux distro.
+
+   :octicon:`download` `{flatpak_name} <{flatpak_url}>`__ [{flatpak_size}]
+   :bdg-link-primary-line:`Checksum File <{flatpak_shasumfile}>`
 
 
 Debian Package

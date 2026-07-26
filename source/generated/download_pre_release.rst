@@ -1,4 +1,5 @@
 .. _AppImage: https://appimage.org/
+.. _Flatpak: https://flatpak.org/
 .. _Ubuntu: https://ubuntu.com/
 .. _Debian: https://www.debian.org/
 .. _Linux Mint: https://linuxmint.com/
@@ -34,6 +35,17 @@ AppImage
 
    :octicon:`download` `novelwriter-26.2b1-x86_64.AppImage <https://github.com/vkbo/novelWriter/releases/download/v26.2b1/novelwriter-26.2b1-x86_64.AppImage>`__ [83.5 MB]
    :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.2b1/novelwriter-26.2b1-x86_64.AppImage.sha256>`
+
+
+Flatpak (Experimental)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. card::
+
+   The Flatpak_ should run on any recent Linux distro.
+
+   :octicon:`download` `novelwriter-26.2-linux.flatpak <https://github.com/vkbo/novelWriter/releases/download/v26.2b1/novelwriter-26.2-linux.flatpak>`__ [10.9 MB]
+   :bdg-link-primary-line:`Checksum File <https://github.com/vkbo/novelWriter/releases/download/v26.2b1/novelwriter-26.2-linux.flatpak.sha256>`
 
 
 Debian Package
