@@ -1,7 +1,7 @@
 Latest Release
 ==============
 
-**Version 2026.1.2** -- Released on July 25, 2026 -- Read the :ref:`Release Notes <main_release_26_1>`
+**Version 2026.1 Patch 2** -- Released on July 25, 2026 -- Read the :ref:`Release Notes <main_release_26_1>`
 
 .. grid:: 2
    :margin: 4 4 0 0

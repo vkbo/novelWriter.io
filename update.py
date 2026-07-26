@@ -26,6 +26,21 @@ def stripVersion(version: str) -> str:
         return version
 
 
+def formatVersion(value: str) -> str:
+    """Format a version number into a more human readable form."""
+    major, _, version = value.partition(".")
+    prefix = "20" if int(major) >= 20 else ""
+    if "." in version:
+        version = version.replace(".", " Patch ")
+    elif "a" in version:
+        version = version.replace("a", " Alpha ")
+    elif "b" in version:
+        version = version.replace("b", " Beta ")
+    elif "rc" in version:
+        version = version.replace("rc", " RC ")
+    return f"{prefix}{major}.{version}" if major and version else ""
+
+
 def updateSetting(name: str, value: str) -> None:
     """Update a setting in the settings.json file."""
     setFile = Path("source/settings.json")
@@ -172,9 +187,9 @@ def pullRelease(args):
 
     discussUrl = data.get("discussion_url", "Unknown")
     releaseUrl = data.get("html_url", "Unknown")
-    releaseVersion = "20" + data.get("name", "xx.x").removeprefix("Version ")
     releaseDate = data.get("published_at", "")
     shortVersion = data.get("tag_name", "???").lstrip("v")
+    releaseVersion = formatVersion(shortVersion)
     releaseRef = "main_release_" + "_".join(stripVersion(shortVersion).split(".")[:2])
     isPreRelease = data.get("prerelease", False)
     tarBall = data.get("tarball_url", "")

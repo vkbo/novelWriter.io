@@ -6,7 +6,7 @@
 .. _SignPath.io: https://about.signpath.io/
 .. _SignPath Foundation: https://signpath.org/
 
-| **Release Version:** 2026.1.2
+| **Release Version:** 2026.1 Patch 2
 | **Release Date:** July 25, 2026
 | **Release Notes:** :ref:`main_release_26_1`
 | **Release Feedback:** :octicon:`comment-discussion` `Discussion <https://github.com/vkbo/novelWriter/discussions/2899>`__

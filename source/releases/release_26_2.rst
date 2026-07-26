@@ -28,9 +28,16 @@ shown as colour-coded progress bars in the status bar of the user interface. The
 when you start writing on a new day. Only content in novel root folders is counted, and if your project has multiple
 novel folders, you can exclude some of them from the count in the project settings.
 
+Note that the progress bars are only visible once you've set some writing goals, so to get started, go to the new Goals
+tab in Project Settings and set them up!
+
 
 Improved Project Search
 -----------------------
+
+.. image:: images/26_2_project_search.png
+   :width: 40%
+   :align: right
 
 The project search tool now has a collapsible filter panel below the search box, letting you narrow your search
 results by text content, document type, and root folder. In addition, when you search in the editor, all matches for
@@ -59,6 +66,10 @@ A few other manuscript features have also been added:
 
 Text Editor Improvements
 ------------------------
+
+.. image:: images/26_2_hover_cards.png
+   :width: 40%
+   :align: right
 
 Several improvements have been made to the text editor and viewer:
 
