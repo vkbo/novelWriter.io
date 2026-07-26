@@ -5,7 +5,7 @@
 Release 2026.1
 **************
 
-| **Release Date:** April 26, 2026
+| **Release Date:** 26 April, 2026
 | **Patches:** :ref:`2026.1.1 <main_release_26_1_1>`, :ref:`2026.1.2 <main_release_26_1_2>`
 
 
@@ -80,7 +80,7 @@ Patch Releases
 Patch 2026.1.1
 --------------
 
-**Release Date:** June 28, 2026
+**Release Date:** 28 June, 2026
 
 This patch release adds Catalan language to the app, and updates translation files for other languages. Some user
 interface labels for the Manuscript tool have been improved, and the documentation updated. A small fix resolves an
@@ -92,7 +92,7 @@ error message printed to the log when launching the app on Linux.
 Patch 2026.1.2
 --------------
 
-**Release Date:** July 25, 2026
+**Release Date:** 25 July, 2026
 
 This is a patch release that fixes a race condition when searching across multiple documents, restores the application's
 taskbar icon on Windows, and fixes a font setting that failed to load on older versions of Qt. Japanese and Russian

@@ -4,7 +4,7 @@
 Release 2.1
 ***********
 
-| **Release Date:** October 17, 2023
+| **Release Date:** 17 October, 2023
 | **Patches:** :ref:`2.1.1 <main_release_2_1_1>`
 
 
@@ -36,7 +36,7 @@ Patch Releases
 Patch 2.1.1
 -----------
 
-**Release Date:** November 5, 2023
+**Release Date:** 5 November, 2023
 
 This is a patch release that fixes a layout issue and internationalisation issues with the new Manuscript Build tool. It also fixes
 a number of issues related to bugs in the underlying Qt framework that affects drag and drop functionality in the project tree.

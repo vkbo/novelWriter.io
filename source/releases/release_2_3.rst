@@ -4,7 +4,7 @@
 Release 2.3
 ***********
 
-| **Release Date:** March 10, 2024
+| **Release Date:** 10 March, 2024
 | **Patches:** :ref:`2.3.1 <main_release_2_3_1>`
 
 
@@ -149,7 +149,7 @@ Patch Releases
 Patch 2.3.1
 -----------
 
-**Release Date:** March 17, 2024
+**Release Date:** 17 March, 2024
 
 This is a patch release that fixes several issues with translations into other languages than the default English, and adds
 completed translations for French.

@@ -4,7 +4,7 @@
 Release 2.8
 ***********
 
-| **Release Date:** December 14, 2025
+| **Release Date:** 14 December, 2025
 | **Patches:** :ref:`2.8.1 <main_release_2_8_1>`, :ref:`2.8.2 <main_release_2_8_2>`
 
 
@@ -98,7 +98,7 @@ Patch Releases
 Patch 2.8.1
 -----------
 
-**Release Date:** December 28, 2025
+**Release Date:** 28 December, 2025
 
 This patch fixes an issue where the application could crash due to a change in the framework novelWriter is built on.
 The issue is related to certain input methods, and is at least triggered when using Spotlight on MacOS. It could
@@ -110,7 +110,7 @@ potentially affect other platforms too.
 Patch 2.8.2
 -----------
 
-**Release Date:** January 25, 2026
+**Release Date:** 25 January, 2026
 
 This is a patch release that fixes an issue with launching novelWriter via a project file on Windows, adds an alert when
 the spell check dictionary cannot be loaded, handles headings in HTML manuscripts the same way as for documents, and

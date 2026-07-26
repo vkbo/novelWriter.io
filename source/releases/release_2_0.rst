@@ -4,7 +4,7 @@
 Release 2.0
 ***********
 
-| **Release Date:** November 28, 2022
+| **Release Date:** 28 November, 2022
 | **Patches:** :ref:`2.0.1 <main_release_2_0_1>`, :ref:`2.0.2 <main_release_2_0_2>`, :ref:`2.0.3 <main_release_2_0_3>`,
   :ref:`2.0.4 <main_release_2_0_4>`, :ref:`2.0.5 <main_release_2_0_5>`, :ref:`2.0.6 <main_release_2_0_6>`,
   :ref:`2.0.7 <main_release_2_0_7>`
@@ -105,7 +105,7 @@ Patch Releases
 Patch 2.0.1
 -----------
 
-**Release Date:** November 29, 2022
+**Release Date:** 29 November, 2022
 
 This is a patch release that fixes a minor issues with loading custom GUI themes that haven't been updated to include the icon theme
 setting. The patch also updates the French translation.
@@ -115,7 +115,7 @@ setting. The patch also updates the French translation.
 Patch 2.0.2
 -----------
 
-**Release Date:** December 1, 2022
+**Release Date:** 1 December, 2022
 
 This is a patch release that fixes a minor issues with syntax highlighting not updating when the highlighting preferences were
 changed. It also fixes an issue that broke the FreeBSD release.
@@ -125,7 +125,7 @@ changed. It also fixes an issue that broke the FreeBSD release.
 Patch 2.0.3
 -----------
 
-**Release Date:** January 8, 2023
+**Release Date:** 8 January, 2023
 
 This is a patch release that fixes a few bugs and usability issues. The editing of status and importance labels in Project Settings
 should now be a bit more intuitive. Opening a document from the Outline View that is already open in the editor should now switch to
@@ -138,7 +138,7 @@ updated as well. A new credits tab has been added to the About dialog box, repla
 Patch 2.0.4
 -----------
 
-**Release Date:** January 29, 2023
+**Release Date:** 29 January, 2023
 
 This is a patch release that fixes a bug where novelWriter would crash if PyQt5 version 5.15.8 was installed and imported.
 
@@ -147,7 +147,7 @@ This is a patch release that fixes a bug where novelWriter would crash if PyQt5 
 Patch 2.0.5
 -----------
 
-**Release Date:** February 12, 2023
+**Release Date:** 12 February, 2023
 
 This is a patch release that fixes a number of minor bugs and usability issues.
 
@@ -165,7 +165,7 @@ its way.
 Patch 2.0.6
 -----------
 
-**Release Date:** February 26, 2023
+**Release Date:** 26 February, 2023
 
 This is a patch release that fixes a few minor bugs and a broken feature.
 
@@ -181,7 +181,7 @@ due to a change in the link format in 2.0.
 Patch 2.0.7
 -----------
 
-**Release Date:** April 16, 2023
+**Release Date:** 16 April, 2023
 
 This is a patch release that fixes a few issues and adds a Japanese translation.
 

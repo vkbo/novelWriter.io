@@ -4,7 +4,7 @@
 Release 2.7
 ***********
 
-| **Release Date:** June 1, 2025
+| **Release Date:** 1 June, 2025
 | **Patches:** :ref:`2.7.1 <main_release_2_7_1>`, :ref:`2.7.2 <main_release_2_7_2>`, :ref:`2.7.3 <main_release_2_7_3>`,
   :ref:`2.7.4 <main_release_2_7_4>`, :ref:`2.7.5 <main_release_2_7_5>`
 
@@ -141,7 +141,7 @@ Patch Releases
 Patch 2.7.1
 -----------
 
-**Release Date:** June 9, 2025
+**Release Date:** 9 June, 2025
 
 This patch release fixes some issues with tags and references, an issue with the auto-complete menu on Windows, and some issues with
 the AppImage on Linux. The Czech translation for 2.7 has also been completed.
@@ -152,7 +152,7 @@ the AppImage on Linux. The Czech translation for 2.7 has also been completed.
 Patch 2.7.2
 -----------
 
-**Release Date:** June 24, 2025
+**Release Date:** 24 June, 2025
 
 This is a patch release that fixes several issues related to DocX and PDF manuscript documents, improves how line breaks, alignment
 and indentation is processed, and fixes some issues with displaying tags for novel documents on the user interface.
@@ -163,7 +163,7 @@ and indentation is processed, and fixes some issues with displaying tags for nov
 Patch 2.7.3
 -----------
 
-**Release Date:** July 7, 2025
+**Release Date:** 7 July, 2025
 
 This is a patch release that fixes a bug in, and makes a few improvement to, Preferences. The bug is related to a crash when using
 the ``%`` symbol in text field settings, and the improvements should make it easier to use the special dialogue highlighting
@@ -175,7 +175,7 @@ settings.
 Patch 2.7.4
 -----------
 
-**Release Date:** July 15, 2025
+**Release Date:** 15 July, 2025
 
 This is a patch release that updates the Czech and French translations, and makes some changes to the available Material Symbols
 icon themes. Additional icon themes are no longer automatically included in all release packages due to license constraints.
@@ -186,7 +186,7 @@ icon themes. Additional icon themes are no longer automatically included in all 
 Patch 2.7.5
 -----------
 
-**Release Date:** September 14, 2025
+**Release Date:** 14 September, 2025
 
 This is a patch release that fixes an issue related to crashes when using the completer menu under certain conditions, and improves
 positioning of the input box for CJK languages.

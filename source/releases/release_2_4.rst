@@ -4,7 +4,7 @@
 Release 2.4
 ***********
 
-| **Release Date:** April 20, 2024
+| **Release Date:** 20 April, 2024
 | **Patches:** :ref:`2.4.1 <main_release_2_4_1>`, :ref:`2.4.2 <main_release_2_4_2>`, :ref:`2.4.3 <main_release_2_4_3>`,
   :ref:`2.4.4 <main_release_2_4_4>`
 
@@ -105,7 +105,7 @@ Patch Releases
 Patch 2.4.1
 -----------
 
-**Release Date:** May 6, 2024
+**Release Date:** 6 May, 2024
 
 This is a patch release that fixes a number of minor issues with the Manuscript Build tool. The only critical fix is related to a
 potential crash when deleting a build entry when its settings dialog is still open. A few minor improvements also include
@@ -118,7 +118,7 @@ viewer where the font used for the document header and footer now matches the us
 Patch 2.4.2
 -----------
 
-**Release Date:** May 18, 2024
+**Release Date:** 18 May, 2024
 
 This is a patch release that fixes two minor font issues and updates the Dutch and Chinese translations.
 
@@ -135,7 +135,7 @@ rescaled according to the new size until the application was restarted. The head
 Patch 2.4.3
 -----------
 
-**Release Date:** May 20, 2024
+**Release Date:** 20 May, 2024
 
 This is a patch release that fixes issues with the document font in the editor, viewer and manuscript preview on some Linux distros.
 The font would not be set correctly after a restart of the app. It is known to affect Linux Mint 21.3, and may also affect other
@@ -150,7 +150,7 @@ way to install new dictionaries.
 Patch 2.4.4
 -----------
 
-**Release Date:** June 12, 2024
+**Release Date:** 12 June, 2024
 
 This is a patch release that fixes two minor issues, and also updates the Portuguese translation.
 

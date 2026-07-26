@@ -4,7 +4,7 @@
 Release 2.6
 ***********
 
-| **Release Date:** January 26, 2025
+| **Release Date:** 26 January, 2025
 | **Patches:** :ref:`2.6.1 <main_release_2_6_1>`, :ref:`2.6.2 <main_release_2_6_2>`, :ref:`2.6.3 <main_release_2_6_3>`
 
 .. _Issues: https://github.com/vkbo/novelWriter/issues
@@ -125,7 +125,7 @@ Patch Releases
 Patch 2.6.1
 -----------
 
-**Release Date:** February 2, 2025
+**Release Date:** 2 February, 2025
 
 This is a patch release that fixes an issue with creating new notes from the editor context menu, adds an option to turn off the
 confirmation box that pops up when closing novelWriter, and improves the recent project list on the Welcome dialog.
@@ -139,7 +139,7 @@ Spanish, Norwegian, US English, German and Japanese translations of the applicat
 Patch 2.6.2
 -----------
 
-**Release Date:** February 16, 2025
+**Release Date:** 16 February, 2025
 
 This is a patch release that fixes a few issues with the project tree: The Empty Trash option in the menu now works again, and it is
 no longer possible to accidentally drag and drop project items onto the root of the project tree.
@@ -153,7 +153,7 @@ been updated.
 Patch 2.6.3
 -----------
 
-**Release Date:** February 16, 2025
+**Release Date:** 16 February, 2025
 
 This is a patch release that fixes a translation issue that affected several labels on the user interface where the wrong or no
 translation was used. The bug affected all languages except for English.

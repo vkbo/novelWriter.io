@@ -4,7 +4,7 @@
 Pre-Release 2026.2 Beta 1
 *************************
 
-| **Release Date:** Not yet released
+| **Release Date:** 26 July, 2026
 
 
 Release Notes

@@ -4,7 +4,7 @@
 Release 2.5
 ***********
 
-| **Release Date:** July 10, 2024
+| **Release Date:** 10 July, 2024
 | **Patches:** :ref:`2.5.1 <main_release_2_5_1>`, :ref:`2.5.2 <main_release_2_5_2>`, :ref:`2.5.3 <main_release_2_5_3>`
 
 
@@ -137,7 +137,7 @@ Patch Releases
 Patch 2.5.1
 -----------
 
-**Release Date:** July 28, 2024
+**Release Date:** 28 July, 2024
 
 This is a patch release that fixes an issue with the lock file being left in the project when the project open is cancelled, a few
 issues with custom input boxes in Preferences, and a usability issue when selecting to edit a tag or reference from the Tags and
@@ -149,7 +149,7 @@ References panel as well as fixed an issue with the Importance labels not being 
 Patch 2.5.2
 -----------
 
-**Release Date:** September 17, 2024
+**Release Date:** 17 September, 2024
 
 This is a patch release that fixes a series of issues mostly affecting dialogue highlighting in the document viewer. The way the
 text is formatted in the viewer changed a lot in 2.5, and there were a few issues with the new implementation. The tab stop distance
@@ -161,7 +161,7 @@ setting was also ignored by the updated document viewer, but has now been fixed 
 Patch 2.5.3
 -----------
 
-**Release Date:** November 26, 2024
+**Release Date:** 26 November, 2024
 
 This is a patch release that fixes an issue with swapped colours for the saved indicator in the status bar for the Default Light
 theme, a bug for some platforms where drag and drop onto the root of the project tree was possible, and an issue with the HTML

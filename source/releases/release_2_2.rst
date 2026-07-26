@@ -4,7 +4,7 @@
 Release 2.2
 ***********
 
-| **Release Date:** December 17, 2023
+| **Release Date:** 17 December, 2023
 | **Patches:** :ref:`2.2.1 <main_release_2_2_1>`
 
 
@@ -54,7 +54,7 @@ Patch Releases
 Patch 2.2.1
 -----------
 
-**Release Date:** January 27, 2024
+**Release Date:** 27 January, 2024
 
 This is a patch release that fixes an issue where the Project View would sometimes switch to the Novel View when a new item was
 created. This patch also includes updated translations for German and Chinese.
