@@ -19,6 +19,11 @@ for the text editor, such as hover cards, zoom, and adjustable line height.
    This is a beta release of the next release version, and is intended for testing purposes. Please be careful when
    using this version on live writing projects, and make sure you take frequent backups.
 
+.. attention::
+
+   Note that the 2026.2 release will upgrade your project file structure, so once you've accepted the upgrade notice
+   when opening a project for the first time, you will not be able to open it in earlier versions of novelWriter.
+
 
 Project Writing Goals
 ---------------------
