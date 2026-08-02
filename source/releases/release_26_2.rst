@@ -1,10 +1,10 @@
 .. _main_release_26_2:
 
 *************************
-Pre-Release 2026.2 Beta 1
+Pre-Release 2026.2 Beta 2
 *************************
 
-| **Release Date:** 26 July, 2026
+| **Release Date:** 2 August, 2026
 
 
 Release Notes
@@ -118,3 +118,11 @@ Download Links
 ==============
 
 .. include:: ../generated/download_pre_release.rst
+
+
+Older Releases
+==============
+
+Past release packages are available for download on `GitHub <https://github.com/vkbo/novelWriter/releases>`__.
+
+| :octicon:`mark-github` `Download Release 26.2 Beta 1 <https://github.com/vkbo/novelWriter/releases/tag/v26.2b1>`__
